@@ -32,25 +32,33 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 
 //HOME
-$routes->get('/', 'Home::index');
-$routes->get('/beranda', 'Home::index');
-$routes->get('/perlombaan', 'Home::perlombaan');
-$routes->get('/tentang-kami', 'Home::tentang_kami');
-$routes->get('/faq', 'Home::faq');
-$routes->get('/kontak-kami', 'Home::kontak_kami');
-$routes->get('/informasi-dosen', 'Home::informasi_dosen');
-$routes->get('/validasi-lomba', 'Home::validasi_lomba');
+
+$routes->get('/', 'User::index', ['as' => 'user-index']);
+$routes->get('/beranda', 'Home::index', ['as' => 'home-beranda']);
+$routes->get('/perlombaan', 'Home::perlombaan', ['as' => 'home-perlombaan']);
+$routes->get('/tentang-kami', 'Home::tentang_kami', ['as' => 'home-tentang-kami']);
+$routes->get('/faq', 'Home::faq', ['as' => 'home-faq']);
+$routes->get('/kontak-kami', 'Home::kontak_kami', ['as' => 'home-kontak-kami']);
+$routes->get('/informasi-dosen', 'Home::informasi_dosen', ['as' => 'home-informasi-dosen']);
+$routes->get('/validasi-lomba', 'Home::validasi_lomba', ['as' => 'home-validasi-lomba']);
 
 //AUTH
 // $routes->get('/login', 'Auth::login');
 // $routes->get('/admin/login', 'Auth::login_admin');
 
+//AUTH
+$routes->group('admin', ['filter' => 'role:admin'], function ($routes) {
+    $routes->get('', 'User::admin', ['as' => 'admin-index']);
+    $routes->get('dosen', 'Admin\Dosen::index', ['as' => 'admin-dosen']);
+    $routes->get('mahasiswa', 'Admin\Mahasiswa::index', ['as' => 'admin-mahasiswa']);
+    $routes->get('prodi', 'Admin\Prodi::index', ['as' => 'admin-prodi']);
+    $routes->get('lomba', 'Admin\Lomba::index', ['as' => 'admin-lomba']);
+    $routes->get('rekognisi', 'Admin\Rekognisi::index', ['as' => 'admin-rekognisi']);
+});
 
 
 
 
-
-$routes->get('/admin/dosen', 'Admin\Dosen::index');
 // $routes->get('/percobaan/(:any)', 'Home::index/$1'); // apapun
 // $routes->get('/percobaan/(:segment)', 'Home::index/$1'); // apapun kecuali slash
 // $routes->get('/percobaan/(:num)', 'Home::index/$1'); // hanya angka

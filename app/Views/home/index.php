@@ -23,9 +23,9 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="banner-img">
-                        <img src="assets-techex-demo/images/home-three/home-three-img.png" alt="Images">
+                        <img src="/assets-techex-demo/images/home-three/home-three-img.png" alt="Images">
                         <div class="banner-img-shape">
-                            <img src="assets-techex-demo/images/home-three/home-three-shape.png" alt="Images" loading="lazy">
+                            <img src="/assets-techex-demo/images/home-three/home-three-shape.png" alt="Images" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -35,21 +35,21 @@
     <div class="container">
         <div class="banner-sub-slider owl-carousel owl-theme">
             <div class="banner-sub-item">
-                <img src="assets-techex-demo/images/home-three/home-three-sub1.jpg" alt="Images" loading="lazy">
+                <img src="/assets-techex-demo/images/home-three/home-three-sub1.jpg" alt="Images" loading="lazy">
                 <div class="content">
                     <h3>3.7k</h3>
                     <span>Satisfied Clients</span>
                 </div>
             </div>
             <div class="banner-sub-item">
-                <img src="assets-techex-demo/images/home-three/home-three-sub2.jpg" alt="Images" loading="lazy">
+                <img src="/assets-techex-demo/images/home-three/home-three-sub2.jpg" alt="Images" loading="lazy">
                 <div class="content">
                     <h3>45+</h3>
                     <span>Country Worldwide</span>
                 </div>
             </div>
             <div class="banner-sub-item">
-                <img src="assets-techex-demo/images/home-three/home-three-sub3.jpg" alt="Images" loading="lazy">
+                <img src="/assets-techex-demo/images/home-three/home-three-sub3.jpg" alt="Images" loading="lazy">
                 <div class="content">
                     <h3>6.5+</h3>
                     <span>Project Completed</span>
@@ -65,7 +65,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="about-img-2">
-                    <img src="assets-techex-demo/images/about/about-img3.jpg" alt="About Images" loading="lazy">
+                    <img src="/assets-techex-demo/images/about/about-img3.jpg" alt="About Images" loading="lazy">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -169,7 +169,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="services-item">
                     <a href="service-details.html">
-                        <img src="assets-techex-demo/images/services/services-img1.jpg" alt="Images" loading="lazy">
+                        <img src="/assets-techex-demo/images/services/services-img1.jpg" alt="Images" loading="lazy">
                     </a>
                     <div class="content">
                         <i class="flaticon-consultant"></i>
@@ -181,7 +181,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="services-item">
                     <a href="service-details.html">
-                        <img src="assets-techex-demo/images/services/services-img2.jpg" alt="Images" loading="lazy">
+                        <img src="/assets-techex-demo/images/services/services-img2.jpg" alt="Images" loading="lazy">
                     </a>
                     <div class="content">
                         <i class="flaticon-consulting"></i>
@@ -193,7 +193,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="services-item">
                     <a href="service-details.html">
-                        <img src="assets-techex-demo/images/services/services-img3.jpg" alt="Images" loading="lazy">
+                        <img src="/assets-techex-demo/images/services/services-img3.jpg" alt="Images" loading="lazy">
                     </a>
                     <div class="content">
                         <i class="flaticon-web-development"></i>
@@ -205,7 +205,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="services-item">
                     <a href="service-details.html">
-                        <img src="assets-techex-demo/images/services/services-img4.jpg" alt="Images" loading="lazy">
+                        <img src="/assets-techex-demo/images/services/services-img4.jpg" alt="Images" loading="lazy">
                     </a>
                     <div class="content">
                         <i class="flaticon-stats"></i>
@@ -217,7 +217,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="services-item">
                     <a href="service-details.html">
-                        <img src="assets-techex-demo/images/services/services-img5.jpg" alt="Images" loading="lazy">
+                        <img src="/assets-techex-demo/images/services/services-img5.jpg" alt="Images" loading="lazy">
                     </a>
                     <div class="content">
                         <i class="flaticon-structure"></i>
@@ -229,7 +229,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="services-item">
                     <a href="service-details.html">
-                        <img src="assets-techex-demo/images/services/services-img6.jpg" alt="Images" loading="lazy">
+                        <img src="/assets-techex-demo/images/services/services-img6.jpg" alt="Images" loading="lazy">
                     </a>
                     <div class="content">
                         <i class="flaticon-data-analytics"></i>
@@ -280,7 +280,7 @@
         <div class="case-study-slider owl-carousel owl-theme pt-45">
             <div class="case-study-item">
                 <a href="case-details.html">
-                    <img src="assets-techex-demo/images/case-study/case-study1.jpg" alt="Images" loading="lazy">
+                    <img src="/assets-techex-demo/images/case-study/case-study1.jpg" alt="Images" loading="lazy">
                 </a>
                 <div class="content">
                     <h3><a href="case-details.html">Business Solution</a></h3>
@@ -293,7 +293,7 @@
             </div>
             <div class="case-study-item">
                 <a href="case-details.html">
-                    <img src="assets-techex-demo/images/case-study/case-study2.jpg" alt="Images" loading="lazy">
+                    <img src="/assets-techex-demo/images/case-study/case-study2.jpg" alt="Images" loading="lazy">
                 </a>
                 <div class="content">
                     <h3><a href="case-details.html">Business Solution</a></h3>
@@ -306,7 +306,7 @@
             </div>
             <div class="case-study-item">
                 <a href="case-details.html">
-                    <img src="assets-techex-demo/images/case-study/case-study3.jpg" alt="Images" loading="lazy">
+                    <img src="/assets-techex-demo/images/case-study/case-study3.jpg" alt="Images" loading="lazy">
                 </a>
                 <div class="content">
                     <h3><a href="case-details.html">Business Solution</a></h3>
@@ -319,7 +319,7 @@
             </div>
             <div class="case-study-item">
                 <a href="case-details.html">
-                    <img src="assets-techex-demo/images/case-study/case-study4.jpg" alt="Images" loading="lazy">
+                    <img src="/assets-techex-demo/images/case-study/case-study4.jpg" alt="Images" loading="lazy">
                 </a>
                 <div class="content">
                     <h3><a href="case-details.html">UI/UX Research</a></h3>
@@ -332,7 +332,7 @@
             </div>
             <div class="case-study-item">
                 <a href="case-details.html">
-                    <img src="assets-techex-demo/images/case-study/case-study6.jpg" alt="Images" loading="lazy">
+                    <img src="/assets-techex-demo/images/case-study/case-study6.jpg" alt="Images" loading="lazy">
                 </a>
                 <div class="content">
                     <h3><a href="case-details.html">Business Solution</a></h3>
@@ -345,7 +345,7 @@
             </div>
             <div class="case-study-item">
                 <a href="case-details.html">
-                    <img src="assets-techex-demo/images/case-study/case-study2.jpg" alt="Images" loading="lazy">
+                    <img src="/assets-techex-demo/images/case-study/case-study2.jpg" alt="Images" loading="lazy">
                 </a>
                 <div class="content">
                     <h3><a href="case-details.html">Web Development</a></h3>
@@ -426,22 +426,22 @@
     <div class="container">
         <div class="brand-slider owl-carousel owl-theme">
             <div class="brand-item">
-                <img src="assets-techex-demo/images/brand-logo/brand-style1.png" alt="Images" loading="lazy">
+                <img src="/assets-techex-demo/images/brand-logo/brand-style1.png" alt="Images" loading="lazy">
             </div>
             <div class="brand-item">
-                <img src="assets-techex-demo/images/brand-logo/brand-style2.png" alt="Images" loading="lazy">
+                <img src="/assets-techex-demo/images/brand-logo/brand-style2.png" alt="Images" loading="lazy">
             </div>
             <div class="brand-item">
-                <img src="assets-techex-demo/images/brand-logo/brand-style3.png" alt="Images" loading="lazy">
+                <img src="/assets-techex-demo/images/brand-logo/brand-style3.png" alt="Images" loading="lazy">
             </div>
             <div class="brand-item">
-                <img src="assets-techex-demo/images/brand-logo/brand-style4.png" alt="Images" loading="lazy">
+                <img src="/assets-techex-demo/images/brand-logo/brand-style4.png" alt="Images" loading="lazy">
             </div>
             <div class="brand-item">
-                <img src="assets-techex-demo/images/brand-logo/brand-style5.png" alt="Images" loading="lazy">
+                <img src="/assets-techex-demo/images/brand-logo/brand-style5.png" alt="Images" loading="lazy">
             </div>
             <div class="brand-item">
-                <img src="assets-techex-demo/images/brand-logo/brand-style3.png" alt="Images" loading="lazy">
+                <img src="/assets-techex-demo/images/brand-logo/brand-style3.png" alt="Images" loading="lazy">
             </div>
         </div>
     </div>
@@ -457,7 +457,7 @@
         <div class="clients-slider owl-carousel owl-theme pt-45">
             <div class="clients-content">
                 <div class="content">
-                    <img src="assets-techex-demo/images/clients-img/clients-img1.jpg" alt="Images" loading="lazy">
+                    <img src="/assets-techex-demo/images/clients-img/clients-img1.jpg" alt="Images" loading="lazy">
                     <i class='bx bxs-quote-alt-left'></i>
                     <h3>Jonthon Martin</h3>
                     <span>App Developer</span>
@@ -469,7 +469,7 @@
             </div>
             <div class="clients-content">
                 <div class="content">
-                    <img src="assets-techex-demo/images/clients-img/clients-img2.jpg" alt="Images" loading="lazy">
+                    <img src="/assets-techex-demo/images/clients-img/clients-img2.jpg" alt="Images" loading="lazy">
                     <i class='bx bxs-quote-alt-left'></i>
                     <h3>Alin Decros</h3>
                     <span>Graphic Designer</span>
@@ -481,7 +481,7 @@
             </div>
             <div class="clients-content">
                 <div class="content">
-                    <img src="assets-techex-demo/images/clients-img/clients-img3.jpg" alt="Images" loading="lazy">
+                    <img src="/assets-techex-demo/images/clients-img/clients-img3.jpg" alt="Images" loading="lazy">
                     <i class='bx bxs-quote-alt-left'></i>
                     <h3>Elen Musk</h3>
                     <span>Web Developer</span>
@@ -530,7 +530,7 @@
                 <div class="blog-card">
                     <div class="blog-img">
                         <a href="blog-details.html">
-                            <img src="assets-techex-demo/images/blog/blog-img1.jpg" alt="Blog Images" loading="lazy">
+                            <img src="/assets-techex-demo/images/blog/blog-img1.jpg" alt="Blog Images" loading="lazy">
                         </a>
                         <div class="blog-tag">
                             <h3>11</h3>
@@ -558,7 +558,7 @@
                 <div class="blog-card">
                     <div class="blog-img">
                         <a href="blog-details.html">
-                            <img src="assets-techex-demo/images/blog/blog-img2.jpg" alt="Blog Images" loading="lazy">
+                            <img src="/assets-techex-demo/images/blog/blog-img2.jpg" alt="Blog Images" loading="lazy">
                         </a>
                         <div class="blog-tag">
                             <h3>14</h3>
@@ -586,7 +586,7 @@
                 <div class="blog-card">
                     <div class="blog-img">
                         <a href="blog-details.html">
-                            <img src="assets-techex-demo/images/blog/blog-img3.jpg" alt="Blog Images" loading="lazy">
+                            <img src="/assets-techex-demo/images/blog/blog-img3.jpg" alt="Blog Images" loading="lazy">
                         </a>
                         <div class="blog-tag">
                             <h3>17</h3>

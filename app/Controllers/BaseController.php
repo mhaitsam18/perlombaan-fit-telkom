@@ -43,6 +43,7 @@ abstract class BaseController extends Controller
      */
     // protected $session;
 
+
     /**
      * Constructor.
      */

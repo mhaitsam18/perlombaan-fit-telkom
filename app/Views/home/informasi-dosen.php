@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="inner-shape">
-        <img src="assets-techex-demo/images/shape/inner-shape.png" alt="Images">
+        <img src="/assets-techex-demo/images/shape/inner-shape.png" alt="Images">
     </div>
 </div>
 
@@ -37,7 +37,7 @@
         <div class="row pt-45">
             <div class="col-lg-4 col-md-6">
                 <div class="team-card">
-                    <img src="assets-techex-demo/images/team/team-img1.jpg" alt="Team Images" loading="lazy">
+                    <img src="/assets-techex-demo/images/team/team-img1.jpg" alt="Team Images" loading="lazy">
                     <ul class="social-link">
                         <li>
                             <a href="https://www.facebook.com/" target="_blank">
@@ -68,7 +68,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="team-card">
-                    <img src="assets-techex-demo/images/team/team-img2.jpg" alt="Team Images" loading="lazy">
+                    <img src="/assets-techex-demo/images/team/team-img2.jpg" alt="Team Images" loading="lazy">
                     <ul class="social-link">
                         <li>
                             <a href="https://www.facebook.com/" target="_blank">
@@ -99,7 +99,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="team-card">
-                    <img src="assets-techex-demo/images/team/team-img3.jpg" alt="Team Images" loading="lazy">
+                    <img src="/assets-techex-demo/images/team/team-img3.jpg" alt="Team Images" loading="lazy">
                     <ul class="social-link">
                         <li>
                             <a href="https://www.facebook.com/" target="_blank">
@@ -130,7 +130,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="team-card">
-                    <img src="assets-techex-demo/images/team/team-img4.jpg" alt="Team Images" loading="lazy">
+                    <img src="/assets-techex-demo/images/team/team-img4.jpg" alt="Team Images" loading="lazy">
                     <ul class="social-link">
                         <li>
                             <a href="https://www.facebook.com/" target="_blank">
@@ -161,7 +161,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="team-card">
-                    <img src="assets-techex-demo/images/team/team-img5.jpg" alt="Team Images" loading="lazy">
+                    <img src="/assets-techex-demo/images/team/team-img5.jpg" alt="Team Images" loading="lazy">
                     <ul class="social-link">
                         <li>
                             <a href="https://www.facebook.com/" target="_blank">
@@ -192,7 +192,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="team-card">
-                    <img src="assets-techex-demo/images/team/team-img6.jpg" alt="Team Images" loading="lazy">
+                    <img src="/assets-techex-demo/images/team/team-img6.jpg" alt="Team Images" loading="lazy">
                     <ul class="social-link">
                         <li>
                             <a href="https://www.facebook.com/" target="_blank">

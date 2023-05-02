@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="inner-shape">
-        <img src="assets-techex-demo/images/shape/inner-shape.png" alt="Images">
+        <img src="/assets-techex-demo/images/shape/inner-shape.png" alt="Images">
     </div>
 </div>
 

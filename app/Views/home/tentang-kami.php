@@ -22,7 +22,7 @@
         </div>
     </div>
     <div class="inner-shape">
-        <img src="assets-techex-demo/images/shape/inner-shape.png" alt="Images">
+        <img src="/assets-techex-demo/images/shape/inner-shape.png" alt="Images">
     </div>
 </div>
 
@@ -32,7 +32,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="about-play">
-                    <img src="assets-techex-demo/images/about/about-img1.jpg" alt="About Images" loading="lazy">
+                    <img src="/assets-techex-demo/images/about/about-img1.jpg" alt="About Images" loading="lazy">
                     <div class="about-play-content">
                         <span>Watch Our Intro Video</span>
                         <h2>Perfect Solution for It Services!</h2>
@@ -111,7 +111,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="choose-img">
-                    <img src="assets-techex-demo/images/choose-img.jpg" alt="Images" loading="lazy">
+                    <img src="/assets-techex-demo/images/choose-img.jpg" alt="Images" loading="lazy">
                 </div>
             </div>
         </div>
@@ -177,22 +177,22 @@
     <div class="container">
         <div class="brand-slider owl-carousel owl-theme">
             <div class="brand-item">
-                <img src="assets-techex-demo/images/brand-logo/brand-style1.png" alt="Images" loading="lazy">
+                <img src="/assets-techex-demo/images/brand-logo/brand-style1.png" alt="Images" loading="lazy">
             </div>
             <div class="brand-item">
-                <img src="assets-techex-demo/images/brand-logo/brand-style2.png" alt="Images" loading="lazy">
+                <img src="/assets-techex-demo/images/brand-logo/brand-style2.png" alt="Images" loading="lazy">
             </div>
             <div class="brand-item">
-                <img src="assets-techex-demo/images/brand-logo/brand-style3.png" alt="Images" loading="lazy">
+                <img src="/assets-techex-demo/images/brand-logo/brand-style3.png" alt="Images" loading="lazy">
             </div>
             <div class="brand-item">
-                <img src="assets-techex-demo/images/brand-logo/brand-style4.png" alt="Images" loading="lazy">
+                <img src="/assets-techex-demo/images/brand-logo/brand-style4.png" alt="Images" loading="lazy">
             </div>
             <div class="brand-item">
-                <img src="assets-techex-demo/images/brand-logo/brand-style5.png" alt="Images" loading="lazy">
+                <img src="/assets-techex-demo/images/brand-logo/brand-style5.png" alt="Images" loading="lazy">
             </div>
             <div class="brand-item">
-                <img src="assets-techex-demo/images/brand-logo/brand-style3.png" alt="Images" loading="lazy">
+                <img src="/assets-techex-demo/images/brand-logo/brand-style3.png" alt="Images" loading="lazy">
             </div>
         </div>
     </div>
@@ -239,10 +239,10 @@
     </div>
     <div class="counter-shape">
         <div class="shape1">
-            <img src="assets-techex-demo/images/shape/shape1.png" alt="Images" loading="lazy">
+            <img src="/assets-techex-demo/images/shape/shape1.png" alt="Images" loading="lazy">
         </div>
         <div class="shape2">
-            <img src="assets-techex-demo/images/shape/shape2.png" alt="Images" loading="lazy">
+            <img src="/assets-techex-demo/images/shape/shape2.png" alt="Images" loading="lazy">
         </div>
     </div>
 </div>
