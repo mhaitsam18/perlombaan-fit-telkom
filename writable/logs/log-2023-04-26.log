@@ -1,0 +1,33 @@
+CRITICAL - 2023-04-26 12:10:06 --> Undefined variable $page
+in APPPATH\Views\layouts\home.php on line 66.
+ 1 APPPATH\Views\layouts\home.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', 'D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\app\\Views\\layouts\\home.php', 66)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\app\\Views\\layouts\\home.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layouts/home', [], true)
+ 5 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('home/index', [], true)
+ 6 APPPATH\Controllers\Home.php(10): view('home/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\public\\index.php')
+CRITICAL - 2023-04-26 12:27:14 --> Invalid file: "home/perlombaan.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/perlombaan.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('home/perlombaan', [], true)
+ 3 APPPATH\Controllers\Home.php(16): view('home/perlombaan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->perlombaan()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\public\\index.php')
+CRITICAL - 2023-04-26 12:51:33 --> Invalid file: "auth/login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/login.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('auth/login', [], true)
+ 3 APPPATH\Controllers\Auth.php(14): view('auth/login', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->login()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\public\\index.php')
