@@ -11,7 +11,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <div class="banner-content">
-                        <h1>Dashboard Perlombaan D1 Sistem Informasi - Telkom University</h1>
+                        <h1>Dashboard Perlombaan D3 Sistem Informasi - Telkom University</h1>
                         <p>
                             Aenean Sollicitudin, Lorem quis Bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
                         </p>
