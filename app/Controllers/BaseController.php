@@ -43,6 +43,12 @@ abstract class BaseController extends Controller
      */
     // protected $session;
 
+    protected $dosenModel;
+    protected $lombaModel;
+    protected $mahasiswaModel;
+    protected $prodiModel;
+    protected $rekognisiModel;
+    protected $userModel;
 
     /**
      * Constructor.
@@ -55,5 +61,12 @@ abstract class BaseController extends Controller
         // Preload any models, libraries, etc, here.
 
         // E.g.: $this->session = \Config\Services::session();
+
+        $this->dosenModel = new \App\Models\DosenModel();
+        $this->lombaModel = new \App\Models\LombaModel();
+        $this->mahasiswaModel = new \App\Models\MahasiswaModel();
+        $this->prodiModel = new \App\Models\ProdiModel();
+        $this->rekognisiModel = new \App\Models\RekognisiModel();
+        // $this->userModel = new \App\Models\UserModel();
     }
 }
