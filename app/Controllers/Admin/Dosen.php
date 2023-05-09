@@ -3,17 +3,16 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
-use App\Models\DosenModel;
 
 
 class Dosen extends BaseController
 {
-
     private $db;
-    function __construct()
+    public function __construct()
     {
-        $this->db = \Config\Database::connect();
+        $this->db      = \Config\Database::connect();
     }
+
     public function index()
     {
         $data_dosen = $this->dosenModel->findAll();
@@ -29,13 +28,12 @@ class Dosen extends BaseController
         return view('admin/dosen/show', [
             'title' => 'Detail Dosen',
             'page' => 'dosen',
-            'dosen' => $this->dosenModel->join('users', 'users.id = dosen.user_id')->where(['id' => $id])->first(),
+            'dosen' => $this->dosenModel->join('users', 'users.id = dosen.user_id')->where(['dosen.id' => $id])->first(),
         ]);
     }
 
     public function create()
     {
-
         session();
         return view('admin/dosen/create', [
             'title' => 'Tambah Data Dosen',
@@ -66,13 +64,15 @@ class Dosen extends BaseController
         return redirect()->to('/admin/dosen');
     }
 
-    public function edit($id = null)
+    public function edit($id)
     {
+        $dosen = $this->dosenModel->where(['dosen.id' => $id])->first();
         return view('admin/dosen/edit', [
             'title' => 'Ubah data Dosen',
             'validation' => \Config\Services::validation(),
             'page' => 'dosen',
-            'dosen' => $this->dosenModel->join('users', 'users.id = dosen.user_id')->where(['id' => $id])->first(),
+            'dosen' => $dosen,
+            'user' => $this->db->table('users')->where(['id' => $dosen['user_id']])->get()
         ]);
     }
 

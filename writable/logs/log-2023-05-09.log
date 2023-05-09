@@ -1,0 +1,830 @@
+INFO - 2023-05-09 14:53:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 14:53:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 15:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 15:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 15:42:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 16:51:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:48:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 17:48:13 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\app\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+#7 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit', '1')
+#8 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+#9 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP ...')
+#12 {main}
+CRITICAL - 2023-05-09 17:48:13 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit', '1')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\public\\index.php')
+INFO - 2023-05-09 17:48:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 17:48:38 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\app\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+#7 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit', '1')
+#8 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+#9 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP ...')
+#12 {main}
+CRITICAL - 2023-05-09 17:48:38 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit', '1')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\public\\index.php')
+INFO - 2023-05-09 17:49:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 17:49:18 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\app\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+#7 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit', '1')
+#8 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+#9 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP ...')
+#12 {main}
+CRITICAL - 2023-05-09 17:49:18 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit', '1')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\public\\index.php')
+INFO - 2023-05-09 17:49:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 17:49:49 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\app\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+#7 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit')
+#8 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+#9 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP ...')
+#12 {main}
+CRITICAL - 2023-05-09 17:49:49 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\public\\index.php')
+INFO - 2023-05-09 17:49:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 17:49:57 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\app\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+#7 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit')
+#8 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+#9 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP ...')
+#12 {main}
+CRITICAL - 2023-05-09 17:49:57 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\public\\index.php')
+INFO - 2023-05-09 17:49:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 17:49:58 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\app\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+#7 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit')
+#8 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+#9 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP ...')
+#12 {main}
+CRITICAL - 2023-05-09 17:49:58 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\public\\index.php')
+INFO - 2023-05-09 17:50:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 17:50:12 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\app\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+#7 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit')
+#8 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+#9 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP ...')
+#12 {main}
+CRITICAL - 2023-05-09 17:50:12 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\public\\index.php')
+INFO - 2023-05-09 17:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 17:50:25 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\app\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+#7 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit', '1')
+#8 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+#9 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP ...')
+#12 {main}
+CRITICAL - 2023-05-09 17:50:25 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit', '1')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\public\\index.php')
+INFO - 2023-05-09 17:50:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 17:50:53 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\app\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+#7 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit', '1')
+#8 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+#9 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP ...')
+#12 {main}
+CRITICAL - 2023-05-09 17:50:53 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit', '1')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\public\\index.php')
+INFO - 2023-05-09 17:51:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:51:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:51:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 17:51:25 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\app\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+#7 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('create')
+#8 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+#9 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP ...')
+#12 {main}
+CRITICAL - 2023-05-09 17:51:25 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'create\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'create\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'create\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('create')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\public\\index.php')
+INFO - 2023-05-09 17:51:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:51:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:52:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:52:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:52:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:53:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:53:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:53:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:53:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 17:53:21 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\app\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+#7 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit')
+#8 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+#9 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP ...')
+#12 {main}
+CRITICAL - 2023-05-09 17:53:21 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\public\\index.php')
+INFO - 2023-05-09 17:53:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 17:53:50 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\app\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+#7 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit')
+#8 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+#9 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP ...')
+#12 {main}
+CRITICAL - 2023-05-09 17:53:50 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\public\\index.php')
+INFO - 2023-05-09 17:53:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:53:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:54:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:54:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 17:54:19 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\app\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+#7 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit')
+#8 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+#9 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP ...')
+#12 {main}
+CRITICAL - 2023-05-09 17:54:19 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'edit\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('edit')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\public\\index.php')
+INFO - 2023-05-09 17:54:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 17:54:35 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\app\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+#7 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('create')
+#8 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+#9 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP ...')
+#12 {main}
+CRITICAL - 2023-05-09 17:54:35 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'create\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'create\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'create\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('create')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\public\\index.php')
+INFO - 2023-05-09 17:55:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:56:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:56:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-09 17:56:37 --> mysqli_sql_exception: Column 'id' in where clause is ambiguous in D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\app\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+#7 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('create')
+#8 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+#9 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Haitsam\PHP Projects\Codeigniter 4\perlombaan-fit-telkom\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP ...')
+#12 {main}
+CRITICAL - 2023-05-09 17:56:37 --> Column 'id' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'create\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'create\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = \'create\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `dosen`
+JOIN `users` ON `users`.`id` = `dosen`.`user_id`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Admin\Dosen.php(32): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dosen->show('create')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\public\\index.php')
+INFO - 2023-05-09 17:57:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:57:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:57:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:57:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:57:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:57:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:58:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:58:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:58:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:59:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:59:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:59:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:59:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:59:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:59:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:59:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:59:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:59:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 17:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:00:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:00:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:00:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:00:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:00:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:03:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:04:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:04:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:04:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:04:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:04:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:04:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:04:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:04:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:05:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:07:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:10:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:11:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:11:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:19:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:23:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:31:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:31:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 18:36:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 19:20:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 19:20:45 --> Call to a member function table() on null
+in APPPATH\Controllers\Admin\Dosen.php on line 75.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dosen->edit('1')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\public\\index.php')
+INFO - 2023-05-09 19:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 19:21:35 --> Attempt to read property "user_id" on array
+in APPPATH\Controllers\Admin\Dosen.php on line 75.
+ 1 APPPATH\Controllers\Admin\Dosen.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "user_id" on array', 'D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\app\\Controllers\\Admin\\Dosen.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dosen->edit('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\public\\index.php')
+INFO - 2023-05-09 19:22:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 19:22:17 --> Attempt to read property "user_id" on array
+in APPPATH\Controllers\Admin\Dosen.php on line 75.
+ 1 APPPATH\Controllers\Admin\Dosen.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "user_id" on array', 'D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\app\\Controllers\\Admin\\Dosen.php', 75)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dosen->edit('1')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\public\\index.php')
+INFO - 2023-05-09 19:22:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 19:22:31 --> Attempt to read property "email" on array
+in APPPATH\Views\admin\dosen\edit.php on line 108.
+ 1 APPPATH\Views\admin\dosen\edit.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "email" on array', 'D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\app\\Views\\admin\\dosen\\edit.php', 108)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\app\\Views\\admin\\dosen\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/dosen/edit', [], true)
+ 5 APPPATH\Controllers\Admin\Dosen.php(75): view('admin/dosen/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dosen->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\public\\index.php')
+INFO - 2023-05-09 19:22:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-09 19:22:50 --> Undefined array key "email"
+in APPPATH\Views\admin\dosen\edit.php on line 108.
+ 1 APPPATH\Views\admin\dosen\edit.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "email"', 'D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\app\\Views\\admin\\dosen\\edit.php', 108)
+ 2 SYSTEMPATH\View\View.php(213): include('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\app\\Views\\admin\\dosen\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('admin/dosen/edit', [], true)
+ 5 APPPATH\Controllers\Admin\Dosen.php(75): view('admin/dosen/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Admin\Dosen->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Dosen))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Haitsam\\PHP Projects\\Codeigniter 4\\perlombaan-fit-telkom\\public\\index.php')
+INFO - 2023-05-09 19:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 19:25:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 19:33:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 19:38:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 19:44:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-09 19:44:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
