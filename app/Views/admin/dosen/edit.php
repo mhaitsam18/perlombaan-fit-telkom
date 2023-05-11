@@ -33,6 +33,16 @@
             <div class="card-body">
                 <div class="d-flex justify-content-between align-items-baseline mb-2">
                     <h6 class="card-title mb-0">Ubah data Autentikasi / Akun</h6>
+                    <?php if (session()->has('validation')) : ?>
+                        <div class="alert alert-danger">
+                            <?php
+                            $validation = session('validation');
+                            foreach ($validation->getErrors() as $field => $error) {
+                                echo $error . '<br>';
+                            }
+                            ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <form action="/user" method="post" class="forms-sample">
                     <?= csrf_field() ?>

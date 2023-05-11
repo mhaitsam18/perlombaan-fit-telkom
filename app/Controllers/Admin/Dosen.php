@@ -91,7 +91,6 @@ class Dosen extends BaseController
         ]);
 
         $validation = \Config\Services::validation();
-        dd($validation);
         if (!$check) {
             return redirect()->back()->withInput()->with('validation', $validation);
         }
