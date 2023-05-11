@@ -49,6 +49,7 @@ abstract class BaseController extends Controller
     protected $prodiModel;
     protected $rekognisiModel;
     protected $userModel;
+    // protected $session;
 
     /**
      * Constructor.
@@ -69,6 +70,6 @@ abstract class BaseController extends Controller
         $this->rekognisiModel = new \App\Models\RekognisiModel();
         // $this->userModel = new \App\Models\UserModel();
 
-        session();
+        // $this->session = \Config\Services::session();
     }
 }

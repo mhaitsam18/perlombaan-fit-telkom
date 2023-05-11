@@ -99,4 +99,6 @@ class Session extends BaseConfig
      * DB Group for the database session.
      */
     public ?string $DBGroup = null;
+
+    public $sessionDriver            = 'CodeIgniter\HTTP\Session\Handlers\FileHandler';
 }

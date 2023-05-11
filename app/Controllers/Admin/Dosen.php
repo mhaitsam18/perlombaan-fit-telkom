@@ -92,6 +92,7 @@ class Dosen extends BaseController
 
         $validation = \Config\Services::validation();
         if (!$check) {
+            $this->session->setFlashdata('validation', $validation);
             return redirect()->back()->withInput()->with('validation', $validation);
         }
 
