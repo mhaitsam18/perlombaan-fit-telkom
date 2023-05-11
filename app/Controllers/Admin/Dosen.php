@@ -34,7 +34,6 @@ class Dosen extends BaseController
 
     public function create()
     {
-        session();
         return view('admin/dosen/create', [
             'title' => 'Tambah Data Dosen',
             'validation' => \Config\Services::validation(),
@@ -72,25 +71,43 @@ class Dosen extends BaseController
             'validation' => \Config\Services::validation(),
             'page' => 'dosen',
             'dosen' => $dosen,
-            'user' => $this->db->table('users')->where(['id' => $dosen['user_id']])->get()
+            'user' => $this->db->table('users')->where(['id' => $dosen['user_id']])->get()->getRowArray()
         ]);
     }
 
     public function update($id = null)
     {
         $check = $this->validate([
-            'kode' => 'required|is_unique[dosen.kode,id,{$id}]'
+            'email_telkom' => 'required|is_unique[dosen.email_telkom,id,{$id}]',
+            'nama' => 'required',
+            'nama_gelar' => 'required',
+            'nip' => 'required|is_unique[dosen.nip,id,{$id}]',
+            'nidn' => 'required|is_unique[dosen.nidn,id,{$id}]',
+            'kode' => 'required|is_unique[dosen.kode,id,{$id}]',
+            'telepon' => 'required',
+            'alamat' => 'required',
+            // 'foto' => 'required',
+            'kode' => 'required',
         ]);
 
+        $validation = \Config\Services::validation();
+        dd($validation);
         if (!$check) {
-            $validation = \Config\Services::validation();
-
             return redirect()->back()->withInput()->with('validation', $validation);
         }
 
-
         $this->dosenModel->save([
             'id' => $id,
+            'prodi_id' => $this->request->getVar('prodi_id'),
+            'email_telkom' => $this->request->getVar('email_telkom'),
+            'nama' => $this->request->getVar('nama'),
+            'nama_gelar' => $this->request->getVar('nama_gelar'),
+            'nip' => $this->request->getVar('nip'),
+            'nidn' => $this->request->getVar('nidn'),
+            'kode' => $this->request->getVar('kode'),
+            'telepon' => $this->request->getVar('telepon'),
+            'alamat' => $this->request->getVar('alamat'),
+            'foto' => $this->request->getVar('foto'),
             'kode' => $this->request->getVar('kode')
         ]);
 

@@ -18,149 +18,140 @@
 
 
 <div class="row">
-    <div class="col-lg-12 col-xl-12 stretch-card">
+    <div class="col-md-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <div class="d-flex justify-content-between align-items-baseline mb-2">
-                    <h6 class="card-title mb-0">Ubah data Dosen</h6>
-                </div>
-                <div class="page-content">
-
-                    <nav class="page-breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Forms</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Wizard</li>
-                        </ol>
-                    </nav>
-
-                    <div class="row">
-                        <div class="col-md-12 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Horizontal wizard</h4>
-                                    <p class="text-muted mb-3">Read the <a href="http://www.jquery-steps.com/GettingStarted" target="_blank"> Official jQuery Steps Documentation </a>for a full list of instructions and other options.</p>
-                                    <div id="wizard">
-                                        <h2>First Step</h2>
-                                        <section>
-                                            <h4>First Step</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut nulla nunc. Maecenas arcu sem, hendrerit a tempor quis,
-                                                sagittis accumsan tellus. In hac habitasse platea dictumst. Donec a semper dui. Nunc eget quam libero. Nam at felis metus.
-                                                Nam tellus dolor, tristique ac tempus nec, iaculis quis nisi.</p>
-                                        </section>
-
-                                        <h2>Second Step</h2>
-                                        <section>
-                                            <h4>Second Step</h4>
-                                            <p>Donec mi sapien, hendrerit nec egestas a, rutrum vitae dolor. Nullam venenatis diam ac ligula elementum pellentesque.
-                                                In lobortis sollicitudin felis non eleifend. Morbi tristique tellus est, sed tempor elit. Morbi varius, nulla quis condimentum
-                                                dictum, nisi elit condimentum magna, nec venenatis urna quam in nisi. Integer hendrerit sapien a diam adipiscing consectetur.
-                                                In euismod augue ullamcorper leo dignissim quis elementum arcu porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                Vestibulum leo velit, blandit ac tempor nec, ultrices id diam. Donec metus lacus, rhoncus sagittis iaculis nec, malesuada a diam.
-                                                Donec non pulvinar urna. Aliquam id velit lacus.</p>
-                                        </section>
-
-                                        <h2>Third Step</h2>
-                                        <section>
-                                            <h4>Third Step</h4>
-                                            <p>Morbi ornare tellus at elit ultrices id dignissim lorem elementum. Sed eget nisl at justo condimentum dapibus. Fusce eros justo,
-                                                pellentesque non euismod ac, rutrum sed quam. Ut non mi tortor. Vestibulum eleifend varius ullamcorper. Aliquam erat volutpat.
-                                                Donec diam massa, porta vel dictum sit amet, iaculis ac massa. Sed elementum dui commodo lectus sollicitudin in auctor mauris
-                                                venenatis.</p>
-                                        </section>
-
-                                        <h2>Fourth Step</h2>
-                                        <section>
-                                            <h4>Fourth Step</h4>
-                                            <p>Quisque at sem turpis, id sagittis diam. Suspendisse malesuada eros posuere mauris vehicula vulputate. Aliquam sed sem tortor.
-                                                Quisque sed felis ut mauris feugiat iaculis nec ac lectus. Sed consequat vestibulum purus, imperdiet varius est pellentesque vitae.
-                                                Suspendisse consequat cursus eros, vitae tempus enim euismod non. Nullam ut commodo tortor.</p>
-                                        </section>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12 stretch-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Vertical Wizard</h4>
-                                    <div id="wizardVertical">
-                                        <h2>First Step</h2>
-                                        <section>
-                                            <h4>First Step</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut nulla nunc. Maecenas arcu sem, hendrerit a tempor quis,
-                                                sagittis accumsan tellus. In hac habitasse platea dictumst. Donec a semper dui. Nunc eget quam libero. Nam at felis metus.
-                                                Nam tellus dolor, tristique ac tempus nec, iaculis quis nisi.</p>
-                                        </section>
-
-                                        <h2>Second Step</h2>
-                                        <section>
-                                            <h4>Second Step</h4>
-                                            <p>Donec mi sapien, hendrerit nec egestas a, rutrum vitae dolor. Nullam venenatis diam ac ligula elementum pellentesque.
-                                                In lobortis sollicitudin felis non eleifend. Morbi tristique tellus est, sed tempor elit. Morbi varius, nulla quis condimentum
-                                                dictum, nisi elit condimentum magna, nec venenatis urna quam in nisi. Integer hendrerit sapien a diam adipiscing consectetur.
-                                                In euismod augue ullamcorper leo dignissim quis elementum arcu porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                Vestibulum leo velit, blandit ac tempor nec, ultrices id diam. Donec metus lacus, rhoncus sagittis iaculis nec, malesuada a diam.
-                                                Donec non pulvinar urna. Aliquam id velit lacus.</p>
-                                        </section>
-
-                                        <h2>Third Step</h2>
-                                        <section>
-                                            <h4>Third Step</h4>
-                                            <p>Morbi ornare tellus at elit ultrices id dignissim lorem elementum. Sed eget nisl at justo condimentum dapibus. Fusce eros justo,
-                                                pellentesque non euismod ac, rutrum sed quam. Ut non mi tortor. Vestibulum eleifend varius ullamcorper. Aliquam erat volutpat.
-                                                Donec diam massa, porta vel dictum sit amet, iaculis ac massa. Sed elementum dui commodo lectus sollicitudin in auctor mauris
-                                                venenatis.</p>
-                                        </section>
-
-                                        <h2>Fourth Step</h2>
-                                        <section>
-                                            <h4>Fourth Step</h4>
-                                            <p>Quisque at sem turpis, id sagittis diam. Suspendisse malesuada eros posuere mauris vehicula vulputate. Aliquam sed sem tortor.
-                                                Quisque sed felis ut mauris feugiat iaculis nec ac lectus. Sed consequat vestibulum purus, imperdiet varius est pellentesque vitae.
-                                                Suspendisse consequat cursus eros, vitae tempus enim euismod non. Nullam ut commodo tortor.</p>
-                                        </section>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <form action="/" method="post" class="forms-sample">
+                <h4 class="card-title">Form Data Dosen</h4>
+                <form action="/user/dosen" method="post" id="form" enctype="multipart/form-data">
                     <?= csrf_field() ?>
-                    <input type="hidden" name="_method" value="put">
-                    <div class="mb-3">
-                        <label for="exampleInputUsername1" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="exampleInputUsername1" autocomplete="off" placeholder="Username">
+                    <div class="row" id="">
+                        <div class="col-md-6">
+                            <h2>Autentikasi</h2>
+                            <!-- <div class="mb-3">
+                                <label for="fullname" class="form-label">Nama Lengkap</label>
+                                <input type="text" class="form-control <?= ($validation->hasError('fullname')) ? 'is-invalid' : '' ?>" name="fullname" id="fullname" value="<?= old('fullname') ?>">
+                                <div id="fullname_feedback" class="invalid-feedback">
+                                    <?= $validation->getError('fullname') ?>
+                                </div>
+                            </div> -->
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" class="form-control <?= ($validation->hasError('username')) ? 'is-invalid' : '' ?>" name="username" id="username" value="<?= old('username') ?>">
+                                <div id="username_feedback" class="invalid-feedback">
+                                    <?= $validation->getError('username') ?>
+                                </div>
+                            </div>
+                            <!-- <div class="mb-3">
+                                <label class="form-label">Nomor Handphone:</label>
+                                <input class="form-control <?= ($validation->hasError('no_ponsel')) ? 'is-invalid' : '' ?> mb-4 mb-md-0" data-inputmask-alias="(+62) 899-9999-99999" name="no_ponsel" id="no_ponsel" value="<?= old('no_ponsel') ?>" />
+                                <div id="no_ponsel_feedback" class="invalid-feedback">
+                                    <?= $validation->getError('no_ponsel') ?>
+                                </div>
+                            </div> -->
+                            <div class="mb-3">
+                                <label class="form-label">Email:</label>
+                                <input class="form-control <?= ($validation->hasError('email')) ? 'is-invalid' : '' ?> mb-4 mb-md-0" data-inputmask="'alias': 'email'" name="email" id="email" value="<?= old('email') ?>" />
+                                <div id="email_feedback" class="invalid-feedback">
+                                    <?= $validation->getError('email') ?>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Kata Sandi:</label>
+                                <input type="password" class="form-control <?= ($validation->hasError('password')) ? 'is-invalid' : '' ?> mb-4 mb-md-0" name="password" id="password" />
+                                <div id="password_feedback" class="invalid-feedback">
+                                    <?= $validation->getError('password') ?>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Konfirmasi Kata Sandi:</label>
+                                <input type="password" class="form-control <?= ($validation->hasError('pass_confirm')) ? 'is-invalid' : '' ?>" name="pass_confirm" id="pass_confirm" />
+                                <div id="pass_confirm_feedback" class="invalid-feedback">
+                                    <?= $validation->getError('pass_confirm') ?>
+                                </div>
+                            </div>
+
+                            <!-- <div class="mb-3">
+                                <label class="form-label">Foto Profil:</label>
+                                <input type="file" class="form-control <?= ($validation->hasError('user_image')) ? 'is-invalid' : '' ?> mb-4 mb-md-0" name="user_image" id="user_image" value="<?= old('user_image') ?>" />
+                                <div id="user_image_feedback" class="invalid-feedback">
+                                    <?= $validation->getError('user_image') ?>
+                                </div>
+                            </div> -->
+                        </div>
+
+                        <div class="col-md-6">
+                            <h2>Data Dosen</h2>
+                            <div class="mb-3">
+                                <label for="email_telkom" class="form-label">Email Telkom</label>
+                                <input type="text" class="form-control <?= ($validation->hasError('email_telkom')) ? 'is-invalid' : '' ?> <?= ($validation->hasError('email_telkom')) ? 'is-invalid' : '' ?>" name="email_telkom" id="email_telkom" value="<?= old('email_telkom') ?>">
+                                <div id="email_telkom_feedback" class="invalid-feedback">
+                                    <?= $validation->getError('email_telkom') ?>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nama" class="form-label">Nama Lengkap</label>
+                                <input type="text" class="form-control <?= ($validation->hasError('nama')) ? 'is-invalid' : '' ?>" name="nama" id="nama" value="<?= old('nama') ?>">
+                                <div id="nama_feedback" class="invalid-feedback">
+                                    <?= $validation->getError('nama') ?>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nama_gelar" class="form-label">Nama dan Gelar</label>
+                                <input type="text" class="form-control <?= ($validation->hasError('nama_gelar')) ? 'is-invalid' : '' ?>" name="nama_gelar" id="nama_gelar" value="<?= old('nama_gelar') ?>">
+                                <div id="nama_gelar_feedback" class="invalid-feedback">
+                                    <?= $validation->getError('nama_gelar') ?>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nip" class="form-label">NIP</label>
+                                <input type="text" class="form-control <?= ($validation->hasError('nip')) ? 'is-invalid' : '' ?>" name="nip" id="nip" value="<?= old('nip') ?>">
+                                <div id="nip_feedback" class="invalid-feedback">
+                                    <?= $validation->getError('nip') ?>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nidn" class="form-label">NIDN</label>
+                                <input type="text" class="form-control <?= ($validation->hasError('nidn')) ? 'is-invalid' : '' ?>" name="nidn" id="nidn" value="<?= old('nidn') ?>">
+                                <div id="nidn_feedback" class="invalid-feedback">
+                                    <?= $validation->getError('nidn') ?>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="kode" class="form-label">Kode Dosen</label>
+                                <input type="text" class="form-control <?= ($validation->hasError('kode')) ? 'is-invalid' : '' ?>" name="kode" id="kode" value="<?= old('kode') ?>">
+                                <div id="kode_feedback" class="invalid-feedback">
+                                    <?= $validation->getError('kode') ?>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="telepon" class="form-label">Nomor Kantor</label>
+                                <input type="text" class="form-control <?= ($validation->hasError('telepon')) ? 'is-invalid' : '' ?>" name="telepon" id="telepon" value="<?= old('telepon') ?>">
+                                <div id="telepon_feedback" class="invalid-feedback">
+                                    <?= $validation->getError('telepon') ?>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="foto" class="form-label">Foto Formal</label>
+                                <input type="file" class="form-control <?= ($validation->hasError('foto')) ? 'is-invalid' : '' ?>" name="foto" id="foto">
+                                <div id="foto_feedback" class="invalid-feedback">
+                                    <?= $validation->getError('foto') ?>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="alamat" class="form-label">Alamat</label>
+                                <textarea id="maxlength-textarea" class="form-control <?= ($validation->hasError('alamat')) ? 'is-invalid' : '' ?>" maxlength="150" rows="8" name="alamat"><?= old('alamat') ?></textarea>
+                                <div id="alamat_feedback" class="invalid-feedback">
+                                    <?= $validation->getError('alamat') ?>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="exampleInputUsername1" class="form-label">Nama Lengkap</label>
-                        <input type="text" class="form-control" id="exampleInputUsername1" autocomplete="off" placeholder="Username">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" autocomplete="off" placeholder="Password">
-                    </div>
-                    <div class="form-check mb-3">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">
-                            Remember me
-                        </label>
-                    </div>
-                    <button type="submit" class="btn btn-primary me-2">Submit</button>
-                    <button class="btn btn-secondary">Cancel</button>
                 </form>
             </div>
         </div>
     </div>
-</div> <!-- row -->
+</div>
 
 
 <?= $this->endSection() ?>
@@ -171,4 +162,35 @@
 <!-- End plugin js for this page -->
 
 <script src="/assets-nobleui/js/wizard.js"></script>
+<script>
+    var form = $("#example-form");
+    form.validate({
+        errorPlacement: function errorPlacement(error, element) {
+            element.before(error);
+        },
+        rules: {
+            confirm: {
+                equalTo: "#password"
+            }
+        }
+    });
+    form.children("div").steps({
+        headerTag: "h3",
+        bodyTag: "section",
+        transitionEffect: "slideLeft",
+        onStepChanging: function(event, currentIndex, newIndex) {
+            form.validate().settings.ignore = ":disabled,:hidden";
+            return form.valid();
+        },
+        onFinishing: function(event, currentIndex) {
+            form.validate().settings.ignore = ":disabled";
+            return form.valid();
+        },
+        onFinished: function(event, currentIndex) {
+            alert("Submitted!");
+        }
+    });
+</script>
+
+</script>
 <?= $this->endSection() ?>

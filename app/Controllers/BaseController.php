@@ -68,5 +68,7 @@ abstract class BaseController extends Controller
         $this->prodiModel = new \App\Models\ProdiModel();
         $this->rekognisiModel = new \App\Models\RekognisiModel();
         // $this->userModel = new \App\Models\UserModel();
+
+        session();
     }
 }

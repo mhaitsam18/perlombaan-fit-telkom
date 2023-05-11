@@ -26,7 +26,7 @@
                             <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton7">
-                            <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="plus" class="icon-sm me-2"></i> <span class="">Tambah</span></a>
+                            <a class="dropdown-item d-flex align-items-center" href="/admin/dosen/create"><i data-feather="plus" class="icon-sm me-2"></i> <span class="">Tambah</span></a>
                             <!-- <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Cetak</span></a>
                             <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Unduh</span></a> -->
                         </div>
@@ -57,8 +57,16 @@
                                     <td><?= $row['nidn'] ?></td>
                                     <td><?= $row['alamat'] ?></td>
                                     <td><?= $row['telepon'] ?></td>
-                                    <td><?= $row['foto'] ?></td>
-                                    <td></td>
+                                    <td> <img src="/assets/img/<?= $row['foto'] ?>" class="img-fluid"> </td>
+                                    <td>
+                                        <!-- <a href="/admin/dosen/edit/<?= $row['id'] ?>" class="btn btn-sm btn-primary">Detail</a> -->
+                                        <a href="/admin/dosen/edit/<?= $row['id'] ?>" class="btn btn-sm btn-success d-inline">Ubah</a>
+                                        <form action="/admin/dosen/delete/<?= $row['id'] ?>" method="POST" class="d-inline">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                                            <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
+                                        </form>
+                                    </td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
