@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 02, 2023 at 05:18 PM
+-- Generation Time: May 11, 2023 at 04:15 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -90,7 +90,10 @@ INSERT INTO `auth_groups_users` (`id`, `group_id`, `user_id`) VALUES
 (3, 2, 11),
 (5, 2, 13),
 (6, 2, 14),
-(7, 2, 15);
+(7, 2, 15),
+(8, 2, 20),
+(9, 2, 21),
+(10, 2, 22);
 
 -- --------------------------------------------------------
 
@@ -276,7 +279,19 @@ INSERT INTO `auth_logins` (`id`, `ip_address`, `email`, `user_id`, `date`, `succ
 (162, '::1', 'admin', NULL, '2023-05-02 14:52:22', 0),
 (163, '::1', 'admin', NULL, '2023-05-02 14:52:38', 0),
 (164, '::1', 'admin@gmail.com', NULL, '2023-05-02 14:53:50', 0),
-(165, '::1', 'admin@gmail.com', 12, '2023-05-02 15:15:01', 1);
+(165, '::1', 'admin@gmail.com', 12, '2023-05-02 15:15:01', 1),
+(166, '::1', 'admin@gmail.com', 12, '2023-05-07 13:27:21', 1),
+(167, '::1', 'admin@gmail.com', 12, '2023-05-07 13:32:34', 1),
+(168, '::1', 'admin@gmail.com', 12, '2023-05-07 18:55:37', 1),
+(169, '::1', 'admin@gmail.com', 12, '2023-05-08 10:51:17', 1),
+(170, '::1', 'admin@gmail.com', 12, '2023-05-08 19:31:16', 1),
+(171, '::1', 'admin@gmail.com', 12, '2023-05-09 15:34:04', 1),
+(172, '::1', 'admin@gmail.com', 12, '2023-05-09 18:04:12', 1),
+(173, '::1', 'admin@gmail.com', 12, '2023-05-10 18:26:28', 1),
+(174, '::1', 'admin@gmail.com', 12, '2023-05-11 10:07:16', 1),
+(175, '::1', 'admin@gmail.com', 12, '2023-05-11 13:09:58', 1),
+(176, '::1', 'bismillah', 22, '2023-05-11 13:51:11', 0),
+(177, '::1', 'admin@gmail.com', 12, '2023-05-11 13:51:20', 1);
 
 -- --------------------------------------------------------
 
@@ -312,6 +327,14 @@ CREATE TABLE `auth_reset_attempts` (
   `token` varchar(255) DEFAULT NULL,
   `created_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `auth_reset_attempts`
+--
+
+INSERT INTO `auth_reset_attempts` (`id`, `email`, `ip_address`, `user_agent`, `token`, `created_at`) VALUES
+(1, 'percobaan@gmail.com', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36', NULL, '2023-05-11 12:21:50'),
+(2, 'percobaan@gmail.com', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36', NULL, '2023-05-11 12:23:23');
 
 -- --------------------------------------------------------
 
@@ -367,26 +390,28 @@ CREATE TABLE `dosen` (
 --
 
 INSERT INTO `dosen` (`id`, `user_id`, `prodi_id`, `email_telkom`, `nama`, `nama_gelar`, `nip`, `nidn`, `kode`, `telepon`, `alamat`, `foto`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 2, NULL, NULL, 'Patrick Adolf Telnoni', 'Patrick Adolf Telnoni, S.T., M.T.', '5171', NULL, 'PTI', '+62 822-1928-7517', 'Denpasar', 'user.png', '2022-08-16 09:34:30', '2022-08-16 09:34:30', NULL),
-(2, 3, NULL, NULL, 'Dedy Rahman Wijaya', 'Dr. Dedy Rahman Wijaya, S.T., M.T.', '5172', NULL, 'DRW', '+62 822-1914-7349', 'Denpasar', 'user.png', '2022-08-16 09:34:30', '2022-08-16 09:34:30', NULL),
-(3, 4, NULL, NULL, 'Hanung Nindito Prasetyo', 'Hanung Nindito Prasetyo, S.Si, M.T.', '5173', NULL, 'HNP', '+62 812-2059-9883', 'Denpasar', 'user.png', '2022-08-16 09:34:30', '2022-08-16 09:34:30', NULL),
-(4, 5, NULL, NULL, 'M. Barja Sanjaya', 'M. Barja Sanjaya, S.T., M.T., OCA.', '5174', NULL, 'MBS', '+62 813-1314-1120', 'Denpasar', 'user.png', '2022-08-16 09:34:30', '2022-08-16 09:34:30', NULL),
-(5, 6, NULL, NULL, 'Siska Komala Sari', 'Siska Komala Sari, S.T., M.T.', '5175', NULL, 'SKS', '+62 813-2019-8038', 'Denpasar', 'user.png', '2022-08-16 09:34:30', '2022-08-16 09:34:30', NULL),
-(6, 7, NULL, NULL, 'Wawa Wikusna', 'Wawa Wikusna, S.T., M.Kom.', '5176', NULL, 'WIU', '+62 813-2060-4160', 'Denpasar', 'user.png', '2022-08-16 09:34:30', '2022-08-16 09:34:30', NULL),
-(7, 8, NULL, NULL, 'Elis Hernawati', 'Elis Hernawati, S.T., M.Kom.', '5177', NULL, 'ELT', '+62 822-4003-5983', 'Denpasar', 'user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
-(8, 9, NULL, NULL, 'Inne Gartina Husein', 'Dr. Inne Gartina Husein, S.Kom., M.T.', '5178', NULL, 'INE', '+62 813-9509-6162', 'Denpasar', 'user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
-(9, 10, NULL, NULL, 'Pramuko Aji', 'Pramuko Aji, S.T., M.T.', '5179', NULL, 'PRA', '+62 821-8008-5050', 'Denpasar', 'user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
-(10, 11, NULL, NULL, 'Suryatiningsih', 'Suryatiningsih, S.T., M.T., OCA., C.Ht.', '5180', NULL, 'SYN', '+62 813-2077-6520', 'Denpasar', 'user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
-(11, 12, NULL, NULL, 'Tedi Gunawan', 'Tedi Gunawan, S.T., M.Kom.', '5181', NULL, 'TGN', '+62 812-2199-440', 'Denpasar', 'user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
-(12, 13, NULL, NULL, 'Pikir Wisnu Wijayanto', 'Dr. Pikir Wisnu Wijayanto, S.E., S.Pd.Ing., M.Hum.', '5182', NULL, 'PWW', '+62 851-0387-9393', 'Denpasar', 'user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
-(13, 14, NULL, NULL, 'Ely Rosely', 'Ir. Ely Rosely, M.B.S.', '5183', NULL, 'ELR', '+62 815-1324-4609', 'Denpasar', 'user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
-(14, 15, NULL, NULL, 'Mutia Qana\'a', 'Mutia Qana\'a, S.Psi., M.Psi.', '5184', NULL, 'MQA', '+62 852-2279-7846', 'Denpasar', 'user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
-(15, 16, NULL, NULL, 'Wahyu Hidayat', 'Wahyu Hidayat, S.T., M.T., OCA.', '5185', NULL, 'WHY', '+62 813-2207-2099', 'Denpasar', 'user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
-(16, 17, NULL, NULL, 'Robbi Hendriyanto', 'Robbi Hendriyanto, S.T., M.T.', '5186', NULL, 'RHN', '+62 823-1604-9294', 'Denpasar', 'user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
-(17, 22, NULL, NULL, 'Olivia Istianah', 'Olivia Istianah Amd.Kom', '1222', NULL, 'opi', '08131213123', 'Bandung', 'user.png', '2022-08-16 10:53:00', '2022-08-16 10:53:00', NULL),
-(18, 23, NULL, NULL, 'Rania Athala', 'Rania Athala Amd.Kom', '1235', NULL, 'tat', '08121312321', 'Bandung', 'user.png', '2022-08-16 10:53:00', '2022-08-16 10:53:00', NULL),
-(19, 24, NULL, NULL, 'Rusyda Hanifan', 'Rusyda Hanifan Amd.Kom', '1236', NULL, 'han', '8121312326', 'Bandung', 'user.png', '2022-08-16 10:53:00', '2022-08-16 10:53:00', NULL),
-(20, 25, NULL, NULL, 'ejakkk', 'Ejak Amd.Kom', '1229', NULL, 'ejk', '8131213120', 'Bandung', 'user.png', '2022-08-16 11:37:53', '2022-08-16 11:37:53', NULL);
+(1, 2, NULL, NULL, 'Patrick Adolf Telnoni', 'Patrick Adolf Telnoni, S.T., M.T.', '5171', NULL, 'PTI', '+62 822-1928-7517', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:30', '2022-08-16 09:34:30', NULL),
+(2, 3, NULL, NULL, 'Dedy Rahman Wijaya', 'Dr. Dedy Rahman Wijaya, S.T., M.T.', '5172', NULL, 'DRW', '+62 822-1914-7349', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:30', '2022-08-16 09:34:30', NULL),
+(3, 4, NULL, NULL, 'Hanung Nindito Prasetyo', 'Hanung Nindito Prasetyo, S.Si, M.T.', '5173', NULL, 'HNP', '+62 812-2059-9883', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:30', '2022-08-16 09:34:30', NULL),
+(4, 5, NULL, NULL, 'M. Barja Sanjaya', 'M. Barja Sanjaya, S.T., M.T., OCA.', '5174', NULL, 'MBS', '+62 813-1314-1120', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:30', '2022-08-16 09:34:30', NULL),
+(5, 6, NULL, NULL, 'Siska Komala Sari', 'Siska Komala Sari, S.T., M.T.', '5175', NULL, 'SKS', '+62 813-2019-8038', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:30', '2022-08-16 09:34:30', NULL),
+(6, 7, NULL, NULL, 'Wawa Wikusna', 'Wawa Wikusna, S.T., M.Kom.', '5176', NULL, 'WIU', '+62 813-2060-4160', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:30', '2022-08-16 09:34:30', NULL),
+(7, 8, NULL, NULL, 'Elis Hernawati', 'Elis Hernawati, S.T., M.Kom.', '5177', NULL, 'ELT', '+62 822-4003-5983', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
+(8, 9, NULL, NULL, 'Inne Gartina Husein', 'Dr. Inne Gartina Husein, S.Kom., M.T.', '5178', NULL, 'INE', '+62 813-9509-6162', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
+(9, 10, NULL, NULL, 'Pramuko Aji', 'Pramuko Aji, S.T., M.T.', '5179', NULL, 'PRA', '+62 821-8008-5050', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
+(10, 11, NULL, NULL, 'Suryatiningsih', 'Suryatiningsih, S.T., M.T., OCA., C.Ht.', '5180', NULL, 'SYN', '+62 813-2077-6520', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
+(11, 12, NULL, NULL, 'Tedi Gunawan', 'Tedi Gunawan, S.T., M.Kom.', '5181', NULL, 'TGN', '+62 812-2199-440', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
+(12, 13, NULL, NULL, 'Pikir Wisnu Wijayanto', 'Dr. Pikir Wisnu Wijayanto, S.E., S.Pd.Ing., M.Hum.', '5182', NULL, 'PWW', '+62 851-0387-9393', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
+(13, 14, NULL, NULL, 'Ely Rosely', 'Ir. Ely Rosely, M.B.S.', '5183', NULL, 'ELR', '+62 815-1324-4609', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
+(14, 15, NULL, NULL, 'Mutia Qana\'a', 'Mutia Qana\'a, S.Psi., M.Psi.', '5184', NULL, 'MQA', '+62 852-2279-7846', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
+(15, 16, NULL, NULL, 'Wahyu Hidayat', 'Wahyu Hidayat, S.T., M.T., OCA.', '5185', NULL, 'WHY', '+62 813-2207-2099', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
+(16, 17, NULL, NULL, 'Robbi Hendriyanto', 'Robbi Hendriyanto, S.T., M.T.', '5186', NULL, 'RHN', '+62 823-1604-9294', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
+(17, 22, NULL, NULL, 'Olivia Istianah', 'Olivia Istianah Amd.Kom', '1222', NULL, 'opi', '08131213123', 'Bandung', 'dosen/user.png', '2022-08-16 10:53:00', '2022-08-16 10:53:00', NULL),
+(18, 23, NULL, NULL, 'Rania Athala', 'Rania Athala Amd.Kom', '1235', NULL, 'tat', '08121312321', 'Bandung', 'dosen/user.png', '2022-08-16 10:53:00', '2022-08-16 10:53:00', NULL),
+(19, 24, NULL, NULL, 'Rusyda Hanifan', 'Rusyda Hanifan Amd.Kom', '1236', NULL, 'han', '8121312326', 'Bandung', 'dosen/user.png', '2022-08-16 10:53:00', '2022-08-16 10:53:00', NULL),
+(20, 25, NULL, NULL, 'ejakkk', 'Ejak Amd.Kom', '1229', NULL, 'ejk', '8131213120', 'Bandung', 'dosen/user.png', '2022-08-16 11:37:53', '2022-08-16 11:37:53', NULL),
+(21, 20, NULL, 'bagusbanget@student.telkomuniversity.ac.id', 'percobaan', 'percobaan', '1234', '1234', 'tes', '123123', 'asdad', '2112312', '2023-05-11 05:26:29', '2023-05-11 05:26:29', NULL),
+(23, 22, NULL, 'bismillah@student.telkomunviersity.ac.id', 'bismillah', 'bismillah', '1818123', '01978132', 'BIS', '123128931', 'asdasdsadas', NULL, '2023-05-11 06:29:35', '2023-05-11 06:29:35', NULL);
 
 -- --------------------------------------------------------
 
@@ -476,6 +501,7 @@ INSERT INTO `lomba` (`id`, `poster`, `Title`, `link`, `teks`, `slug`, `Penyeleng
 CREATE TABLE `mahasiswa` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `user_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `nama` varchar(255) DEFAULT NULL,
   `nim` varchar(255) DEFAULT NULL,
   `kelas` varchar(255) DEFAULT NULL,
   `prodi_id` bigint(20) UNSIGNED DEFAULT NULL,
@@ -610,20 +636,25 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `username`, `fullname`, `user_image`, `no_ponsel`, `password_hash`, `nim`, `reset_hash`, `reset_at`, `reset_expires`, `activate_hash`, `status`, `status_message`, `active`, `role`, `force_pass_reset`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(3, 'putripratamisari@gmail.com', 'wtfss', '', NULL, '', '$2y$10$X71.pl6kl47C9s5Cylfbf.KWo8D.KtLgkfj500w5n8xNkl9jO4.bm', 0, NULL, NULL, NULL, '58bacebe221a8515dd62b87f87e6c19b', NULL, NULL, 0, 'admin', 0, '2022-07-12 11:47:50', '2022-07-12 11:47:50', NULL),
-(4, 'dinnabila22@gmail.com', 'dnabilaa', '', NULL, '', '$2y$10$a6xH2XElGeJpu3aAnwu3bO5DUPMYGPDWPXBODBRLl3cUVlA8F7NQm', 0, NULL, NULL, NULL, 'd857f961fecba584da94417503976962', NULL, NULL, 0, 'admin', 0, '2022-07-12 12:47:25', '2022-07-12 12:47:25', NULL),
-(5, 'dnabilaa@student.telkomuniversity.ac.id', 'chenle12', '', NULL, '', '$2y$10$PsnSQjQZLMfgRLW7aEqnr.HppXTAjGdCEBmxrVldVOPVwhD6yeARK', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-07-12 12:51:31', '2022-07-12 12:51:31', NULL),
-(6, 'sekretariat@pkbibengkulu.or.id', 'haechan12', '', NULL, '', '$2y$10$/2JzhQifgv5bPeNPFN9jG./k2EI3N7dXBCibciqVah1tD1l733TKK', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-07-13 22:07:57', '2022-07-13 22:07:57', NULL),
-(7, 'haechan@gmail.com', 'haechan112', '', NULL, '', '$2y$10$exBSmBjBfSSK.hBdt3biv.CXEJ0sTjT1wDZaEy.2ylHfQKEY2sIWO', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-07-13 22:08:39', '2022-07-13 22:08:39', NULL),
-(11, 'test@gmail.com', 'test', '', NULL, '', '$2y$10$7oxARPGmt59sKeqYObyleO9Xf1enwcto/hhza88efGjdJb.2KojhW', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-07-29 08:43:16', '2022-07-29 08:43:16', NULL),
-(12, 'admin@gmail.com', 'admin', '', NULL, '', '$2y$10$DhnccSKG4I4LCttOWhIGue5c/ijmScS0NUbffWF4maC4WInpO1tMS', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-07-29 08:47:25', '2022-07-29 08:47:25', NULL),
-(13, 'dnabila0703@gmail.com', 'wtf', '', NULL, '', '$2y$10$IdrLJborxy69xfY0O/Jet.q.miFcyrlVpANOKYct7AWNZWpODAByq', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-08-18 02:56:34', '2022-08-18 02:56:34', NULL),
-(14, 'putri@gmail.com', 'putri', '', NULL, '', '$2y$10$QjzNa7GXEppNp1UnyZYOteE4v2SV7r4ylc3vDLUxgPivtzidpU90y', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-08-19 09:40:18', '2022-08-19 09:40:18', NULL),
-(15, 'marklee@gmail.com', 'marklee', '', NULL, '', '$2y$10$WriEqYmtkl5a4GTjgEtonucWD41q3cc7OXs9P5AS1u4iDcBoCZw4q', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-08-19 09:45:49', '2022-08-19 09:45:49', NULL),
-(16, 'dnabila07@gmail.com', 'ary', '', NULL, '', '$2y$10$MO51so9NYLHQefzTHUVSUuT7M5ZU9.X3hpxaUyqks0STiNPed.cpm', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-12-20 01:43:52', '2022-12-20 01:43:52', NULL),
-(17, 'ari@gmail.com', 'ari', '', NULL, '', '$2y$10$cuxQvqe96LnFtp3McL.3ueh3ZYeSILboVPdlZHijITa9rFEzrDJDq', 0, NULL, NULL, NULL, '2403c3d949a338c722a283a8876a7027', NULL, NULL, 1, 'admin', 0, '2023-05-02 08:09:29', '2023-05-02 08:09:29', NULL),
-(18, 'ari2@gmail.com', 'ermapedagang', '', NULL, '', '$2y$10$owKZEGhMkZM1.f8Rqwb5fuXhWrKZlRe7vhTCmaaGO/ERMlpXDz2C.', 0, NULL, NULL, NULL, 'faf29adce2d68d8997eb0fe86d6d2b12', NULL, NULL, 1, 'admin', 0, '2023-05-02 08:11:32', '2023-05-02 08:11:32', NULL),
-(19, 'isa@gmail.com', 'isa1234', NULL, NULL, NULL, '$2y$10$DhnccSKG4I4LCttOWhIGue5c/ijmScS0NUbffWF4maC4WInpO1tMS', NULL, NULL, NULL, NULL, '82f0baf9a37c5aad62a4082f67adc999', NULL, NULL, 1, NULL, 0, '2023-05-02 10:55:58', '2023-05-02 10:55:58', NULL);
+(1, 'dandan@gmail.com', 'dandan', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, NULL),
+(2, 'nano@gmail.com', 'nano', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, NULL),
+(3, 'putripratamisari@gmail.com', 'wtfss', '', 'profile/user.png', '', '$2y$10$X71.pl6kl47C9s5Cylfbf.KWo8D.KtLgkfj500w5n8xNkl9jO4.bm', 0, NULL, NULL, NULL, '58bacebe221a8515dd62b87f87e6c19b', NULL, NULL, 0, 'admin', 0, '2022-07-12 11:47:50', '2022-07-12 11:47:50', NULL),
+(4, 'dinnabila22@gmail.com', 'dnabilaa', '', 'profile/user.png', '', '$2y$10$a6xH2XElGeJpu3aAnwu3bO5DUPMYGPDWPXBODBRLl3cUVlA8F7NQm', 0, NULL, NULL, NULL, 'd857f961fecba584da94417503976962', NULL, NULL, 0, 'admin', 0, '2022-07-12 12:47:25', '2022-07-12 12:47:25', NULL),
+(5, 'dnabilaa@student.telkomuniversity.ac.id', 'chenle12', '', 'profile/user.png', '', '$2y$10$PsnSQjQZLMfgRLW7aEqnr.HppXTAjGdCEBmxrVldVOPVwhD6yeARK', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-07-12 12:51:31', '2022-07-12 12:51:31', NULL),
+(6, 'sekretariat@pkbibengkulu.or.id', 'haechan12', '', 'profile/user.png', '', '$2y$10$/2JzhQifgv5bPeNPFN9jG./k2EI3N7dXBCibciqVah1tD1l733TKK', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-07-13 22:07:57', '2022-07-13 22:07:57', NULL),
+(7, 'haechan@gmail.com', 'haechan112', '', 'profile/user.png', '', '$2y$10$exBSmBjBfSSK.hBdt3biv.CXEJ0sTjT1wDZaEy.2ylHfQKEY2sIWO', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-07-13 22:08:39', '2022-07-13 22:08:39', NULL),
+(11, 'test@gmail.com', 'test', '', 'profile/user.png', '', '$2y$10$7oxARPGmt59sKeqYObyleO9Xf1enwcto/hhza88efGjdJb.2KojhW', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-07-29 08:43:16', '2022-07-29 08:43:16', NULL),
+(12, 'admin@gmail.com', 'admin', '', 'profile/admin.png', '', '$2y$10$DhnccSKG4I4LCttOWhIGue5c/ijmScS0NUbffWF4maC4WInpO1tMS', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-07-29 08:47:25', '2022-07-29 08:47:25', NULL),
+(13, 'dnabila0703@gmail.com', 'wtf', '', 'profile/user.png', '', '$2y$10$IdrLJborxy69xfY0O/Jet.q.miFcyrlVpANOKYct7AWNZWpODAByq', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-08-18 02:56:34', '2022-08-18 02:56:34', NULL),
+(14, 'putri@gmail.com', 'putri', '', 'profile/user.png', '', '$2y$10$QjzNa7GXEppNp1UnyZYOteE4v2SV7r4ylc3vDLUxgPivtzidpU90y', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-08-19 09:40:18', '2022-08-19 09:40:18', NULL),
+(15, 'marklee@gmail.com', 'marklee', '', 'profile/user.png', '', '$2y$10$WriEqYmtkl5a4GTjgEtonucWD41q3cc7OXs9P5AS1u4iDcBoCZw4q', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-08-19 09:45:49', '2022-08-19 09:45:49', NULL),
+(16, 'dnabila07@gmail.com', 'ary', '', 'profile/user.png', '', '$2y$10$MO51so9NYLHQefzTHUVSUuT7M5ZU9.X3hpxaUyqks0STiNPed.cpm', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-12-20 01:43:52', '2022-12-20 01:43:52', NULL),
+(17, 'ari@gmail.com', 'ari', '', 'profile/user.png', '', '$2y$10$cuxQvqe96LnFtp3McL.3ueh3ZYeSILboVPdlZHijITa9rFEzrDJDq', 0, NULL, NULL, NULL, '2403c3d949a338c722a283a8876a7027', NULL, NULL, 1, 'admin', 0, '2023-05-02 08:09:29', '2023-05-02 08:09:29', NULL),
+(18, 'ari2@gmail.com', 'ermapedagang', '', 'profile/user.png', '', '$2y$10$owKZEGhMkZM1.f8Rqwb5fuXhWrKZlRe7vhTCmaaGO/ERMlpXDz2C.', 0, NULL, NULL, NULL, 'faf29adce2d68d8997eb0fe86d6d2b12', NULL, NULL, 1, 'admin', 0, '2023-05-02 08:11:32', '2023-05-02 08:11:32', NULL),
+(19, 'isa@gmail.com', 'isa1234', NULL, 'profile/user.png', NULL, '$2y$10$DhnccSKG4I4LCttOWhIGue5c/ijmScS0NUbffWF4maC4WInpO1tMS', NULL, NULL, NULL, NULL, '82f0baf9a37c5aad62a4082f67adc999', NULL, NULL, 1, NULL, 0, '2023-05-02 10:55:58', '2023-05-02 10:55:58', NULL),
+(20, 'percobaan@gmail.com', 'percobaan', NULL, NULL, NULL, '$2y$10$TEEMSVHCqKB8zfyM.4eDiO55ILimSiA8evln9Ysx8GTZ72DzFdTZW', NULL, NULL, NULL, NULL, 'a53c8b4f6dd977f6ab0953ecba38ab48', NULL, NULL, 0, NULL, 0, '2023-05-11 12:26:29', '2023-05-11 12:26:29', NULL),
+(21, 'bagus@gmail.com', 'bagus', NULL, NULL, NULL, '$2y$10$K7Vfg3Ad9hvUcnGzrcc8UuVgIrp3.7j0EQdkbxlSU892Rj8r9J/.G', NULL, NULL, NULL, NULL, '6f26cab4f2e6d4b9c2d7ebfc171721a8', NULL, NULL, 0, NULL, 0, '2023-05-11 13:12:58', '2023-05-11 13:12:58', NULL),
+(22, 'bismillah@gmail.com', 'bismillah', NULL, NULL, NULL, '$2y$10$j0q8KTqluph4W6Dmvr/rMe.p7HrTeTAf/aZ8q.lDatSIUoNMoAu..', NULL, NULL, NULL, NULL, 'e7f914ef568dbc955d23fc343cf508e5', NULL, NULL, 0, NULL, 0, '2023-05-11 13:29:35', '2023-05-11 13:29:35', NULL);
 
 --
 -- Indexes for dumped tables
@@ -766,13 +797,13 @@ ALTER TABLE `auth_groups`
 -- AUTO_INCREMENT for table `auth_groups_users`
 --
 ALTER TABLE `auth_groups_users`
-  MODIFY `id` bigint(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `auth_logins`
 --
 ALTER TABLE `auth_logins`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=166;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=178;
 
 --
 -- AUTO_INCREMENT for table `auth_permissions`
@@ -784,7 +815,7 @@ ALTER TABLE `auth_permissions`
 -- AUTO_INCREMENT for table `auth_reset_attempts`
 --
 ALTER TABLE `auth_reset_attempts`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `auth_tokens`
@@ -796,7 +827,7 @@ ALTER TABLE `auth_tokens`
 -- AUTO_INCREMENT for table `dosen`
 --
 ALTER TABLE `dosen`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `input_mahasiswa`
@@ -838,7 +869,7 @@ ALTER TABLE `prodi`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- Constraints for dumped tables
