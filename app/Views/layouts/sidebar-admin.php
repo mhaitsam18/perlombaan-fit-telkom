@@ -1,7 +1,7 @@
 <nav class="sidebar">
     <div class="sidebar-header">
         <a href="#" class="sidebar-brand">
-            <img src="/assets/img/logos/logo_telyu_lanskap.png" class="img-fluid mx-auto p-4" alt="">
+            <img src="/assets/img/logos/logo_telyu_lanskap.png" class="img-fluid mx-auto p-4" alt="" href="/admin">
         </a>
         <div class="sidebar-toggler not-active">
             <span></span>

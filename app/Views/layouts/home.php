@@ -52,7 +52,7 @@
     <div class="navbar-area">
 
         <div class="mobile-nav">
-            <a href="index.html" class="logo">
+            <a href="/beranda" class="logo">
                 <img src="/assets/img/logos/logo_telyu_lanskap.png" class="logo-one logo-telyu" alt="Logo">
                 <img src="/assets/img/logos/logo_telyu_potrait.png" class="logo-two logo-telyu" alt="Logo">
             </a>
@@ -62,7 +62,7 @@
             <div class="container-fluid">
                 <div class="container-max">
                     <nav class="navbar navbar-expand-md navbar-light ">
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="/beranda">
                             <img src="/assets/img/logos/logo_telyu_lanskap.png" class="logo-one logo-telyu" alt="Logo">
                             <img src="/assets/img/logos/logo_telyu_potrait.png" class="logo-two logo-telyu" alt="Logo">
                         </a>
@@ -196,7 +196,7 @@
                     <div class="col-lg-4 col-sm-6">
                         <div class="footer-widget">
                             <div class="footer-logo">
-                                <a href="index.html">
+                                <a href="/beranda">
                                     <img src="/assets/img/logos/logo_telyu_lanskap.png" alt="Images" loading="lazy">
                                 </a>
                             </div>

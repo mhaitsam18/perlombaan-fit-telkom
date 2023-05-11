@@ -13,11 +13,11 @@
                     <div class="banner-content">
                         <h1>Dashboard Perlombaan D3 Sistem Informasi - Telkom University</h1>
                         <p>
-                            Aenean Sollicitudin, Lorem quis Bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
+                            Website untuk mencari lomba khusus sistem informasi
                         </p>
                         <div class="banner-btn">
-                            <a href="about.html" class="default-btn btn-bg-two border-radius-50">Learn More <i class='bx bx-chevron-right'></i></a>
-                            <a href="contact.html" class="default-btn btn-bg-one border-radius-50 ml-20">Get A Quote <i class='bx bx-chevron-right'></i></a>
+                            <a href="/login" class="default-btn btn-bg-two border-radius-50">Cari Lomba <i class='bx bx-chevron-right'></i></a>
+                            <a href="contact.html" class="default-btn btn-bg-one border-radius-50 ml-20">Register<i class='bx bx-chevron-right'></i></a>
                         </div>
                     </div>
                 </div>
@@ -72,13 +72,15 @@
                 <div class="about-content-2 ml-20">
                     <div class="section-title">
                         <span class="sp-color1">About Us</span>
-                        <h2>Right Partner for Software Innovation</h2>
+                        <h2>Selamat datang di website dashboard perlombaan!</h2>
                         <p>
-                            Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
-                            Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum auctor a ornare odio.
+                            Website ini dibuat untuk membantu mengelola perlombaan secara efektif dan efisien. Kami menyediakan sebuah platform yang menyatukan semua informasi terkait perlombaan yang dikhususkan untuk sistem informasi dalam satu tempat.
+                            <br><br>
+                            Terima kasih telah menggunakan layanan kami, kami berharap website ini dapat membantu Anda dalam mengelola perlombaan dengan lebih baik dan efektif.
+
                         </p>
                     </div>
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-lg-6 col-6">
                             <div class="about-card">
                                 <div class="content">
@@ -97,7 +99,7 @@
                                 <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
