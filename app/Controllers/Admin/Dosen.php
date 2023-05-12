@@ -10,8 +10,9 @@ class Dosen extends BaseController
     private $db;
     public function __construct()
     {
-        $this->db      = \Config\Database::connect();
+        $this->db = \Config\Database::connect();
     }
+
 
     public function index()
     {
@@ -87,12 +88,11 @@ class Dosen extends BaseController
             'telepon' => 'required',
             'alamat' => 'required',
             // 'foto' => 'required',
-            'kode' => 'required',
         ]);
-
         $validation = \Config\Services::validation();
+        // dd($validation);
         if (!$check) {
-            $this->session->setFlashdata('validation', $validation);
+            session()->set(['validation' => $validation]);
             return redirect()->back()->withInput()->with('validation', $validation);
         }
 
