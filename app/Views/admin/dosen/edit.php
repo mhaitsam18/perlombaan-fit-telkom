@@ -26,6 +26,12 @@
     </div>
 </div>
 
+<?php if (session()->getFlashdata('errorss')) : ?>
+    <div class="alert alert-danger">
+        <?php $data = session()->getFlashdata('errorss') ?>
+        <?= dd($data) ?>
+    </div>
+<?php endif; ?>
 
 <div class="row">
     <div class="col-md-6 grid-margin stretch-card">
@@ -96,6 +102,9 @@
                 <form action="/admin/dosen/<?= $dosen['id'] ?>" method="post" class="forms-sample">
                     <?= csrf_field() ?>
                     <input type="hidden" name="_method" value="PUT">
+
+                    <input type="hidden" name="id" value="<?= $dosen['id'] ?>">
+
                     <div class="mb-3">
                         <label for="email_telkom" class="form-label">Email Telkom</label>
                         <input type="text" class="form-control <?= ($validation->hasError('email_telkom')) ? 'is-invalid' : '' ?> <?= ($validation->hasError('email_telkom')) ? 'is-invalid' : '' ?>" name="email_telkom" id="email_telkom" value="<?= old('email_telkom', $dosen['email_telkom']) ?>">
@@ -127,9 +136,15 @@
                     <div class="mb-3">
                         <label for="nidn" class="form-label">NIDN</label>
                         <input type="text" class="form-control <?= ($validation->hasError('nidn')) ? 'is-invalid' : '' ?>" name="nidn" id="nidn" value="<?= old('nidn', $dosen['nidn']) ?>">
-                        <div id="nidn_feedback" class="invalid-feedback">
-                            <?= $validation->getError('nidn') ?>
-                        </div>
+
+
+                        <?php if ($validation->getError('nidn')) : ?>
+                            <div id="nidn_feedback" class="">
+                                asdasdas
+                            </div>
+                        <?php endif; ?>
+
+
                     </div>
                     <div class="mb-3">
                         <label for="kode" class="form-label">Kode Dosen</label>

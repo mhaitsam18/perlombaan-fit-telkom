@@ -56,8 +56,8 @@ $routes->group('admin', ['filter' => 'role:admin'], function ($routes) {
         $routes->get('create', 'Admin\Dosen::create', ['as' => 'create-dosen']);
         $routes->get('edit/(:any)', 'Admin\Dosen::edit/$1', ['as' => 'edit-dosen']);
         $routes->get('(:any)', 'Admin\Dosen::show/$1', ['as' => 'show-dosen']);
-        $routes->post('', 'Admin\Dosen::store', ['as' => 'store-dosen']);
         $routes->put('(:num)', 'Admin\Dosen::update/$i', ['as' => 'update-dosen']);
+        $routes->post('', 'Admin\Dosen::store', ['as' => 'store-dosen']);
         $routes->delete('delete/(:num)', 'Admin\Dosen::delete/$1', ['as' => 'delete-dosen']);
     });
     $routes->group('mahasiswa', static function ($routes) {

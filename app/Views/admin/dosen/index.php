@@ -14,6 +14,12 @@
     </div>
 </div>
 
+<?php if (session()->getFlashdata('success')) : ?>
+    <div class="alert alert-danger">
+        <p><?= session()->getFlashdata('success') ?></p>
+    </div>
+<?php endif; ?>
+
 
 <div class="row">
     <div class="col-lg-12 col-xl-12 stretch-card">

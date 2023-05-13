@@ -16,13 +16,20 @@
     </div>
 </div>
 
+<?php if (session()->getFlashdata('error')) : ?>
+    asdasdas
+    <div class="alert alert-danger">
+        <?= session()->getFlashdata('error') ?>
+    </div>
+<?php endif ?>
+
 
 <div class="row">
     <div class="col-md-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Form Data Dosen</h4>
-                <form action="/user/dosen" method="post" id="form" enctype="multipart/form-data">
+                <form action="/admin/dosen/" method="post" id="form" enctype="multipart/form-data">
                     <?= csrf_field() ?>
                     <div class="row" id="">
                         <div class="col-md-6">
