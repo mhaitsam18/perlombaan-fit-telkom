@@ -96,15 +96,15 @@ class Dosen extends BaseController
         $validation = \Config\Services::validation();
         // dd($validation);
         if (!$check) {
-            return redirect()->back()->withInput()->with('validation', $validation);
-            // $dosen = $this->dosenModel->where(['dosen.id' => $this->request->getVar('id')])->first();
-            // return view('admin/dosen/edit', [
-            //     'title' => 'Ubah data Dosen',
-            //     'validation' => $validation,
-            //     'page' => 'dosen',
-            //     'dosen' => $dosen,
-            //     'user' => $this->db->table('users')->where(['id' => $dosen['user_id']])->get()->getRowArray()
-            // ]);
+            // return redirect()->back()->withInput()->with('validation', $validation);
+            $dosen = $this->dosenModel->where(['dosen.id' => $this->request->getVar('id')])->first();
+            return view('admin/dosen/edit', [
+                'title' => 'Ubah data Dosen',
+                'validation' => $validation,
+                'page' => 'dosen',
+                'dosen' => $dosen,
+                'user' => $this->db->table('users')->where(['id' => $dosen['user_id']])->get()->getRowArray()
+            ]);
         }
 
         $this->dosenModel->save([

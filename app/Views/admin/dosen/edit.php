@@ -34,7 +34,7 @@
 <?php endif; ?>
 
 <div class="row">
-    <div class="col-md-6 grid-margin stretch-card">
+    <!-- <div class="col-md-6 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
                 <div class="d-flex justify-content-between align-items-baseline mb-2">
@@ -92,8 +92,8 @@
                 </form>
             </div>
         </div>
-    </div>
-    <div class="col-md-6 grid-margin stretch-card">
+    </div> -->
+    <div class="col-md-9 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
                 <div class="d-flex justify-content-between align-items-baseline mb-2">
