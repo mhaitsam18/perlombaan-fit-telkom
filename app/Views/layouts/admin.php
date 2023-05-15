@@ -34,6 +34,12 @@ License: For each use you must have a valid license purchased only from above li
     <link rel="stylesheet" href="/assets-nobleui/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
     <!-- End plugin css for this page -->
 
+
+
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="/assets-nobleui/vendors/sweetalert2/sweetalert2.min.css">
+    <!-- End plugin css for this page -->
+
     <!-- inject:css -->
     <link rel="stylesheet" href="/assets-nobleui/fonts/feather-font/css/iconfont.css">
     <link rel="stylesheet" href="/assets-nobleui/vendors/flag-icon-css/css/flag-icon.min.css">
@@ -62,6 +68,12 @@ License: For each use you must have a valid license purchased only from above li
             <!-- partial -->
 
             <div class="page-content">
+                <?php if (session()->getFlashdata('success')) : ?>
+                    <div class="flash-data" data-success="<?= session()->getFlashdata('success') ?>"></div>
+                <?php endif; ?>
+                <?php if (session()->getFlashdata('fail')) : ?>
+                    <div class="flash-data" data-fail="<?= session()->getFlashdata('fail') ?>"></div>
+                <?php endif; ?>
                 <?= $this->renderSection('content') ?>
 
 
@@ -101,7 +113,89 @@ License: For each use you must have a valid license purchased only from above li
     <script src="/assets-nobleui/js/dashboard-light.js"></script>
     <script src="/assets-nobleui/js/datepicker.js"></script>
     <!-- End custom js for this page -->
+    <!-- Plugin js for this page -->
+    <script src="/assets-nobleui/vendors/sweetalert2/sweetalert2.min.js"></script>
+    <!-- End plugin js for this page -->
+    <script>
+        const success = $('.flash-data').data('success');
+        const fail = $('.flash-data').data('fail');
+        if (success) {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+
+            Toast.fire({
+                icon: 'success',
+                title: success
+            })
+        }
+        if (fail) {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+
+            Toast.fire({
+                icon: 'error',
+                title: fail
+            })
+        }
+
+
+        $('.tombol-hapus').on('click', function(e) {
+            e.preventDefault();
+            const formAction = $(this).closest('form').attr('action');
+            Swal.fire({
+                title: 'Apakah Anda Yakin?',
+                text: "Data ini akan dihapus!",
+                icon: 'warning',
+                confirmButtonText: 'Hapus',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $(this).closest('form').submit();
+                }
+            });
+        });
+
+        function previewImg() {
+            const image = document.querySelector('.img-input');
+            const imageLabel = document.querySelector('.img-label');
+            const imgPreview = document.querySelector('.img-preview');
+
+            if (imageLabel) {
+                imageLabel.textContent = image.files[0].name;
+            }
+
+            const fileImage = new FileReader();
+            fileImage.readAsDataURL(image.files[0]);
+
+            fileImage.onload = function(e) {
+                imgPreview.src = e.target.result;
+            }
+        }
+    </script>
+
+
     <?= $this->renderSection('script') ?>
+
 
 </body>
 

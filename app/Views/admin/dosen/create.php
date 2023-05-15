@@ -17,7 +17,6 @@
 </div>
 
 <?php if (session()->getFlashdata('error')) : ?>
-    asdasdas
     <div class="alert alert-danger">
         <?= session()->getFlashdata('error') ?>
     </div>
@@ -32,15 +31,15 @@
                 <form action="/admin/dosen/" method="post" id="form" enctype="multipart/form-data">
                     <?= csrf_field() ?>
                     <div class="row" id="">
-                        <div class="col-md-6">
+                        <!-- <div class="col-md-6">
                             <h2>Autentikasi</h2>
-                            <!-- <div class="mb-3">
+                            <div class="mb-3">
                                 <label for="fullname" class="form-label">Nama Lengkap</label>
                                 <input type="text" class="form-control <?= ($validation->hasError('fullname')) ? 'is-invalid' : '' ?>" name="fullname" id="fullname" value="<?= old('fullname') ?>">
                                 <div id="fullname_feedback" class="invalid-feedback">
                                     <?= $validation->getError('fullname') ?>
                                 </div>
-                            </div> -->
+                            </div>
                             <div class="mb-3">
                                 <label for="username" class="form-label">Username</label>
                                 <input type="text" class="form-control <?= ($validation->hasError('username')) ? 'is-invalid' : '' ?>" name="username" id="username" value="<?= old('username') ?>">
@@ -48,13 +47,13 @@
                                     <?= $validation->getError('username') ?>
                                 </div>
                             </div>
-                            <!-- <div class="mb-3">
+                            <div class="mb-3">
                                 <label class="form-label">Nomor Handphone:</label>
                                 <input class="form-control <?= ($validation->hasError('no_ponsel')) ? 'is-invalid' : '' ?> mb-4 mb-md-0" data-inputmask-alias="(+62) 899-9999-99999" name="no_ponsel" id="no_ponsel" value="<?= old('no_ponsel') ?>" />
                                 <div id="no_ponsel_feedback" class="invalid-feedback">
                                     <?= $validation->getError('no_ponsel') ?>
                                 </div>
-                            </div> -->
+                            </div>
                             <div class="mb-3">
                                 <label class="form-label">Email:</label>
                                 <input class="form-control <?= ($validation->hasError('email')) ? 'is-invalid' : '' ?> mb-4 mb-md-0" data-inputmask="'alias': 'email'" name="email" id="email" value="<?= old('email') ?>" />
@@ -77,17 +76,17 @@
                                 </div>
                             </div>
 
-                            <!-- <div class="mb-3">
+                            <div class="mb-3">
                                 <label class="form-label">Foto Profil:</label>
                                 <input type="file" class="form-control <?= ($validation->hasError('user_image')) ? 'is-invalid' : '' ?> mb-4 mb-md-0" name="user_image" id="user_image" value="<?= old('user_image') ?>" />
                                 <div id="user_image_feedback" class="invalid-feedback">
                                     <?= $validation->getError('user_image') ?>
                                 </div>
-                            </div> -->
-                        </div>
+                            </div>
+                        </div> -->
 
                         <div class="col-md-6">
-                            <h2>Data Dosen</h2>
+                            <!-- <h2>Data Dosen</h2> -->
                             <div class="mb-3">
                                 <label for="email_telkom" class="form-label">Email Telkom</label>
                                 <input type="text" class="form-control <?= ($validation->hasError('email_telkom')) ? 'is-invalid' : '' ?> <?= ($validation->hasError('email_telkom')) ? 'is-invalid' : '' ?>" name="email_telkom" id="email_telkom" value="<?= old('email_telkom') ?>">
@@ -139,7 +138,10 @@
                             </div>
                             <div class="mb-3">
                                 <label for="foto" class="form-label">Foto Formal</label>
-                                <input type="file" class="form-control <?= ($validation->hasError('foto')) ? 'is-invalid' : '' ?>" name="foto" id="foto">
+                                <div class="col-sm-4 m-1">
+                                    <img src="/assets/img/dosen/user.png" class="img-thumbnail img-preview">
+                                </div>
+                                <input type="file" class="form-control img-input <?= ($validation->hasError('foto')) ? 'is-invalid' : '' ?>" name="foto" id="foto" onchange="previewImg()">
                                 <div id="foto_feedback" class="invalid-feedback">
                                     <?= $validation->getError('foto') ?>
                                 </div>

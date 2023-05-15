@@ -15,7 +15,7 @@
 </div>
 
 <?php if (session()->getFlashdata('success')) : ?>
-    <div class="alert alert-danger">
+    <div class="alert alert-success">
         <p><?= session()->getFlashdata('success') ?></p>
     </div>
 <?php endif; ?>
@@ -70,7 +70,7 @@
                                         <form action="/admin/dosen/delete/<?= $row['id'] ?>" method="POST" class="d-inline">
                                             <input type="hidden" name="_method" value="DELETE">
                                             <input type="hidden" name="id" value="<?= $row['id'] ?>">
-                                            <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
+                                            <button type="submit" class="btn btn-sm btn-danger tombol-hapus">Hapus</button>
                                         </form>
                                     </td>
                                 </tr>

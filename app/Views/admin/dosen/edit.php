@@ -99,9 +99,10 @@
                 <div class="d-flex justify-content-between align-items-baseline mb-2">
                     <h6 class="card-title mb-0">Ubah data Dosen</h6>
                 </div>
-                <form action="/admin/dosen/<?= $dosen['id'] ?>" method="post" class="forms-sample">
+                <form action="/admin/dosen/<?= $dosen['id'] ?>" method="post" class="forms-sample" enctype="multipart/form-data">
                     <?= csrf_field() ?>
                     <input type="hidden" name="_method" value="PUT">
+                    <input type="hidden" name="fotoLama" value="<?= $dosen['foto'] ?>">
 
                     <input type="hidden" name="id" value="<?= $dosen['id'] ?>">
 
@@ -162,7 +163,10 @@
                     </div>
                     <div class="mb-3">
                         <label for="foto" class="form-label">Foto Formal</label>
-                        <input type="text" class="form-control <?= ($validation->hasError('foto')) ? 'is-invalid' : '' ?>" name="foto" id="foto" value="<?= old('foto', $dosen['foto']) ?>">
+                        <div class="col-sm-4 m-1">
+                            <img src="/assets/img/<?= $dosen['foto'] ?>" class="img-thumbnail img-preview">
+                        </div>
+                        <input type="file" class="form-control img-input <?= ($validation->hasError('foto')) ? 'is-invalid' : '' ?>" name="foto" id="foto" value="<?= old('foto', $dosen['foto']) ?>" onchange="previewImg()">
                         <div id="foto_feedback" class="invalid-feedback">
                             <?= $validation->getError('foto') ?>
                         </div>

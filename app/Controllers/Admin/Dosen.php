@@ -49,17 +49,45 @@ class Dosen extends BaseController
     public function store()
     {
         $check = $this->validate([
-            'kode' => 'required|is_unique[dosen.kode]'
+            'email_telkom' => 'required|is_unique[dosen.email_telkom]',
+            'nama' => 'required',
+            'nama_gelar' => 'required',
+            'nip' => 'required|is_unique[dosen.nip]',
+            'nidn' => 'required|is_unique[dosen.nidn]',
+            'kode' => 'required|is_unique[dosen.kode]',
+            'telepon' => 'required',
+            'alamat' => 'required',
+            'foto' => 'uploaded[foto]|is_image[foto]',
         ]);
 
-        if (!$check) {
-            $validation = \Config\Services::validation();
 
-            return redirect()->back()->withInput()->with('error', $validation->listErrors());
+
+        if (!$check) {
+            return view('admin/dosen/create', [
+                'title' => 'Tambah Data Dosen',
+                'validation' => \Config\Services::validation(),
+                'page' => 'dosen',
+            ]);
+            // $validation = \Config\Services::validation();
+            // return redirect()->back()->withInput()->with('error', $validation->listErrors());
+            // return redirect()->back()->withInput();
         }
 
+        $file = $this->request->getFile('foto');
+        $nama_file = 'dosen/' . $file->getRandomName();
+        $file->move('assets/img/dosen');
 
         $this->dosenModel->save([
+            'prodi_id' => $this->request->getVar('prodi_id'),
+            'email_telkom' => $this->request->getVar('email_telkom'),
+            'nama' => $this->request->getVar('nama'),
+            'nama_gelar' => $this->request->getVar('nama_gelar'),
+            'nip' => $this->request->getVar('nip'),
+            'nidn' => $this->request->getVar('nidn'),
+            'kode' => $this->request->getVar('kode'),
+            'telepon' => $this->request->getVar('telepon'),
+            'alamat' => $this->request->getVar('alamat'),
+            'foto' => $nama_file,
             'kode' => $this->request->getVar('kode')
         ]);
 
@@ -83,15 +111,15 @@ class Dosen extends BaseController
     public function update($id = null)
     {
         $check = $this->validate([
-            'email_telkom' => 'required|is_unique[dosen.email_telkom,id,{$id}]',
+            'email_telkom' => 'required|is_unique[dosen.email_telkom,id,{id}]',
             'nama' => 'required',
             'nama_gelar' => 'required',
-            'nip' => 'required|is_unique[dosen.nip,id,{$id}]',
-            'nidn' => 'required|is_unique[dosen.nidn,id,{$id}]',
-            'kode' => 'required|is_unique[dosen.kode,id,{$id}]',
+            'nip' => 'required|is_unique[dosen.nip,id,{id}]',
+            'nidn' => 'required|is_unique[dosen.nidn,id,{id}]',
+            'kode' => 'required|is_unique[dosen.kode,id,{id}]',
             'telepon' => 'required',
             'alamat' => 'required',
-            // 'foto' => 'required',
+            'foto' => 'is_image[foto]',
         ]);
         $validation = \Config\Services::validation();
         // dd($validation);
@@ -107,6 +135,17 @@ class Dosen extends BaseController
             ]);
         }
 
+
+        $file = $this->request->getFile('foto');
+
+        if ($file->getError() == 4) {
+            $nama_file = $this->request->getVar('fotoLama');
+        } else {
+            $nama_file = 'dosen/' . $file->getRandomName();
+            $file->move('assets/img/dosen');
+        }
+
+
         $this->dosenModel->save([
             'id' => $id,
             'prodi_id' => $this->request->getVar('prodi_id'),
@@ -118,11 +157,11 @@ class Dosen extends BaseController
             'kode' => $this->request->getVar('kode'),
             'telepon' => $this->request->getVar('telepon'),
             'alamat' => $this->request->getVar('alamat'),
-            'foto' => $this->request->getVar('foto'),
+            'foto' => $nama_file,
             'kode' => $this->request->getVar('kode')
         ]);
 
-        session()->setFlashdata('success', 'Data dosen berhasil ditambahkan');
+        session()->setFlashdata('success', 'Data dosen berhasil diubah');
 
         return redirect()->to('/admin/dosen');
     }
