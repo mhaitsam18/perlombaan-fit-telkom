@@ -32,7 +32,7 @@ class Mahasiswa extends BaseController
         return view('admin/mahasiswa/show', [
             'title' => 'Detail Mahasiswa',
             'page' => 'mahasiswa',
-            'mahasiswa' => $this->mahasiswaModel->join('users', 'users.id = mahasiswa.user_id')->where(['mahasiswa.id' => $id])->first(),
+            'mahasiswa' => $this->mahasiswaModel->find($id),
         ]);
     }
 
@@ -51,7 +51,7 @@ class Mahasiswa extends BaseController
         $check = $this->validate([
             'email_telkom' => 'required|is_unique[mahasiswa.email_telkom]',
             'nama' => 'required',
-            'nim' => 'required|is_unique[mahasiswa.nim]',
+            'nim' => 'required|numeric|is_unique[mahasiswa.nim]',
             'kelas' => 'required',
             'foto' => 'uploaded[foto]|is_image[foto]',
         ]);
@@ -93,7 +93,7 @@ class Mahasiswa extends BaseController
 
     public function edit($id)
     {
-        $mahasiswa = $this->mahasiswaModel->where(['mahasiswa.id' => $id])->first();
+        $mahasiswa = $this->mahasiswaModel->find($id);
         return view('admin/mahasiswa/edit', [
             'title' => 'Ubah data Mahasiswa',
             'validation' => $this->validation,
@@ -108,7 +108,7 @@ class Mahasiswa extends BaseController
         $check = $this->validate([
             'email_telkom' => 'required|is_unique[mahasiswa.email_telkom,id,{id}]',
             'nama' => 'required',
-            'nim' => 'required|is_unique[mahasiswa.nim,id,{id}]',
+            'nim' => 'required|numeric|is_unique[mahasiswa.nim,id,{id}]',
             'kelas' => 'required',
             'foto' => 'is_image[foto]',
         ]);
@@ -116,7 +116,7 @@ class Mahasiswa extends BaseController
         // dd($validation);
         if (!$check) {
             // return redirect()->back()->withInput()->with('validation', $validation);
-            $mahasiswa = $this->mahasiswaModel->where(['mahasiswa.id' => $this->request->getVar('id')])->first();
+            $mahasiswa = $this->mahasiswaModel->find($this->request->getVar('id'));
             return view('admin/mahasiswa/edit', [
                 'title' => 'Ubah data mahasiswa',
                 'validation' => $validation,

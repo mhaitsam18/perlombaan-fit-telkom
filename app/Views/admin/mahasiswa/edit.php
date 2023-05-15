@@ -121,18 +121,18 @@
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="nip" class="form-label">Nomor Induk Mahasiswa</label>
-                        <input type="text" class="form-control <?= ($validation->hasError('nip')) ? 'is-invalid' : '' ?>" name="nip" id="nip" value="<?= old('nip', $mahasiswa['nip']) ?>">
-                        <div id="nip_feedback" class="invalid-feedback">
-                            <?= $validation->getError('nip') ?>
+                        <label for="nim" class="form-label">Nomor Induk Mahasiswa</label>
+                        <input type="text" class="form-control <?= ($validation->hasError('nim')) ? 'is-invalid' : '' ?>" name="nim" id="nim" value="<?= old('nim', $mahasiswa['nim']) ?>">
+                        <div id="nim_feedback" class="invalid-feedback">
+                            <?= $validation->getError('nim') ?>
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="nidn" class="form-label">Kelas</label>
-                        <input type="text" class="form-control <?= ($validation->hasError('nidn')) ? 'is-invalid' : '' ?>" name="nidn" id="nidn" value="<?= old('nidn', $mahasiswa['nidn']) ?>">
+                        <label for="kelas" class="form-label">Kelas</label>
+                        <input type="text" class="form-control <?= ($validation->hasError('kelas')) ? 'is-invalid' : '' ?>" name="kelas" id="kelas" value="<?= old('kelas', $mahasiswa['kelas']) ?>">
 
-                        <div id="nip_feedback" class="invalid-feedback">
-                            <?= $validation->getError('nidn') ?>
+                        <div id="kelas_feedback" class="invalid-feedback">
+                            <?= $validation->getError('kelas') ?>
                         </div>
                     </div>
                     <div class="mb-3">

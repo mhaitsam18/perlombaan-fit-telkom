@@ -137,15 +137,9 @@
                     <div class="mb-3">
                         <label for="nidn" class="form-label">NIDN</label>
                         <input type="text" class="form-control <?= ($validation->hasError('nidn')) ? 'is-invalid' : '' ?>" name="nidn" id="nidn" value="<?= old('nidn', $dosen['nidn']) ?>">
-
-
-                        <?php if ($validation->getError('nidn')) : ?>
-                            <div id="nidn_feedback" class="">
-                                asdasdas
-                            </div>
-                        <?php endif; ?>
-
-
+                        <div id="nidn_feedback" class="invalid-feedback">
+                            <?= $validation->getError('nidn') ?>
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="kode" class="form-label">Kode Dosen</label>

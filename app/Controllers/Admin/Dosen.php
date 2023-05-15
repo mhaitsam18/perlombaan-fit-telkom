@@ -32,7 +32,7 @@ class Dosen extends BaseController
         return view('admin/dosen/show', [
             'title' => 'Detail Dosen',
             'page' => 'dosen',
-            'dosen' => $this->dosenModel->join('users', 'users.id = dosen.user_id')->where(['dosen.id' => $id])->first(),
+            'dosen' => $this->dosenModel->find($id),
         ]);
     }
 
@@ -98,7 +98,7 @@ class Dosen extends BaseController
 
     public function edit($id)
     {
-        $dosen = $this->dosenModel->where(['dosen.id' => $id])->first();
+        $dosen = $this->dosenModel->find($id);
         return view('admin/dosen/edit', [
             'title' => 'Ubah data Dosen',
             'validation' => $this->validation,
@@ -114,10 +114,10 @@ class Dosen extends BaseController
             'email_telkom' => 'required|is_unique[dosen.email_telkom,id,{id}]',
             'nama' => 'required',
             'nama_gelar' => 'required',
-            'nip' => 'required|is_unique[dosen.nip,id,{id}]',
-            'nidn' => 'required|is_unique[dosen.nidn,id,{id}]',
-            'kode' => 'required|is_unique[dosen.kode,id,{id}]',
-            'telepon' => 'required',
+            'nip' => 'required|numeric|is_unique[dosen.nip,id,{id}]',
+            'nidn' => 'required|numeric|is_unique[dosen.nidn,id,{id}]',
+            'kode' => 'required|numeric|is_unique[dosen.kode,id,{id}]',
+            'telepon' => 'required|numeric',
             'alamat' => 'required',
             'foto' => 'is_image[foto]',
         ]);
@@ -125,7 +125,7 @@ class Dosen extends BaseController
         // dd($validation);
         if (!$check) {
             // return redirect()->back()->withInput()->with('validation', $validation);
-            $dosen = $this->dosenModel->where(['dosen.id' => $this->request->getVar('id')])->first();
+            $dosen = $this->dosenModel->find($this->request->getVar('id'));
             return view('admin/dosen/edit', [
                 'title' => 'Ubah data Dosen',
                 'validation' => $validation,
