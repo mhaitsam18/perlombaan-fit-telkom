@@ -34,6 +34,10 @@ License: For each use you must have a valid license purchased only from above li
     <link rel="stylesheet" href="/assets-nobleui/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
     <!-- End plugin css for this page -->
 
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="/assets-nobleui/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <!-- End plugin css for this page -->
+
 
 
     <!-- Plugin css for this page -->
@@ -96,6 +100,14 @@ License: For each use you must have a valid license purchased only from above li
     <script src="/assets-nobleui/vendors/core/core.js"></script>
     <!-- endinject -->
 
+
+    <!-- Plugin js for this page -->
+    <script src="/assets-nobleui/vendors/datatables.net/jquery.dataTables.js"></script>
+    <script src="/assets-nobleui/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <!-- End plugin js for this page -->
+
+
+
     <!-- Plugin js for this page -->
     <script src="/assets-nobleui/vendors/chartjs/Chart.min.js"></script>
     <script src="/assets-nobleui/vendors/jquery.flot/jquery.flot.js"></script>
@@ -116,6 +128,11 @@ License: For each use you must have a valid license purchased only from above li
     <!-- Plugin js for this page -->
     <script src="/assets-nobleui/vendors/sweetalert2/sweetalert2.min.js"></script>
     <!-- End plugin js for this page -->
+
+    <!-- Custom js for this page -->
+    <script src="/assets-nobleui/js/data-table.js"></script>
+    <!-- End custom js for this page -->
+
     <script>
         const success = $('.flash-data').data('success');
         const fail = $('.flash-data').data('fail');
