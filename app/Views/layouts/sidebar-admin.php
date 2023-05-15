@@ -38,14 +38,14 @@
                 </a>
             </li>
             <li class="nav-item nav-category">Perlombaan</li>
-            <li class="nav-item <?= ($page == 'prodi') ? 'active' : '' ?>">
-                <a href="<?= route_to('admin-prodi') ?>" class="nav-link">
+            <li class="nav-item <?= ($page == 'lomba') ? 'active' : '' ?>">
+                <a href="<?= route_to('admin-lomba') ?>" class="nav-link">
                     <i class="link-icon" data-feather="users"></i>
                     <span class="link-title">Data Lomba</span>
                 </a>
             </li>
-            <li class="nav-item <?= ($page == 'prodi') ? 'active' : '' ?>">
-                <a href="<?= route_to('admin-prodi') ?>" class="nav-link">
+            <li class="nav-item <?= ($page == 'rekognisi') ? 'active' : '' ?>">
+                <a href="<?= route_to('admin-rekognisi') ?>" class="nav-link">
                     <i class="link-icon" data-feather="users"></i>
                     <span class="link-title">Rekognisi</span>
                 </a>
