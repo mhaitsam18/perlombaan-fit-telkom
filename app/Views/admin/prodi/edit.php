@@ -68,7 +68,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="keterangan" class="form-label">Keterangan</label>
-                        <textarea id="maxlength-textarea" class="form-control <?= ($validation->hasError('keterangan')) ? 'is-invalid' : '' ?>" maxlength="150" rows="8" name="keterangan"><?= old('keterangan', $dosen['keterangan']) ?></textarea>
+                        <textarea id="maxlength-textarea" class="form-control <?= ($validation->hasError('keterangan')) ? 'is-invalid' : '' ?>" maxlength="150" rows="8" name="keterangan"><?= old('keterangan', $prodi['keterangan']) ?></textarea>
                         <div id="keterangan_feedback" class="invalid-feedback">
                             <?= $validation->getError('keterangan') ?>
                         </div>

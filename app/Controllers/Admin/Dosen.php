@@ -116,8 +116,8 @@ class Dosen extends BaseController
             'nama_gelar' => 'required',
             'nip' => 'required|numeric|is_unique[dosen.nip,id,{id}]',
             'nidn' => 'required|numeric|is_unique[dosen.nidn,id,{id}]',
-            'kode' => 'required|numeric|is_unique[dosen.kode,id,{id}]',
-            'telepon' => 'required|numeric',
+            'kode' => 'required|is_unique[dosen.kode,id,{id}]',
+            'telepon' => 'required',
             'alamat' => 'required',
             'foto' => 'is_image[foto]',
         ]);

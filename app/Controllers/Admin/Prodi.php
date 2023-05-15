@@ -112,17 +112,6 @@ class Prodi extends BaseController
             ]);
         }
 
-
-        $file = $this->request->getFile('foto');
-
-        if ($file->getError() == 4) {
-            $nama_file = $this->request->getVar('fotoLama');
-        } else {
-            $nama_file = 'prodi/' . $file->getRandomName();
-            $file->move('assets/img/prodi');
-        }
-
-
         $this->prodiModel->save([
             'id' => $id,
             'kode' => $this->request->getVar('kode'),
