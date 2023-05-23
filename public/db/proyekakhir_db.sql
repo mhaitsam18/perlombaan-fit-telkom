@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 11, 2023 at 04:15 PM
+-- Generation Time: May 23, 2023 at 07:30 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -291,7 +291,29 @@ INSERT INTO `auth_logins` (`id`, `ip_address`, `email`, `user_id`, `date`, `succ
 (174, '::1', 'admin@gmail.com', 12, '2023-05-11 10:07:16', 1),
 (175, '::1', 'admin@gmail.com', 12, '2023-05-11 13:09:58', 1),
 (176, '::1', 'bismillah', 22, '2023-05-11 13:51:11', 0),
-(177, '::1', 'admin@gmail.com', 12, '2023-05-11 13:51:20', 1);
+(177, '::1', 'admin@gmail.com', 12, '2023-05-11 13:51:20', 1),
+(178, '::1', 'admin@gmail.com', 12, '2023-05-11 14:21:35', 1),
+(179, '::1', 'admin@gmail.com', 12, '2023-05-11 15:21:15', 1),
+(180, '::1', 'admin@gmail.com', 12, '2023-05-11 15:33:11', 1),
+(181, '::1', 'admin@gmail.com', 12, '2023-05-11 16:17:42', 1),
+(182, '::1', 'admin@gmail.com', 12, '2023-05-11 16:27:13', 1),
+(183, '::1', 'admin@gmail.com', 12, '2023-05-11 16:51:08', 1),
+(184, '::1', 'admin@gmail.com', 12, '2023-05-12 16:54:36', 1),
+(185, '::1', 'admin@gmail.com', 12, '2023-05-12 17:32:02', 1),
+(186, '::1', 'admin@gmail.com', 12, '2023-05-12 18:11:11', 1),
+(187, '::1', 'admin@gmail.com', 12, '2023-05-12 18:14:23', 1),
+(188, '::1', 'admin@gmail.com', 12, '2023-05-12 18:42:16', 1),
+(189, '::1', 'admin@gmail.com', 12, '2023-05-12 19:00:53', 1),
+(190, '::1', 'admin@gmail.com', 12, '2023-05-12 19:22:51', 1),
+(191, '::1', 'admin@gmail.com', 12, '2023-05-12 23:37:52', 1),
+(192, '::1', 'admin@gmail.com', 12, '2023-05-13 02:56:51', 1),
+(193, '::1', 'admin@gmail.com', 12, '2023-05-13 15:38:47', 1),
+(194, '::1', 'admin@gmail.com', 12, '2023-05-14 16:08:55', 1),
+(195, '::1', 'admin@gmail.com', 12, '2023-05-15 07:47:01', 1),
+(196, '::1', 'admin@gmail.com', 12, '2023-05-15 14:37:42', 1),
+(197, '::1', 'admin@gmail.com', 12, '2023-05-15 17:16:24', 1),
+(198, '::1', 'admin@gmail.com', 12, '2023-05-16 15:53:09', 1),
+(199, '::1', 'admin@gmail.com', 12, '2023-05-22 04:27:39', 1);
 
 -- --------------------------------------------------------
 
@@ -408,10 +430,7 @@ INSERT INTO `dosen` (`id`, `user_id`, `prodi_id`, `email_telkom`, `nama`, `nama_
 (16, 17, NULL, NULL, 'Robbi Hendriyanto', 'Robbi Hendriyanto, S.T., M.T.', '5186', NULL, 'RHN', '+62 823-1604-9294', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
 (17, 22, NULL, NULL, 'Olivia Istianah', 'Olivia Istianah Amd.Kom', '1222', NULL, 'opi', '08131213123', 'Bandung', 'dosen/user.png', '2022-08-16 10:53:00', '2022-08-16 10:53:00', NULL),
 (18, 23, NULL, NULL, 'Rania Athala', 'Rania Athala Amd.Kom', '1235', NULL, 'tat', '08121312321', 'Bandung', 'dosen/user.png', '2022-08-16 10:53:00', '2022-08-16 10:53:00', NULL),
-(19, 24, NULL, NULL, 'Rusyda Hanifan', 'Rusyda Hanifan Amd.Kom', '1236', NULL, 'han', '8121312326', 'Bandung', 'dosen/user.png', '2022-08-16 10:53:00', '2022-08-16 10:53:00', NULL),
-(20, 25, NULL, NULL, 'ejakkk', 'Ejak Amd.Kom', '1229', NULL, 'ejk', '8131213120', 'Bandung', 'dosen/user.png', '2022-08-16 11:37:53', '2022-08-16 11:37:53', NULL),
-(21, 20, NULL, 'bagusbanget@student.telkomuniversity.ac.id', 'percobaan', 'percobaan', '1234', '1234', 'tes', '123123', 'asdad', '2112312', '2023-05-11 05:26:29', '2023-05-11 05:26:29', NULL),
-(23, 22, NULL, 'bismillah@student.telkomunviersity.ac.id', 'bismillah', 'bismillah', '1818123', '01978132', 'BIS', '123128931', 'asdasdsadas', NULL, '2023-05-11 06:29:35', '2023-05-11 06:29:35', NULL);
+(19, 24, NULL, NULL, 'Rusyda Hanifan', 'Rusyda Hanifan Amd.Kom', '1236', NULL, 'han', '8121312326', 'Bandung', 'dosen/user.png', '2022-08-16 10:53:00', '2022-08-16 10:53:00', NULL);
 
 -- --------------------------------------------------------
 
@@ -461,16 +480,48 @@ INSERT INTO `input_mahasiswa` (`id`, `nim`, `nama`, `kelas`, `email`, `no_hp`, `
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `kategori_lomba`
+--
+
+CREATE TABLE `kategori_lomba` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `kategori_indo` varchar(255) DEFAULT NULL,
+  `kategori_inggris` varchar(255) DEFAULT NULL,
+  `slug` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `kategori_lomba`
+--
+
+INSERT INTO `kategori_lomba` (`id`, `kategori_indo`, `kategori_inggris`, `slug`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Pemrograman', 'Programming', 'programming', '2023-05-23 17:10:52', '2023-05-23 17:10:52', NULL),
+(2, 'Keamanan Siber', 'Cyber Security', 'cyber-security', '2023-05-23 17:10:52', '2023-05-23 17:10:52', NULL),
+(3, 'Penambangan Data', 'Data Mining', 'data-mining', '2023-05-23 17:10:52', '2023-05-23 17:10:52', NULL),
+(4, 'Desain Pengalaman Pengguna', 'UX Design', 'ux-design', '2023-05-23 17:10:52', '2023-05-23 17:10:52', NULL),
+(5, 'Animasi', 'Animation', 'animation', '2023-05-23 17:10:52', '2023-05-23 17:10:52', NULL),
+(6, 'Pengembangan Perangkat Lunak', 'Software Development', 'software-development', '2023-05-23 17:10:52', '2023-05-23 17:10:52', NULL),
+(7, 'Piranti Cerdas, Sistem Benam & IoT', 'Smart Device, Embedded System & IoT', 'iot', '2023-05-23 17:10:52', '2023-05-23 17:10:52', NULL),
+(8, 'Pengembangan Aplikasi Permainan', 'Game Development', 'game-development', '2023-05-23 17:10:52', '2023-05-23 17:10:52', NULL),
+(9, 'Pengembangan Bisnis TIK', 'ICT Business Development', 'ict-business-development', '2023-05-23 17:10:52', '2023-05-23 17:10:52', NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `lomba`
 --
 
 CREATE TABLE `lomba` (
   `id` int(5) NOT NULL,
+  `katetgori_lomba_id` bigint(20) UNSIGNED DEFAULT NULL,
   `poster` varchar(255) NOT NULL,
   `Title` varchar(200) NOT NULL,
   `link` varchar(255) NOT NULL,
   `teks` mediumtext NOT NULL,
-  `slug` varchar(255) NOT NULL,
+  `slug` varchar(255) DEFAULT NULL,
   `Penyelenggara` varchar(200) NOT NULL,
   `Deadline` date NOT NULL,
   `counting_day` varchar(255) NOT NULL,
@@ -483,14 +534,14 @@ CREATE TABLE `lomba` (
 -- Dumping data for table `lomba`
 --
 
-INSERT INTO `lomba` (`id`, `poster`, `Title`, `link`, `teks`, `slug`, `Penyelenggara`, `Deadline`, `counting_day`, `output`, `created_at`, `updated_at`) VALUES
-(66, '', 'GEMASTIK', 'https://eventpelajar.com/lomba/ ', '', '', 'Dinas Pendidikan', '2022-09-02', '', 'Valid', '2022-08-07', '2022-08-07'),
-(67, '', 'LKTI UNIMED', 'Kompetisi Mahasiswa - LLDIKTI Wilayah VI', '', '', 'Universitas Medan', '2022-08-30', '', 'Invalid', '2022-08-07', '2022-08-07'),
-(68, '', 'PKM', 'Kompetisi Mahasiswa - LLDIKTI Wilayah VI', '', '', 'Kemenristekdikti', '2022-09-01', '', 'Valid', '2022-08-07', '2022-08-07'),
-(69, '', 'OLIVIA', 'https://www.kompas.com/tag/lomba', '', '', 'ITS', '2022-09-02', '', 'Valid', '2022-08-07', '2022-08-07'),
-(134, '', '', 'https://www.informasilomba.com/ ', '', '', '', '0000-00-00', '', '', '2022-12-20', '2022-12-20'),
-(135, '', '', 'https://www.informasilomba.com/ ', '', '', '', '0000-00-00', '', '', '2022-12-20', '2022-12-20'),
-(136, '', '', 'https://kesejahteraan.kemdikbud.go.id/p2mw', '', '', '', '0000-00-00', '', '', '2023-03-27', '2023-03-27');
+INSERT INTO `lomba` (`id`, `katetgori_lomba_id`, `poster`, `Title`, `link`, `teks`, `slug`, `Penyelenggara`, `Deadline`, `counting_day`, `output`, `created_at`, `updated_at`) VALUES
+(66, NULL, '', 'GEMASTIK', 'https://eventpelajar.com/lomba/ ', '', '', 'Dinas Pendidikan', '2022-09-02', '', 'Valid', '2022-08-07', '2022-08-07'),
+(67, NULL, '', 'LKTI UNIMED', 'Kompetisi Mahasiswa - LLDIKTI Wilayah VI', '', '', 'Universitas Medan', '2022-08-30', '', 'Invalid', '2022-08-07', '2022-08-07'),
+(68, NULL, '', 'PKM', 'Kompetisi Mahasiswa - LLDIKTI Wilayah VI', '', '', 'Kemenristekdikti', '2022-09-01', '', 'Valid', '2022-08-07', '2022-08-07'),
+(69, NULL, '', 'OLIVIA', 'https://www.kompas.com/tag/lomba', '', '', 'ITS', '2022-09-02', '', 'Valid', '2022-08-07', '2022-08-07'),
+(134, NULL, '', '', 'https://www.informasilomba.com/ ', '', '', '', '0000-00-00', '', '', '2022-12-20', '2022-12-20'),
+(135, NULL, '', '', 'https://www.informasilomba.com/ ', '', '', '', '0000-00-00', '', '', '2022-12-20', '2022-12-20'),
+(136, NULL, '', '', 'https://kesejahteraan.kemdikbud.go.id/p2mw', '', '', '', '0000-00-00', '', '', '2023-03-27', '2023-03-27');
 
 -- --------------------------------------------------------
 
@@ -504,6 +555,8 @@ CREATE TABLE `mahasiswa` (
   `nama` varchar(255) DEFAULT NULL,
   `nim` varchar(255) DEFAULT NULL,
   `kelas` varchar(255) DEFAULT NULL,
+  `email_telkom` varchar(255) DEFAULT NULL,
+  `foto` varchar(255) DEFAULT NULL,
   `prodi_id` bigint(20) UNSIGNED DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` datetime DEFAULT current_timestamp()
@@ -738,6 +791,12 @@ ALTER TABLE `input_mahasiswa`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `kategori_lomba`
+--
+ALTER TABLE `kategori_lomba`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `lomba`
 --
 ALTER TABLE `lomba`
@@ -803,7 +862,7 @@ ALTER TABLE `auth_groups_users`
 -- AUTO_INCREMENT for table `auth_logins`
 --
 ALTER TABLE `auth_logins`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=178;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=200;
 
 --
 -- AUTO_INCREMENT for table `auth_permissions`
@@ -834,6 +893,12 @@ ALTER TABLE `dosen`
 --
 ALTER TABLE `input_mahasiswa`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT for table `kategori_lomba`
+--
+ALTER TABLE `kategori_lomba`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `lomba`

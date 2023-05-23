@@ -13,9 +13,13 @@ class Home extends BaseController
     }
     public function perlombaan()
     {
+        $data_lomba = $this->lombaModel->findAll();
+        $data_kategori_lomba = $this->kategoriLombaModel->findAll();
         return view('home/perlombaan', [
             'title' => 'Perlombaan',
-            'page' => 'perlombaan'
+            'page' => 'perlombaan',
+            'data_lomba' => $data_lomba,
+            'data_kategori_lomba' => $data_kategori_lomba,
         ]);
     }
     public function tentang_kami()

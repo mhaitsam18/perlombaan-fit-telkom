@@ -45,6 +45,7 @@ abstract class BaseController extends Controller
 
     protected $dosenModel;
     protected $lombaModel;
+    protected $kategoriLombaModel;
     protected $mahasiswaModel;
     protected $prodiModel;
     protected $rekognisiModel;
@@ -65,6 +66,7 @@ abstract class BaseController extends Controller
         session();
         $this->dosenModel = new \App\Models\DosenModel();
         $this->lombaModel = new \App\Models\LombaModel();
+        $this->kategoriLombaModel = new \App\Models\KategoriLombaModel();
         $this->mahasiswaModel = new \App\Models\MahasiswaModel();
         $this->prodiModel = new \App\Models\ProdiModel();
         $this->rekognisiModel = new \App\Models\RekognisiModel();
