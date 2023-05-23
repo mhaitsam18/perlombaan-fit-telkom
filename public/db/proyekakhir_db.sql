@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2023 at 07:30 PM
+-- Generation Time: May 23, 2023 at 07:54 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -516,12 +516,14 @@ INSERT INTO `kategori_lomba` (`id`, `kategori_indo`, `kategori_inggris`, `slug`,
 
 CREATE TABLE `lomba` (
   `id` int(5) NOT NULL,
-  `katetgori_lomba_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `kategori_lomba_id` bigint(20) UNSIGNED DEFAULT NULL,
   `poster` varchar(255) NOT NULL,
   `Title` varchar(200) NOT NULL,
+  `cabang_lomba` varchar(255) DEFAULT NULL,
   `link` varchar(255) NOT NULL,
   `teks` mediumtext NOT NULL,
   `slug` varchar(255) DEFAULT NULL,
+  `excerpt` text DEFAULT NULL,
   `Penyelenggara` varchar(200) NOT NULL,
   `Deadline` date NOT NULL,
   `counting_day` varchar(255) NOT NULL,
@@ -534,14 +536,14 @@ CREATE TABLE `lomba` (
 -- Dumping data for table `lomba`
 --
 
-INSERT INTO `lomba` (`id`, `katetgori_lomba_id`, `poster`, `Title`, `link`, `teks`, `slug`, `Penyelenggara`, `Deadline`, `counting_day`, `output`, `created_at`, `updated_at`) VALUES
-(66, NULL, '', 'GEMASTIK', 'https://eventpelajar.com/lomba/ ', '', '', 'Dinas Pendidikan', '2022-09-02', '', 'Valid', '2022-08-07', '2022-08-07'),
-(67, NULL, '', 'LKTI UNIMED', 'Kompetisi Mahasiswa - LLDIKTI Wilayah VI', '', '', 'Universitas Medan', '2022-08-30', '', 'Invalid', '2022-08-07', '2022-08-07'),
-(68, NULL, '', 'PKM', 'Kompetisi Mahasiswa - LLDIKTI Wilayah VI', '', '', 'Kemenristekdikti', '2022-09-01', '', 'Valid', '2022-08-07', '2022-08-07'),
-(69, NULL, '', 'OLIVIA', 'https://www.kompas.com/tag/lomba', '', '', 'ITS', '2022-09-02', '', 'Valid', '2022-08-07', '2022-08-07'),
-(134, NULL, '', '', 'https://www.informasilomba.com/ ', '', '', '', '0000-00-00', '', '', '2022-12-20', '2022-12-20'),
-(135, NULL, '', '', 'https://www.informasilomba.com/ ', '', '', '', '0000-00-00', '', '', '2022-12-20', '2022-12-20'),
-(136, NULL, '', '', 'https://kesejahteraan.kemdikbud.go.id/p2mw', '', '', '', '0000-00-00', '', '', '2023-03-27', '2023-03-27');
+INSERT INTO `lomba` (`id`, `kategori_lomba_id`, `poster`, `Title`, `cabang_lomba`, `link`, `teks`, `slug`, `excerpt`, `Penyelenggara`, `Deadline`, `counting_day`, `output`, `created_at`, `updated_at`) VALUES
+(66, 1, 'lomba/gemastik-2022.jpg', 'GEMASTIK', 'Programming', 'https://eventpelajar.com/lomba/ ', '', '', NULL, 'Risetdikti', '2022-09-02', '', 'Valid', '2022-08-07', '2022-08-07'),
+(67, 9, 'lomba/gemastik.png', 'P2MW', 'Bisnis Digital', 'Kompetisi Mahasiswa - LLDIKTI Wilayah VI', '', '', NULL, 'Kemdikbud', '2022-08-30', '', 'Invalid', '2022-08-07', '2022-08-07'),
+(68, 4, 'lomba/gemastik-2022.jpg', 'PKM', 'PKM T', 'Kompetisi Mahasiswa - LLDIKTI Wilayah VI', '', '', NULL, 'Kemenristekdikti', '2022-09-01', '', 'Valid', '2022-08-07', '2022-08-07'),
+(69, 4, 'lomba/gemastik.png', 'OLIVIA', 'UI/UX', 'https://www.kompas.com/tag/lomba', '', '', NULL, 'ITS', '2022-09-02', '', 'Valid', '2022-08-07', '2022-08-07'),
+(134, NULL, 'lomba/gemastik-2022.jpg', '', NULL, 'https://www.informasilomba.com/ ', '', '', NULL, '', '0000-00-00', '', '', '2022-12-20', '2022-12-20'),
+(135, NULL, 'lomba/gemastik.png', '', NULL, 'https://www.informasilomba.com/ ', '', '', NULL, '', '0000-00-00', '', '', '2022-12-20', '2022-12-20'),
+(136, NULL, 'lomba/gemastik-2022.jpg', '', NULL, 'https://kesejahteraan.kemdikbud.go.id/p2mw', '', '', NULL, '', '0000-00-00', '', '', '2023-03-27', '2023-03-27');
 
 -- --------------------------------------------------------
 
