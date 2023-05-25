@@ -42,7 +42,7 @@ use CodeIgniter\I18n\Time;
                         <div class="col-lg-12">
                             <div class="blog-style-card">
                                 <div class="blog-style-img">
-                                    <a href="blog-details.html">
+                                    <a href="/perlombaan/<?= $lomba['slug'] ?>">
                                         <img src="/assets/img/<?= $lomba['poster'] ?>" alt="Images" loading="lazy">
                                     </a>
                                     <div class="blog-style-tag">
@@ -54,12 +54,12 @@ use CodeIgniter\I18n\Time;
                                     <ul>
                                         <li><i class='bx bxs-user'></i> By <?= $lomba['Penyelenggara'] ?></li>
                                         <li><i class='bx bx-show-alt'></i>322 View</li>
-                                        <li><i class='bx bx-purchase-tag-alt'></i><?= $lomba['kategori_lomba_id'] ?></li>
+                                        <li><i class='bx bx-purchase-tag-alt'></i><?= $lomba['kategori_indo'] ?></li>
                                     </ul>
-                                    <h3><a href="blog-details.html"><?= $lomba['cabang_lomba'] ?></a></h3>
+                                    <h3><a href="/perlombaan/<?= $lomba['slug'] ?>"><?= $lomba['cabang_lomba'] ?></a></h3>
                                     <?= $lomba['teks'] ?>
                                     <!-- <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, Proin gravida nibh vel vewwlit nisi elit consequat ipsum.</p> -->
-                                    <a href="blog-details.html" class="default-btn btn-bg-two border-radius-50">Learn More <i class='bx bx-chevron-right'></i></a>
+                                    <a href="/perlombaan/<?= $lomba['slug'] ?>" class="default-btn btn-bg-two border-radius-50">Learn More <i class='bx bx-chevron-right'></i></a>
                                 </div>
                             </div>
                         </div>
@@ -67,7 +67,7 @@ use CodeIgniter\I18n\Time;
                     <div class="col-lg-12">
                         <div class="blog-style-card">
                             <div class="blog-style-img">
-                                <a href="blog-details.html">
+                                <a href="/perlombaan/<?= $lomba['slug'] ?>">
                                     <img src="/assets-techex-demo/images/blog/blog-style-img1.jpg" alt="Images" loading="lazy">
                                 </a>
                                 <div class="blog-style-tag">
@@ -81,16 +81,16 @@ use CodeIgniter\I18n\Time;
                                     <li><i class='bx bx-show-alt'></i>322 View</li>
                                     <li><i class='bx bx-purchase-tag-alt'></i>Business</li>
                                 </ul>
-                                <h3><a href="blog-details.html">10 Ways To Get Efficient Result and Benefits</a></h3>
+                                <h3><a href="/perlombaan/<?= $lomba['slug'] ?>">10 Ways To Get Efficient Result and Benefits</a></h3>
                                 <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, Proin gravida nibh vel vewwlit nisi elit consequat ipsum.</p>
-                                <a href="blog-details.html" class="default-btn btn-bg-two border-radius-50">Learn More <i class='bx bx-chevron-right'></i></a>
+                                <a href="/perlombaan/<?= $lomba['slug'] ?>" class="default-btn btn-bg-two border-radius-50">Learn More <i class='bx bx-chevron-right'></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="blog-style-card">
                             <div class="blog-style-img">
-                                <a href="blog-details.html">
+                                <a href="/perlombaan/<?= $lomba['slug'] ?>">
                                     <img src="/assets-techex-demo/images/blog/blog-style-img2.jpg" alt="Images" loading="lazy">
                                 </a>
                                 <div class="blog-style-tag">
@@ -104,16 +104,16 @@ use CodeIgniter\I18n\Time;
                                     <li><i class='bx bx-show-alt'></i>322 View</li>
                                     <li><i class='bx bx-purchase-tag-alt'></i>Digital</li>
                                 </ul>
-                                <h3><a href="blog-details.html">New Device Invention for Digital Platform</a></h3>
+                                <h3><a href="/perlombaan/<?= $lomba['slug'] ?>">New Device Invention for Digital Platform</a></h3>
                                 <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, Proin gravida nibh vel vewwlit nisi elit consequat ipsum.</p>
-                                <a href="blog-details.html" class="default-btn btn-bg-two border-radius-50">Learn More <i class='bx bx-chevron-right'></i></a>
+                                <a href="/perlombaan/<?= $lomba['slug'] ?>" class="default-btn btn-bg-two border-radius-50">Learn More <i class='bx bx-chevron-right'></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="blog-style-card">
                             <div class="blog-style-img">
-                                <a href="blog-details.html">
+                                <a href="/perlombaan/<?= $lomba['slug'] ?>">
                                     <img src="/assets-techex-demo/images/blog/blog-style-img3.jpg" alt="Images" loading="lazy">
                                 </a>
                                 <div class="blog-style-tag">
@@ -127,16 +127,16 @@ use CodeIgniter\I18n\Time;
                                     <li><i class='bx bx-show-alt'></i>122 View</li>
                                     <li><i class='bx bx-purchase-tag-alt'></i>App</li>
                                 </ul>
-                                <h3><a href="blog-details.html">5 App that Really Hack and Help you to Make Your Phone More Easy</a></h3>
+                                <h3><a href="/perlombaan/<?= $lomba['slug'] ?>">5 App that Really Hack and Help you to Make Your Phone More Easy</a></h3>
                                 <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, Proin gravida nibh vel vewwlit nisi elit consequat ipsum.</p>
-                                <a href="blog-details.html" class="default-btn btn-bg-two border-radius-50">Learn More <i class='bx bx-chevron-right'></i></a>
+                                <a href="/perlombaan/<?= $lomba['slug'] ?>" class="default-btn btn-bg-two border-radius-50">Learn More <i class='bx bx-chevron-right'></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="blog-style-card">
                             <div class="blog-style-img">
-                                <a href="blog-details.html">
+                                <a href="/perlombaan/<?= $lomba['slug'] ?>">
                                     <img src="/assets-techex-demo/images/blog/blog-style-img4.jpg" alt="Images" loading="lazy">
                                 </a>
                                 <div class="blog-style-tag">
@@ -150,9 +150,9 @@ use CodeIgniter\I18n\Time;
                                     <li><i class='bx bx-show-alt'></i>222 View</li>
                                     <li><i class='bx bx-purchase-tag-alt'></i>Product</li>
                                 </ul>
-                                <h3><a href="blog-details.html">Product Idea Solution for new Generation</a></h3>
+                                <h3><a href="/perlombaan/<?= $lomba['slug'] ?>">Product Idea Solution for new Generation</a></h3>
                                 <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, Proin gravida nibh vel vewwlit nisi elit consequat ipsum.</p>
-                                <a href="blog-details.html" class="default-btn btn-bg-two border-radius-50">Learn More <i class='bx bx-chevron-right'></i></a>
+                                <a href="/perlombaan/<?= $lomba['slug'] ?>" class="default-btn btn-bg-two border-radius-50">Learn More <i class='bx bx-chevron-right'></i></a>
                             </div>
                         </div>
                     </div>
@@ -193,7 +193,7 @@ use CodeIgniter\I18n\Time;
                                 <?php endforeach; ?>
                                 <!-- <li>
                                     <div class="line-circle"></div>
-                                    <a href="blog-details.html">IT Services<span>[70]</span></a>
+                                    <a href="/perlombaan/<?= $lomba['slug'] ?>">IT Services<span>[70]</span></a>
                                 </li> -->
                             </ul>
                         </div>
@@ -258,44 +258,44 @@ use CodeIgniter\I18n\Time;
                     <div class="side-bar-widget">
                         <h3 class="title">Tag Cloud</h3>
                         <ul class="side-bar-widget-tag">
-                            <li><a href="blog-details.html">Android</a></li>
-                            <li><a href="blog-details.html">Creative</a></li>
-                            <li><a href="blog-details.html">App</a></li>
-                            <li><a href="blog-details.html">IOS</a></li>
-                            <li><a href="blog-details.html">Business</a></li>
-                            <li><a href="blog-details.html">Consulting</a></li>
+                            <li><a href="/perlombaan/<?= $lomba['slug'] ?>">Android</a></li>
+                            <li><a href="/perlombaan/<?= $lomba['slug'] ?>">Creative</a></li>
+                            <li><a href="/perlombaan/<?= $lomba['slug'] ?>">App</a></li>
+                            <li><a href="/perlombaan/<?= $lomba['slug'] ?>">IOS</a></li>
+                            <li><a href="/perlombaan/<?= $lomba['slug'] ?>">Business</a></li>
+                            <li><a href="/perlombaan/<?= $lomba['slug'] ?>">Consulting</a></li>
                         </ul>
                     </div>
                     <div class="side-bar-widget">
                         <h3 class="title">Gallery</h3>
                         <ul class="blog-gallery">
                             <li>
-                                <a href="blog-details.html">
+                                <a href="/perlombaan/<?= $lomba['slug'] ?>">
                                     <img src="/assets-techex-demo/images/blog/blog-small-img1.jpg" alt="image" loading="lazy">
                                 </a>
                             </li>
                             <li>
-                                <a href="blog-details.html">
+                                <a href="/perlombaan/<?= $lomba['slug'] ?>">
                                     <img src="/assets-techex-demo/images/blog/blog-small-img2.jpg" alt="image" loading="lazy">
                                 </a>
                             </li>
                             <li>
-                                <a href="blog-details.html">
+                                <a href="/perlombaan/<?= $lomba['slug'] ?>">
                                     <img src="/assets-techex-demo/images/blog/blog-small-img3.jpg" alt="image" loading="lazy">
                                 </a>
                             </li>
                             <li>
-                                <a href="blog-details.html">
+                                <a href="/perlombaan/<?= $lomba['slug'] ?>">
                                     <img src="/assets-techex-demo/images/blog/blog-small-img4.jpg" alt="image" loading="lazy">
                                 </a>
                             </li>
                             <li>
-                                <a href="blog-details.html">
+                                <a href="/perlombaan/<?= $lomba['slug'] ?>">
                                     <img src="/assets-techex-demo/images/blog/blog-small-img5.jpg" alt="image" loading="lazy">
                                 </a>
                             </li>
                             <li>
-                                <a href="blog-details.html">
+                                <a href="/perlombaan/<?= $lomba['slug'] ?>">
                                     <img src="/assets-techex-demo/images/blog/blog-small-img6.jpg" alt="image" loading="lazy">
                                 </a>
                             </li>
@@ -307,27 +307,27 @@ use CodeIgniter\I18n\Time;
                             <ul>
                                 <li>
                                     <div class="line-circle"></div>
-                                    <a href="blog-details.html">Design<span>[70]</span></a>
+                                    <a href="/perlombaan/<?= $lomba['slug'] ?>">Design<span>[70]</span></a>
                                 </li>
                                 <li>
                                     <div class="line-circle"></div>
-                                    <a href="blog-details.html">Business<span>[24]</span></a>
+                                    <a href="/perlombaan/<?= $lomba['slug'] ?>">Business<span>[24]</span></a>
                                 </li>
                                 <li>
                                     <div class="line-circle"></div>
-                                    <a href="blog-details.html">Development<span>[08]</span></a>
+                                    <a href="/perlombaan/<?= $lomba['slug'] ?>">Development<span>[08]</span></a>
                                 </li>
                                 <li>
                                     <div class="line-circle"></div>
-                                    <a href="blog-details.html">Technology <span>[17]</span></a>
+                                    <a href="/perlombaan/<?= $lomba['slug'] ?>">Technology <span>[17]</span></a>
                                 </li>
                                 <li>
                                     <div class="line-circle"></div>
-                                    <a href="blog-details.html">Startup <span>[20]</span></a>
+                                    <a href="/perlombaan/<?= $lomba['slug'] ?>">Startup <span>[20]</span></a>
                                 </li>
                                 <li>
                                     <div class="line-circle"></div>
-                                    <a href="blog-details.html">Marketing Growth <span>[13]</span></a>
+                                    <a href="/perlombaan/<?= $lomba['slug'] ?>">Marketing Growth <span>[13]</span></a>
                                 </li>
                             </ul>
                         </div>

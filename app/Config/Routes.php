@@ -46,6 +46,8 @@ $routes->get('/validasi-lomba', 'Home::validasi_lomba', ['as' => 'home-validasi-
 // $routes->get('/login', 'Auth::login');
 // $routes->get('/admin/login', 'Auth::login_admin');
 
+$routes->get('/perlombaan/(:any)', 'Home::detail_perlombaan/$1', ['as' => 'detail-home-perlombaan']);
+
 //AUTH
 $routes->group('admin', ['filter' => 'role:admin'], function ($routes) {
     $routes->get('', 'User::admin', ['as' => 'admin']);

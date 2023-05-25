@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2023 at 07:54 PM
+-- Generation Time: May 25, 2023 at 08:51 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -537,13 +537,10 @@ CREATE TABLE `lomba` (
 --
 
 INSERT INTO `lomba` (`id`, `kategori_lomba_id`, `poster`, `Title`, `cabang_lomba`, `link`, `teks`, `slug`, `excerpt`, `Penyelenggara`, `Deadline`, `counting_day`, `output`, `created_at`, `updated_at`) VALUES
-(66, 1, 'lomba/gemastik-2022.jpg', 'GEMASTIK', 'Programming', 'https://eventpelajar.com/lomba/ ', '', '', NULL, 'Risetdikti', '2022-09-02', '', 'Valid', '2022-08-07', '2022-08-07'),
-(67, 9, 'lomba/gemastik.png', 'P2MW', 'Bisnis Digital', 'Kompetisi Mahasiswa - LLDIKTI Wilayah VI', '', '', NULL, 'Kemdikbud', '2022-08-30', '', 'Invalid', '2022-08-07', '2022-08-07'),
-(68, 4, 'lomba/gemastik-2022.jpg', 'PKM', 'PKM T', 'Kompetisi Mahasiswa - LLDIKTI Wilayah VI', '', '', NULL, 'Kemenristekdikti', '2022-09-01', '', 'Valid', '2022-08-07', '2022-08-07'),
-(69, 4, 'lomba/gemastik.png', 'OLIVIA', 'UI/UX', 'https://www.kompas.com/tag/lomba', '', '', NULL, 'ITS', '2022-09-02', '', 'Valid', '2022-08-07', '2022-08-07'),
-(134, NULL, 'lomba/gemastik-2022.jpg', '', NULL, 'https://www.informasilomba.com/ ', '', '', NULL, '', '0000-00-00', '', '', '2022-12-20', '2022-12-20'),
-(135, NULL, 'lomba/gemastik.png', '', NULL, 'https://www.informasilomba.com/ ', '', '', NULL, '', '0000-00-00', '', '', '2022-12-20', '2022-12-20'),
-(136, NULL, 'lomba/gemastik-2022.jpg', '', NULL, 'https://kesejahteraan.kemdikbud.go.id/p2mw', '', '', NULL, '', '0000-00-00', '', '', '2023-03-27', '2023-03-27');
+(66, 1, 'lomba/gemastik-2022.jpg', 'GEMASTIK', 'Programming', 'https://eventpelajar.com/lomba/ ', '', 'gemastik-programming-2022', NULL, 'Risetdikti', '2022-09-02', '', 'Valid', '2022-08-07', '2022-08-07'),
+(67, 9, 'lomba/gemastik.png', 'P2MW', 'Bisnis Digital', 'Kompetisi Mahasiswa - LLDIKTI Wilayah VI', '', 'p2mw-bisnis-digital-2022', NULL, 'Kemdikbud', '2022-08-30', '', 'Invalid', '2022-08-07', '2022-08-07'),
+(68, 4, 'lomba/gemastik-2022.jpg', 'PKM', 'PKM T', 'Kompetisi Mahasiswa - LLDIKTI Wilayah VI', '', 'pkm-pkm-t-2022', NULL, 'Kemenristekdikti', '2022-09-01', '', 'Valid', '2022-08-07', '2022-08-07'),
+(69, 4, 'lomba/gemastik.png', 'OLIVIA', 'UI/UX', 'https://www.kompas.com/tag/lomba', '', 'olivia-ui-ux-2022', NULL, 'ITS', '2022-09-02', '', 'Valid', '2022-08-07', '2022-08-07');
 
 -- --------------------------------------------------------
 

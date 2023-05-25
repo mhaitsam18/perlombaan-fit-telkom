@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
+use Tatter\Relations\Traits\ModelTrait;
+
 
 class LombaModel extends Model
 {
@@ -12,4 +14,15 @@ class LombaModel extends Model
 
     // Dates
     protected $useTimestamps = true;
+
+    public function getKategoriLomba($kategori_lomba_id)
+    {
+        $kategoriLombaModel = new KategoriLombaModel();
+        return $kategoriLombaModel->find($kategori_lomba_id);
+    }
+
+    public function getJoinKategoriLomba()
+    {
+        // return $this->join('f')->all();
+    }
 }

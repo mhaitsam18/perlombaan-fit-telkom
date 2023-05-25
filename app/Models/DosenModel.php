@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
+use Myth\Auth\Models\UserModel;
 
 class DosenModel extends Model
 {
@@ -12,4 +13,10 @@ class DosenModel extends Model
 
     // Dates
     protected $useTimestamps = true;
+
+    public function getUser($userId)
+    {
+        $userModel = new UserModel();
+        return $userModel->find($userId);
+    }
 }
