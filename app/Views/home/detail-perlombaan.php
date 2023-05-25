@@ -45,11 +45,11 @@ use CodeIgniter\I18n\Time;
                     </div>
                     <div class="blog-article-title">
                         <ul>
-                            <li><i class='bx bxs-user'></i> By Admin</li>
+                            <li><i class='bx bxs-user'></i> By <?= $lomba['Penyelenggara'] ?></li>
                             <li><i class='bx bx-show-alt'></i>322 View</li>
                             <li><i class='bx bxs-conversation'></i>2 Comments</li>
                         </ul>
-                        <h2><?= $lomba['Title'] ?></h2>
+                        <h2><?= $lomba['Title'] ?> - <?= $lomba['cabang_lomba'] ?></h2>
                     </div>
                     <div class="article-content">
                         <p>
