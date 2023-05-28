@@ -1,0 +1,60 @@
+
+    <!-- <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-baseline mb-2">
+                    <h6 class="card-title mb-0">Ubah data Autentikasi / Akun</h6>
+                    <?php if (session()->has('validation')) : ?>
+                        <div class="alert alert-danger">
+                            <?php
+                            $validation = session('validation');
+                            foreach ($validation->getErrors() as $field => $error) {
+                                echo $error . '<br>';
+                            }
+                            ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <form action="/user" method="post" class="forms-sample">
+                    <?= csrf_field() ?>
+                    <input type="hidden" name="_method" value="put">
+                    <div class="mb-3">
+                        <label for="fullname" class="form-label">Nama Lengkap</label>
+                        <input type="text" class="form-control <?= ($validation->hasError('fullname')) ? 'is-invalid' : '' ?>" name="fullname" id="fullname" value="<?= old('fullname', $user['fullname']) ?>">
+                        <div id="fullname_feedback" class="invalid-feedback">
+                            <?= $validation->getError('fullname') ?>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control <?= ($validation->hasError('username')) ? 'is-invalid' : '' ?>" name="username" id="username" value="<?= old('username', $user['username']) ?>">
+                        <div id="username_feedback" class="invalid-feedback">
+                            <?= $validation->getError('username') ?>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Nomor Handphone:</label>
+                        <input class="form-control <?= ($validation->hasError('no_ponsel')) ? 'is-invalid' : '' ?> mb-4 mb-md-0" data-inputmask-alias="(+62) 899-9999-99999" name="no_ponsel" id="no_ponsel" value="<?= old('no_ponsel', $user['no_ponsel']) ?>" />
+                        <div id="no_ponsel_feedback" class="invalid-feedback">
+                            <?= $validation->getError('no_ponsel') ?>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email:</label>
+                        <input class="form-control <?= ($validation->hasError('email')) ? 'is-invalid' : '' ?> mb-4 mb-md-0" data-inputmask="'alias': 'email'" name="email" id="email" value="<?= old('email', $user['email']) ?>" />
+                        <div id="email_feedback" class="invalid-feedback">
+                            <?= $validation->getError('email') ?>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Foto Profil:</label>
+                        <input type="file" class="form-control <?= ($validation->hasError('user_image')) ? 'is-invalid' : '' ?> mb-4 mb-md-0" name="user_image" id="user_image" value="<?= old('user_image', $user['user_image']) ?>" />
+                        <div id="user_image_feedback" class="invalid-feedback">
+                            <?= $validation->getError('user_image') ?>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary me-2">Simpan</button>
+                </form>
+            </div>
+        </div>
+    </div> -->

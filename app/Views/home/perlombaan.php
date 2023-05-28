@@ -57,7 +57,7 @@ use CodeIgniter\I18n\Time;
                                         <li><i class='bx bx-purchase-tag-alt'></i><?= $lomba['kategori_indo'] ?></li>
                                     </ul>
                                     <h3><a href="/perlombaan/<?= $lomba['slug'] ?>"><?= $lomba['cabang_lomba'] ?></a></h3>
-                                    <?= $lomba['teks'] ?>
+                                    <?= $lomba['except'] ?>
                                     <!-- <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, Proin gravida nibh vel vewwlit nisi elit consequat ipsum.</p> -->
                                     <a href="/perlombaan/<?= $lomba['slug'] ?>" class="default-btn btn-bg-two border-radius-50">Learn More <i class='bx bx-chevron-right'></i></a>
                                 </div>
