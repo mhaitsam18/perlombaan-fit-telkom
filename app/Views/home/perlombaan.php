@@ -57,7 +57,7 @@ use CodeIgniter\I18n\Time;
                                         <li><i class='bx bx-purchase-tag-alt'></i><?= $lomba['kategori_indo'] ?></li>
                                     </ul>
                                     <h3><a href="/perlombaan/<?= $lomba['slug'] ?>"><?= $lomba['cabang_lomba'] ?></a></h3>
-                                    <?= $lomba['except'] ?>
+                                    <?= $lomba['excerpt'] ?>
                                     <!-- <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, Proin gravida nibh vel vewwlit nisi elit consequat ipsum.</p> -->
                                     <a href="/perlombaan/<?= $lomba['slug'] ?>" class="default-btn btn-bg-two border-radius-50">Learn More <i class='bx bx-chevron-right'></i></a>
                                 </div>
@@ -89,7 +89,7 @@ use CodeIgniter\I18n\Time;
                             </button>
                         </form>
                     </div>
-                    <div class="side-bar-widget">
+                    <!-- <div class="side-bar-widget">
                         <h3 class="title">Kategori Lomba</h3>
                         <div class="side-bar-categories">
                             <ul>
@@ -105,7 +105,7 @@ use CodeIgniter\I18n\Time;
                                 </li> -->
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- <div class="side-bar-widget">
                         <h3 class="title">Latest Blog</h3>
                         <div class="widget-popular-post">
