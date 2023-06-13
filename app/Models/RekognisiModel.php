@@ -8,7 +8,7 @@ class RekognisiModel extends Model
 {
     protected $table      = 'rekognisi';
 
-    protected $allowedFields = [];
+    protected $allowedFields = ['user_id','nama_lomba','nama_ketua','nim','nama_pembimbing','kelas','email','sertifikat','status'];
 
     // Dates
     protected $useTimestamps = true;

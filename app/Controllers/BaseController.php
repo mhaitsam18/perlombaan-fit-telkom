@@ -49,6 +49,9 @@ abstract class BaseController extends Controller
     protected $mahasiswaModel;
     protected $prodiModel;
     protected $rekognisiModel;
+    protected $rekognisiMahasiswaModel;
+    protected $pendataanLombaModel;
+    protected $pendataanLombaMahasiswaModel;
     protected $userModel;
     // protected $session;
 
@@ -70,6 +73,9 @@ abstract class BaseController extends Controller
         $this->mahasiswaModel = new \App\Models\MahasiswaModel();
         $this->prodiModel = new \App\Models\ProdiModel();
         $this->rekognisiModel = new \App\Models\RekognisiModel();
+        $this->rekognisiMahasiswaModel = new \App\Models\RekognisiMahasiswaModel();
+        $this->pendataanLombaModel = new \App\Models\PendataanLombaModel();
+        $this->pendataanLombaMahasiswaModel = new \App\Models\PendataanLombaMahasiswaModel();
         // $this->userModel = new \App\Models\UserModel();
 
         // $this->session = \Config\Services::session();

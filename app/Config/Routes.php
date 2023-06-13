@@ -42,6 +42,16 @@ $routes->get('/kontak-kami', 'Home::kontak_kami', ['as' => 'home-kontak-kami']);
 $routes->get('/informasi-dosen', 'Home::informasi_dosen', ['as' => 'home-informasi-dosen']);
 $routes->get('/validasi-lomba', 'Home::validasi_lomba', ['as' => 'home-validasi-lomba']);
 
+$routes->group('mahasiswa', ['filter' => 'role:mahasiswa'], function ($routes) {
+    $routes->group('rekognisi', static function ($routes) {
+        $routes->get('', 'Mahasiswa\Rekognisi::index', ['as' => 'mahasiswa-rekognisi-index']);
+    });
+    $routes->group('pendataan-lomba', static function ($routes) {
+        $routes->get('', 'Mahasiswa\PendataanLomba::index', ['as' => 'mahasiswa-pendataan-lomba-index']);
+    });
+});
+
+
 //AUTH
 // $routes->get('/login', 'Auth::login');
 // $routes->get('/admin/login', 'Auth::login_admin');
@@ -58,7 +68,7 @@ $routes->group('admin', ['filter' => 'role:admin'], function ($routes) {
         $routes->get('create', 'Admin\Dosen::create', ['as' => 'create-dosen']);
         $routes->get('edit/(:any)', 'Admin\Dosen::edit/$1', ['as' => 'edit-dosen']);
         $routes->get('(:any)', 'Admin\Dosen::show/$1', ['as' => 'show-dosen']);
-        $routes->put('(:num)', 'Admin\Dosen::update/$i', ['as' => 'update-dosen']);
+        $routes->put('(:num)', 'Admin\Dosen::update/$1', ['as' => 'update-dosen']);
         $routes->post('', 'Admin\Dosen::store', ['as' => 'store-dosen']);
         $routes->delete('delete/(:num)', 'Admin\Dosen::delete/$1', ['as' => 'delete-dosen']);
     });
@@ -68,7 +78,7 @@ $routes->group('admin', ['filter' => 'role:admin'], function ($routes) {
         $routes->get('edit/(:any)', 'Admin\Mahasiswa::edit/$1', ['as' => 'edit-mahasiswa']);
         $routes->get('(:any)', 'Admin\Mahasiswa::show/$1', ['as' => 'show-mahasiswa']);
         $routes->post('', 'Admin\Mahasiswa::store', ['as' => 'store-mahasiswa']);
-        $routes->put('(:num)', 'Admin\Mahasiswa::update/$i', ['as' => 'update-mahasiswa']);
+        $routes->put('(:num)', 'Admin\Mahasiswa::update/$1', ['as' => 'update-mahasiswa']);
         $routes->delete('delete/(:num)', 'Admin\Mahasiswa::delete/$1', ['as' => 'delete-mahasiswa']);
     });
     $routes->group('prodi', static function ($routes) {
@@ -77,7 +87,7 @@ $routes->group('admin', ['filter' => 'role:admin'], function ($routes) {
         $routes->get('edit/(:any)', 'Admin\Prodi::edit/$1', ['as' => 'edit-prodi']);
         $routes->get('(:any)', 'Admin\Prodi::show/$1', ['as' => 'show-prodi']);
         $routes->post('', 'Admin\Prodi::store', ['as' => 'store-prodi']);
-        $routes->put('(:num)', 'Admin\Prodi::update/$i', ['as' => 'update-prodi']);
+        $routes->put('(:num)', 'Admin\Prodi::update/$1', ['as' => 'update-prodi']);
         $routes->delete('delete/(:num)', 'Admin\Prodi::delete/$1', ['as' => 'delete-prodi']);
     });
     $routes->group('lomba', static function ($routes) {
@@ -86,7 +96,7 @@ $routes->group('admin', ['filter' => 'role:admin'], function ($routes) {
         $routes->get('edit/(:any)', 'Admin\Lomba::edit/$1', ['as' => 'edit-lomba']);
         $routes->get('(:any)', 'Admin\Lomba::show/$1', ['as' => 'show-lomba']);
         $routes->post('', 'Admin\Lomba::store', ['as' => 'store-lomba']);
-        $routes->put('(:num)', 'Admin\Lomba::update/$i', ['as' => 'update-lomba']);
+        $routes->put('(:num)', 'Admin\Lomba::update/$1', ['as' => 'update-lomba']);
         $routes->delete('delete/(:num)', 'Admin\Lomba::delete/$1', ['as' => 'delete-lomba']);
     });
     $routes->group('rekognisi', static function ($routes) {
@@ -95,7 +105,7 @@ $routes->group('admin', ['filter' => 'role:admin'], function ($routes) {
         $routes->get('edit/(:any)', 'Admin\Rekognisi::edit/$1', ['as' => 'edit-rekognisi']);
         $routes->get('(:any)', 'Admin\Rekognisi::show/$1', ['as' => 'show-rekognisi']);
         $routes->post('', 'Admin\Rekognisi::store', ['as' => 'store-rekognisi']);
-        $routes->put('(:num)', 'Admin\Rekognisi::update/$i', ['as' => 'update-rekognisi']);
+        $routes->put('(:num)', 'Admin\Rekognisi::update/$1', ['as' => 'update-rekognisi']);
         $routes->delete('delete/(:num)', 'Admin\Rekognisi::delete/$1', ['as' => 'delete-rekognisi']);
     });
 });

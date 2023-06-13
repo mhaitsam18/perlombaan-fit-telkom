@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 25, 2023 at 08:51 PM
+-- Generation Time: Jun 13, 2023 at 05:21 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -313,7 +313,16 @@ INSERT INTO `auth_logins` (`id`, `ip_address`, `email`, `user_id`, `date`, `succ
 (196, '::1', 'admin@gmail.com', 12, '2023-05-15 14:37:42', 1),
 (197, '::1', 'admin@gmail.com', 12, '2023-05-15 17:16:24', 1),
 (198, '::1', 'admin@gmail.com', 12, '2023-05-16 15:53:09', 1),
-(199, '::1', 'admin@gmail.com', 12, '2023-05-22 04:27:39', 1);
+(199, '::1', 'admin@gmail.com', 12, '2023-05-22 04:27:39', 1),
+(200, '::1', 'admin@gmail.com', 12, '2023-05-26 13:14:33', 1),
+(201, '::1', 'admin@gmail.com', 12, '2023-05-29 11:14:59', 1),
+(202, '::1', 'admin@gmail.com', 12, '2023-06-10 13:45:35', 1),
+(203, '::1', 'admin@gmail.com', 12, '2023-06-10 13:45:49', 1),
+(204, '::1', 'admin@gmail.com', 12, '2023-06-11 13:40:53', 1),
+(205, '::1', 'admin@gmail.com', 12, '2023-06-13 13:45:53', 1),
+(206, '::1', 'ari@gmail.com', 17, '2023-06-13 14:24:05', 1),
+(207, '::1', 'ari@gmail.com', 17, '2023-06-13 15:06:45', 1),
+(208, '::1', 'admin@gmail.com', 12, '2023-06-13 15:16:37', 1);
 
 -- --------------------------------------------------------
 
@@ -430,7 +439,8 @@ INSERT INTO `dosen` (`id`, `user_id`, `prodi_id`, `email_telkom`, `nama`, `nama_
 (16, 17, NULL, NULL, 'Robbi Hendriyanto', 'Robbi Hendriyanto, S.T., M.T.', '5186', NULL, 'RHN', '+62 823-1604-9294', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
 (17, 22, NULL, NULL, 'Olivia Istianah', 'Olivia Istianah Amd.Kom', '1222', NULL, 'opi', '08131213123', 'Bandung', 'dosen/user.png', '2022-08-16 10:53:00', '2022-08-16 10:53:00', NULL),
 (18, 23, NULL, NULL, 'Rania Athala', 'Rania Athala Amd.Kom', '1235', NULL, 'tat', '08121312321', 'Bandung', 'dosen/user.png', '2022-08-16 10:53:00', '2022-08-16 10:53:00', NULL),
-(19, 24, NULL, NULL, 'Rusyda Hanifan', 'Rusyda Hanifan Amd.Kom', '1236', NULL, 'han', '8121312326', 'Bandung', 'dosen/user.png', '2022-08-16 10:53:00', '2022-08-16 10:53:00', NULL);
+(19, 24, NULL, NULL, 'Rusyda Hanifan', 'Rusyda Hanifan Amd.Kom', '1236', NULL, 'han', '8121312326', 'Bandung', 'dosen/user.png', '2022-08-16 10:53:00', '2022-08-16 10:53:00', NULL),
+(24, NULL, NULL, 'tiya@telkomuniversity.ac.id', 'Tiya K Izzati', 'Tiya K Izzati, S.T., M.T', '9281309812', '192830', 'TYA', '+62 822-1914-1234', 'Bandung', 'dosen/1685107026_23898103b6d36918200e.jpeg', '2023-05-26 06:17:06', '2023-05-26 06:17:06', NULL);
 
 -- --------------------------------------------------------
 
@@ -537,10 +547,12 @@ CREATE TABLE `lomba` (
 --
 
 INSERT INTO `lomba` (`id`, `kategori_lomba_id`, `poster`, `Title`, `cabang_lomba`, `link`, `teks`, `slug`, `excerpt`, `Penyelenggara`, `Deadline`, `counting_day`, `output`, `created_at`, `updated_at`) VALUES
-(66, 1, 'lomba/gemastik-2022.jpg', 'GEMASTIK', 'Programming', 'https://eventpelajar.com/lomba/ ', '', 'gemastik-programming-2022', NULL, 'Risetdikti', '2022-09-02', '', 'Valid', '2022-08-07', '2022-08-07'),
-(67, 9, 'lomba/gemastik.png', 'P2MW', 'Bisnis Digital', 'Kompetisi Mahasiswa - LLDIKTI Wilayah VI', '', 'p2mw-bisnis-digital-2022', NULL, 'Kemdikbud', '2022-08-30', '', 'Invalid', '2022-08-07', '2022-08-07'),
-(68, 4, 'lomba/gemastik-2022.jpg', 'PKM', 'PKM T', 'Kompetisi Mahasiswa - LLDIKTI Wilayah VI', '', 'pkm-pkm-t-2022', NULL, 'Kemenristekdikti', '2022-09-01', '', 'Valid', '2022-08-07', '2022-08-07'),
-(69, 4, 'lomba/gemastik.png', 'OLIVIA', 'UI/UX', 'https://www.kompas.com/tag/lomba', '', 'olivia-ui-ux-2022', NULL, 'ITS', '2022-09-02', '', 'Valid', '2022-08-07', '2022-08-07');
+(66, 1, 'lomba/gemastik-2022.jpg', 'GEMASTI', 'Programming', 'https://eventpelajar.com/lomba/ ', '<p>asdasdasdasdasdsad</p>', 'gemastik-programming-2022', 'Lomba Programming seru abis', 'Risetdikti', '2022-09-02', '11', 'Valid', '2022-08-07', '2023-06-11'),
+(67, 9, 'lomba/gemastik.png', 'P2MW', 'Bisnis Digital', 'Kompetisi Mahasiswa - LLDIKTI Wilayah VI', '', 'p2mw-bisnis-digital-2022', 'Lomba Bisnis Digital seru abis', 'Kemdikbud', '2022-08-30', '', 'Invalid', '2022-08-07', '2022-08-07'),
+(68, 4, 'lomba/gemastik-2022.jpg', 'PKM', 'PKM T', 'Kompetisi Mahasiswa - LLDIKTI Wilayah VI', '', 'pkm-pkm-t-2022', 'Lomba PKM T seru abis', 'Kemenristekdikti', '2022-09-01', '', 'Valid', '2022-08-07', '2022-08-07'),
+(69, 4, 'lomba/gemastik.png', 'OLIVIA', 'UI/UX', 'https://www.kompas.com/tag/lomba', '', 'olivia-ui-ux-2022', 'Lomba UI/UX seru abis', 'ITS', '2022-09-02', '', 'Valid', '2022-08-07', '2022-08-07'),
+(137, NULL, '', '', NULL, 'https://kesejahteraan.kemdikbud.go.id/p2mw', '', NULL, NULL, '', '0000-00-00', '', '', '2023-05-29', '2023-05-29'),
+(138, NULL, '', '', NULL, 'https://kesejahteraan.kemdikbud.go.id/p2mw', '', NULL, NULL, '', '0000-00-00', '', '', '2023-05-29', '2023-05-29');
 
 -- --------------------------------------------------------
 
@@ -584,6 +596,57 @@ CREATE TABLE `migrations` (
 INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`, `batch`) VALUES
 (1, '2022-03-18-160919', 'App\\Database\\Migrations\\Lomba', 'default', 'App', 1647622785, 1),
 (2, '2017-11-20-223112', 'Myth\\Auth\\Database\\Migrations\\CreateAuthTables', 'default', 'Myth\\Auth', 1657636658, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pendataan_lomba`
+--
+
+CREATE TABLE `pendataan_lomba` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `nama_lomba` varchar(255) DEFAULT NULL,
+  `nama_ketua` varchar(255) DEFAULT NULL,
+  `nim` varchar(255) DEFAULT NULL,
+  `nama_pembimbing` varchar(255) DEFAULT NULL,
+  `kelas` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `sertifikat` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `pendataan_lomba`
+--
+
+INSERT INTO `pendataan_lomba` (`id`, `user_id`, `nama_lomba`, `nama_ketua`, `nim`, `nama_pembimbing`, `kelas`, `email`, `sertifikat`, `status`, `created_at`, `updated_at`) VALUES
+(1, NULL, 'GEMASTIK WEB PROGRAMMING', 'IHSAN KURNIAWAN', '1202218458', 'KUR', 'SI-44-01', 'kur@gmail.com', 'sertifikat/sertifikat.png', 'Lolos Pendanaan', '2023-06-11 14:17:55', '2023-06-11 14:17:55');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pendataan_lomba_mahasiswa`
+--
+
+CREATE TABLE `pendataan_lomba_mahasiswa` (
+  `id` bigint(20) NOT NULL,
+  `pendataan_lomba_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `nama_mahasiswa` varchar(255) DEFAULT NULL,
+  `nim` varchar(255) DEFAULT NULL,
+  `kelas` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `pendataan_lomba_mahasiswa`
+--
+
+INSERT INTO `pendataan_lomba_mahasiswa` (`id`, `pendataan_lomba_id`, `nama_mahasiswa`, `nim`, `kelas`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Raden Fachry', '6701202132', 'SI-44-04', '2023-06-13 13:55:27', '2023-06-13 13:55:27');
 
 -- --------------------------------------------------------
 
@@ -657,6 +720,57 @@ INSERT INTO `prodi` (`id`, `user_id`, `kode`, `singkatan`, `nama`, `keterangan`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `rekognisi`
+--
+
+CREATE TABLE `rekognisi` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `nama_lomba` varchar(255) DEFAULT NULL,
+  `nama_ketua` varchar(255) DEFAULT NULL,
+  `nim` varchar(255) DEFAULT NULL,
+  `nama_pembimbing` varchar(255) DEFAULT NULL,
+  `kelas` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `sertifikat` varchar(255) DEFAULT NULL,
+  `status` enum('approved','rejected','on process') DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `rekognisi`
+--
+
+INSERT INTO `rekognisi` (`id`, `user_id`, `nama_lomba`, `nama_ketua`, `nim`, `nama_pembimbing`, `kelas`, `email`, `sertifikat`, `status`, `created_at`, `updated_at`) VALUES
+(1, NULL, 'GEMASTIK WEB PROGRAMMING', 'IHSAN KURNIAWAN', '1202218458', 'KUR', 'SI-44-01', 'kur@gmail.com', 'sertifikat/sertifikat.png', 'on process', '2023-06-11 14:17:55', '2023-06-11 14:17:55');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rekognisi_mahasiswa`
+--
+
+CREATE TABLE `rekognisi_mahasiswa` (
+  `id` bigint(20) NOT NULL,
+  `rekognisi_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `nama_mahasiswa` varchar(255) DEFAULT NULL,
+  `nim` varchar(255) DEFAULT NULL,
+  `kelas` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `rekognisi_mahasiswa`
+--
+
+INSERT INTO `rekognisi_mahasiswa` (`id`, `rekognisi_id`, `nama_mahasiswa`, `nim`, `kelas`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Raden Fachry', '6701202132', 'SI-44-04', '2023-06-13 13:55:27', '2023-06-13 13:55:27');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -701,7 +815,7 @@ INSERT INTO `users` (`id`, `email`, `username`, `fullname`, `user_image`, `no_po
 (14, 'putri@gmail.com', 'putri', '', 'profile/user.png', '', '$2y$10$QjzNa7GXEppNp1UnyZYOteE4v2SV7r4ylc3vDLUxgPivtzidpU90y', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-08-19 09:40:18', '2022-08-19 09:40:18', NULL),
 (15, 'marklee@gmail.com', 'marklee', '', 'profile/user.png', '', '$2y$10$WriEqYmtkl5a4GTjgEtonucWD41q3cc7OXs9P5AS1u4iDcBoCZw4q', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-08-19 09:45:49', '2022-08-19 09:45:49', NULL),
 (16, 'dnabila07@gmail.com', 'ary', '', 'profile/user.png', '', '$2y$10$MO51so9NYLHQefzTHUVSUuT7M5ZU9.X3hpxaUyqks0STiNPed.cpm', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-12-20 01:43:52', '2022-12-20 01:43:52', NULL),
-(17, 'ari@gmail.com', 'ari', '', 'profile/user.png', '', '$2y$10$cuxQvqe96LnFtp3McL.3ueh3ZYeSILboVPdlZHijITa9rFEzrDJDq', 0, NULL, NULL, NULL, '2403c3d949a338c722a283a8876a7027', NULL, NULL, 1, 'admin', 0, '2023-05-02 08:09:29', '2023-05-02 08:09:29', NULL),
+(17, 'ari@gmail.com', 'ari', '', 'profile/user.png', '', '$2y$10$DhnccSKG4I4LCttOWhIGue5c/ijmScS0NUbffWF4maC4WInpO1tMS', 0, NULL, NULL, NULL, '2403c3d949a338c722a283a8876a7027', NULL, NULL, 1, 'mahasiswa', 0, '2023-05-02 08:09:29', '2023-05-02 08:09:29', NULL),
 (18, 'ari2@gmail.com', 'ermapedagang', '', 'profile/user.png', '', '$2y$10$owKZEGhMkZM1.f8Rqwb5fuXhWrKZlRe7vhTCmaaGO/ERMlpXDz2C.', 0, NULL, NULL, NULL, 'faf29adce2d68d8997eb0fe86d6d2b12', NULL, NULL, 1, 'admin', 0, '2023-05-02 08:11:32', '2023-05-02 08:11:32', NULL),
 (19, 'isa@gmail.com', 'isa1234', NULL, 'profile/user.png', NULL, '$2y$10$DhnccSKG4I4LCttOWhIGue5c/ijmScS0NUbffWF4maC4WInpO1tMS', NULL, NULL, NULL, NULL, '82f0baf9a37c5aad62a4082f67adc999', NULL, NULL, 1, NULL, 0, '2023-05-02 10:55:58', '2023-05-02 10:55:58', NULL),
 (20, 'percobaan@gmail.com', 'percobaan', NULL, NULL, NULL, '$2y$10$TEEMSVHCqKB8zfyM.4eDiO55ILimSiA8evln9Ysx8GTZ72DzFdTZW', NULL, NULL, NULL, NULL, 'a53c8b4f6dd977f6ab0953ecba38ab48', NULL, NULL, 0, NULL, 0, '2023-05-11 12:26:29', '2023-05-11 12:26:29', NULL),
@@ -815,6 +929,18 @@ ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `pendataan_lomba`
+--
+ALTER TABLE `pendataan_lomba`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pendataan_lomba_mahasiswa`
+--
+ALTER TABLE `pendataan_lomba_mahasiswa`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `prediksi`
 --
 ALTER TABLE `prediksi`
@@ -826,6 +952,18 @@ ALTER TABLE `prediksi`
 ALTER TABLE `prodi`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `prodi_kode_unique` (`kode`);
+
+--
+-- Indexes for table `rekognisi`
+--
+ALTER TABLE `rekognisi`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `rekognisi_mahasiswa`
+--
+ALTER TABLE `rekognisi_mahasiswa`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `users`
@@ -861,7 +999,7 @@ ALTER TABLE `auth_groups_users`
 -- AUTO_INCREMENT for table `auth_logins`
 --
 ALTER TABLE `auth_logins`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=200;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=209;
 
 --
 -- AUTO_INCREMENT for table `auth_permissions`
@@ -885,7 +1023,7 @@ ALTER TABLE `auth_tokens`
 -- AUTO_INCREMENT for table `dosen`
 --
 ALTER TABLE `dosen`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `input_mahasiswa`
@@ -903,7 +1041,7 @@ ALTER TABLE `kategori_lomba`
 -- AUTO_INCREMENT for table `lomba`
 --
 ALTER TABLE `lomba`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=137;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
 
 --
 -- AUTO_INCREMENT for table `mahasiswa`
@@ -918,6 +1056,18 @@ ALTER TABLE `migrations`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `pendataan_lomba`
+--
+ALTER TABLE `pendataan_lomba`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `pendataan_lomba_mahasiswa`
+--
+ALTER TABLE `pendataan_lomba_mahasiswa`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `prediksi`
 --
 ALTER TABLE `prediksi`
@@ -928,6 +1078,18 @@ ALTER TABLE `prediksi`
 --
 ALTER TABLE `prodi`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `rekognisi`
+--
+ALTER TABLE `rekognisi`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `rekognisi_mahasiswa`
+--
+ALTER TABLE `rekognisi_mahasiswa`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`

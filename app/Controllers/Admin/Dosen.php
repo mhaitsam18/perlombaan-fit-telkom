@@ -75,7 +75,7 @@ class Dosen extends BaseController
 
         $file = $this->request->getFile('foto');
         $nama_file = 'dosen/' . $file->getRandomName();
-        $file->move('assets/img/dosen');
+        $file->move('assets/img/dosen', $nama_file);
 
         $this->dosenModel->save([
             'prodi_id' => $this->request->getVar('prodi_id'),
@@ -104,7 +104,7 @@ class Dosen extends BaseController
             'validation' => $this->validation,
             'page' => 'dosen',
             'dosen' => $dosen,
-            'user' => $this->db->table('users')->where(['id' => $dosen['user_id']])->get()->getRowArray()
+            // 'user' => $this->db->table('users')->where(['id' => $dosen['user_id']])->get()->getRowArray()
         ]);
     }
 
