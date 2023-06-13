@@ -26,6 +26,72 @@
     </div>
 </div>
 
+<div class="counter-area pt-100 pb-70">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Selamat datang di halaman "Tentang Kami" Dashboard Perlombaan!</h2>
+            <p> Kami bangga menjadi bagian dari perjalanan kompetisi Anda melalui platform kami yang inovatif. Dashboard Perlombaan adalah solusi terpadu yang dirancang khusus untuk memudahkan peserta dalam memantau perlombaan secara efisien.
+            </p>
+            <p>Tim kami terdiri dari 2 orang mahasiswa Telkom Uninversity yang berkomitmen untuk memberikan dukungan teknis yang cepat dan responsif. Kami siap membantu Anda menjawab pertanyaan, menyelesaikan masalah, dan memberikan bantuan yang Anda butuhkan.</p>
+
+            <p> Kami berharap Anda menikmati pengalaman menggunakan Dashboard Perlombaan kami. Kami terus berupaya meningkatkan platform kami agar dapat memenuhi harapan dan kebutuhan Anda. Terima kasih telah memilih kami sebagai mitra perlombaan Anda!</p>
+        </div>
+    </div>
+    <div class="counter-shape">
+        <div class="shape1">
+            <img src="/assets-techex-demo/images/shape/shape1.png" alt="Images" loading="lazy">
+        </div>
+        <div class="shape2">
+            <img src="/assets-techex-demo/images/shape/shape2.png" alt="Images" loading="lazy">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="choose-area pt-100 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="choose-content mr-20">
+                    <div class="section-title">
+                        <h2>Dinda Nabila.</h2>
+                        <p>
+                            Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum auctor a ornare odio.
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-6">
+                            <div class="choose-content-card">
+                                <div class="content">
+                                    <i class="flaticon-practice"></i>
+                                    <h3>Experience</h3>
+                                </div>
+                                <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-6">
+                            <div class="choose-content-card">
+                                <div class="content">
+                                    <i class="flaticon-help"></i>
+                                    <h3>Quick Support</h3>
+                                </div>
+                                <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="choose-img">
+                    <img src="/assets-techex-demo/images/choose-img.jpg" alt="Images" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="about-area ptb-100">
     <div class="container">
@@ -74,52 +140,7 @@
     </div>
 </div>
 
-
-<div class="choose-area pt-100 pb-70">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="choose-content mr-20">
-                    <div class="section-title">
-                        <span class="sp-color1">Why Choose Us</span>
-                        <h2>We Provide Truly Prominent It Solutions.</h2>
-                        <p>
-                            Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum auctor a ornare odio.
-                        </p>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-6">
-                            <div class="choose-content-card">
-                                <div class="content">
-                                    <i class="flaticon-practice"></i>
-                                    <h3>Experience</h3>
-                                </div>
-                                <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-6">
-                            <div class="choose-content-card">
-                                <div class="content">
-                                    <i class="flaticon-help"></i>
-                                    <h3>Quick Support</h3>
-                                </div>
-                                <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="choose-img">
-                    <img src="/assets-techex-demo/images/choose-img.jpg" alt="Images" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="security-area pt-100 pb-70">
+<!-- <div class="security-area pt-100 pb-70">
     <div class="container">
         <div class="section-title text-center">
             <span class="sp-color2">IT Security & Computing</span>
@@ -196,56 +217,10 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
-<div class="counter-area pt-100 pb-70">
-    <div class="container">
-        <div class="section-title text-center">
-            <span class="sp-color2">Numbers Are Talking</span>
-            <h2>Let’s Check Our Business Growth and Success Story</h2>
-            <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris Morbi accumsan ipsum velit. </p>
-        </div>
-        <div class="row pt-45">
-            <div class="col-lg-3 col-6 col-md-3">
-                <div class="counter-another-content">
-                    <i class="flaticon-web-development"></i>
-                    <h3>4205+</h3>
-                    <span>Delivered Goods</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-6 col-md-3">
-                <div class="counter-another-content">
-                    <i class="flaticon-consulting-1"></i>
-                    <h3>245+</h3>
-                    <span>IT Consulting</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-6 col-md-3">
-                <div class="counter-another-content">
-                    <i class="flaticon-startup"></i>
-                    <h3>3550+</h3>
-                    <span>Fully Launched</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-6 col-md-3">
-                <div class="counter-another-content">
-                    <i class="flaticon-tick"></i>
-                    <h3>6545+</h3>
-                    <span>Project Completed</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="counter-shape">
-        <div class="shape1">
-            <img src="/assets-techex-demo/images/shape/shape1.png" alt="Images" loading="lazy">
-        </div>
-        <div class="shape2">
-            <img src="/assets-techex-demo/images/shape/shape2.png" alt="Images" loading="lazy">
-        </div>
-    </div>
-</div>
+
 
 <?= $this->endSection() ?>
 

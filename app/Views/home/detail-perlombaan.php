@@ -66,13 +66,13 @@ use CodeIgniter\I18n\Time;
                             elit consequat ipsum.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
                             elit consequat ipsum. Proin gravida nibh vel velit.
                         </p>
-                        <blockquote class="blockquote">
+                        <!-- <blockquote class="blockquote">
                             <p>
                                 Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, Proin gravida nibh vel velit nisi elit.
                             </p>
                             <span>- Albedin Simanth</span>
                             <i class='bx bxs-quote-alt-left'></i>
-                        </blockquote>
+                        </blockquote> -->
                         <p>
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. cu
                             sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies ne,
@@ -99,7 +99,7 @@ use CodeIgniter\I18n\Time;
                                 </div>
                             </div>
                             <div class="col-lg-5 col-sm-5 col-md-5">
-                                <ul class="social-icon">
+                                <!-- <ul class="social-icon">
                                     <li>
                                         <a href="https://www.facebook.com/" target="_blank">
                                             <i class='bx bxl-facebook'></i>
@@ -120,11 +120,11 @@ use CodeIgniter\I18n\Time;
                                             <i class='bx bxl-instagram'></i>
                                         </a>
                                     </li>
-                                </ul>
+                                </ul                            l> -->
                             </div>
                         </div>
                     </div>
-                    <div class="comments-wrap">
+                    <!-- <div class="comments-wrap">
                         <div class="comment-title">
                             <h3 class="title">Comments (02)</h3>
                         </div>
@@ -209,12 +209,12 @@ use CodeIgniter\I18n\Time;
                                 </div>
                             </form>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="side-bar-area">
-                    <div class="search-widget">
+                    <!-- <div class="search-widget">
                         <form class="search-form">
                             <input type="search" class="form-control" placeholder="Search...">
                             <button type="submit">
@@ -252,7 +252,7 @@ use CodeIgniter\I18n\Time;
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="side-bar-widget">
                         <h3 class="title">Latest Blog</h3>
                         <div class="widget-popular-post">
@@ -310,7 +310,7 @@ use CodeIgniter\I18n\Time;
                             </article>
                         </div>
                     </div>
-                    <div class="side-bar-widget">
+                    <!-- <div class="side-bar-widget">
                         <h3 class="title">Tag Cloud</h3>
                         <ul class="side-bar-widget-tag">
                             <li><a href="blog-details.html" target="_blank">Android</a></li>
@@ -386,7 +386,7 @@ use CodeIgniter\I18n\Time;
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

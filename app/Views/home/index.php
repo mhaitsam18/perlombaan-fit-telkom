@@ -24,15 +24,15 @@
                 <div class="col-lg-7">
                     <div class="banner-img">
                         <img src="/assets-techex-demo/images/home-three/home-three-img.png" alt="Images">
-                        <div class="banner-img-shape">
+                        <!-- <div class="banner-img-shape">
                             <img src="/assets-techex-demo/images/home-three/home-three-shape.png" alt="Images" loading="lazy">
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container">
+    <!-- <div class="container">
         <div class="banner-sub-slider owl-carousel owl-theme">
             <div class="banner-sub-item">
                 <img src="/assets-techex-demo/images/home-three/home-three-sub1.jpg" alt="Images" loading="lazy">
@@ -56,7 +56,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 
 
@@ -65,7 +65,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="about-img-2">
-                    <img src="/assets-techex-demo/images/about/about-img3.jpg" alt="About Images" loading="lazy">
+                    <img src="/assets-techex-demo/images/about/gedung.jpg" alt="About Images" loading="lazy">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -107,7 +107,7 @@
 </div>
 
 
-<div class="security-area pt-100 pb-70">
+<!-- <div class="security-area pt-100 pb-70">
     <div class="container">
         <div class="section-title text-center">
             <span class="sp-color2">IT Security & Computing</span>
@@ -158,53 +158,53 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
 <section class="services-area-three pt-100 pb-70">
     <div class="container">
         <div class="section-title text-center">
             <span class="sp-color2">Our Services</span>
-            <h2>We Provide a Wide Variety of IT Services</h2>
+            <h2>Kami Menyediakan Berbagai Layanan</h2>
         </div>
         <div class="row pt-45">
             <div class="col-lg-4 col-md-6">
                 <div class="services-item">
-                    <a href="service-details.html">
+                    <a href="/login">
                         <img src="/assets-techex-demo/images/services/services-img1.jpg" alt="Images" loading="lazy">
                     </a>
                     <div class="content">
                         <i class="flaticon-consultant"></i>
-                        <span><a href="service-details.html">IT Solution</a></span>
-                        <h3><a href="service-details.html">IT Consulting</a></h3>
+                        <!-- <span><a href="service-details.html">Informasi Dosen</a></span> -->
+                        <h3><a href="/login">Perlombaan</a></h3>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="services-item">
-                    <a href="service-details.html">
+                    <a href="/login">
                         <img src="/assets-techex-demo/images/services/services-img2.jpg" alt="Images" loading="lazy">
                     </a>
                     <div class="content">
                         <i class="flaticon-consulting"></i>
-                        <span><a href="service-details.html">Cloud Services</a></span>
-                        <h3><a href="service-details.html">Cloud Computing</a></h3>
+                        <!-- <span><a href="service-details.html">Rekognisi</a></span> -->
+                        <h3><a href="/login">Rekognisi</a></h3>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="services-item">
-                    <a href="service-details.html">
+                    <a href="/login">
                         <img src="/assets-techex-demo/images/services/services-img3.jpg" alt="Images" loading="lazy">
                     </a>
                     <div class="content">
                         <i class="flaticon-web-development"></i>
-                        <span><a href="service-details.html">Web Services</a></span>
-                        <h3><a href="service-details.html">Web Development</a></h3>
+                        <!-- <span><a href="service-details.html">Web Services</a></span> -->
+                        <h3><a href="/login">Validasi Lomba</a></h3>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <!-- <div class="col-lg-4 col-md-6">
                 <div class="services-item">
                     <a href="service-details.html">
                         <img src="/assets-techex-demo/images/services/services-img4.jpg" alt="Images" loading="lazy">
@@ -239,13 +239,13 @@
                         <h3><a href="service-details.html">Data Analysis</a></h3>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
 
 
-<div class="build-area pt-100 pb-70">
+<!-- <div class="build-area pt-100 pb-70">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-8 col-md-8">
@@ -270,10 +270,10 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
-<div class="case-study-area pb-70">
+<!-- <div class="case-study-area pb-70">
     <div class="container-fluid p-0">
         <div class="section-title text-center">
             <span class="sp-color2">Case Study</span>
@@ -360,7 +360,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
 <div class="talk-area ptb-100">
@@ -368,14 +368,14 @@
         <div class="talk-content text-center">
             <div class="section-title text-center">
                 <span class="sp-color1">Let's Talk</span>
-                <h2>We Are Adding Kinds of It Services That You Grow Success</h2>
+                <h2>Contact Us</h2>
             </div>
-            <a href="contact.html" class="default-btn btn-bg-two border-radius-5">Contact Us</a>
+            <a href="contact.html" class="default-btn btn-bg-two border-radius-5">Klik Di sini</a>
         </div>
     </div>
 </div>
 
-
+<!-- 
 <section class="technology-area-two pt-100 pb-70">
     <div class="container">
         <div class="section-title text-center">
@@ -421,10 +421,10 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 
-<div class="brand-area-two ptb-100">
+<!-- <div class="brand-area-two ptb-100">
     <div class="container">
         <div class="brand-slider owl-carousel owl-theme">
             <div class="brand-item">
@@ -447,26 +447,25 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
 <section class="clients-area pt-100 pb-70">
     <div class="container">
         <div class="section-title text-center">
             <span class="sp-color2">Our Clients</span>
-            <h2>Our Clients Feedback</h2>
+            <h2>Mahasiswa Feedback</h2>
         </div>
         <div class="clients-slider owl-carousel owl-theme pt-45">
             <div class="clients-content">
                 <div class="content">
-                    <img src="/assets-techex-demo/images/clients-img/clients-img1.jpg" alt="Images" loading="lazy">
+                    <img src="/assets-techex-demo/images/clients-img/anas.jpg" alt="Images" loading="lazy">
                     <i class='bx bxs-quote-alt-left'></i>
-                    <h3>Jonthon Martin</h3>
-                    <span>App Developer</span>
+                    <h3>Anas Aprilian</h3>
+                    <span>Mahasiswa D3 Sistem Informasi 2020</span>
                 </div>
                 <p>
-                    “Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis.
-                    sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi loren accumsan ipsum velit.”
+                    “Website ini sangat membantu mahasiswa seperti saya untuk mencari perlombaan di bidang keahlian saya khusus D3 Sistem Informasi”
                 </p>
             </div>
             <div class="clients-content">
@@ -477,8 +476,7 @@
                     <span>Graphic Designer</span>
                 </div>
                 <p>
-                    “Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis.
-                    sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi loren accumsan ipsum velit.”
+                    “Website ini mudah digunakan.”
                 </p>
             </div>
             <div class="clients-content">
@@ -495,7 +493,7 @@
             </div>
         </div>
     </div>
-    <div class="client-circle">
+    <!-- <div class="client-circle">
         <div class="client-circle-1">
             <div class="circle"></div>
         </div>
@@ -517,11 +515,11 @@
         <div class="client-circle-7">
             <div class="circle"></div>
         </div>
-    </div>
+    </div> -->
 </section>
 
 
-<div class="blog-area pt-100 pb-70">
+<!-- <div class="blog-area pt-100 pb-70">
     <div class="container">
         <div class="section-title text-center">
             <span class="sp-color2">Latest Blog</span>
@@ -614,7 +612,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <?= $this->endSection() ?>
 

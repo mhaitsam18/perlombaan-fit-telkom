@@ -7,7 +7,7 @@
 <?= $this->section('content') ?>
 
 
-<div class="inner-banner">
+<!-- <div class="inner-banner">
     <div class="container">
         <div class="inner-title text-center">
             <h3>Log In</h3>
@@ -25,7 +25,7 @@
     <div class="inner-shape">
         <img src="/assets-techex-demo/images/shape/inner-shape.png" alt="Images">
     </div>
-</div>
+</div> -->
 
 
 <div class="user-area pt-100 pb-70">
@@ -33,7 +33,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="user-img">
-                    <img src="/assets-techex-demo/images/user-img.jpg" alt="Images" loading="lazy">
+                    <img src="/assets-techex-demo/images/beranda_logod3.png" alt="Images" loading="lazy">
                 </div>
             </div>
             <div class="col-lg-6">

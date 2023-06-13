@@ -79,7 +79,7 @@ use CodeIgniter\I18n\Time;
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
+            <!-- <div class="col-lg-4">
                 <div class="side-bar-area">
                     <div class="search-widget">
                         <form class="search-form">
@@ -103,10 +103,10 @@ use CodeIgniter\I18n\Time;
                                     <div class="line-circle"></div>
                                     <a href="/perlombaan/<?= $lomba['slug'] ?>">IT Services<span>[70]</span></a>
                                 </li> -->
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- <div class="side-bar-widget">
+            </ul>
+        </div>
+    </div> -->
+    <!-- <div class="side-bar-widget">
                         <h3 class="title">Latest Blog</h3>
                         <div class="widget-popular-post">
                             <article class="item">
@@ -240,10 +240,10 @@ use CodeIgniter\I18n\Time;
                             </ul>
                         </div>
                     </div> -->
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <?= $this->endSection() ?>
 

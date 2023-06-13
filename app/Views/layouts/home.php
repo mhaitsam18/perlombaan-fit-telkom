@@ -90,11 +90,11 @@
                                                 Tentang Kami
                                             </a>
                                         </li>
-                                        <li class="nav-item">
+                                        <!-- <li class="nav-item">
                                             <a href="/faq" class="nav-link <?= ($page == 'faq') ? 'active' : '' ?>">
                                                 FAQ
                                             </a>
-                                        </li>
+                                        </li> -->
                                         <li class="nav-item">
                                             <a href="/kontak-kami" class="nav-link  <?= ($page == 'kontak-kami') ? 'active' : '' ?>">
                                                 Kontak Kami
@@ -114,7 +114,7 @@
                                 </li>
                             </ul>
                             <div class="nav-side d-display nav-side-mt">
-                                <div class="nav-side-item">
+                                <!-- <div class="nav-side-item">
                                     <div class="search-side-widget">
                                         <form class="search-side-form">
                                             <input type="search" class="form-control" placeholder="Search...">
@@ -123,7 +123,7 @@
                                             </button>
                                         </form>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="nav-side-item">
                                     <div class="get-btn">
                                         <?php if (logged_in()) : ?>
@@ -210,7 +210,22 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-sm-6">
+
+                    <!-- <div class="talk-area ptb-100">
+                        <div class="container">
+                            <div class="talk-content text-center">
+                                <div class="section-title text-center">
+                                    <span class="sp-color1">Let's Talk</span>
+                                    <h2>Contact Us</h2>
+                                </div>
+                                <a href="contact.html" class="default-btn btn-bg-two border-radius-5">Klik Di sini</a>
+                            </div>
+                        </div>
+                    </div> -->
+
+
+
+                    <!-- <div class="col-lg-2 col-sm-6">
                         <div class="footer-widget pl-2">
                             <h3>Services</h3>
                             <ul class="footer-list">
@@ -309,27 +324,27 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="copy-right-area">
-                <div class="copy-right-text">
-                    <p>
-                        Copyright © <script>
-                            document.write(new Date().getFullYear())
-                        </script> Dashboard Perlombaan D3 Sistem Informasi. dibuat oleh
-                        <a href="https://instagram.com/raden_fachry" target="_blank">Raden Fachry Azwar</a>
-                    </p>
+            </div> -->
+                    <div class="copy-right-area">
+                        <div class="copy-right-text">
+                            <p>
+                                Copyright © <script>
+                                    document.write(new Date().getFullYear())
+                                </script> Dashboard Perlombaan D3 Sistem Informasi. dibuat oleh
+                                <a href="https://instagram.com/raden_fachry" target="_blank">Raden Fachry Azwar</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
     </footer>
 
 
-    <div class="switch-box">
+    <!-- <div class="switch-box">
         <label id="switch" class="switch">
             <input type="checkbox" onchange="toggleTheme()" id="slider">
             <span class="slider round"></span>
         </label>
-    </div>
+    </div> -->
 
 
     <script src="/assets-techex-demo/js/jquery.min.js"></script>
