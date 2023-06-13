@@ -134,8 +134,7 @@ class Lomba extends BaseController
             $nama_file = 'lomba/' . $file->getRandomName();
             $file->move('assets/img/lomba');
         }
-
-
+        
         $this->lombaModel->save([
             'id' => $id,
             'Title' => $this->request->getVar('Title'),

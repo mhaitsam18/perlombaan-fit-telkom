@@ -79,6 +79,31 @@
                                         Perlombaan
                                     </a>
                                 </li>
+                                <?php if (logged_in()) : ?>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link <?= ($page == 'rekognisi' || $page == 'pendataan-lomba') ? 'active' : '' ?>">
+                                            Layanan
+                                            <i class='bx bx-caret-down'></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a href="/mahasiswa/rekognisi" class="nav-link <?= ($page == 'rekognisi') ? 'active' : '' ?>">
+                                                    Rekognisi
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="/mahasiswa/pendataan-lomba" class="nav-link <?= ($page == 'pendataan-lomba') ? 'active' : '' ?>">
+                                                    Pendataan Lomba
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="/mahasiswa/validasi-lomba" class="nav-link  <?= ($page == 'validasi-lomba') ? 'active' : '' ?>">
+                                                    Validasi Lomba <span>(New)</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                <?php endif; ?>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link <?= ($page == 'tentang-kami' || $page == 'faq' || $page == 'kontak-kami' || $page == 'informasi-dosen' || $page == 'validasi-lomba') ? 'active' : '' ?>">
                                         Informasi
@@ -103,11 +128,6 @@
                                         <li class="nav-item">
                                             <a href="/informasi-dosen" class="nav-link  <?= ($page == 'informasi-dosen') ? 'active' : '' ?>">
                                                 informasi Dosen <span>(New)</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="validasi-lomba" class="nav-link  <?= ($page == 'validasi-lomba') ? 'active' : '' ?>">
-                                                Validasi Lomba <span>(New)</span>
                                             </a>
                                         </li>
                                     </ul>

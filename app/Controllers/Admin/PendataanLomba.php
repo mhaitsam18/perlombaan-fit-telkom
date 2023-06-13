@@ -5,11 +5,11 @@ namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
 
 
-class Rekognisi extends BaseController
+class PendataanLomba extends BaseController
 {
     public function index()
     {
-        $rekognisi = $this->rekognisiModel->findAll();
+        $rekognisi = $this->pendataanLombaModel->findAll();
         return view('admin/rekognisi/index', [
             'title' => 'Rekognisi',
             'page' => 'rekognisi',
@@ -17,7 +17,7 @@ class Rekognisi extends BaseController
             'rekognisi_mahasiswa' => $this->rekognisiMahasiswaModel
         ]);
     }
-    
+
     public function create()
     {
     }
