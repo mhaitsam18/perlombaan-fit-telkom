@@ -37,7 +37,7 @@
     <div class="container">
         <div class="section-title text-center">
             <h2>Formulir Pendataan Lomba</h2>
-            <div class="fs-4">Cek Rekognisi Nilai Kamu <a href="/mahasiswa/rekognisi" class="badge bg-primary">di sini</a></div>
+            <div class="fs-4">Cek Data Lomba Kamu <a href="/mahasiswa/rekognisi" class="badge bg-primary">di sini</a></div>
         </div>
         <div class="row pt-45">
             <div class="col-lg-4">
