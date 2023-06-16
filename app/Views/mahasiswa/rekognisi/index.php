@@ -36,7 +36,11 @@
 <div class="contact-form-area pt-100 pb-70">
     <div class="container">
         <div class="section-title text-center">
-            <h2>Formulir Rekognisi</h2>
+            <h1>Rekognisi Lomba Kamu Menjadi Nilai</h1>
+            <div class="fs-3">
+                Rekognisi adalah suatu fitur untuk menrekognisi suatu loba kamu menjadi nilai nilai di matakuliah tertentu sesuai dengan lomba yang kamu ikuti
+            </div>
+            <div class="fs-4">Cek Rekognisi Nilai Kamu <a href="/mahasiswa/rekognisi" class="badge bg-primary">di sini</a></div>
         </div>
         <div class="row pt-45">
             <div class="col-lg-4">
@@ -72,7 +76,7 @@
 
             <div class="col-lg-8">
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form action="" method="post" enctype="multipart/form-data" id="contactForm">
                         <div class="row">
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">

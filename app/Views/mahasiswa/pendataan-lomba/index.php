@@ -37,6 +37,7 @@
     <div class="container">
         <div class="section-title text-center">
             <h2>Formulir Pendataan Lomba</h2>
+            <div class="fs-4">Cek Rekognisi Nilai Kamu <a href="/mahasiswa/rekognisi" class="badge bg-primary">di sini</a></div>
         </div>
         <div class="row pt-45">
             <div class="col-lg-4">
@@ -114,6 +115,7 @@
                                     <label>Nama Dosen Pembimbing <span>*</span></label>
                                     <input type="text" name="nama_pembimbing" id="nama_pembimbing" class="form-control" required data-error="Masukkan Nama Pembimbing" placeholder="Nama Lengkap">
                                     <div class="help-block with-errors"></div>
+                                    <span class="text-dark">Belum punya Dosen Pembimbing? <a href="/informasi-dosen">Klik di sini</a> </span>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12">
