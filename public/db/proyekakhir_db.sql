@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 13, 2023 at 05:21 PM
+-- Generation Time: Jun 16, 2023 at 08:43 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -322,7 +322,17 @@ INSERT INTO `auth_logins` (`id`, `ip_address`, `email`, `user_id`, `date`, `succ
 (205, '::1', 'admin@gmail.com', 12, '2023-06-13 13:45:53', 1),
 (206, '::1', 'ari@gmail.com', 17, '2023-06-13 14:24:05', 1),
 (207, '::1', 'ari@gmail.com', 17, '2023-06-13 15:06:45', 1),
-(208, '::1', 'admin@gmail.com', 12, '2023-06-13 15:16:37', 1);
+(208, '::1', 'admin@gmail.com', 12, '2023-06-13 15:16:37', 1),
+(209, '::1', 'ari@gmail.com', 17, '2023-06-13 15:33:39', 1),
+(210, '::1', 'admin@gmail.com', 12, '2023-06-13 16:32:12', 1),
+(211, '::1', 'ari@gmail.com', 17, '2023-06-13 16:33:05', 1),
+(212, '::1', 'ari@gmail.com', 17, '2023-06-13 16:35:12', 1),
+(213, '::1', 'admin@gmail.com', 12, '2023-06-13 16:35:43', 1),
+(214, '::1', 'ari@gmail.com', 17, '2023-06-13 16:35:53', 1),
+(215, '::1', 'admin@gmail.com', 12, '2023-06-13 16:41:03', 1),
+(216, '::1', 'ari@gmail.com', 17, '2023-06-13 16:41:34', 1),
+(217, '::1', 'ari@gmail.com', 17, '2023-06-16 02:34:12', 1),
+(218, '::1', 'ari@gmail.com', 17, '2023-06-16 05:56:27', 1);
 
 -- --------------------------------------------------------
 
@@ -999,7 +1009,7 @@ ALTER TABLE `auth_groups_users`
 -- AUTO_INCREMENT for table `auth_logins`
 --
 ALTER TABLE `auth_logins`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=209;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=219;
 
 --
 -- AUTO_INCREMENT for table `auth_permissions`
