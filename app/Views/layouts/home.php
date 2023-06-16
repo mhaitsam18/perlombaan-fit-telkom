@@ -222,11 +222,11 @@
                                 </a>
                             </div>
                             <p>
-                                Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auct.Aenean, lorem quis bibendum auct. Aenean sollicitudin lorem.
+                                Universitas Telkom atau Telkom University adalah sebuah perguruan tinggi swasta no. 1 di Indonesia yang terletak di Bandung, Jawa Barat.
                             </p>
                             <div class="footer-call-content">
                                 <h3>Talk to Our Support</h3>
-                                <span><a href="tel:+1002-123-4567">+1 002-123-4567</a></span>
+                                <span><a href="tel:+62812-1185-5713">+62 812-1185-5713</a></span>
                                 <i class='bx bx-headphone'></i>
                             </div>
                         </div>

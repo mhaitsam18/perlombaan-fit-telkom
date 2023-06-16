@@ -372,7 +372,7 @@
                 <span class="sp-color1">Let's Talk</span>
                 <h2>Contact Us</h2>
             </div>
-            <a href="contact.html" class="default-btn btn-bg-two border-radius-5">Klik Di sini</a>
+            <a href="/kontak-kami" class="default-btn btn-bg-two border-radius-5">Klik Di sini</a>
         </div>
     </div>
 </div>
