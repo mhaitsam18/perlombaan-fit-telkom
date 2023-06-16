@@ -17,7 +17,7 @@ class Rekognisi extends BaseController
     public function index()
     {
         return view('mahasiswa/rekognisi/index', [
-            'title' => 'Input Rekognisi',
+            'title' => 'Rekognisi',
             'page' => 'rekognisi',
         ]);
     }
