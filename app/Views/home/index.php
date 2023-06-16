@@ -73,7 +73,7 @@
             <div class="col-lg-6">
                 <div class="about-content-2 ml-20">
                     <div class="section-title">
-                        <span class="sp-color1">About Us</span>
+                        <span class="sp-color1">Tentang Kami</span>
                         <h2>Selamat datang di website dashboard perlombaan!</h2>
                         <p>
                             Website ini dibuat untuk membantu mengelola perlombaan secara efektif dan efisien. Kami menyediakan sebuah platform yang menyatukan semua informasi terkait perlombaan yang dikhususkan untuk sistem informasi dalam satu tempat.
@@ -166,7 +166,7 @@
 <section class="services-area-three pt-100 pb-70">
     <div class="container">
         <div class="section-title text-center">
-            <span class="sp-color2">Our Services</span>
+            <span class="sp-color2">Layanan Kami</span>
             <h2>Kami Menyediakan Berbagai Layanan</h2>
         </div>
         <div class="row pt-45">
@@ -370,7 +370,7 @@
         <div class="talk-content text-center">
             <div class="section-title text-center">
                 <span class="sp-color1">Let's Talk</span>
-                <h2>Contact Us</h2>
+                <h2>Kontak Kami</h2>
             </div>
             <a href="/kontak-kami" class="default-btn btn-bg-two border-radius-5">Klik Di sini</a>
         </div>
@@ -455,7 +455,7 @@
 <section class="clients-area pt-100 pb-70">
     <div class="container">
         <div class="section-title text-center">
-            <span class="sp-color2">Our Clients</span>
+            <span class="sp-color2">User Kami</span>
             <h2>Mahasiswa Feedback</h2>
         </div>
         <div class="clients-slider owl-carousel owl-theme pt-45">

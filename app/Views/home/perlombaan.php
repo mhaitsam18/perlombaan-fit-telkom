@@ -39,7 +39,7 @@ use CodeIgniter\I18n\Time;
                         <?php
                         $time = Time::parse($lomba['Deadline']);
                         ?>
-                        <div class="col-lg-12">
+                        <div class="col-lg-12 m-3">
                             <div class="blog-style-card">
                                 <div class="blog-style-img">
                                     <a href="/perlombaan/<?= $lomba['slug'] ?>">
@@ -57,7 +57,9 @@ use CodeIgniter\I18n\Time;
                                         <li><i class='bx bx-purchase-tag-alt'></i><?= $lomba['kategori_indo'] ?></li>
                                     </ul>
                                     <h3><a href="/perlombaan/<?= $lomba['slug'] ?>"><?= $lomba['cabang_lomba'] ?></a></h3>
-                                    <?= $lomba['excerpt'] ?>
+                                    <p>
+                                        <?= $lomba['excerpt'] ?>
+                                    </p>
                                     <!-- <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, Proin gravida nibh vel vewwlit nisi elit consequat ipsum.</p> -->
                                     <a href="/perlombaan/<?= $lomba['slug'] ?>" class="default-btn btn-bg-two border-radius-50">Learn More <i class='bx bx-chevron-right'></i></a>
                                 </div>
