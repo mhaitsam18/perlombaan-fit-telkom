@@ -30,11 +30,11 @@
     <div class="container">
         <div class="section-title text-center">
             <h2>Selamat datang di halaman "Tentang Kami" Dashboard Perlombaan!</h2>
-            <p> Kami bangga menjadi bagian dari perjalanan kompetisi Anda melalui platform kami yang inovatif. Dashboard Perlombaan adalah solusi terpadu yang dirancang khusus untuk memudahkan peserta dalam memantau perlombaan secara efisien.
-            </p>
-            <p>Tim kami terdiri dari 2 orang mahasiswa Telkom Uninversity yang berkomitmen untuk memberikan dukungan teknis yang cepat dan responsif. Kami siap membantu Anda menjawab pertanyaan, menyelesaikan masalah, dan memberikan bantuan yang Anda butuhkan.</p>
+            <div class="fs-4"> Kami bangga menjadi bagian dari perjalanan kompetisi Anda melalui platform kami yang inovatif. Dashboard Perlombaan adalah solusi terpadu yang dirancang khusus untuk memudahkan peserta dalam memantau perlombaan secara efisien.
+            </div>
+            <div class="fs-4">Tim kami terdiri dari 2 orang mahasiswa Telkom Uninversity yang berkomitmen untuk memberikan dukungan teknis yang cepat dan responsif. Kami siap membantu Anda menjawab pertanyaan, menyelesaikan masalah, dan memberikan bantuan yang Anda butuhkan.</div>
 
-            <p> Kami berharap Anda menikmati pengalaman menggunakan Dashboard Perlombaan kami. Kami terus berupaya meningkatkan platform kami agar dapat memenuhi harapan dan kebutuhan Anda. Terima kasih telah memilih kami sebagai mitra perlombaan Anda!</p>
+            <div class="fs-4"> Kami berharap Anda menikmati pengalaman menggunakan Dashboard Perlombaan kami. Kami terus berupaya meningkatkan platform kami agar dapat memenuhi harapan dan kebutuhan Anda. Terima kasih telah memilih kami sebagai mitra perlombaan Anda!</div>
         </div>
     </div>
     <div class="counter-shape">

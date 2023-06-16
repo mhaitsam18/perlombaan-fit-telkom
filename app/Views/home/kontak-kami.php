@@ -12,13 +12,18 @@
         <div class="inner-title text-center">
             <div class="talk-content text-center">
                 <div class="section-title text-center">
-                    <!-- <span class="sp-color1">Let's Talk</span> -->
-                    <h3>Contact Us</h3>
+                    <span class="sp-color1">Let's Talk</span>
+                    <h3><?= $title ?></h3>
                 </div>
-                <div class="section-title text-center">
-                    <h3>Let's Send Us a Message Below</h3>
-                </div>
-                <a href="contact.html" class="default-btn btn-bg-two border-radius-5">Klik Di sini</a>
+                <ul>
+                    <li>
+                        <a href="/">Beranda</a>
+                    </li>
+                    <li>
+                        <i class='bx bx-chevrons-right'></i>
+                    </li>
+                    <li><?= $title ?></li>
+                </ul>
             </div>
         </div>
     </div>
@@ -29,33 +34,36 @@
 
 
 <div class="contact-form-area pt-100 pb-70">
-
-    <!-- <div class="row pt-45">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Let's Send Us a Message Below</h2>
+        </div>
+        <div class="row pt-45">
             <div class="col-lg-4">
                 <div class="contact-info mr-20">
-                    <span>Contact Info</span>
-                    <h2>Let's Connect With Us</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet varius mi, ut hendrerit magna mollis ac. </p>
+                    <span>Info Kontak</span>
+                    <h2>Hubungi kami</h2>
+                    <p>Universitas Telkom atau Telkom University adalah sebuah perguruan tinggi swasta yang terletak di Bandung, Jawa Barat.</p>
                     <ul>
                         <li>
                             <div class="content">
                                 <i class='bx bx-phone-call'></i>
-                                <h3>Phone Number</h3>
-                                <a href="tel:+1(212)-255-5511">+1 (212) 255-5511</a>
+                                <h3>Nomor Telepon</h3>
+                                <a href="tel:(022) 7564108">(022) 7564108</a>
                             </div>
                         </li>
                         <li>
                             <div class="content">
                                 <i class='bx bxs-map'></i>
-                                <h3>Address</h3>
-                                <span>124 Virgil A Virginia, USA</span>
+                                <h3>Alamat</h3>
+                                <span>Jl. Telekomunikasi. 1, Terusan Buahbatu - Bojongsoang, Telkom University, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257</span>
                             </div>
                         </li>
                         <li>
                             <div class="content">
                                 <i class='bx bx-message'></i>
-                                <h3>Contact Info</h3>
-                                <a href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#d0b8b5bcbcbf90a4b5b3b8b5a8feb3bfbd"><span class="__cf_email__" data-cfemail="761e131a1a19360213151e130e5815191b">[email&#160;protected]</span></a>
+                                <h3>Kontak Info</h3>
+                                <a href="https://telkomuniversity.ac.id" target="_blank"><span class="__cf_email__" data-cfemail="761e131a1a19360213151e130e5815191b">telkomuniversity.ac.id</span></a>
                             </div>
                         </li>
                     </ul>
@@ -120,8 +128,8 @@
                     </form>
                 </div>
             </div>
-        </div> -->
-</div>
+        </div>
+    </div>
 </div>
 
 

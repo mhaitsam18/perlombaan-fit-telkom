@@ -17,7 +17,9 @@
                         </p>
                         <div class="banner-btn">
                             <a href="/login" class="default-btn btn-bg-two border-radius-50">Cari Lomba <i class='bx bx-chevron-right'></i></a>
-                            <a href="contact.html" class="default-btn btn-bg-one border-radius-50 ml-20">Register<i class='bx bx-chevron-right'></i></a>
+                            <?php if (!logged_in()) : ?>
+                                <a href="/register" class="default-btn btn-bg-one border-radius-50 ml-20">Daftar<i class='bx bx-chevron-right'></i></a>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
