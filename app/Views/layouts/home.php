@@ -98,7 +98,7 @@
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a href="/mahasiswa/validasi-lomba" class="nav-link  <?= ($page == 'validasi-lomba') ? 'active' : '' ?>">
+                                                <a href="/validasi-lomba" class="nav-link  <?= ($page == 'validasi-lomba') ? 'active' : '' ?>">
                                                     Validasi Lomba <span>(New)</span>
                                                 </a>
                                             </li>
