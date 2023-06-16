@@ -29,7 +29,8 @@
 
     <link rel="stylesheet" href="/assets-techex-demo/css/theme-dark.css">
 
-    <link rel="icon" type="image/png" href="/assets/img/logos/logo_telyu_polos.png">
+    <link rel="icon" type="image/png" href="/assets/img/logos/logo_telyu_polos.png"><!-- Filepond stylesheet -->
+    <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
     <style>
         .logo-telyu {
             max-height: 80px;
@@ -388,6 +389,10 @@
     <script src="/assets-techex-demo/js/contact-form-script.js"></script>
 
     <script src="/assets-techex-demo/js/custom.js"></script>
+    <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+    <script>
+        FilePond.parse(document.body);
+    </script>
 
     <?= $this->renderSection('script') ?>
 </body>

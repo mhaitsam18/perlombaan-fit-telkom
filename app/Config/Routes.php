@@ -42,7 +42,7 @@ $routes->get('/kontak-kami', 'Home::kontak_kami', ['as' => 'home-kontak-kami']);
 $routes->get('/informasi-dosen', 'Home::informasi_dosen', ['as' => 'home-informasi-dosen']);
 $routes->get('/validasi-lomba', 'Home::validasi_lomba', ['as' => 'home-validasi-lomba']);
 
-$routes->group('mahasiswa', ['filter' => 'role:mahasiswa'], function ($routes) {
+$routes->group('mahasiswa', static function ($routes) {
     $routes->group('rekognisi', static function ($routes) {
         $routes->get('', 'Mahasiswa\Rekognisi::index', ['as' => 'mahasiswa-rekognisi-index']);
     });
