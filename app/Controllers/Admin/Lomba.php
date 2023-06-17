@@ -70,8 +70,9 @@ class Lomba extends BaseController
         }
 
         $file = $this->request->getFile('poster');
-        $nama_file = 'lomba/' . $file->getRandomName();
+        $nama_file = $file->getRandomName();
         $file->move('assets/img/lomba');
+        $nama_file = 'lomba/' . $nama_file;
 
         $this->lombaModel->save([
             'Title' => $this->request->getVar('Title'),
@@ -131,8 +132,9 @@ class Lomba extends BaseController
         if ($file->getError() == 4) {
             $nama_file = $this->request->getVar('posterLama');
         } else {
-            $nama_file = 'lomba/' . $file->getRandomName();
+            $nama_file = $file->getRandomName();
             $file->move('assets/img/lomba');
+            $nama_file = 'lomba/' . $nama_file;
         }
         
         $this->lombaModel->save([

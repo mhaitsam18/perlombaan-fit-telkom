@@ -74,8 +74,9 @@ class Dosen extends BaseController
         }
 
         $file = $this->request->getFile('foto');
-        $nama_file = 'dosen/' . $file->getRandomName();
+        $nama_file = $file->getRandomName();
         $file->move('assets/img/dosen', $nama_file);
+        $nama_file = 'dosen/' . $nama_file;
 
         $this->dosenModel->save([
             'prodi_id' => $this->request->getVar('prodi_id'),
@@ -141,8 +142,9 @@ class Dosen extends BaseController
         if ($file->getError() == 4) {
             $nama_file = $this->request->getVar('fotoLama');
         } else {
-            $nama_file = 'dosen/' . $file->getRandomName();
+            $nama_file = $file->getRandomName();
             $file->move('assets/img/dosen');
+            $nama_file = 'dosen/' . $nama_file;
         }
 
 

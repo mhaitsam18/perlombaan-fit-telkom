@@ -42,12 +42,20 @@ $routes->get('/kontak-kami', 'Home::kontak_kami', ['as' => 'home-kontak-kami']);
 $routes->get('/informasi-dosen', 'Home::informasi_dosen', ['as' => 'home-informasi-dosen']);
 $routes->get('/validasi-lomba', 'Home::validasi_lomba', ['as' => 'home-validasi-lomba']);
 
+$routes->post('/tmp-upload', 'File::upload', ['as' => 'tmp-upload']);
+$routes->delete('/tmp-delete', 'File::delete', ['as' => 'tmp-delete']);
+
+
 $routes->group('mahasiswa', static function ($routes) {
     $routes->group('rekognisi', static function ($routes) {
         $routes->get('', 'Mahasiswa\Rekognisi::index', ['as' => 'mahasiswa-rekognisi-index']);
+        $routes->post('', 'Mahasiswa\Rekognisi::store', ['as' => 'mahasiswa-rekognisi-store']);
+        $routes->get('list', 'Mahasiswa\Rekognisi::list', ['as' => 'mahasiswa-rekognisi-list']);
     });
     $routes->group('pendataan-lomba', static function ($routes) {
         $routes->get('', 'Mahasiswa\PendataanLomba::index', ['as' => 'mahasiswa-pendataan-lomba-index']);
+        $routes->post('', 'Mahasiswa\PendataanLomba::store', ['as' => 'mahasiswa-pendataan-lomba-store']);
+        $routes->get('list', 'Mahasiswa\PendataanLomba::list', ['as' => 'mahasiswa-pendataan-lomba-list']);
     });
 });
 

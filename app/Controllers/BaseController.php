@@ -53,6 +53,7 @@ abstract class BaseController extends Controller
     protected $pendataanLombaModel;
     protected $pendataanLombaMahasiswaModel;
     protected $userModel;
+    protected $db;
     // protected $session;
 
     /**

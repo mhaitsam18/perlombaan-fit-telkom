@@ -70,8 +70,9 @@ class Mahasiswa extends BaseController
         }
 
         $file = $this->request->getFile('foto');
-        $nama_file = 'mahasiswa/' . $file->getRandomName();
+        $nama_file = $file->getRandomName();
         $file->move('assets/img/mahasiswa');
+        $nama_file = 'mahasiswa/' . $nama_file;
 
 
 
@@ -132,8 +133,9 @@ class Mahasiswa extends BaseController
         if ($file->getError() == 4) {
             $nama_file = $this->request->getVar('fotoLama');
         } else {
-            $nama_file = 'mahasiswa/' . $file->getRandomName();
+            $nama_file = $file->getRandomName();
             $file->move('assets/img/mahasiswa');
+            $nama_file = 'mahasiswa/' . $nama_file;
         }
 
 

@@ -35,6 +35,11 @@
 
 <div class="contact-form-area pt-100 pb-70">
     <div class="container">
+        <?php if (session()->getFlashdata('error')) : ?>
+            <div class="alert alert-danger">
+                <?= session()->getFlashdata('error') ?>
+            </div>
+        <?php endif ?>
         <div class="section-title text-center">
             <h2>Formulir Pendataan Lomba</h2>
             <div class="fs-4">Cek Data Lomba Kamu <a href="/mahasiswa/rekognisi" class="badge bg-primary">di sini</a></div>
@@ -73,47 +78,68 @@
 
             <div class="col-lg-8">
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form action="/mahasiswa/pendataan-lomba" method="post" enctype="multipart/form-data" id="contactForm">
+                        <?= csrf_field() ?>
+                        <input type="hidden" name="user_id" value="<?= user()->id ?>">
+                        <input type="hidden" name="action" id="action" value="/mahasiswa/pendataan-lomba">
                         <div class="row">
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
                                     <label>Nama Lomba<span>*</span></label>
-                                    <input type="text" name="nama_lomba" id="nama_lomba" class="form-control" required data-error="Masukkan nama lomba" placeholder="Nama Lomba">
+                                    <input type="text" name="nama_lomba" id="nama_lomba" class="form-control <?= ($validation->hasError('nama_lomba')) ? 'is-invalid' : '' ?> <?= ($validation->hasError('nama_lomba')) ? 'is-invalid' : '' ?>" required data-error="Masukkan nama lomba" placeholder="Nama Lomba" value="<?= old('nama_lomba') ?>">
+                                    <small id="nama_lomba_feedback" class="text-danger fs-6">
+                                        <?= $validation->getError('nama_lomba') ?>
+                                    </small>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label>Nama Ketua <span>*</span></label>
-                                    <input type="text" name="nama_ketua" id="nama_ketua" class="form-control" required data-error="Masukkan Nama Lengkap" placeholder="Nama Lengkap">
+                                    <input type="text" name="nama_ketua" id="nama_ketua" class="form-control  <?= ($validation->hasError('nama_ketua')) ? 'is-invalid' : '' ?> <?= ($validation->hasError('nama_ketua')) ? 'is-invalid' : '' ?>" required data-error="Masukkan Nama Lengkap" placeholder="Nama Lengkap" value="<?= old('nama_ketua') ?>">
+                                    <small id="nama_ketua_feedback" class="text-danger fs-6">
+                                        <?= $validation->getError('nama_ketua') ?>
+                                    </small>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label>Nomor Induk Mahasiswa <span>*</span></label>
-                                    <input type="text" name="nim" id="nim" required data-error="Masukkan NIM" class="form-control" placeholder="NIM">
+                                    <input type="text" name="nim" id="nim" required data-error="Masukkan NIM" class="form-control  <?= ($validation->hasError('nim')) ? 'is-invalid' : '' ?> <?= ($validation->hasError('nim')) ? 'is-invalid' : '' ?>" placeholder="NIM" value="<?= old('nim') ?>">
+                                    <small id="nim_feedback" class="text-danger fs-6">
+                                        <?= $validation->getError('nim') ?>
+                                    </small>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label>Kelas <span>*</span></label>
-                                    <input type="text" name="kelas" id="kelas" required data-error="Masukkan kelas" class="form-control" placeholder="Kode Kelas">
+                                    <input type="text" name="kelas" id="kelas" required data-error="Masukkan kelas" class="form-control  <?= ($validation->hasError('kelas')) ? 'is-invalid' : '' ?> <?= ($validation->hasError('kelas')) ? 'is-invalid' : '' ?>" placeholder="Kode Kelas" value="<?= old('kelas') ?>">
+                                    <small id="kelas_feedback" class="text-danger fs-6">
+                                        <?= $validation->getError('kelas') ?>
+                                    </small>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label>Email <span>*</span></label>
-                                    <input type="email" name="email" id="email" required data-error="Masukkan email" class="form-control" placeholder="email">
+                                    <input type="email" name="email" id="email" required data-error="Masukkan email" class="form-control  <?= ($validation->hasError('email')) ? 'is-invalid' : '' ?> <?= ($validation->hasError('email')) ? 'is-invalid' : '' ?>" placeholder="email" value="<?= old('email') ?>">
+                                    <small id="email_feedback" class="text-danger fs-6">
+                                        <?= $validation->getError('email') ?>
+                                    </small>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
                                     <label>Nama Dosen Pembimbing <span>*</span></label>
-                                    <input type="text" name="nama_pembimbing" id="nama_pembimbing" class="form-control" required data-error="Masukkan Nama Pembimbing" placeholder="Nama Lengkap">
+                                    <input type="text" name="nama_pembimbing" id="nama_pembimbing" class="form-control  <?= ($validation->hasError('nama_pembimbing')) ? 'is-invalid' : '' ?> <?= ($validation->hasError('nama_pembimbing')) ? 'is-invalid' : '' ?>" required data-error="Masukkan Nama Pembimbing" placeholder="Nama Lengkap" value="<?= old('nama_pembimbing') ?>">
+                                    <small id="nama_pembimbing_feedback" class="text-danger fs-6">
+                                        <?= $validation->getError('nama_pembimbing') ?>
+                                    </small>
                                     <div class="help-block with-errors"></div>
                                     <span class="text-dark">Belum punya Dosen Pembimbing? <a href="/informasi-dosen">Klik di sini</a> </span>
                                 </div>
@@ -122,13 +148,19 @@
                                 <div class="form-group">
                                     <label>Upload Bukti Sertifikat <span>*</span></label>
                                     <input type="file" name="sertifikat" id="sertifikat" class="filepond" required data-error="Upload Sertifikat">
+                                    <small id="sertifikat_feedback" class="text-danger fs-6">
+                                        <?= $validation->getError('sertifikat') ?>
+                                    </small>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
                                     <label>Status Akhir perlombaan <span>*</span></label>
-                                    <input type="text" name="status" id="status" class="form-control" required data-error="Masukkan Status" placeholder="Contoh: Lolos pendanaan / Juara Harapan / Masih mencari Dosen Pembimbing">
+                                    <input type="text" name="status" id="status" class="form-control <?= ($validation->hasError('status')) ? 'is-invalid' : '' ?> <?= ($validation->hasError('status')) ? 'is-invalid' : '' ?>" required data-error="Masukkan Status" placeholder="Contoh: Lolos pendanaan / Juara Harapan / Masih mencari Dosen Pembimbing" value="<?= old('status') ?>">
+                                    <small id="status_feedback" class="text-danger fs-6">
+                                        <?= $validation->getError('status') ?>
+                                    </small>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
@@ -158,7 +190,18 @@
 
 <?= $this->section('script') ?>
 <script>
+    const csrfToken = document.querySelector('[name="csrf-token"]').getAttribute('content');
+    FilePond.create(
+        document.querySelector('.filepond')
+    );
     FilePond.setOptions({
+        server: {
+            process: '/tmp-upload',
+            revert: '/tmp-delete',
+            headers: {
+                'X-CSRF-TOKEN': csrfToken
+            },
+        },
         labelIdle: 'Seret & Lepaskan file Anda atau <span class="filepond--label-action"> Jelajahi </span>'
     });
 </script>

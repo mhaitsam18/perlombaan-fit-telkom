@@ -5,7 +5,8 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="csrf-token" content="<?= csrf_hash() ?>">
+    
     <link rel="stylesheet" href="/assets-techex-demo/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="/assets-techex-demo/css/animate.min.css">
@@ -391,7 +392,7 @@
     <script src="/assets-techex-demo/js/custom.js"></script>
     <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
     <script>
-        FilePond.parse(document.body);
+        // FilePond.parse(document.body);
     </script>
 
     <?= $this->renderSection('script') ?>
