@@ -7,7 +7,6 @@ use App\Controllers\BaseController;
 
 class Mahasiswa extends BaseController
 {
-    private $db;
     protected $validation;
     public function __construct()
     {
