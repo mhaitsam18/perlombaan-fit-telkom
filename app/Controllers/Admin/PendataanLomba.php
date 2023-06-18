@@ -9,12 +9,12 @@ class PendataanLomba extends BaseController
 {
     public function index()
     {
-        $rekognisi = $this->pendataanLombaModel->findAll();
-        return view('admin/rekognisi/index', [
-            'title' => 'Rekognisi',
-            'page' => 'rekognisi',
-            'data_rekognisi' => $rekognisi,
-            'rekognisi_mahasiswa' => $this->rekognisiMahasiswaModel
+        $pendataan_lomba = $this->pendataanLombaModel->findAll();
+        return view('admin/pendataan-lomba/index', [
+            'title' => 'Pendataan Lomba',
+            'page' => 'pendataan-lomba',
+            'data_pendataan_lomba' => $pendataan_lomba,
+            'pendataan_lomba_mahasiswa' => $this->pendataanLombaMahasiswaModel
         ]);
     }
 

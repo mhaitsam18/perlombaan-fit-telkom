@@ -43,60 +43,37 @@ use CodeIgniter\I18n\Time;
                             <span>Nov</span>
                         </div>
                     </div>
+                    <?php
+                        $targetDate = strtotime($lomba['Deadline']);
+                        $currentDate = time();
+                        $secondsRemaining = $targetDate - $currentDate;
+                        $daysRemaining = floor($secondsRemaining / (60 * 60 * 24));
+
+                    ?>
                     <div class="blog-article-title">
                         <ul>
                             <li><i class='bx bxs-user'></i> By <?= $lomba['Penyelenggara'] ?></li>
-                            <li><i class='bx bx-show-alt'></i>322 View</li>
-                            <li><i class='bx bxs-conversation'></i>2 Comments</li>
+                            <li><i class='bx bx-calendar'></i>Deadline: <?= date('d F Y', strtotime($lomba['Deadline'])); ?></li>
+                            <li><i class='bx bx-time'></i><?= $daysRemaining ?> Hari lagi</li>
                         </ul>
                         <h2><?= $lomba['Title'] ?> - <?= $lomba['cabang_lomba'] ?></h2>
                     </div>
                     <div class="article-content">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. cu
-                            sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies ne,
-                            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet n,
-                            vu eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis
-                            pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aen
-                            li, porttitor eu, consequat vitae, eleifend ac, enim.
-                        </p>
-                        <p>
-                            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.
-                            gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, Proin gravida nibh vel velit nisi
-                            elit consequat ipsum.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi
-                            elit consequat ipsum. Proin gravida nibh vel velit.
-                        </p>
-                        <!-- <blockquote class="blockquote">
-                            <p>
-                                Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, Proin gravida nibh vel velit nisi elit.
-                            </p>
-                            <span>- Albedin Simanth</span>
-                            <i class='bx bxs-quote-alt-left'></i>
-                        </blockquote> -->
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. cu
-                            sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies ne,
-                            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet n,
-                            vu eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis
-                            pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aen
-                            li, porttitor eu, consequat vitae, eleifend ac, enim.
-                        </p>
-                        <p>
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',
-                            making it look like readable English.
+                            <?= $lomba['teks'] ?>
                         </p>
                     </div>
                     <div class="blog-article-share">
                         <div class="row align-items-center">
                             <div class="col-lg-7 col-sm-7 col-md-7">
-                                <div class="blog-tag">
+                                <!-- <div class="blog-tag">
                                     <ul>
                                         <li><i class='bx bx-purchase-tag-alt'></i> Tags:</li>
                                         <li><a href="blog-details.html">Android</a></li>
                                         <li><a href="blog-details.html">Creative</a></li>
                                         <li><a href="blog-details.html">App</a></li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="col-lg-5 col-sm-5 col-md-5">
                                 <!-- <ul class="social-icon">
@@ -253,7 +230,7 @@ use CodeIgniter\I18n\Time;
                             </ul>
                         </div>
                     </div> -->
-                    <div class="side-bar-widget">
+                    <!-- <div class="side-bar-widget">
                         <h3 class="title">Latest Blog</h3>
                         <div class="widget-popular-post">
                             <article class="item">
@@ -309,7 +286,7 @@ use CodeIgniter\I18n\Time;
                                 </div>
                             </article>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- <div class="side-bar-widget">
                         <h3 class="title">Tag Cloud</h3>
                         <ul class="side-bar-widget-tag">

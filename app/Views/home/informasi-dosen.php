@@ -31,197 +31,29 @@
 <div class="team-area pt-100 pb-70">
     <div class="container">
         <div class="section-title text-center">
-            <span class="sp-color2">Our Team</span>
-            <h2>Our Team Members</h2>
+            <span class="sp-color2">Dosen Kami</span>
+            <h2>Cari Dosen Pembimbingmu</h2>
         </div>
         <div class="row pt-45">
-            <div class="col-lg-4 col-md-6">
-                <div class="team-card">
-                    <img src="/assets-techex-demo/images/team/team-img1.jpg" alt="Team Images" loading="lazy">
-                    <ul class="social-link">
-                        <li>
-                            <a href="https://www.facebook.com/" target="_blank">
-                                <i class='bx bxl-facebook'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/?lang=en" target="_blank">
-                                <i class='bx bxl-twitter'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/" target="_blank">
-                                <i class='bx bxl-linkedin-square'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/" target="_blank">
-                                <i class='bx bxl-instagram'></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="content">
-                        <h3>Adam Smith</h3>
-                        <span>President & CEO</span>
+            <?php foreach ($data_dosen as $dosen) : ?>
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card">
+                        <img src="/assets/img/<?= $dosen['foto'] ?>" alt="Team Images" loading="lazy">
+                        <ul class="social-link">
+                            <li>
+                                <a href="https://wa.me/<?= $dosen['telepon'] ?>" target="_blank">
+                                    <i class='bx bxl-whatsapp'></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="content">
+                            <h3><?= $dosen['nama_gelar'] ?></h3>
+                            <span><?= $dosen['jabatan'] ?></span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="team-card">
-                    <img src="/assets-techex-demo/images/team/team-img2.jpg" alt="Team Images" loading="lazy">
-                    <ul class="social-link">
-                        <li>
-                            <a href="https://www.facebook.com/" target="_blank">
-                                <i class='bx bxl-facebook'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/?lang=en" target="_blank">
-                                <i class='bx bxl-twitter'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/" target="_blank">
-                                <i class='bx bxl-linkedin-square'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/" target="_blank">
-                                <i class='bx bxl-instagram'></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="content">
-                        <h3>Max Angles</h3>
-                        <span>Manager</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="team-card">
-                    <img src="/assets-techex-demo/images/team/team-img3.jpg" alt="Team Images" loading="lazy">
-                    <ul class="social-link">
-                        <li>
-                            <a href="https://www.facebook.com/" target="_blank">
-                                <i class='bx bxl-facebook'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/?lang=en" target="_blank">
-                                <i class='bx bxl-twitter'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/" target="_blank">
-                                <i class='bx bxl-linkedin-square'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/" target="_blank">
-                                <i class='bx bxl-instagram'></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="content">
-                        <h3>Park Anderson</h3>
-                        <span>Sales Executive</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="team-card">
-                    <img src="/assets-techex-demo/images/team/team-img4.jpg" alt="Team Images" loading="lazy">
-                    <ul class="social-link">
-                        <li>
-                            <a href="https://www.facebook.com/" target="_blank">
-                                <i class='bx bxl-facebook'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/?lang=en" target="_blank">
-                                <i class='bx bxl-twitter'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/" target="_blank">
-                                <i class='bx bxl-linkedin-square'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/" target="_blank">
-                                <i class='bx bxl-instagram'></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="content">
-                        <h3>Tom Shumate</h3>
-                        <span>Founder</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="team-card">
-                    <img src="/assets-techex-demo/images/team/team-img5.jpg" alt="Team Images" loading="lazy">
-                    <ul class="social-link">
-                        <li>
-                            <a href="https://www.facebook.com/" target="_blank">
-                                <i class='bx bxl-facebook'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/?lang=en" target="_blank">
-                                <i class='bx bxl-twitter'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/" target="_blank">
-                                <i class='bx bxl-linkedin-square'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/" target="_blank">
-                                <i class='bx bxl-instagram'></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="content">
-                        <h3>Michael Evens</h3>
-                        <span>Team Leader</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="team-card">
-                    <img src="/assets-techex-demo/images/team/team-img6.jpg" alt="Team Images" loading="lazy">
-                    <ul class="social-link">
-                        <li>
-                            <a href="https://www.facebook.com/" target="_blank">
-                                <i class='bx bxl-facebook'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/?lang=en" target="_blank">
-                                <i class='bx bxl-twitter'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/" target="_blank">
-                                <i class='bx bxl-linkedin-square'></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/" target="_blank">
-                                <i class='bx bxl-instagram'></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="content">
-                        <h3>Carrie Horton</h3>
-                        <span>Sales Manager</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 text-center">
+            <?php endforeach; ?>
+            <!-- <div class="col-lg-12 col-md-12 text-center">
                 <div class="pagination-area">
                     <a href="team.html" class="prev page-numbers">
                         <i class='bx bx-left-arrow-alt'></i>
@@ -233,7 +65,7 @@
                         <i class='bx bx-right-arrow-alt'></i>
                     </a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

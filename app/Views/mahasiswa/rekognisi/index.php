@@ -45,7 +45,7 @@
             <div class="fs-3">
                 Rekognisi adalah suatu fitur untuk menrekognisi suatu loba kamu menjadi nilai nilai di matakuliah tertentu sesuai dengan lomba yang kamu ikuti
             </div>
-            <div class="fs-4">Cek Rekognisi Nilai Kamu <a href="/mahasiswa/rekognisi" class="badge bg-primary">di sini</a></div>
+            <div class="fs-4">Cek Rekognisi Nilai Kamu <a href="/mahasiswa/rekognisi/list" class="badge bg-primary">di sini</a></div>
         </div>
         <div class="row pt-45">
             <div class="col-lg-4">
@@ -150,7 +150,7 @@
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
                                     <label>Upload Bukti Sertifikat <span>*</span></label>
-                                    <input type="file" name="sertifikat" id="sertifikat" class="filepond" required data-error="Upload Sertifikat">
+                                    <input type="file" name="sertifikat" id="sertifikat" class="form-control" required data-error="Upload Sertifikat">
                                     <div id="sertifikat_feedback" class="text-danger fs-6">
                                         <?= $validation->getError('sertifikat') ?>
                                     </div>
@@ -183,9 +183,19 @@
 
 <?= $this->section('script') ?>
 <script>
+    const csrfToken = document.querySelector('[name="csrf-token"]').getAttribute('content');
+    FilePond.create(
+        document.querySelector('.filepond')
+    );
     FilePond.setOptions({
+        server: {
+            process: '/tmp-upload',
+            revert: '/tmp-delete',
+            headers: {
+                'X-CSRF-TOKEN': csrfToken
+            },
+        },
         labelIdle: 'Seret & Lepaskan file Anda atau <span class="filepond--label-action"> Jelajahi </span>'
     });
-
 </script>
 <?= $this->endSection() ?>

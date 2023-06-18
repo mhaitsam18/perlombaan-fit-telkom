@@ -50,12 +50,14 @@ $routes->group('mahasiswa', static function ($routes) {
     $routes->group('rekognisi', static function ($routes) {
         $routes->get('', 'Mahasiswa\Rekognisi::index', ['as' => 'mahasiswa-rekognisi-index']);
         $routes->post('', 'Mahasiswa\Rekognisi::store', ['as' => 'mahasiswa-rekognisi-store']);
+        $routes->post('anggota', 'Mahasiswa\Rekognisi::storeAnggota', ['as' => 'mahasiswa-rekognisi-store-anggota']);
         $routes->get('list', 'Mahasiswa\Rekognisi::list', ['as' => 'mahasiswa-rekognisi-list']);
     });
     $routes->group('pendataan-lomba', static function ($routes) {
         $routes->get('', 'Mahasiswa\PendataanLomba::index', ['as' => 'mahasiswa-pendataan-lomba-index']);
         $routes->post('', 'Mahasiswa\PendataanLomba::store', ['as' => 'mahasiswa-pendataan-lomba-store']);
         $routes->get('list', 'Mahasiswa\PendataanLomba::list', ['as' => 'mahasiswa-pendataan-lomba-list']);
+        $routes->post('anggota', 'Mahasiswa\PendataanLomba::storeAnggota', ['as' => 'mahasiswa-pendataan-lomba-store-anggota']);
     });
 });
 
@@ -109,12 +111,23 @@ $routes->group('admin', ['filter' => 'role:admin'], function ($routes) {
     });
     $routes->group('rekognisi', static function ($routes) {
         $routes->get('', 'Admin\Rekognisi::index', ['as' => 'admin-rekognisi']);
+        $routes->get('print', 'Admin\Rekognisi::print', ['as' => 'print-rekognisi']);
         $routes->get('create', 'Admin\Rekognisi::create', ['as' => 'create-rekognisi']);
         $routes->get('edit/(:any)', 'Admin\Rekognisi::edit/$1', ['as' => 'edit-rekognisi']);
         $routes->get('(:any)', 'Admin\Rekognisi::show/$1', ['as' => 'show-rekognisi']);
         $routes->post('', 'Admin\Rekognisi::store', ['as' => 'store-rekognisi']);
         $routes->put('(:num)', 'Admin\Rekognisi::update/$1', ['as' => 'update-rekognisi']);
         $routes->delete('delete/(:num)', 'Admin\Rekognisi::delete/$1', ['as' => 'delete-rekognisi']);
+    });
+    $routes->group('pendataan-lomba', static function ($routes) {
+        $routes->get('', 'Admin\PendataanLomba::index', ['as' => 'admin-pendataan-lomba']);
+        $routes->get('print', 'Admin\PendataanLomba::print', ['as' => 'print-pendataan-lomba']);
+        $routes->get('create', 'Admin\PendataanLomba::create', ['as' => 'create-pendataan-lomba']);
+        $routes->get('edit/(:any)', 'Admin\PendataanLomba::edit/$1', ['as' => 'edit-pendataan-lomba']);
+        $routes->get('(:any)', 'Admin\PendataanLomba::show/$1', ['as' => 'show-pendataan-lomba']);
+        $routes->post('', 'Admin\PendataanLomba::store', ['as' => 'store-pendataan-lomba']);
+        $routes->put('(:num)', 'Admin\PendataanLomba::update/$1', ['as' => 'update-pendataan-lomba']);
+        $routes->delete('delete/(:num)', 'Admin\PendataanLomba::delete/$1', ['as' => 'delete-pendataan-lomba']);
     });
 });
 

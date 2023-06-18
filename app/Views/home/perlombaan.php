@@ -51,10 +51,17 @@ use CodeIgniter\I18n\Time;
                                     </div>
                                 </div>
                                 <div class="content">
+                                    <?php
+                                        $targetDate = strtotime($lomba['Deadline']);
+                                        $currentDate = time();
+                                        $secondsRemaining = $targetDate - $currentDate;
+                                        $daysRemaining = floor($secondsRemaining / (60 * 60 * 24));
+
+                                     ?>
                                     <ul>
                                         <li><i class='bx bxs-user'></i> By <?= $lomba['Penyelenggara'] ?></li>
-                                        <li><i class='bx bx-show-alt'></i>322 View</li>
-                                        <li><i class='bx bx-purchase-tag-alt'></i><?= $lomba['kategori_indo'] ?></li>
+                                        <li><i class='bx bx-calendar'></i>Deadline: <?= date('d F Y', strtotime($lomba['Deadline'])); ?></li>
+                                        <li><i class='bx bx-time'></i><?= $daysRemaining ?> Hari lagi</li>
                                     </ul>
                                     <h3><a href="/perlombaan/<?= $lomba['slug'] ?>"><?= $lomba['cabang_lomba'] ?></a></h3>
                                     <p>
@@ -67,7 +74,7 @@ use CodeIgniter\I18n\Time;
                         </div>
                     <?php endforeach; ?>
                     <div class="col-lg-12 col-md-12 text-center">
-                        <div class="pagination-area">
+                        <!-- <div class="pagination-area">
                             <a href="blog-1.html" class="prev page-numbers">
                                 <i class='bx bx-left-arrow-alt'></i>
                             </a>
@@ -77,7 +84,7 @@ use CodeIgniter\I18n\Time;
                             <a href="blog-1.html" class="next page-numbers">
                                 <i class='bx bx-right-arrow-alt'></i>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

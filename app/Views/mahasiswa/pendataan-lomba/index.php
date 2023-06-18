@@ -42,7 +42,7 @@
         <?php endif ?>
         <div class="section-title text-center">
             <h2>Formulir Pendataan Lomba</h2>
-            <div class="fs-4">Cek Data Lomba Kamu <a href="/mahasiswa/rekognisi" class="badge bg-primary">di sini</a></div>
+            <div class="fs-4">Cek Data Lomba Kamu <a href="/mahasiswa/pendataan-lomba/list" class="badge bg-primary">di sini</a></div>
         </div>
         <div class="row pt-45">
             <div class="col-lg-4">
@@ -147,7 +147,7 @@
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
                                     <label>Upload Bukti Sertifikat <span>*</span></label>
-                                    <input type="file" name="sertifikat" id="sertifikat" class="filepond" required data-error="Upload Sertifikat">
+                                    <input type="file" name="sertifikat" id="sertifikat" class="form-control" required data-error="Upload Sertifikat">
                                     <small id="sertifikat_feedback" class="text-danger fs-6">
                                         <?= $validation->getError('sertifikat') ?>
                                     </small>

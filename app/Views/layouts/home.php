@@ -347,17 +347,17 @@
                     </div>
                 </div>
             </div> -->
-                    <div class="copy-right-area">
-                        <div class="copy-right-text">
-                            <p>
-                                Copyright © <script>
-                                    document.write(new Date().getFullYear())
-                                </script> Dashboard Perlombaan D3 Sistem Informasi. dibuat oleh
-                                <a href="https://instagram.com/raden_fachry" target="_blank">Raden Fachry Azwar</a>
-                            </p>
-                        </div>
-                    </div>
+            <div class="copy-right-area">
+                <div class="copy-right-text">
+                    <p>
+                        Copyright © <script>
+                            document.write(new Date().getFullYear())
+                        </script> Dashboard Perlombaan D3 Sistem Informasi. dibuat oleh
+                        <a href="https://instagram.com/raden_fachry" target="_blank">Raden Fachry Azwar</a>
+                    </p>
                 </div>
+            </div>
+        </div>
     </footer>
 
 

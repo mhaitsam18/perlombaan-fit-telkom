@@ -15,7 +15,8 @@
                     <span class="sp-color1">Let's Talk</span>
                     <h3><?= $title ?></h3>
                 </div>
-                <ul>
+                <a href="/kontak-kami" class="default-btn btn-bg-two border-radius-5">Klik Di sini</a>
+                <!-- <ul>
                     <li>
                         <a href="/">Beranda</a>
                     </li>
@@ -23,7 +24,7 @@
                         <i class='bx bx-chevrons-right'></i>
                     </li>
                     <li><?= $title ?></li>
-                </ul>
+                </ul> -->
             </div>
         </div>
     </div>
@@ -35,11 +36,11 @@
 
 <div class="contact-form-area pt-100 pb-70">
     <div class="container">
-        <div class="section-title text-center">
+        <!-- <div class="section-title text-center">
             <h2>Let's Send Us a Message Below</h2>
-        </div>
-        <div class="row pt-45">
-            <div class="col-lg-4">
+        </div> -->
+        <!-- <div class="row pt-45"> -->
+            <!-- <div class="col-lg-4">
                 <div class="contact-info mr-20">
                     <span>Info Kontak</span>
                     <h2>Hubungi kami</h2>
@@ -127,8 +128,8 @@
                         </div>
                     </form>
                 </div>
-            </div>
-        </div>
+            </div> -->
+        <!-- </div> -->
     </div>
 </div>
 

@@ -56,7 +56,8 @@ class Home extends BaseController
     {
         return view('home/informasi-dosen', [
             'title' => 'Informasi Dosen',
-            'page' => 'informasi-dosen'
+            'page' => 'informasi-dosen',
+            'data_dosen' => $this->dosenModel->findAll()
         ]);
     }
     public function validasi_lomba()

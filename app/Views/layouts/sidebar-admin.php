@@ -18,26 +18,27 @@
                     <span class="link-title">Dashboard</span>
                 </a>
             </li>
-            <li class="nav-item nav-category">User Management</li>
-            <li class="nav-item <?= ($page == 'mahasiswa') ? 'active' : '' ?>">
-                <a href="<?= route_to('admin-mahasiswa') ?>" class="nav-link">
-                    <i class="link-icon" data-feather="users"></i>
-                    <span class="link-title">Data Mahasiswa</span>
-                </a>
-            </li>
+            <li class="nav-item nav-category">Master Data</li>
+
             <li class="nav-item <?= ($page == 'dosen') ? 'active' : '' ?>">
                 <a href="<?= route_to('admin-dosen') ?>" class="nav-link">
                     <i class="link-icon" data-feather="users"></i>
                     <span class="link-title">Data Dosen</span>
                 </a>
             </li>
-            <li class="nav-item <?= ($page == 'prodi') ? 'active' : '' ?>">
+            <!-- <li class="nav-item <?= ($page == 'prodi') ? 'active' : '' ?>">
                 <a href="<?= route_to('admin-prodi') ?>" class="nav-link">
                     <i class="link-icon" data-feather="users"></i>
                     <span class="link-title">Data Prodi</span>
                 </a>
-            </li>
-            <li class="nav-item nav-category">Perlombaan</li>
+            </li> -->
+            <!-- <li class="nav-item <?= ($page == 'mahasiswa') ? 'active' : '' ?>">
+                <a href="<?= route_to('admin-mahasiswa') ?>" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Data Mahasiswa</span>
+                </a>
+            </li> -->
+            <li class="nav-item nav-category">Fitur</li>
             <li class="nav-item <?= ($page == 'lomba') ? 'active' : '' ?>">
                 <a href="<?= route_to('admin-lomba') ?>" class="nav-link">
                     <i class="link-icon" data-feather="users"></i>
@@ -47,7 +48,13 @@
             <li class="nav-item <?= ($page == 'rekognisi') ? 'active' : '' ?>">
                 <a href="<?= route_to('admin-rekognisi') ?>" class="nav-link">
                     <i class="link-icon" data-feather="users"></i>
-                    <span class="link-title">Rekognisi</span>
+                    <span class="link-title">Data Rekognisi</span>
+                </a>
+            </li>
+            <li class="nav-item <?= ($page == 'pendataan-lomba') ? 'active' : '' ?>">
+                <a href="<?= route_to('admin-pendataan-lomba') ?>" class="nav-link">
+                    <i class="link-icon" data-feather="users"></i>
+                    <span class="link-title">Data Lomba Mahasiswa</span>
                 </a>
             </li>
         </ul>

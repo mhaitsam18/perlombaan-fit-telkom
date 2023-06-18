@@ -22,13 +22,14 @@ class Rekognisi extends BaseController
             'validation' => \Config\Services::validation(),
         ]);
     }
-    
+
     public function list()
     {
         return view('mahasiswa/rekognisi/list', [
             'title' => 'List Rekognisi',
             'page' => 'rekognisi',
-            'data_rekognisi' => $this->rekognisiModel->where('user_id', user()->id)->get()->result(),
+            'data_rekognisi' => $this->rekognisiModel->where('user_id', user()->id)->get()->getResult(),
+            'rekognisi_mahasiswa' => $this->rekognisiMahasiswaModel
         ]);
     }
     
@@ -74,5 +75,41 @@ class Rekognisi extends BaseController
         session()->setFlashdata('success', 'Data rekognisi berhasil dikirim');
 
         return redirect()->to('/mahasiswa/rekognisi/list');
+    }
+
+    public function storeAnggota()
+    {
+        $check = $this->validate([
+            'nama_mahasiswa' => 'required',
+            'nim' => 'required',
+            'kelas' => 'required',
+        ]);
+
+        if (!$check) {
+            return view('mahasiswa/rekognisi/list', [
+                'title' => 'List Rekognisi',
+                'validation' => \Config\Services::validation(),
+                'page' => 'rekognisi',
+            ]);
+            // $validation = \Config\Services::validation();
+            // return redirect()->back()->withInput()->with('error', $validation->listErrors());
+            // return redirect()->back()->withInput();
+        }
+
+
+        $this->rekognisiMahasiswaModel->save([
+            'rekognisi_id' => $this->request->getVar('rekognisi_id'),
+            'nama_mahasiswa' => $this->request->getVar('nama_mahasiswa'),
+            'nim' => $this->request->getVar('nim'),
+            'kelas' => $this->request->getVar('kelas'),
+        ]);
+
+        session()->setFlashdata('success', 'Anggota Lomba berhasil ditambahkan');
+
+        return redirect()->to('/mahasiswa/rekognisi/list');
+    }
+    public function print()
+    {
+        
     }
 }

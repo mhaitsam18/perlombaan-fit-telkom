@@ -26,14 +26,14 @@
         <div class="card">
             <div class="card-body">
                 <div class="d-flex justify-content-between align-items-baseline mb-2">
-                    <h6 class="card-title mb-0">Kelola data Rekognisi</h6>
+                    <h6 class="card-title mb-0">Kelola data lomba Mahasiswa</h6>
                     <div class="dropdown mb-2">
                         <button class="btn p-0" type="button" id="dropdownMenuButton7" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="icon-lg text-muted pb-3px" data-feather="more-horizontal"></i>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton7">
-                            <a class="dropdown-item d-flex align-items-center" href="/admin/rekognisi/create"><i data-feather="plus" class="icon-sm me-2"></i> <span class="">Tambah</span></a>
-                            <a class="dropdown-item d-flex align-items-center" href="/admin/rekognisi/print"><i data-feather="print" class="icon-sm me-2"></i> <span class="">Print</span></a>
+                            <a class="dropdown-item d-flex align-items-center" href="/admin/pendataan-lomba/create"><i data-feather="plus" class="icon-sm me-2"></i> <span class="">Tambah</span></a>
+                            <a class="dropdown-item d-flex align-items-center" href="/admin/pendataan-lomba/print"><i data-feather="print" class="icon-sm me-2"></i> <span class="">Print</span></a>
                             <!-- <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="printer" class="icon-sm me-2"></i> <span class="">Cetak</span></a>
                             <a class="dropdown-item d-flex align-items-center" href="javascript:;"><i data-feather="download" class="icon-sm me-2"></i> <span class="">Unduh</span></a> -->
                         </div>
@@ -58,7 +58,7 @@
                         <tbody>
 
                             <?php $no = 1; ?>
-                            <?php foreach ($data_rekognisi as $row) : ?>
+                            <?php foreach ($data_pendataan_lomba as $row) : ?>
                                 <tr>
                                     <th><?= $no++ ?></th>
                                     <td><?= $row['nama_lomba'] ?></td>
@@ -84,7 +84,7 @@
     </div>
 </div> <!-- row -->
 <!-- Button trigger modal -->
-<?php foreach ($data_rekognisi as $row) : ?>
+<?php foreach ($data_pendataan_lomba as $row) : ?>
     <!-- Modal -->
     <div class="modal fade" id="anggotaModal<?= $row['id'] ?>" tabindex="-1" aria-labelledby="anggotaModalLabel<?= $row['id'] ?>" aria-hidden="true">
         <div class="modal-dialog">
@@ -94,7 +94,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <?php $anggota_rekognisi = $rekognisi_mahasiswa->where('rekognisi_id', $row['id'])->get(); ?>
+                    <?php $anggota_pendataan_lomba = $pendataan_lomba_mahasiswa->where('pendataan_lomba_id', $row['id'])->get(); ?>
 
                     <table id="dataTableExample" class="table table-hover mb-0">
                         <thead>
@@ -118,7 +118,7 @@
                             <?php $no = 2; ?>
 
 
-                            <?php foreach ($anggota_rekognisi->getResult() as $anggota) : ?>
+                            <?php foreach ($anggota_pendataan_lomba->getResult() as $anggota) : ?>
                                 <tr>
                                     <td><?= $no++ ?></td>
                                     <td><?= $anggota->nama_mahasiswa ?></td>
