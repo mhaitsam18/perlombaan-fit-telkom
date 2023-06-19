@@ -44,10 +44,10 @@ use CodeIgniter\I18n\Time;
                         </div>
                     </div>
                     <?php
-                        $targetDate = strtotime($lomba['Deadline']);
-                        $currentDate = time();
-                        $secondsRemaining = $targetDate - $currentDate;
-                        $daysRemaining = floor($secondsRemaining / (60 * 60 * 24));
+                    $targetDate = strtotime($lomba['Deadline']);
+                    $currentDate = time();
+                    $secondsRemaining = $targetDate - $currentDate;
+                    $daysRemaining = floor($secondsRemaining / (60 * 60 * 24));
 
                     ?>
                     <div class="blog-article-title">
@@ -55,6 +55,7 @@ use CodeIgniter\I18n\Time;
                             <li><i class='bx bxs-user'></i> By <?= $lomba['Penyelenggara'] ?></li>
                             <li><i class='bx bx-calendar'></i>Deadline: <?= date('d F Y', strtotime($lomba['Deadline'])); ?></li>
                             <li><i class='bx bx-time'></i><?= $daysRemaining ?> Hari lagi</li>
+                            <li><i class='bx bx-link'></i><a href="<?= $lomba['link'] ?>">Buka Situs Resmi</a></li>
                         </ul>
                         <h2><?= $lomba['Title'] ?> - <?= $lomba['cabang_lomba'] ?></h2>
                     </div>
