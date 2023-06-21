@@ -7,6 +7,14 @@ use App\Controllers\BaseController;
 
 class PendataanLomba extends BaseController
 {
+
+    public function __construct()
+    {
+        if(!logged_in()){
+            return redirect()->to('/login');
+        }
+        
+    }
     public function index()
     {
         return view('mahasiswa/pendataan-lomba/index', [

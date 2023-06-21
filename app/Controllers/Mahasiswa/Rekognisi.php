@@ -13,7 +13,11 @@ class Rekognisi extends BaseController
         $this->db = \Config\Database::connect();
 
         $this->validation = \Config\Services::validation();
+        if (!logged_in()) {
+            return redirect()->to('/login');
+        }
     }
+
     public function index()
     {
         return view('mahasiswa/rekognisi/index', [
