@@ -26,7 +26,7 @@ class Home extends BaseController
     {
         $lomba = $this->lombaModel->where('slug', $slug)->first();
         return view('home/detail-perlombaan', [
-            'title' => 'Perlombaan',
+            'title' => 'Detail Perlombaan',
             'page' => 'perlombaan',
             'lomba' => $lomba,
         ]);

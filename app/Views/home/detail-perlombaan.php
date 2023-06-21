@@ -13,15 +13,15 @@ use CodeIgniter\I18n\Time;
 <div class="inner-banner">
     <div class="container">
         <div class="inner-title text-center">
-            <h3>Blog Details </h3>
+            <h3><?= $title ?></h3>
             <ul>
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="/beranda">Beranda</a>
                 </li>
                 <li>
                     <i class='bx bx-chevrons-right'></i>
                 </li>
-                <li>Blog Details</li>
+                <li><?= $title ?></li>
             </ul>
         </div>
     </div>
@@ -37,11 +37,11 @@ use CodeIgniter\I18n\Time;
             <div class="col-lg-8">
                 <div class="blog-article">
                     <div class="blog-article-img">
-                        <img src="/assets-techex-demo/images/blog/blog-details.jpg" alt="Images" loading="lazy">
-                        <div class="blog-article-tag">
+                        <img src="/assets/img/<?= $lomba['poster'] ?>" alt="Images" loading="lazy">
+                        <!-- <div class="blog-article-tag">
                             <h3>04</h3>
                             <span>Nov</span>
-                        </div>
+                        </div> -->
                     </div>
                     <?php
                     $targetDate = strtotime($lomba['Deadline']);
@@ -55,7 +55,7 @@ use CodeIgniter\I18n\Time;
                             <li><i class='bx bxs-user'></i> By <?= $lomba['Penyelenggara'] ?></li>
                             <li><i class='bx bx-calendar'></i>Deadline: <?= date('d F Y', strtotime($lomba['Deadline'])); ?></li>
                             <li><i class='bx bx-time'></i><?= $daysRemaining ?> Hari lagi</li>
-                            <li><i class='bx bx-link'></i><a href="<?= $lomba['link'] ?>">Buka Situs Resmi</a></li>
+                            <li><i class='bx bx-link'></i><a href="<?= $lomba['link'] ?>" target="_blank">Buka Situs Resmi</a></li>
                         </ul>
                         <h2><?= $lomba['Title'] ?> - <?= $lomba['cabang_lomba'] ?></h2>
                     </div>

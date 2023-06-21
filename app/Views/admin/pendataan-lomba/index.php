@@ -50,7 +50,7 @@
                                 <th class="pt-0">NIM</th>
                                 <th class="pt-0">Kelas</th>
                                 <th class="pt-0">Email</th>
-                                <th class="pt-0">Sertifikat</th>
+                                <th class="pt-0">Bukti</th>
                                 <th class="pt-0">Status</th>
                                 <th class="pt-0">Aksi</th>
                             </tr>
@@ -67,7 +67,7 @@
                                     <td><?= $row['nim'] ?></td>
                                     <td><?= $row['kelas'] ?></td>
                                     <td><?= $row['email'] ?></td>
-                                    <td><a href="/assets/img/<?= $row['sertifikat'] ?>" target="_blank" class="btn btn-sm btn-success">Sertifikat</a></td>
+                                    <td><a href="/assets/img/<?= $row['sertifikat'] ?>" target="_blank" class="btn btn-sm btn-success">Bukti</a></td>
                                     <td><?= $row['status'] ?></td>
                                     <td>
                                         <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#anggotaModal<?= $row['id'] ?>">

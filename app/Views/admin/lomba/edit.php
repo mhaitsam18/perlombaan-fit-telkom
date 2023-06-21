@@ -89,13 +89,13 @@
                             <?= $validation->getError('Deadline') ?>
                         </div>
                     </div>
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label for="counting_day" class="form-label">counting_day</label>
                         <input type="text" class="form-control <?= ($validation->hasError('counting_day')) ? 'is-invalid' : '' ?>" name="counting_day" id="counting_day" value="<?= old('counting_day', $lomba['counting_day']) ?>">
                         <div id="counting_day_feedback" class="invalid-feedback">
                             <?= $validation->getError('counting_day') ?>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="mb-3">
                         <label for="poster" class="form-label">Poster</label>
                         <div class="col-sm-4 m-1">

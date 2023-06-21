@@ -15,7 +15,7 @@
                     <span class="sp-color1">Let's Talk</span>
                     <h3><?= $title ?></h3>
                 </div>
-                <a href="/kontak-kami" class="default-btn btn-bg-two border-radius-5">Klik Di sini</a>
+                <a href="https://wa.me/+6281211855713" class="default-btn btn-bg-two border-radius-5">Klik Di sini</a>
                 <!-- <ul>
                     <li>
                         <a href="/">Beranda</a>
@@ -40,7 +40,7 @@
             <h2>Let's Send Us a Message Below</h2>
         </div> -->
         <!-- <div class="row pt-45"> -->
-            <!-- <div class="col-lg-4">
+        <!-- <div class="col-lg-4">
                 <div class="contact-info mr-20">
                     <span>Info Kontak</span>
                     <h2>Hubungi kami</h2>
