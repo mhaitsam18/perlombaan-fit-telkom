@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 16, 2023 at 08:43 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.1.12
+-- Generation Time: Jun 21, 2023 at 02:04 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.1.17
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -93,7 +93,11 @@ INSERT INTO `auth_groups_users` (`id`, `group_id`, `user_id`) VALUES
 (7, 2, 15),
 (8, 2, 20),
 (9, 2, 21),
-(10, 2, 22);
+(10, 2, 22),
+(11, 2, 23),
+(12, 2, 24),
+(13, 2, 25),
+(14, 2, 26);
 
 -- --------------------------------------------------------
 
@@ -332,7 +336,28 @@ INSERT INTO `auth_logins` (`id`, `ip_address`, `email`, `user_id`, `date`, `succ
 (215, '::1', 'admin@gmail.com', 12, '2023-06-13 16:41:03', 1),
 (216, '::1', 'ari@gmail.com', 17, '2023-06-13 16:41:34', 1),
 (217, '::1', 'ari@gmail.com', 17, '2023-06-16 02:34:12', 1),
-(218, '::1', 'ari@gmail.com', 17, '2023-06-16 05:56:27', 1);
+(218, '::1', 'ari@gmail.com', 17, '2023-06-16 05:56:27', 1),
+(219, '::1', 'ari@gmail.com', 17, '2023-06-17 18:37:22', 1),
+(220, '::1', 'admin@gmail.com', 12, '2023-06-18 07:32:56', 1),
+(221, '::1', 'ari@gmail.com', 17, '2023-06-18 10:47:56', 1),
+(222, '::1', 'ari@gmail.com', 17, '2023-06-18 13:23:46', 1),
+(223, '::1', 'admin@gmail.com', 12, '2023-06-18 13:30:18', 1),
+(224, '::1', 'ari@gmail.com', 17, '2023-06-18 13:34:00', 1),
+(225, '::1', 'admin@gmail.com', 12, '2023-06-18 13:34:47', 1),
+(226, '::1', 'admin@gmail.com', 12, '2023-06-18 13:37:34', 1),
+(227, '::1', 'ari@gmail.com', 17, '2023-06-18 13:38:48', 1),
+(228, '::1', 'ari@gmail.com', 17, '2023-06-18 17:38:35', 1),
+(229, '::1', 'admin@gmail.com', 12, '2023-06-18 20:12:28', 1),
+(230, '::1', 'admin@gmail.com', 12, '2023-06-21 06:57:32', 1),
+(231, '::1', 'ari@gmail.com', 17, '2023-06-21 07:24:25', 1),
+(232, '::1', 'admin@gmail.com', 12, '2023-06-21 07:30:43', 1),
+(233, '::1', 'admin@gmail.com', 12, '2023-06-21 07:36:35', 1),
+(234, '::1', 'admin@gmail.com', 12, '2023-06-21 07:36:42', 1),
+(235, '::1', 'ari@gmail.com', 17, '2023-06-21 08:22:44', 1),
+(236, '::1', 'admin@gmail.com', 12, '2023-06-21 08:43:47', 1),
+(237, '::1', 'admin@gmail.com', 12, '2023-06-21 09:37:21', 1),
+(238, '::1', 'admin@gmail.com', 12, '2023-06-21 09:50:07', 1),
+(239, '::1', 'admin@gmail.com', 12, '2023-06-21 11:14:25', 1);
 
 -- --------------------------------------------------------
 
@@ -421,6 +446,7 @@ CREATE TABLE `dosen` (
   `telepon` varchar(255) DEFAULT NULL,
   `alamat` text DEFAULT NULL,
   `foto` longtext DEFAULT NULL,
+  `jabatan` varchar(255) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
@@ -430,27 +456,26 @@ CREATE TABLE `dosen` (
 -- Dumping data for table `dosen`
 --
 
-INSERT INTO `dosen` (`id`, `user_id`, `prodi_id`, `email_telkom`, `nama`, `nama_gelar`, `nip`, `nidn`, `kode`, `telepon`, `alamat`, `foto`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 2, NULL, NULL, 'Patrick Adolf Telnoni', 'Patrick Adolf Telnoni, S.T., M.T.', '5171', NULL, 'PTI', '+62 822-1928-7517', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:30', '2022-08-16 09:34:30', NULL),
-(2, 3, NULL, NULL, 'Dedy Rahman Wijaya', 'Dr. Dedy Rahman Wijaya, S.T., M.T.', '5172', NULL, 'DRW', '+62 822-1914-7349', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:30', '2022-08-16 09:34:30', NULL),
-(3, 4, NULL, NULL, 'Hanung Nindito Prasetyo', 'Hanung Nindito Prasetyo, S.Si, M.T.', '5173', NULL, 'HNP', '+62 812-2059-9883', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:30', '2022-08-16 09:34:30', NULL),
-(4, 5, NULL, NULL, 'M. Barja Sanjaya', 'M. Barja Sanjaya, S.T., M.T., OCA.', '5174', NULL, 'MBS', '+62 813-1314-1120', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:30', '2022-08-16 09:34:30', NULL),
-(5, 6, NULL, NULL, 'Siska Komala Sari', 'Siska Komala Sari, S.T., M.T.', '5175', NULL, 'SKS', '+62 813-2019-8038', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:30', '2022-08-16 09:34:30', NULL),
-(6, 7, NULL, NULL, 'Wawa Wikusna', 'Wawa Wikusna, S.T., M.Kom.', '5176', NULL, 'WIU', '+62 813-2060-4160', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:30', '2022-08-16 09:34:30', NULL),
-(7, 8, NULL, NULL, 'Elis Hernawati', 'Elis Hernawati, S.T., M.Kom.', '5177', NULL, 'ELT', '+62 822-4003-5983', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
-(8, 9, NULL, NULL, 'Inne Gartina Husein', 'Dr. Inne Gartina Husein, S.Kom., M.T.', '5178', NULL, 'INE', '+62 813-9509-6162', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
-(9, 10, NULL, NULL, 'Pramuko Aji', 'Pramuko Aji, S.T., M.T.', '5179', NULL, 'PRA', '+62 821-8008-5050', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
-(10, 11, NULL, NULL, 'Suryatiningsih', 'Suryatiningsih, S.T., M.T., OCA., C.Ht.', '5180', NULL, 'SYN', '+62 813-2077-6520', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
-(11, 12, NULL, NULL, 'Tedi Gunawan', 'Tedi Gunawan, S.T., M.Kom.', '5181', NULL, 'TGN', '+62 812-2199-440', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
-(12, 13, NULL, NULL, 'Pikir Wisnu Wijayanto', 'Dr. Pikir Wisnu Wijayanto, S.E., S.Pd.Ing., M.Hum.', '5182', NULL, 'PWW', '+62 851-0387-9393', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
-(13, 14, NULL, NULL, 'Ely Rosely', 'Ir. Ely Rosely, M.B.S.', '5183', NULL, 'ELR', '+62 815-1324-4609', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
-(14, 15, NULL, NULL, 'Mutia Qana\'a', 'Mutia Qana\'a, S.Psi., M.Psi.', '5184', NULL, 'MQA', '+62 852-2279-7846', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
-(15, 16, NULL, NULL, 'Wahyu Hidayat', 'Wahyu Hidayat, S.T., M.T., OCA.', '5185', NULL, 'WHY', '+62 813-2207-2099', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
-(16, 17, NULL, NULL, 'Robbi Hendriyanto', 'Robbi Hendriyanto, S.T., M.T.', '5186', NULL, 'RHN', '+62 823-1604-9294', 'Denpasar', 'dosen/user.png', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
-(17, 22, NULL, NULL, 'Olivia Istianah', 'Olivia Istianah Amd.Kom', '1222', NULL, 'opi', '08131213123', 'Bandung', 'dosen/user.png', '2022-08-16 10:53:00', '2022-08-16 10:53:00', NULL),
-(18, 23, NULL, NULL, 'Rania Athala', 'Rania Athala Amd.Kom', '1235', NULL, 'tat', '08121312321', 'Bandung', 'dosen/user.png', '2022-08-16 10:53:00', '2022-08-16 10:53:00', NULL),
-(19, 24, NULL, NULL, 'Rusyda Hanifan', 'Rusyda Hanifan Amd.Kom', '1236', NULL, 'han', '8121312326', 'Bandung', 'dosen/user.png', '2022-08-16 10:53:00', '2022-08-16 10:53:00', NULL),
-(24, NULL, NULL, 'tiya@telkomuniversity.ac.id', 'Tiya K Izzati', 'Tiya K Izzati, S.T., M.T', '9281309812', '192830', 'TYA', '+62 822-1914-1234', 'Bandung', 'dosen/1685107026_23898103b6d36918200e.jpeg', '2023-05-26 06:17:06', '2023-05-26 06:17:06', NULL);
+INSERT INTO `dosen` (`id`, `user_id`, `prodi_id`, `email_telkom`, `nama`, `nama_gelar`, `nip`, `nidn`, `kode`, `telepon`, `alamat`, `foto`, `jabatan`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 2, NULL, 'patrick@telkomuniversity.ac.id', 'Patrick Adolf Telnoni', 'Patrick Adolf Telnoni, S.T., M.T.', '5171', '123123123123', 'PTI', '+6282219287517', 'Denpasar', 'dosen/team-img1.jpg', 'Ketua Lab SI', '2022-08-16 09:34:30', '2023-06-21 00:31:48', NULL),
+(2, 3, NULL, NULL, 'Dedy Rahman Wijaya', 'Dr. Dedy Rahman Wijaya, S.T., M.T.', '5172', NULL, 'DRW', '+6282219147349', 'Denpasar', 'dosen/team-img2.jpg', 'Ketua Lab Data Sains', '2022-08-16 09:34:30', '2022-08-16 09:34:30', NULL),
+(3, 4, NULL, NULL, 'Hanung Nindito Prasetyo', 'Hanung Nindito Prasetyo, S.Si, M.T.', '5173', NULL, 'HNP', '+6281220599883', 'Denpasar', 'dosen/team-img3.jpg', 'Sistem Analis', '2022-08-16 09:34:30', '2022-08-16 09:34:30', NULL),
+(4, 5, NULL, NULL, 'M. Barja Sanjaya', 'M. Barja Sanjaya, S.T., M.T., OCA.', '5174', NULL, 'MBS', '+6281313141120', 'Denpasar', 'dosen/team-img4.jpg', 'Ketua Lab Programming', '2022-08-16 09:34:30', '2022-08-16 09:34:30', NULL),
+(5, 6, NULL, NULL, 'Siska Komala Sari', 'Siska Komala Sari, S.T., M.T.', '5175', NULL, 'SKS', '+6281320198038', 'Denpasar', 'dosen/team-img5.jpg', 'Database Engineering', '2022-08-16 09:34:30', '2022-08-16 09:34:30', NULL),
+(6, 7, NULL, NULL, 'Wawa Wikusna', 'Wawa Wikusna, S.T., M.Kom.', '5176', NULL, 'WIU', '+6281320604160', 'Denpasar', 'dosen/team-img6.jpg', 'Smart City', '2022-08-16 09:34:30', '2022-08-16 09:34:30', NULL),
+(7, 8, NULL, NULL, 'Elis Hernawati', 'Elis Hernawati, S.T., M.Kom.', '5177', NULL, 'ELT', '+6282240035983', 'Denpasar', 'dosen/team-img1.jpg', 'Business Plan', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
+(8, 9, NULL, NULL, 'Inne Gartina Husein', 'Dr. Inne Gartina Husein, S.Kom., M.T.', '5178', NULL, 'INE', '+6281395096162', 'Denpasar', 'dosen/team-img6.jpg', 'Projek Lab', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
+(9, 10, NULL, NULL, 'Pramuko Aji', 'Pramuko Aji, S.T., M.T.', '5179', NULL, 'PRA', '+6282180085050', 'Denpasar', 'dosen/team-img6.jpg', 'Programmer', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
+(10, 11, NULL, NULL, 'Suryatiningsih', 'Suryatiningsih, S.T., M.T., OCA., C.Ht.', '5180', NULL, 'SYN', '+6281320776520', 'Denpasar', 'dosen/team-img6.jpg', 'UI/UX', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
+(11, 12, NULL, NULL, 'Tedi Gunawan', 'Tedi Gunawan, S.T., M.Kom.', '5181', NULL, 'TGN', '+628122199440', 'Denpasar', 'dosen/team-img6.jpg', 'UI/UX', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
+(12, 13, NULL, NULL, 'Pikir Wisnu Wijayanto', 'Dr. Pikir Wisnu Wijayanto, S.E., S.Pd.Ing., M.Hum.', '5182', NULL, 'PWW', '+6285103879393', 'Denpasar', 'dosen/team-img6.jpg', 'UI/UX', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
+(13, 14, NULL, NULL, 'Ely Rosely', 'Ir. Ely Rosely, M.B.S.', '5183', NULL, 'ELR', '+6281513244609', 'Denpasar', 'dosen/team-img6.jpg', 'UI/UX', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
+(14, 15, NULL, NULL, 'Mutia Qana\'a', 'Mutia Qana\'a, S.Psi., M.Psi.', '5184', NULL, 'MQA', '+6285222797846', 'Denpasar', 'dosen/team-img6.jpg', 'UI/UX', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
+(15, 16, NULL, NULL, 'Wahyu Hidayat', 'Wahyu Hidayat, S.T., M.T., OCA.', '5185', NULL, 'WHY', '+6281322072099', 'Denpasar', 'dosen/team-img6.jpg', 'UI/UX', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
+(16, 17, NULL, NULL, 'Robbi Hendriyanto', 'Robbi Hendriyanto, S.T., M.T.', '5186', NULL, 'RHN', '+6282316049294', 'Denpasar', 'dosen/team-img6.jpg', 'UI/UX', '2022-08-16 09:34:31', '2022-08-16 09:34:31', NULL),
+(17, 22, NULL, NULL, 'Olivia Istianah', 'Olivia Istianah Amd.Kom', '1222', NULL, 'opi', '+628131213123', 'Bandung', 'dosen/team-img6.jpg', 'UI/UX', '2022-08-16 10:53:00', '2022-08-16 10:53:00', NULL),
+(18, 23, NULL, NULL, 'Rania Athala', 'Rania Athala Amd.Kom', '1235', NULL, 'tat', '+628121312321', 'Bandung', 'dosen/team-img6.jpg', 'UI/UX', '2022-08-16 10:53:00', '2022-08-16 10:53:00', NULL),
+(24, NULL, NULL, 'tiya@telkomuniversity.ac.id', 'Tiya K Izzati', 'Tiya K Izzati, S.T., M.T', '9281309812', '192830', 'TYA', '+6282219141234', 'Bandung', 'dosen/team-img2.jpg', 'UI/UX', '2023-05-26 06:17:06', '2023-05-26 06:17:06', NULL);
 
 -- --------------------------------------------------------
 
@@ -546,7 +571,7 @@ CREATE TABLE `lomba` (
   `excerpt` text DEFAULT NULL,
   `Penyelenggara` varchar(200) NOT NULL,
   `Deadline` date NOT NULL,
-  `counting_day` varchar(255) NOT NULL,
+  `counting_day` varchar(255) DEFAULT NULL,
   `output` varchar(255) NOT NULL,
   `created_at` date DEFAULT NULL,
   `updated_at` date DEFAULT NULL
@@ -557,12 +582,12 @@ CREATE TABLE `lomba` (
 --
 
 INSERT INTO `lomba` (`id`, `kategori_lomba_id`, `poster`, `Title`, `cabang_lomba`, `link`, `teks`, `slug`, `excerpt`, `Penyelenggara`, `Deadline`, `counting_day`, `output`, `created_at`, `updated_at`) VALUES
-(66, 1, 'lomba/gemastik-2022.jpg', 'GEMASTI', 'Programming', 'https://eventpelajar.com/lomba/ ', '<p>asdasdasdasdasdsad</p>', 'gemastik-programming-2022', 'Lomba Programming seru abis', 'Risetdikti', '2022-09-02', '11', 'Valid', '2022-08-07', '2023-06-11'),
-(67, 9, 'lomba/gemastik.png', 'P2MW', 'Bisnis Digital', 'Kompetisi Mahasiswa - LLDIKTI Wilayah VI', '', 'p2mw-bisnis-digital-2022', 'Lomba Bisnis Digital seru abis', 'Kemdikbud', '2022-08-30', '', 'Invalid', '2022-08-07', '2022-08-07'),
-(68, 4, 'lomba/gemastik-2022.jpg', 'PKM', 'PKM T', 'Kompetisi Mahasiswa - LLDIKTI Wilayah VI', '', 'pkm-pkm-t-2022', 'Lomba PKM T seru abis', 'Kemenristekdikti', '2022-09-01', '', 'Valid', '2022-08-07', '2022-08-07'),
-(69, 4, 'lomba/gemastik.png', 'OLIVIA', 'UI/UX', 'https://www.kompas.com/tag/lomba', '', 'olivia-ui-ux-2022', 'Lomba UI/UX seru abis', 'ITS', '2022-09-02', '', 'Valid', '2022-08-07', '2022-08-07'),
-(137, NULL, '', '', NULL, 'https://kesejahteraan.kemdikbud.go.id/p2mw', '', NULL, NULL, '', '0000-00-00', '', '', '2023-05-29', '2023-05-29'),
-(138, NULL, '', '', NULL, 'https://kesejahteraan.kemdikbud.go.id/p2mw', '', NULL, NULL, '', '0000-00-00', '', '', '2023-05-29', '2023-05-29');
+(66, 1, 'lomba/gemastik-2022.jpg', 'GEMASTI', 'Programming', 'https://eventpelajar.com/lomba/ ', '<p>\n                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. cu\n                            sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies ne,\n                            pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet n,\n                            vu eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis\n                            pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aen\n                            li, porttitor eu, consequat vitae, eleifend ac, enim.\n                        </p>\n                        <p>\n                            Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.\n                            gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, Proin gravida nibh vel velit nisi\n                            elit consequat ipsum.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi\n                            elit consequat ipsum. Proin gravida nibh vel velit.\n                        </p>', 'gemastik-programming-2022', '<p>Lomba Programming seru abis</p>', 'Risetdikti', '2023-09-02', '11', 'Valid', '2022-08-07', '2023-06-11'),
+(67, 9, 'lomba/gemastik.png', 'P2MW', 'Bisnis Digital', 'https://kesejahteraan.kemdikbud.go.id/p2mw', '<p>                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. cu                             sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies ne,                             pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet n,                             vu eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis                             pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aen                             li, porttitor eu, consequat vitae, eleifend ac, enim.                         </p>                         <p>                             Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.                             gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, Proin gravida nibh vel velit nisi                             elit consequat ipsum.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi                             elit consequat ipsum. Proin gravida nibh vel velit.                         </p>', 'p2mw-bisnis-digital-2022', '<p>Lomba Programming seru abis</p>', 'Kemdikbud', '2023-08-30', '12', 'Invalid', '2022-08-07', '2022-08-07'),
+(68, 4, 'lomba/gemastik-2022.jpg', 'PKM', 'PKM T', 'https://kesejahteraan.kemdikbud.go.id/p2mw', '<p>                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. cu                             sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies ne,                             pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet n,                             vu eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis                             pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aen                             li, porttitor eu, consequat vitae, eleifend ac, enim.                         </p>                         <p>                             Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.                             gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, Proin gravida nibh vel velit nisi                             elit consequat ipsum.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi                             elit consequat ipsum. Proin gravida nibh vel velit.                         </p>', 'pkm-pkm-t-2022', 'Lomba PKM T seru abis', 'Kemenristekdikti', '2023-09-01', '10', 'Valid', '2022-08-07', '2022-08-07'),
+(69, 4, 'lomba/gemastik.png', 'OLIVIA', 'UI/UX', 'https://www.kompas.com/tag/lomba', '<p>                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. cu                             sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies ne,                             pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet n,                             vu eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis                             pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aen                             li, porttitor eu, consequat vitae, eleifend ac, enim.                         </p>                         <p>                             Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.                             gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, Proin gravida nibh vel velit nisi                             elit consequat ipsum.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi                             elit consequat ipsum. Proin gravida nibh vel velit.                         </p>', 'olivia-ui-ux-2022', 'Lomba UI/UX seru abis', 'ITS', '2023-09-02', '15', 'Valid', '2022-08-07', '2022-08-07'),
+(139, NULL, 'lomba/1687333137_429fad14d0c2888a1f6a.png', 'Dicoding', NULL, 'https://www.dicoding.com/', '<p>Lomba lomba</p>', 'dicoding-2023', NULL, 'Dicoding', '2023-11-30', '11', '', '2023-06-21', '2023-06-21'),
+(140, NULL, '', '', NULL, 'https://srgate.kemahasiswaan.uny.ac.id/gemastik/', '', NULL, NULL, '', '0000-00-00', NULL, '', '2023-06-21', '2023-06-21');
 
 -- --------------------------------------------------------
 
@@ -633,7 +658,8 @@ CREATE TABLE `pendataan_lomba` (
 --
 
 INSERT INTO `pendataan_lomba` (`id`, `user_id`, `nama_lomba`, `nama_ketua`, `nim`, `nama_pembimbing`, `kelas`, `email`, `sertifikat`, `status`, `created_at`, `updated_at`) VALUES
-(1, NULL, 'GEMASTIK WEB PROGRAMMING', 'IHSAN KURNIAWAN', '1202218458', 'KUR', 'SI-44-01', 'kur@gmail.com', 'sertifikat/sertifikat.png', 'Lolos Pendanaan', '2023-06-11 14:17:55', '2023-06-11 14:17:55');
+(1, NULL, 'GEMASTIK WEB PROGRAMMING', 'IHSAN KURNIAWAN', '1202218458', 'KUR', 'SI-44-01', 'kur@gmail.com', 'pendataan-lomba/1687035172_aa45fe0c9061321979c8.png', 'Lolos Pendanaan', '2023-06-11 14:17:55', '2023-06-11 14:17:55'),
+(2, 17, 'Programming', 'Raden Fachry Azwar', '6701202345', 'Inne Gartina Husein', 'D3SI-44-04', 'radenfachryazwar@gmail.com', 'pendataan-lomba/1687035172_aa45fe0c9061321979c8.png', 'Berhasil', '2023-06-17 13:52:52', '2023-06-17 13:52:52');
 
 -- --------------------------------------------------------
 
@@ -656,7 +682,8 @@ CREATE TABLE `pendataan_lomba_mahasiswa` (
 --
 
 INSERT INTO `pendataan_lomba_mahasiswa` (`id`, `pendataan_lomba_id`, `nama_mahasiswa`, `nim`, `kelas`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Raden Fachry', '6701202132', 'SI-44-04', '2023-06-13 13:55:27', '2023-06-13 13:55:27');
+(1, 1, 'Raden Fachry', '6701202132', 'SI-44-04', '2023-06-13 13:55:27', '2023-06-13 13:55:27'),
+(2, 2, 'Baskoro Bayu Saputra', '6701202345', 'D3SI-42-03', '2023-06-18 11:35:15', '2023-06-18 11:35:15');
 
 -- --------------------------------------------------------
 
@@ -753,7 +780,9 @@ CREATE TABLE `rekognisi` (
 --
 
 INSERT INTO `rekognisi` (`id`, `user_id`, `nama_lomba`, `nama_ketua`, `nim`, `nama_pembimbing`, `kelas`, `email`, `sertifikat`, `status`, `created_at`, `updated_at`) VALUES
-(1, NULL, 'GEMASTIK WEB PROGRAMMING', 'IHSAN KURNIAWAN', '1202218458', 'KUR', 'SI-44-01', 'kur@gmail.com', 'sertifikat/sertifikat.png', 'on process', '2023-06-11 14:17:55', '2023-06-11 14:17:55');
+(1, NULL, 'GEMASTIK WEB PROGRAMMING', 'IHSAN KURNIAWAN', '1202218458', 'KUR', 'SI-44-01', 'kur@gmail.com', 'sertifikat/sertifikat.png', 'on process', '2023-06-11 14:17:55', '2023-06-11 14:17:55'),
+(2, 17, 'Programming', 'Vanisa Auliani', '670120113', 'Inne Gartina Husein', 'D3SI-44-05', 'suryatiningsih@gmail.com', 'rekognisi/1687094697_bdd577483e78fa30599f.png', 'on process', '2023-06-18 06:24:57', '2023-06-18 06:24:57'),
+(3, 17, 'UI/UX', 'Raden Fachry', '6701202132', 'Inne Gartina Husein', 'D3SI-44-04', 'radenfachryazwar@gmail.com', 'rekognisi/1687332567_d4b7fbe410c8e42ebc20.png', 'on process', '2023-06-21 00:29:27', '2023-06-21 00:29:27');
 
 -- --------------------------------------------------------
 
@@ -776,7 +805,8 @@ CREATE TABLE `rekognisi_mahasiswa` (
 --
 
 INSERT INTO `rekognisi_mahasiswa` (`id`, `rekognisi_id`, `nama_mahasiswa`, `nim`, `kelas`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Raden Fachry', '6701202132', 'SI-44-04', '2023-06-13 13:55:27', '2023-06-13 13:55:27');
+(1, 1, 'Raden Fachry', '6701202132', 'SI-44-04', '2023-06-13 13:55:27', '2023-06-13 13:55:27'),
+(2, 3, 'Baron', '670120001', 'D3SI-44-04', '2023-06-21 00:30:08', '2023-06-21 00:30:08');
 
 -- --------------------------------------------------------
 
@@ -830,7 +860,11 @@ INSERT INTO `users` (`id`, `email`, `username`, `fullname`, `user_image`, `no_po
 (19, 'isa@gmail.com', 'isa1234', NULL, 'profile/user.png', NULL, '$2y$10$DhnccSKG4I4LCttOWhIGue5c/ijmScS0NUbffWF4maC4WInpO1tMS', NULL, NULL, NULL, NULL, '82f0baf9a37c5aad62a4082f67adc999', NULL, NULL, 1, NULL, 0, '2023-05-02 10:55:58', '2023-05-02 10:55:58', NULL),
 (20, 'percobaan@gmail.com', 'percobaan', NULL, NULL, NULL, '$2y$10$TEEMSVHCqKB8zfyM.4eDiO55ILimSiA8evln9Ysx8GTZ72DzFdTZW', NULL, NULL, NULL, NULL, 'a53c8b4f6dd977f6ab0953ecba38ab48', NULL, NULL, 0, NULL, 0, '2023-05-11 12:26:29', '2023-05-11 12:26:29', NULL),
 (21, 'bagus@gmail.com', 'bagus', NULL, NULL, NULL, '$2y$10$K7Vfg3Ad9hvUcnGzrcc8UuVgIrp3.7j0EQdkbxlSU892Rj8r9J/.G', NULL, NULL, NULL, NULL, '6f26cab4f2e6d4b9c2d7ebfc171721a8', NULL, NULL, 0, NULL, 0, '2023-05-11 13:12:58', '2023-05-11 13:12:58', NULL),
-(22, 'bismillah@gmail.com', 'bismillah', NULL, NULL, NULL, '$2y$10$j0q8KTqluph4W6Dmvr/rMe.p7HrTeTAf/aZ8q.lDatSIUoNMoAu..', NULL, NULL, NULL, NULL, 'e7f914ef568dbc955d23fc343cf508e5', NULL, NULL, 0, NULL, 0, '2023-05-11 13:29:35', '2023-05-11 13:29:35', NULL);
+(22, 'bismillah@gmail.com', 'bismillah', NULL, NULL, NULL, '$2y$10$j0q8KTqluph4W6Dmvr/rMe.p7HrTeTAf/aZ8q.lDatSIUoNMoAu..', NULL, NULL, NULL, NULL, 'e7f914ef568dbc955d23fc343cf508e5', NULL, NULL, 0, NULL, 0, '2023-05-11 13:29:35', '2023-05-11 13:29:35', NULL),
+(23, 'raden@gmail.com', 'raden', NULL, NULL, NULL, '$2y$10$g6LREYx8g49T2dvFhA4OD.JF8OCE78fbhOhwj88ueWKUJ6G2JNvR6', NULL, NULL, NULL, NULL, '95d77340f60dd88d8cefe5bc8e809f52', NULL, NULL, 0, NULL, 0, '2023-06-21 10:39:40', '2023-06-21 10:39:40', NULL),
+(24, 'tandu@gmail.com', 'Rinaldo', NULL, NULL, NULL, '$2y$10$Hrck1gJv7cuVG2eJxpgxe.l6dUsSpY1TML1DiNeS3LdVqwn1FF1Z2', NULL, NULL, NULL, NULL, '669bed25d8986b98809830ff0a38afba', NULL, NULL, 0, NULL, 0, '2023-06-21 11:30:43', '2023-06-21 11:30:43', NULL),
+(25, 'danu@gmail.com', 'danu', NULL, NULL, NULL, '$2y$10$gUKd7a7xX88eV4ex40LmleqTGs46BU8nGK99ChN3RP2/mrpKlv6Yu', NULL, NULL, NULL, NULL, '87767c6930f3f1a31dc17caac44bd543', NULL, NULL, 0, NULL, 0, '2023-06-21 11:34:03', '2023-06-21 11:34:03', NULL),
+(26, 'feby@gmail.com', 'feby', NULL, NULL, NULL, '$2y$10$0aq4NXhaQpsyaoZKb60h/eLuTm3sYMi7ru2NTah9GDArw6LhgRz.e', NULL, NULL, NULL, NULL, 'e19fbff0a01be1c1a55e700da5b423a9', NULL, NULL, 0, NULL, 0, '2023-06-21 11:39:14', '2023-06-21 11:39:14', NULL);
 
 --
 -- Indexes for dumped tables
@@ -1003,13 +1037,13 @@ ALTER TABLE `auth_groups`
 -- AUTO_INCREMENT for table `auth_groups_users`
 --
 ALTER TABLE `auth_groups_users`
-  MODIFY `id` bigint(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `auth_logins`
 --
 ALTER TABLE `auth_logins`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=219;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=240;
 
 --
 -- AUTO_INCREMENT for table `auth_permissions`
@@ -1033,7 +1067,7 @@ ALTER TABLE `auth_tokens`
 -- AUTO_INCREMENT for table `dosen`
 --
 ALTER TABLE `dosen`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `input_mahasiswa`
@@ -1051,7 +1085,7 @@ ALTER TABLE `kategori_lomba`
 -- AUTO_INCREMENT for table `lomba`
 --
 ALTER TABLE `lomba`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
 
 --
 -- AUTO_INCREMENT for table `mahasiswa`
@@ -1069,13 +1103,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `pendataan_lomba`
 --
 ALTER TABLE `pendataan_lomba`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `pendataan_lomba_mahasiswa`
 --
 ALTER TABLE `pendataan_lomba_mahasiswa`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `prediksi`
@@ -1093,19 +1127,19 @@ ALTER TABLE `prodi`
 -- AUTO_INCREMENT for table `rekognisi`
 --
 ALTER TABLE `rekognisi`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `rekognisi_mahasiswa`
 --
 ALTER TABLE `rekognisi_mahasiswa`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- Constraints for dumped tables
