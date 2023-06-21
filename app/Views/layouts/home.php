@@ -219,7 +219,7 @@
                         <div class="footer-widget text-center">
                             <div class="footer-logo">
                                 <a href="/beranda">
-                                    <img src="/assets/img/logos/logo_telyu_lanskap.png" alt="Images" loading="lazy" class="mx-auto d-block" style="width: 400px;">
+                                    <img src="/assets/img/logos/logo_telyu_lanskap_putih.png" alt="Images" loading="lazy" class="mx-auto d-block" style="width: 400px;">
                                 </a>
                             </div>
                             <p class="text-center mx-auto">

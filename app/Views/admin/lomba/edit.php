@@ -84,7 +84,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="Deadline" class="form-label">Deadline</label>
-                        <input type="text" class="form-control <?= ($validation->hasError('Deadline')) ? 'is-invalid' : '' ?>" name="Deadline" id="Deadline" value="<?= old('Deadline', $lomba['Deadline']) ?>">
+                        <input type="date" class="form-control <?= ($validation->hasError('Deadline')) ? 'is-invalid' : '' ?>" name="Deadline" id="Deadline" value="<?= old('Deadline', $lomba['Deadline']) ?>">
                         <div id="Deadline_feedback" class="invalid-feedback">
                             <?= $validation->getError('Deadline') ?>
                         </div>

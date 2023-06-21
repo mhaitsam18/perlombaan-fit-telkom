@@ -93,14 +93,14 @@
                                 <?php endif; ?>
                                 <div class="col-lg-12 ">
                                     <button type="submit" class="default-btn btn-bg-two">
-                                        Log In Now
+                                        Masuk Sekarang
                                     </button>
                                 </div>
                                 <?php if ($config->allowRegistration) : ?>
                                     <div class="col-12">
                                         <p class="account-desc">
                                             <?= lang('Auth.needAnAccount') ?>
-                                            <a href="<?= url_to('register') ?>">Register Now</a>
+                                            <a href="<?= url_to('register') ?>">Daftar Sekarang</a>
                                         </p>
                                     </div>
                                 <?php endif; ?>

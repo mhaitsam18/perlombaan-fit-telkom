@@ -60,7 +60,7 @@
         </ul>
     </div>
 </nav>
-<nav class="settings-sidebar">
+<!-- <nav class="settings-sidebar">
     <div class="sidebar-body">
         <a href="#" class="settings-sidebar-toggler">
             <i data-feather="settings"></i>
@@ -81,4 +81,4 @@
             </div>
         </div>
     </div>
-</nav>
+</nav> -->

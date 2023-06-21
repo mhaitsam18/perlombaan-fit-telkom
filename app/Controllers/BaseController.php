@@ -78,7 +78,7 @@ abstract class BaseController extends Controller
         $this->pendataanLombaModel = new \App\Models\PendataanLombaModel();
         $this->pendataanLombaMahasiswaModel = new \App\Models\PendataanLombaMahasiswaModel();
         // $this->userModel = new \App\Models\UserModel();
-
+        
         // $this->session = \Config\Services::session();
 
     }
