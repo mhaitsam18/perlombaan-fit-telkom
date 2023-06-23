@@ -143,6 +143,20 @@
 <!-- End plugin js for this page -->
 
 <script src="/assets-nobleui/js/wizard.js"></script>
+
+<script>
+    function previewImg() {
+        const foto = document.querySelector('#foto');
+        const imgPreview = document.querySelector('.img-preview');
+        imgPreview.style.display = 'block';
+        const oFReader = new FileReader();
+        oFReader.readAsDataURL(foto.files[0]);
+
+        oFReader.onload = function(oFREvent) {
+            imgPreview.src = oFREvent.target.result;
+        }
+    }
+</script>
 <script>
     var form = $("#example-form");
     form.validate({

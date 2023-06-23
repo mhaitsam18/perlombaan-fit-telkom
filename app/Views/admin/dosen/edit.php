@@ -124,6 +124,20 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('script') ?>
+
+<script>
+    function previewImg() {
+        const foto = document.querySelector('#foto');
+        const imgPreview = document.querySelector('.img-preview');
+        imgPreview.style.display = 'block';
+        const oFReader = new FileReader();
+        oFReader.readAsDataURL(foto.files[0]);
+
+        oFReader.onload = function(oFREvent) {
+            imgPreview.src = oFREvent.target.result;
+        }
+    }
+</script>
 <!-- Plugin js for this page -->
 <script src="/assets-nobleui/vendors/jquery-steps/jquery.steps.min.js"></script>
 <!-- End plugin js for this page -->
