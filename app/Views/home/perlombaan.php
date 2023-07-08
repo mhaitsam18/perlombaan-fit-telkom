@@ -33,13 +33,13 @@ use CodeIgniter\I18n\Time;
 <div class="blog-style-area pt-100 pb-70">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-12">
                 <div class="row">
                     <?php foreach ($data_lomba as $lomba) : ?>
                         <?php
                         $time = Time::parse($lomba['Deadline']);
                         ?>
-                        <div class="col-lg-12 m-3">
+                        <div class="col-lg-5 m-3">
                             <div class="blog-style-card">
                                 <div class="blog-style-img">
                                     <a href="/perlombaan/<?= $lomba['slug'] ?>">
