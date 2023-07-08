@@ -119,6 +119,7 @@ $routes->group('admin', ['filter' => 'role:admin'], function ($routes) {
         $routes->post('', 'Admin\Rekognisi::store', ['as' => 'store-rekognisi']);
         $routes->put('(:num)', 'Admin\Rekognisi::update/$1', ['as' => 'update-rekognisi']);
         $routes->delete('delete/(:num)', 'Admin\Rekognisi::delete/$1', ['as' => 'delete-rekognisi']);
+        $routes->post('update-status', 'Admin\Rekognisi::updateStatus', ['as' => 'update-status-rekognisi']);
     });
     $routes->group('pendataan-lomba', static function ($routes) {
         $routes->get('', 'Admin\PendataanLomba::index', ['as' => 'admin-pendataan-lomba']);

@@ -73,6 +73,9 @@
                                         <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#anggotaModal<?= $row['id'] ?>">
                                             Detail Anggota
                                         </button>
+                                        <button type="button" class="btn btn-primary btn-sm updateStatus" data-bs-toggle="modal" data-bs-target="#updateStatusModal" data-id="<?= $row['id'] ?>" data-status="<?= $row['status'] ?>">
+                                            Perbarui Status
+                                        </button>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
@@ -139,7 +142,52 @@
 
 <?php endforeach; ?>
 
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="updateStatusModal" tabindex="-1" aria-labelledby="updateStatusModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="updateStatusModalLabel">Perbarui Status</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="/admin/rekognisi/update-status" method="post">
+                <?= csrf_field() ?>
+                <div class="modal-body">
+                    <input type="hidden" name="id" id="id">
+                    <div class="mb-3">
+                        <label for="status" class="form-label">Status<span class="text-danger">*</span></label>
+                        <select name="status" id="status" class="form-select <?= ($validation->hasError('status')) ? 'is-invalid' : '' ?> <?= ($validation->hasError('status')) ? 'is-invalid' : '' ?>" data-error="Masukkan status" placeholder="Pilih Status">
+                            <option selected disabled value="">Pilih Status</option>
+                            <option value="diterima">diterima</option>
+                            <option value="ditolak">ditolak</option>
+                            <option value="dalam proses">dalam proses</option>
+                        </select>
+                        <small id="status_feedback" class="text-danger fs-6">
+                            <?= $validation->getError('status') ?>
+                        </small>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                <button type="submit" class="btn btn-primary">Simpan</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
 <?= $this->endSection() ?>
 
 <?= $this->section('script') ?>
+<script>
+    $(document).on("click", ".updateStatus", function() {
+        var id = $(this).data('id');
+        $(".modal-body  #id").val(id);
+
+        var status = $(this).data('status');
+        $(".modal-body  #status").val(status);
+    });
+</script>
 <?= $this->endSection() ?>
