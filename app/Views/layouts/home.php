@@ -84,18 +84,34 @@
                                 <?php if (logged_in()) : ?>
                                 <?php endif; ?>
                                 <li class="nav-item">
+                                    <a href="/mahasiswa/pendataan-lomba/list" class="nav-link <?= ($page == 'pendataan-lomba') ? 'active' : '' ?>">
+                                        Pendataan Lomba
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/mahasiswa/rekognisi/list" class="nav-link <?= ($page == 'rekognisi') ? 'active' : '' ?>">
+                                        Rekognisi
+                                    </a>
+                                </li>
+
+                                <!-- <li class="nav-item">
+                                    <a href="/validasi-lomba" class="nav-link  <?= ($page == 'validasi-lomba') ? 'active' : '' ?>">
+                                        Validasi Lomba <span>(error)</span>
+                                    </a>
+                                </li> -->
+                                <!-- <li class="nav-item">
                                     <a href="#" class="nav-link <?= ($page == 'rekognisi' || $page == 'pendataan-lomba' || $page == 'validasi-lomba') ? 'active' : '' ?>">
                                         Layanan
                                         <i class='bx bx-caret-down'></i>
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li class="nav-item">
-                                            <a href="/mahasiswa/rekognisi" class="nav-link <?= ($page == 'rekognisi') ? 'active' : '' ?>">
+                                            <a href="/mahasiswa/rekognisi/list" class="nav-link <?= ($page == 'rekognisi') ? 'active' : '' ?>">
                                                 Rekognisi
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="/mahasiswa/pendataan-lomba" class="nav-link <?= ($page == 'pendataan-lomba') ? 'active' : '' ?>">
+                                            <a href="/mahasiswa/pendataan-lomba/list" class="nav-link <?= ($page == 'pendataan-lomba') ? 'active' : '' ?>">
                                                 Pendataan Lomba
                                             </a>
                                         </li>
@@ -105,7 +121,7 @@
                                             </a>
                                         </li>
                                     </ul>
-                                </li>
+                                </li> -->
                                 <li class="nav-item">
                                     <a href="#" class="nav-link <?= ($page == 'tentang-kami' || $page == 'faq' || $page == 'kontak-kami' || $page == 'informasi-dosen') ? 'active' : '' ?>">
                                         Informasi
@@ -129,7 +145,7 @@
                                         </li>
                                         <li class="nav-item">
                                             <a href="/informasi-dosen" class="nav-link  <?= ($page == 'informasi-dosen') ? 'active' : '' ?>">
-                                                informasi Dosen <span>(New)</span>
+                                                informasi Dosen
                                             </a>
                                         </li>
                                     </ul>
@@ -346,17 +362,17 @@
                         </div>
                     </div>
                 </div> -->
-                <div class="copy-right-area">
-                    <div class="copy-right-text">
-                        <p>
-                            Copyright © <script>
-                                document.write(new Date().getFullYear())
-                            </script> Dashboard Perlombaan D3 Sistem Informasi. dibuat oleh
-                            <a href="https://instagram.com/raden_fachry" target="_blank">Raden Fachry Azwar</a>
-                        </p>
+                    <div class="copy-right-area">
+                        <div class="copy-right-text">
+                            <p>
+                                Copyright © <script>
+                                    document.write(new Date().getFullYear())
+                                </script> Dashboard Perlombaan D3 Sistem Informasi. dibuat oleh
+                                <a href="https://instagram.com/raden_fachry" target="_blank">Raden Fachry Azwar</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
     </footer>
 
 

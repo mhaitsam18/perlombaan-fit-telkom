@@ -36,8 +36,8 @@
 <div class="contact-form-area pt-100 pb-70">
     <div class="container">
         <div class="section-title text-center">
-            <h2>Formulir Validasi Lomba</h2>
-            <div class="fs-4">
+            <h2>Formulir Validasi Lomba</h2><br>
+            <div class="fs-4" style="text-align: justify;">
                 Form Validasi Lomba adalah sebuah formulir yang dirancang untuk memvalidasi apakah lomba yang diinputkan sesuai dengan program studi D3 Sistem Informasi. Kalian bisa mencari suatu lomba di luar website ini dan divalidasi di sini karena formulir ini dibuat dengan memanfaatkan teknologi machine learning, yang memungkinkan pengguna untuk dengan cepat mengetahui apakah lomba yang akan diikuti sesuai dengan bidang keahlian yang ditawarkan oleh program studi tersebut. Fitur ini sangat membantu dalam menyaring lomba-lomba yang relevan, sehingga mahasiswa D3 Sistem Informasi dapat fokus mengikuti kegiatan yang sesuai dengan kurikulum dan minat mereka.
             </div>
             <span></span>

@@ -28,13 +28,12 @@
 
 <div class="counter-area pt-100 pb-70">
     <div class="container">
-        <div class="section-title text-center">
-            <h2>Selamat datang di halaman "Tentang Kami" Dashboard Perlombaan!</h2>
-            <div class="fs-4"> Kami bangga menjadi bagian dari perjalanan kompetisi Anda melalui platform kami yang inovatif. Dashboard Perlombaan adalah solusi terpadu yang dirancang khusus untuk memudahkan peserta dalam memantau perlombaan secara efisien.
-            </div>
-            <div class="fs-4">Tim kami terdiri dari 2 orang mahasiswa Telkom Uninversity yang berkomitmen untuk memberikan dukungan teknis yang cepat dan responsif. Kami siap membantu Anda menjawab pertanyaan, menyelesaikan masalah, dan memberikan bantuan yang Anda butuhkan.</div>
+        <div class="section-title">
+            <h2 class="text-center">Selamat datang di halaman "Tentang Kami" Dashboard Perlombaan!</h2><br>
+            <div class="fs-4" style="text-align: justify;"> Kami bangga menjadi bagian dari perjalanan kompetisi Anda melalui platform kami yang inovatif. dashboard Perlombaan adalah solusi terpadu yang dirancang khusus untuk memudahkan peserta dalam memantau perlombaan secara efisien.
 
-            <div class="fs-4"> Kami berharap Anda menikmati pengalaman menggunakan Dashboard Perlombaan kami. Kami terus berupaya meningkatkan platform kami agar dapat memenuhi harapan dan kebutuhan Anda. Terima kasih telah memilih kami sebagai mitra perlombaan Anda!</div>
+                Tim kami terdiri dari 2 orang mahasiswa Telkom Uninversity Raden Fachry Azwar dan Dinda Nabila
+                Kami berharap Anda menikmati pengalaman menggunakan Dashboard Perlombaan kami. Kami terus berupaya meningkatkan platform kami agar dapat memenuhi harapan dan kebutuhan Anda. Terima kasih telah memilih kami sebagai mitra perlombaan Anda!</div>
         </div>
     </div>
     <div class="counter-shape">
@@ -57,12 +56,17 @@
             <div class="col-lg-6">
                 <div class="choose-content mr-20">
                     <div class="section-title">
-                        <h2>Dinda Nabila.</h2>
+                        <h2>Dinda Nabila</h2>
+                        <p>
+                            Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum auctor a ornare odio.
+                        </p>
+                        <br>
+                        <h2>Raden Fachry Azwar</h2>
                         <p>
                             Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum auctor a ornare odio.
                         </p>
                     </div>
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-lg-6 col-6">
                             <div class="choose-content-card">
                                 <div class="content">
@@ -81,7 +85,7 @@
                                 <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-lg-6">

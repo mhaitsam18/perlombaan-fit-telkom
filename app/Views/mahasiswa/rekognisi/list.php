@@ -42,7 +42,8 @@
         <?php endif ?>
         <div class="section-title text-center">
             <h2>Rekognisi</h2>
-            <div class="fs-4">Ingin prestasi kamu menjadi Nilai di mata kuliah? masukkan prestasi kamu <a href="/mahasiswa/rekognisi" class="badge bg-primary">di sini</a></div>
+            <div class="fs-4">Rekognisi digunakan ketika mahasiswa sudah selesai dalam mengikuti perlombaan</div>
+            <div class="fs-4">Ingin menambahkan rekognisi ? masukkan prestasi kamu <a href="/mahasiswa/rekognisi" class="badge bg-primary">di sini</a></div>
         </div>
         <div class="row pt-45">
             <div class="col-lg-12">
@@ -61,7 +62,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php if($data_rekognisi): ?>
+                        <?php if ($data_rekognisi) : ?>
                             <?php $no = 1; ?>
                             <?php foreach ($data_rekognisi as $row) : ?>
                                 <tr>
@@ -81,7 +82,7 @@
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
-                        <?php else: ?>
+                        <?php else : ?>
                             <tr>
                                 <td colspan="9" class="text-center">Tidak Ada data</td>
                             </tr>

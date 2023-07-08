@@ -202,7 +202,7 @@
                     <div class="content">
                         <i class="flaticon-web-development"></i>
                         <!-- <span><a href="service-details.html">Web Services</a></span> -->
-                        <h3><a href="/login">Validasi Lomba</a></h3>
+                        <h3><a href="/login">Pendataan Lomba</a></h3>
                     </div>
                 </div>
             </div>
@@ -218,6 +218,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="col-lg-4 col-md-6">
                 <div class="services-item">
                     <a href="service-details.html">
