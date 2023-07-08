@@ -52,12 +52,12 @@ use CodeIgniter\I18n\Time;
                                 </div>
                                 <div class="content">
                                     <?php
-                                        $targetDate = strtotime($lomba['Deadline']);
-                                        $currentDate = time();
-                                        $secondsRemaining = $targetDate - $currentDate;
-                                        $daysRemaining = floor($secondsRemaining / (60 * 60 * 24));
+                                    $targetDate = strtotime($lomba['Deadline']);
+                                    $currentDate = time();
+                                    $secondsRemaining = $targetDate - $currentDate;
+                                    $daysRemaining = floor($secondsRemaining / (60 * 60 * 24));
 
-                                     ?>
+                                    ?>
                                     <ul>
                                         <li><i class='bx bxs-user'></i> By <?= $lomba['Penyelenggara'] ?></li>
                                         <li><i class='bx bx-calendar'></i>Deadline: <?= date('d F Y', strtotime($lomba['Deadline'])); ?></li>
@@ -75,6 +75,7 @@ use CodeIgniter\I18n\Time;
                         </div>
                     <?php endforeach; ?>
                     <div class="col-lg-12 col-md-12 text-center">
+                        <?= $pager->links('lomba', 'home_pagination') ?>
                         <!-- <div class="pagination-area">
                             <a href="blog-1.html" class="prev page-numbers">
                                 <i class='bx bx-left-arrow-alt'></i>
