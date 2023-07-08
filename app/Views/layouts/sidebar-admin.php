@@ -57,6 +57,10 @@
                     <span class="link-title">Data Lomba Mahasiswa</span>
                 </a>
             </li>
+            <li class="nav-item nav-category">Fitur Maintance</li>
+            <a style="color: black;" href="/validasi-lomba" class="nav-link <?= ($page == 'validasi-lomba') ? 'active' : '' ?>">
+                Validasi Lomba <span>(error)</span>
+            </a>
         </ul>
     </div>
 </nav>

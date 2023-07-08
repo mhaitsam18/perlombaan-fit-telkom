@@ -42,7 +42,8 @@
         <?php endif ?>
         <div class="section-title text-center">
             <h2>Pendataan Lomba</h2>
-            <div class="fs-4">Mau menambahkan data prestasimu? klik <a href="/mahasiswa/pendataan-lomba" class="badge bg-primary">di sini</a></div>
+            <div class="fs-4">Pendataan Lomba digunakan untuk mendata mahasiswa ketika sebelum melakukan perlombaan</div>
+            <div class="fs-4">Mau menambahkan data mu? klik <a href="/mahasiswa/pendataan-lomba" class="badge bg-primary">di sini</a></div>
         </div>
         <div class="row pt-45">
             <div class="col-lg-12">
@@ -74,9 +75,13 @@
                                     <td><?= $row->email ?></td>
                                     <td><?= $row->status ?></td>
                                     <td>
-                                        <a href="/assets/img/<?= $row->sertifikat ?>" target="_blank" class="btn btn-sm btn-success">Sertifikat</a>
+                                        <a href="/assets/img/<?= $row->sertifikat ?>" target="_blank" class="btn btn-sm btn-success">Sertifikat</a><br><br>
                                         <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#anggotaModal<?= $row->id ?>">
                                             Anggota
+                                        </button>
+                                        <br><br>
+                                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal">
+                                            Update Status
                                         </button>
                                     </td>
                                 </tr>

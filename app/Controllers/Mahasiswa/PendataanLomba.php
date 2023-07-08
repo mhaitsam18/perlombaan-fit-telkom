@@ -10,10 +10,9 @@ class PendataanLomba extends BaseController
 
     public function __construct()
     {
-        if(!logged_in()){
+        if (!logged_in()) {
             return redirect()->to('/login');
         }
-        
     }
     public function index()
     {
@@ -23,7 +22,7 @@ class PendataanLomba extends BaseController
             'validation' => \Config\Services::validation(),
         ]);
     }
-    
+
     public function list()
     {
         return view('mahasiswa/pendataan-lomba/list', [
@@ -33,7 +32,7 @@ class PendataanLomba extends BaseController
             'pendataan_lomba_mahasiswa' => $this->pendataanLombaMahasiswaModel
         ]);
     }
-    
+
     public function store()
     {
         $check = $this->validate([
@@ -45,7 +44,7 @@ class PendataanLomba extends BaseController
             'sertifikat' => 'uploaded[sertifikat]',
             'status' => 'required',
         ]);
-        
+
         // echo $this->request->getVar('nama_lomba');
         // die();
 
@@ -84,7 +83,7 @@ class PendataanLomba extends BaseController
 
         return redirect()->to('/mahasiswa/pendataan-lomba/list');
     }
-    
+
     public function storeAnggota()
     {
         $check = $this->validate([
@@ -92,7 +91,7 @@ class PendataanLomba extends BaseController
             'nim' => 'required',
             'kelas' => 'required',
         ]);
-        
+
         if (!$check) {
             return view('mahasiswa/pendataan-lomba/list', [
                 'title' => 'List Pendataan Lomba',
@@ -104,7 +103,7 @@ class PendataanLomba extends BaseController
             // return redirect()->back()->withInput();
         }
 
-        
+
         $this->pendataanLombaMahasiswaModel->save([
             'pendataan_lomba_id' => $this->request->getVar('pendataan_lomba_id'),
             'nama_mahasiswa' => $this->request->getVar('nama_mahasiswa'),

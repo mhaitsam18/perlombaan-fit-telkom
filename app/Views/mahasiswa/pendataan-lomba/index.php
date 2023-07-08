@@ -101,6 +101,7 @@
                                         <?= $validation->getError('nama_ketua') ?>
                                     </small>
                                     <div class="help-block with-errors"></div>
+                                    <span class="text-dark">Note : Untuk Penambahan anggota dilakukan ketika form ini sudah dikirim</span>
                                 </div>
                             </div>
                             <div class="col-lg-6">

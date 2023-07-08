@@ -104,6 +104,7 @@
                                         <?= $validation->getError('nama_ketua') ?>
                                     </div>
                                     <div class="help-block with-errors"></div>
+                                    <span class="text-dark">Note : Untuk Penambahan anggota dilakukan ketika form ini sudah dikirim</span>
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -144,7 +145,6 @@
                                         <?= $validation->getError('nama_pembimbing') ?>
                                     </div>
                                     <div class="help-block with-errors"></div>
-                                    <span class="text-dark">Belum punya Dosen Pembimbing? <a href="/informasi-dosen">Klik di sini</a> </span>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12">
