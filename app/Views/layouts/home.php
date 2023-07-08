@@ -164,7 +164,9 @@
                                 </div> -->
                                 <div class="nav-side-item align-middle">
                                     <h5 class="align-middle">
-                                        Haloo, <?= user()->fullname ?>
+                                        <?php if (logged_in()) : ?>
+                                            Haloo, <?= user()->fullname ?>
+                                        <?php endif; ?>
                                     </h5>
                                 </div>
                                 <div class="nav-side-item">
