@@ -80,7 +80,7 @@
                                             Anggota
                                         </button>
                                         <br><br>
-                                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal">
+                                        <button type="button" class="btn btn-primary btn-sm updateStatus" data-bs-toggle="modal" data-bs-target="#updateStatusModal" data-id="<?= $row->id ?>" data-status="<?= $row->status ?>">
                                             Update Status
                                         </button>
                                     </td>
@@ -174,7 +174,34 @@
     </div>
 
 <?php endforeach; ?>
-
+<!-- Modal -->
+<div class="modal fade" id="updateStatusModal" tabindex="-1" aria-labelledby="updateStatusModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="updateStatusModalLabel">Perbarui Status</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="/mahasiswa/pendataan-lomba/update-status" method="post">
+                <div class="modal-body">
+                    <input type="hidden" name="id" id="id">
+                    <div class="mb-3">
+                        <label for="status" class="form-label">Status<span class="text-danger">*</span></label>
+                        <input type="text" name="status" id="status" class="form-control <?= ($validation->hasError('status')) ? 'is-invalid' : '' ?> <?= ($validation->hasError('status')) ? 'is-invalid' : '' ?>" data-error="Masukkan status" placeholder="status">
+                        <small id="status_feedback" class="text-danger fs-6">
+                            <?= $validation->getError('status') ?>
+                        </small>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 <?= $this->endSection() ?>
 
 <?= $this->section('script') ?>
@@ -192,6 +219,14 @@
             },
         },
         labelIdle: 'Seret & Lepaskan file Anda atau <span class="filepond--label-action"> Jelajahi </span>'
+    });
+
+    $(document).on("click", ".updateStatus", function() {
+        var id = $(this).data('id');
+        $(".modal-body  #id").val(id);
+
+        var status = $(this).data('status');
+        $(".modal-body  #status").val(status);
     });
 </script>
 <?= $this->endSection() ?>

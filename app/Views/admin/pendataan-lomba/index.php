@@ -136,7 +136,6 @@
             </div>
         </div>
     </div>
-
 <?php endforeach; ?>
 
 <?= $this->endSection() ?>

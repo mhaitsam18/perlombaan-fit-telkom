@@ -21,4 +21,5 @@ class PendataanLomba extends BaseController
     public function create()
     {
     }
+
 }

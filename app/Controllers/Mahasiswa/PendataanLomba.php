@@ -29,7 +29,8 @@ class PendataanLomba extends BaseController
             'title' => 'List Pendataan Lomba',
             'page' => 'pendataan-lomba',
             'data_pendataan_lomba' => $this->pendataanLombaModel->where('user_id', user()->id)->get()->getResult(),
-            'pendataan_lomba_mahasiswa' => $this->pendataanLombaMahasiswaModel
+            'pendataan_lomba_mahasiswa' => $this->pendataanLombaMahasiswaModel,
+            'validation' => \Config\Services::validation(),
         ]);
     }
 
@@ -112,6 +113,35 @@ class PendataanLomba extends BaseController
         ]);
 
         session()->setFlashdata('success', 'Anggota Lomba berhasil ditambahkan');
+
+        return redirect()->to('/mahasiswa/pendataan-lomba/list');
+    }
+
+
+    public function updateStatus()
+    {
+        $check = $this->validate([
+            'status' => 'required',
+        ]);
+
+        if (!$check) {
+            return view('mahasiswa/pendataan-lomba/list', [
+                'title' => 'List Pendataan Lomba',
+                'validation' => \Config\Services::validation(),
+                'page' => 'pendataan-lomba',
+            ]);
+            // $validation = \Config\Services::validation();
+            // return redirect()->back()->withInput()->with('error', $validation->listErrors());
+            // return redirect()->back()->withInput();
+        }
+
+
+        $this->pendataanLombaModel->save([
+            'id' => $this->request->getVar('id'),
+            'status' => $this->request->getVar('status'),
+        ]);
+
+        session()->setFlashdata('success', 'Status Lomba berhasil diperbarui');
 
         return redirect()->to('/mahasiswa/pendataan-lomba/list');
     }

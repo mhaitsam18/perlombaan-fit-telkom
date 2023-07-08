@@ -58,6 +58,7 @@ $routes->group('mahasiswa', static function ($routes) {
         $routes->post('', 'Mahasiswa\PendataanLomba::store', ['as' => 'mahasiswa-pendataan-lomba-store']);
         $routes->get('list', 'Mahasiswa\PendataanLomba::list', ['as' => 'mahasiswa-pendataan-lomba-list']);
         $routes->post('anggota', 'Mahasiswa\PendataanLomba::storeAnggota', ['as' => 'mahasiswa-pendataan-lomba-store-anggota']);
+        $routes->post('update-status', 'Mahasiswa\PendataanLomba::updateStatus', ['as' => 'mahasiswa-pendataan-lomba-update-status']);
     });
 });
 
