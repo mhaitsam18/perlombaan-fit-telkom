@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 21, 2023 at 02:04 PM
+-- Generation Time: Jul 08, 2023 at 05:14 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.1.17
 
@@ -97,7 +97,10 @@ INSERT INTO `auth_groups_users` (`id`, `group_id`, `user_id`) VALUES
 (11, 2, 23),
 (12, 2, 24),
 (13, 2, 25),
-(14, 2, 26);
+(14, 2, 26),
+(15, 2, 29),
+(16, 2, 30),
+(17, 2, 31);
 
 -- --------------------------------------------------------
 
@@ -357,7 +360,11 @@ INSERT INTO `auth_logins` (`id`, `ip_address`, `email`, `user_id`, `date`, `succ
 (236, '::1', 'admin@gmail.com', 12, '2023-06-21 08:43:47', 1),
 (237, '::1', 'admin@gmail.com', 12, '2023-06-21 09:37:21', 1),
 (238, '::1', 'admin@gmail.com', 12, '2023-06-21 09:50:07', 1),
-(239, '::1', 'admin@gmail.com', 12, '2023-06-21 11:14:25', 1);
+(239, '::1', 'admin@gmail.com', 12, '2023-06-21 11:14:25', 1),
+(240, '::1', 'donald.anas@gmail.com', NULL, '2023-07-08 14:23:12', 0),
+(241, '::1', 'donal.anas@gmail.com', NULL, '2023-07-08 14:24:11', 0),
+(242, '::1', 'donal.anas@gmail.com', NULL, '2023-07-08 14:24:17', 0),
+(243, '::1', 'admin@gmail.com', 12, '2023-07-08 14:24:56', 1);
 
 -- --------------------------------------------------------
 
@@ -771,6 +778,7 @@ CREATE TABLE `rekognisi` (
   `email` varchar(255) DEFAULT NULL,
   `sertifikat` varchar(255) DEFAULT NULL,
   `status` enum('approved','rejected','on process') DEFAULT NULL,
+  `prestasi` varchar(255) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -779,10 +787,10 @@ CREATE TABLE `rekognisi` (
 -- Dumping data for table `rekognisi`
 --
 
-INSERT INTO `rekognisi` (`id`, `user_id`, `nama_lomba`, `nama_ketua`, `nim`, `nama_pembimbing`, `kelas`, `email`, `sertifikat`, `status`, `created_at`, `updated_at`) VALUES
-(1, NULL, 'GEMASTIK WEB PROGRAMMING', 'IHSAN KURNIAWAN', '1202218458', 'KUR', 'SI-44-01', 'kur@gmail.com', 'sertifikat/sertifikat.png', 'on process', '2023-06-11 14:17:55', '2023-06-11 14:17:55'),
-(2, 17, 'Programming', 'Vanisa Auliani', '670120113', 'Inne Gartina Husein', 'D3SI-44-05', 'suryatiningsih@gmail.com', 'rekognisi/1687094697_bdd577483e78fa30599f.png', 'on process', '2023-06-18 06:24:57', '2023-06-18 06:24:57'),
-(3, 17, 'UI/UX', 'Raden Fachry', '6701202132', 'Inne Gartina Husein', 'D3SI-44-04', 'radenfachryazwar@gmail.com', 'rekognisi/1687332567_d4b7fbe410c8e42ebc20.png', 'on process', '2023-06-21 00:29:27', '2023-06-21 00:29:27');
+INSERT INTO `rekognisi` (`id`, `user_id`, `nama_lomba`, `nama_ketua`, `nim`, `nama_pembimbing`, `kelas`, `email`, `sertifikat`, `status`, `prestasi`, `created_at`, `updated_at`) VALUES
+(1, NULL, 'GEMASTIK WEB PROGRAMMING', 'IHSAN KURNIAWAN', '1202218458', 'KUR', 'SI-44-01', 'kur@gmail.com', 'sertifikat/sertifikat.png', 'on process', NULL, '2023-06-11 14:17:55', '2023-06-11 14:17:55'),
+(2, 17, 'Programming', 'Vanisa Auliani', '670120113', 'Inne Gartina Husein', 'D3SI-44-05', 'suryatiningsih@gmail.com', 'rekognisi/1687094697_bdd577483e78fa30599f.png', 'on process', NULL, '2023-06-18 06:24:57', '2023-06-18 06:24:57'),
+(3, 17, 'UI/UX', 'Raden Fachry', '6701202132', 'Inne Gartina Husein', 'D3SI-44-04', 'radenfachryazwar@gmail.com', 'rekognisi/1687332567_d4b7fbe410c8e42ebc20.png', 'on process', NULL, '2023-06-21 00:29:27', '2023-06-21 00:29:27');
 
 -- --------------------------------------------------------
 
@@ -864,7 +872,12 @@ INSERT INTO `users` (`id`, `email`, `username`, `fullname`, `user_image`, `no_po
 (23, 'raden@gmail.com', 'raden', NULL, NULL, NULL, '$2y$10$g6LREYx8g49T2dvFhA4OD.JF8OCE78fbhOhwj88ueWKUJ6G2JNvR6', NULL, NULL, NULL, NULL, '95d77340f60dd88d8cefe5bc8e809f52', NULL, NULL, 0, NULL, 0, '2023-06-21 10:39:40', '2023-06-21 10:39:40', NULL),
 (24, 'tandu@gmail.com', 'Rinaldo', NULL, NULL, NULL, '$2y$10$Hrck1gJv7cuVG2eJxpgxe.l6dUsSpY1TML1DiNeS3LdVqwn1FF1Z2', NULL, NULL, NULL, NULL, '669bed25d8986b98809830ff0a38afba', NULL, NULL, 0, NULL, 0, '2023-06-21 11:30:43', '2023-06-21 11:30:43', NULL),
 (25, 'danu@gmail.com', 'danu', NULL, NULL, NULL, '$2y$10$gUKd7a7xX88eV4ex40LmleqTGs46BU8nGK99ChN3RP2/mrpKlv6Yu', NULL, NULL, NULL, NULL, '87767c6930f3f1a31dc17caac44bd543', NULL, NULL, 0, NULL, 0, '2023-06-21 11:34:03', '2023-06-21 11:34:03', NULL),
-(26, 'feby@gmail.com', 'feby', NULL, NULL, NULL, '$2y$10$0aq4NXhaQpsyaoZKb60h/eLuTm3sYMi7ru2NTah9GDArw6LhgRz.e', NULL, NULL, NULL, NULL, 'e19fbff0a01be1c1a55e700da5b423a9', NULL, NULL, 0, NULL, 0, '2023-06-21 11:39:14', '2023-06-21 11:39:14', NULL);
+(26, 'feby@gmail.com', 'feby', NULL, NULL, NULL, '$2y$10$0aq4NXhaQpsyaoZKb60h/eLuTm3sYMi7ru2NTah9GDArw6LhgRz.e', NULL, NULL, NULL, NULL, 'e19fbff0a01be1c1a55e700da5b423a9', NULL, NULL, 0, NULL, 0, '2023-06-21 11:39:14', '2023-06-21 11:39:14', NULL),
+(27, 'viky@gmail.com', 'viky', 'Viky', NULL, NULL, '$2y$10$up6w89oGic.8D7/8.FGx8.KYk00oZIJcgxxDRDqv2Xf75/WcjdO.K', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'mahasiswa', 0, '2023-06-21 12:09:42', '2023-06-21 12:09:42', NULL),
+(28, 'donal.anas@gmail.com', 'Anas', 'Donald', NULL, NULL, '$2y$10$1LuROH.OscjornKa8Djube6/A292kr60HIMVuJ4cyl/wCvTyU.Ke.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'mahasiswa', 0, '2023-07-08 14:22:50', '2023-07-08 14:22:50', NULL),
+(29, 'trump@gmail.com', 'trump', 'Donald Trump', NULL, NULL, '$2y$10$qMRkUvHSHUNs5G5IXH4nPuFi2cojafIdnZP5qUR76C2dcXbDzpCA.', NULL, NULL, NULL, NULL, 'fe24e88b26902b7d99f7c23a23a9d5b3', NULL, NULL, 1, 'mahasiswa', 0, '2023-07-08 14:58:09', '2023-07-08 14:58:09', NULL),
+(30, 'aang@gmail.com', 'aang', 'Avatar The Legend of Aang', NULL, NULL, '$2y$10$aLPkStNkjFeMu7HmmNg3HOPgfPZNHuzXqM2oJkhUPRBodocelz8OC', NULL, NULL, NULL, NULL, '94f0f10964db35f6a237c92da618fc98', NULL, NULL, 0, 'mahasiswa', 0, '2023-07-08 15:05:02', '2023-07-08 15:05:02', NULL),
+(31, 'coba@gmail.com', 'coba', 'coba1', NULL, NULL, '$2y$10$Ms9qJtmP5eQOK4uiEEDhYO5fT.8Er1LZnhKlngeOzk5kvwqbFClTG', NULL, NULL, NULL, NULL, '20d7227290a9309b19105d2e873cd4b9', NULL, NULL, 1, 'mahasiswa', 0, '2023-07-08 15:06:27', '2023-07-08 15:06:27', NULL);
 
 --
 -- Indexes for dumped tables
@@ -1037,13 +1050,13 @@ ALTER TABLE `auth_groups`
 -- AUTO_INCREMENT for table `auth_groups_users`
 --
 ALTER TABLE `auth_groups_users`
-  MODIFY `id` bigint(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` bigint(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `auth_logins`
 --
 ALTER TABLE `auth_logins`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=240;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=244;
 
 --
 -- AUTO_INCREMENT for table `auth_permissions`
@@ -1139,7 +1152,7 @@ ALTER TABLE `rekognisi_mahasiswa`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- Constraints for dumped tables
