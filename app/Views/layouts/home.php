@@ -151,7 +151,7 @@
                                     </ul>
                                 </li>
                             </ul>
-                            <div class="nav-side d-display nav-side-mt">
+                            <div class="nav-side d-display nav-side-mt align-middle">
                                 <!-- <div class="nav-side-item">
                                     <div class="search-side-widget">
                                         <form class="search-side-form">
@@ -162,6 +162,11 @@
                                         </form>
                                     </div>
                                 </div> -->
+                                <div class="nav-side-item align-middle">
+                                    <h5 class="align-middle">
+                                        Haloo, <?= user()->fullname ?>
+                                    </h5>
+                                </div>
                                 <div class="nav-side-item">
                                     <div class="get-btn">
                                         <?php if (logged_in()) : ?>
