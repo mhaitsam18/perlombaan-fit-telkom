@@ -57,6 +57,7 @@
                             <th class="pt-0">NIM</th>
                             <th class="pt-0">Kelas</th>
                             <th class="pt-0">Email</th>
+                            <th class="pt-0">Prestasi</th>
                             <th class="pt-0">Status</th>
                             <th class="pt-0">Aksi</th>
                         </tr>
@@ -73,6 +74,7 @@
                                     <td><?= $row->nim ?></td>
                                     <td><?= $row->kelas ?></td>
                                     <td><?= $row->email ?></td>
+                                    <td><?= $row->prestasi ?></td>
                                     <td><?= $row->status ?></td>
                                     <td>
                                         <a href="/assets/img/<?= $row->sertifikat ?>" target="_blank" class="btn btn-sm btn-success">Sertifikat</a>

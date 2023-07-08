@@ -140,7 +140,7 @@
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
                                     <label>Nama Dosen Pembimbing <span>*</span></label>
-                                    <input type="text" name="nama_pembimbing" id="nama_pembimbing" class="form-control  <?= ($validation->hasError('nama_pembimbing')) ? 'is-invalid' : '' ?> <?= ($validation->hasError('nama_pembimbing')) ? 'is-invalid' : '' ?>" required data-error="Masukkan Nama Pembimbing" placeholder="Nama Lengkap" value="<?= old('nama_pembimbing') ?>">
+                                    <input type="text" name="nama_pembimbing" id="nama_pembimbing" class="form-control <?= ($validation->hasError('nama_pembimbing')) ? 'is-invalid' : '' ?> <?= ($validation->hasError('nama_pembimbing')) ? 'is-invalid' : '' ?>" required data-error="Masukkan Nama Pembimbing" placeholder="Nama Lengkap" value="<?= old('nama_pembimbing') ?>">
                                     <div id="nama_pembimbing_feedback" class="text-danger fs-6">
                                         <?= $validation->getError('nama_pembimbing') ?>
                                     </div>
@@ -153,6 +153,23 @@
                                     <input type="file" name="sertifikat" id="sertifikat" class="form-control" required data-error="Upload Sertifikat">
                                     <div id="sertifikat_feedback" class="text-danger fs-6">
                                         <?= $validation->getError('sertifikat') ?>
+                                    </div>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 mb-3">
+                                <div class="form-group">
+                                    <label>Kategori Prestasi <span>*</span></label>
+                                    <select name="prestasi" id="prestasi" class="form-control <?= ($validation->hasError('nama_pembimbing')) ? 'is-invalid' : '' ?> <?= ($validation->hasError('nama_pembimbing')) ? 'is-invalid' : '' ?>" required data-error="Prestasi">
+                                        <option disabled selected value="">Pilih Prestasi</option>
+                                        <option <?= (old('prestasi') == 'Juara 1') ? 'selected' : '' ?> value="Juara 1">Juara 1</option>
+                                        <option <?= (old('prestasi') == 'Juara 2') ? 'selected' : '' ?> value="Juara 2">Juara 2</option>
+                                        <option <?= (old('prestasi') == 'Juara 3') ? 'selected' : '' ?> value="Juara 3">Juara 3</option>
+                                        <option <?= (old('prestasi') == 'Lolos Pendanaan') ? 'selected' : '' ?> value="Lolos Pendanaan">Lolos Pendanaan</option>
+                                        <option <?= (old('prestasi') == 'Juara Harapan') ? 'selected' : '' ?> value="Juara Harapan">Juara Harapan</option>
+                                    </select>
+                                    <div id="prestasi_feedback" class="text-danger fs-6">
+                                        <?= $validation->getError('prestasi') ?>
                                     </div>
                                     <div class="help-block with-errors"></div>
                                 </div>

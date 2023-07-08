@@ -46,6 +46,7 @@ class Rekognisi extends BaseController
             'kelas' => 'required',
             'email' => 'required',
             'sertifikat' => 'uploaded[sertifikat]',
+            'prestasi' => 'required',
         ]);
 
         if (!$check) {
@@ -74,6 +75,7 @@ class Rekognisi extends BaseController
             'email' => $this->request->getVar('email'),
             'sertifikat' => $nama_file,
             'status' => 'on process',
+            'prestasi' => $this->request->getVar('prestasi'),
         ]);
 
         session()->setFlashdata('success', 'Data rekognisi berhasil dikirim');
