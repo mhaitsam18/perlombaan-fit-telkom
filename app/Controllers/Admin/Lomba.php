@@ -53,7 +53,7 @@ class Lomba extends BaseController
             'slug' => 'required|is_unique[lomba.slug]',
             'Penyelenggara' => 'required',
             'Deadline' => 'required',
-            'counting_day' => 'required',
+            // 'counting_day' => 'required',
             'poster' => 'uploaded[poster]|is_image[poster]',
             // 'output' => 'required',
         ]);
@@ -80,7 +80,7 @@ class Lomba extends BaseController
             'slug' => $this->request->getVar('slug'),
             'Penyelenggara' => $this->request->getVar('Penyelenggara'),
             'Deadline' => $this->request->getVar('Deadline'),
-            'counting_day' => $this->request->getVar('counting_day'),
+            // 'counting_day' => $this->request->getVar('counting_day'),
             'poster' => $nama_file,
             // 'output' => $this->request->getVar('output'),
         ]);
@@ -110,7 +110,7 @@ class Lomba extends BaseController
             'slug' => 'required|is_unique[lomba.slug,id,{id}]',
             'Penyelenggara' => 'required',
             'Deadline' => 'required',
-            'counting_day' => 'required',
+            // 'counting_day' => 'required',
             'poster' => 'is_image[poster]',
             // 'output' => 'required',
         ]);
@@ -144,7 +144,7 @@ class Lomba extends BaseController
             'slug' => $this->request->getVar('slug'),
             'Penyelenggara' => $this->request->getVar('Penyelenggara'),
             'Deadline' => $this->request->getVar('Deadline'),
-            'counting_day' => $this->request->getVar('counting_day'),
+            // 'counting_day' => $this->request->getVar('counting_day'),
             'poster' => $nama_file,
             // 'output' => $this->request->getVar('output'),
         ]);

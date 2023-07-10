@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 08, 2023 at 05:14 PM
+-- Generation Time: Jul 10, 2023 at 03:18 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.1.17
 
@@ -364,7 +364,16 @@ INSERT INTO `auth_logins` (`id`, `ip_address`, `email`, `user_id`, `date`, `succ
 (240, '::1', 'donald.anas@gmail.com', NULL, '2023-07-08 14:23:12', 0),
 (241, '::1', 'donal.anas@gmail.com', NULL, '2023-07-08 14:24:11', 0),
 (242, '::1', 'donal.anas@gmail.com', NULL, '2023-07-08 14:24:17', 0),
-(243, '::1', 'admin@gmail.com', 12, '2023-07-08 14:24:56', 1);
+(243, '::1', 'admin@gmail.com', 12, '2023-07-08 14:24:56', 1),
+(244, '::1', 'trump@gmail.com', 29, '2023-07-08 15:20:24', 1),
+(245, '::1', 'ari@gmail.com', 17, '2023-07-08 15:58:33', 1),
+(246, '::1', 'ari@gmail.com', 17, '2023-07-08 16:02:47', 1),
+(247, '::1', 'ari@gmail.com', 17, '2023-07-08 16:03:10', 1),
+(248, '::1', 'ari@gmail.com', 17, '2023-07-08 16:03:58', 1),
+(249, '::1', 'admin@gmail.com', 12, '2023-07-08 17:14:38', 1),
+(250, '::1', 'ari@gmail.com', 17, '2023-07-08 17:47:17', 1),
+(251, '::1', 'ari@gmail.com', 17, '2023-07-08 17:56:36', 1),
+(252, '::1', 'admin@gmail.com', 12, '2023-07-10 13:11:55', 1);
 
 -- --------------------------------------------------------
 
@@ -569,17 +578,17 @@ INSERT INTO `kategori_lomba` (`id`, `kategori_indo`, `kategori_inggris`, `slug`,
 CREATE TABLE `lomba` (
   `id` int(5) NOT NULL,
   `kategori_lomba_id` bigint(20) UNSIGNED DEFAULT NULL,
-  `poster` varchar(255) NOT NULL,
-  `Title` varchar(200) NOT NULL,
+  `poster` varchar(255) DEFAULT NULL,
+  `Title` varchar(200) DEFAULT NULL,
   `cabang_lomba` varchar(255) DEFAULT NULL,
-  `link` varchar(255) NOT NULL,
-  `teks` mediumtext NOT NULL,
+  `link` varchar(255) DEFAULT NULL,
+  `teks` mediumtext DEFAULT NULL,
   `slug` varchar(255) DEFAULT NULL,
   `excerpt` text DEFAULT NULL,
-  `Penyelenggara` varchar(200) NOT NULL,
-  `Deadline` date NOT NULL,
+  `Penyelenggara` varchar(200) DEFAULT NULL,
+  `Deadline` date DEFAULT NULL,
   `counting_day` varchar(255) DEFAULT NULL,
-  `output` varchar(255) NOT NULL,
+  `output` varchar(255) DEFAULT NULL,
   `created_at` date DEFAULT NULL,
   `updated_at` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
@@ -593,8 +602,7 @@ INSERT INTO `lomba` (`id`, `kategori_lomba_id`, `poster`, `Title`, `cabang_lomba
 (67, 9, 'lomba/gemastik.png', 'P2MW', 'Bisnis Digital', 'https://kesejahteraan.kemdikbud.go.id/p2mw', '<p>                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. cu                             sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies ne,                             pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet n,                             vu eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis                             pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aen                             li, porttitor eu, consequat vitae, eleifend ac, enim.                         </p>                         <p>                             Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.                             gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, Proin gravida nibh vel velit nisi                             elit consequat ipsum.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi                             elit consequat ipsum. Proin gravida nibh vel velit.                         </p>', 'p2mw-bisnis-digital-2022', '<p>Lomba Programming seru abis</p>', 'Kemdikbud', '2023-08-30', '12', 'Invalid', '2022-08-07', '2022-08-07'),
 (68, 4, 'lomba/gemastik-2022.jpg', 'PKM', 'PKM T', 'https://kesejahteraan.kemdikbud.go.id/p2mw', '<p>                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. cu                             sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies ne,                             pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet n,                             vu eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis                             pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aen                             li, porttitor eu, consequat vitae, eleifend ac, enim.                         </p>                         <p>                             Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.                             gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, Proin gravida nibh vel velit nisi                             elit consequat ipsum.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi                             elit consequat ipsum. Proin gravida nibh vel velit.                         </p>', 'pkm-pkm-t-2022', 'Lomba PKM T seru abis', 'Kemenristekdikti', '2023-09-01', '10', 'Valid', '2022-08-07', '2022-08-07'),
 (69, 4, 'lomba/gemastik.png', 'OLIVIA', 'UI/UX', 'https://www.kompas.com/tag/lomba', '<p>                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. cu                             sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies ne,                             pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet n,                             vu eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis                             pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aen                             li, porttitor eu, consequat vitae, eleifend ac, enim.                         </p>                         <p>                             Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.                             gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, Proin gravida nibh vel velit nisi                             elit consequat ipsum.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi                             elit consequat ipsum. Proin gravida nibh vel velit.                         </p>', 'olivia-ui-ux-2022', 'Lomba UI/UX seru abis', 'ITS', '2023-09-02', '15', 'Valid', '2022-08-07', '2022-08-07'),
-(139, NULL, 'lomba/1687333137_429fad14d0c2888a1f6a.png', 'Dicoding', NULL, 'https://www.dicoding.com/', '<p>Lomba lomba</p>', 'dicoding-2023', NULL, 'Dicoding', '2023-11-30', '11', '', '2023-06-21', '2023-06-21'),
-(140, NULL, '', '', NULL, 'https://srgate.kemahasiswaan.uny.ac.id/gemastik/', '', NULL, NULL, '', '0000-00-00', NULL, '', '2023-06-21', '2023-06-21');
+(139, NULL, 'lomba/1687333137_429fad14d0c2888a1f6a.png', 'Dicoding', NULL, 'https://www.dicoding.com/', '<p>Lomba lomba</p>', 'dicoding-2023', NULL, 'Dicoding', '2023-11-30', '11', '', '2023-06-21', '2023-06-21');
 
 -- --------------------------------------------------------
 
@@ -666,7 +674,7 @@ CREATE TABLE `pendataan_lomba` (
 
 INSERT INTO `pendataan_lomba` (`id`, `user_id`, `nama_lomba`, `nama_ketua`, `nim`, `nama_pembimbing`, `kelas`, `email`, `sertifikat`, `status`, `created_at`, `updated_at`) VALUES
 (1, NULL, 'GEMASTIK WEB PROGRAMMING', 'IHSAN KURNIAWAN', '1202218458', 'KUR', 'SI-44-01', 'kur@gmail.com', 'pendataan-lomba/1687035172_aa45fe0c9061321979c8.png', 'Lolos Pendanaan', '2023-06-11 14:17:55', '2023-06-11 14:17:55'),
-(2, 17, 'Programming', 'Raden Fachry Azwar', '6701202345', 'Inne Gartina Husein', 'D3SI-44-04', 'radenfachryazwar@gmail.com', 'pendataan-lomba/1687035172_aa45fe0c9061321979c8.png', 'Berhasil', '2023-06-17 13:52:52', '2023-06-17 13:52:52');
+(2, 17, 'Programming', 'Raden Fachry Azwar', '6701202345', 'Inne Gartina Husein', 'D3SI-44-04', 'radenfachryazwar@gmail.com', 'pendataan-lomba/1687035172_aa45fe0c9061321979c8.png', 'Mantep', '2023-06-17 13:52:52', '2023-07-08 10:03:14');
 
 -- --------------------------------------------------------
 
@@ -777,7 +785,7 @@ CREATE TABLE `rekognisi` (
   `kelas` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `sertifikat` varchar(255) DEFAULT NULL,
-  `status` enum('approved','rejected','on process') DEFAULT NULL,
+  `status` enum('diterima','ditolak','dalam proses') DEFAULT NULL,
   `prestasi` varchar(255) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT current_timestamp()
@@ -788,9 +796,10 @@ CREATE TABLE `rekognisi` (
 --
 
 INSERT INTO `rekognisi` (`id`, `user_id`, `nama_lomba`, `nama_ketua`, `nim`, `nama_pembimbing`, `kelas`, `email`, `sertifikat`, `status`, `prestasi`, `created_at`, `updated_at`) VALUES
-(1, NULL, 'GEMASTIK WEB PROGRAMMING', 'IHSAN KURNIAWAN', '1202218458', 'KUR', 'SI-44-01', 'kur@gmail.com', 'sertifikat/sertifikat.png', 'on process', NULL, '2023-06-11 14:17:55', '2023-06-11 14:17:55'),
-(2, 17, 'Programming', 'Vanisa Auliani', '670120113', 'Inne Gartina Husein', 'D3SI-44-05', 'suryatiningsih@gmail.com', 'rekognisi/1687094697_bdd577483e78fa30599f.png', 'on process', NULL, '2023-06-18 06:24:57', '2023-06-18 06:24:57'),
-(3, 17, 'UI/UX', 'Raden Fachry', '6701202132', 'Inne Gartina Husein', 'D3SI-44-04', 'radenfachryazwar@gmail.com', 'rekognisi/1687332567_d4b7fbe410c8e42ebc20.png', 'on process', NULL, '2023-06-21 00:29:27', '2023-06-21 00:29:27');
+(1, NULL, 'GEMASTIK WEB PROGRAMMING', 'IHSAN KURNIAWAN', '1202218458', 'KUR', 'SI-44-01', 'kur@gmail.com', 'sertifikat/sertifikat.png', 'dalam proses', NULL, '2023-06-11 14:17:55', '2023-07-08 10:43:42'),
+(2, 17, 'Programming', 'Vanisa Auliani', '670120113', 'Inne Gartina Husein', 'D3SI-44-05', 'suryatiningsih@gmail.com', 'rekognisi/1687094697_bdd577483e78fa30599f.png', 'diterima', NULL, '2023-06-18 06:24:57', '2023-07-08 10:42:35'),
+(3, 17, 'UI/UX', 'Raden Fachry', '6701202132', 'Inne Gartina Husein', 'D3SI-44-04', 'radenfachryazwar@gmail.com', 'rekognisi/1687332567_d4b7fbe410c8e42ebc20.png', 'dalam proses', NULL, '2023-06-21 00:29:27', '2023-07-08 10:43:47'),
+(4, 17, 'Programming', 'Raden Fachry Azwar', '6701202132', 'Inne Gartina Husein', 'D3SI-44-04', 'radenfachryazwar@gmail.com', 'rekognisi/1688836378_b22defd121f1d9e3463c.png', 'dalam proses', 'Juara 1', '2023-07-08 10:12:58', '2023-07-08 10:43:51');
 
 -- --------------------------------------------------------
 
@@ -850,29 +859,29 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `username`, `fullname`, `user_image`, `no_ponsel`, `password_hash`, `nim`, `reset_hash`, `reset_at`, `reset_expires`, `activate_hash`, `status`, `status_message`, `active`, `role`, `force_pass_reset`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'dandan@gmail.com', 'dandan', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, NULL),
-(2, 'nano@gmail.com', 'nano', NULL, NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, NULL),
-(3, 'putripratamisari@gmail.com', 'wtfss', '', 'profile/user.png', '', '$2y$10$X71.pl6kl47C9s5Cylfbf.KWo8D.KtLgkfj500w5n8xNkl9jO4.bm', 0, NULL, NULL, NULL, '58bacebe221a8515dd62b87f87e6c19b', NULL, NULL, 0, 'admin', 0, '2022-07-12 11:47:50', '2022-07-12 11:47:50', NULL),
-(4, 'dinnabila22@gmail.com', 'dnabilaa', '', 'profile/user.png', '', '$2y$10$a6xH2XElGeJpu3aAnwu3bO5DUPMYGPDWPXBODBRLl3cUVlA8F7NQm', 0, NULL, NULL, NULL, 'd857f961fecba584da94417503976962', NULL, NULL, 0, 'admin', 0, '2022-07-12 12:47:25', '2022-07-12 12:47:25', NULL),
-(5, 'dnabilaa@student.telkomuniversity.ac.id', 'chenle12', '', 'profile/user.png', '', '$2y$10$PsnSQjQZLMfgRLW7aEqnr.HppXTAjGdCEBmxrVldVOPVwhD6yeARK', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-07-12 12:51:31', '2022-07-12 12:51:31', NULL),
-(6, 'sekretariat@pkbibengkulu.or.id', 'haechan12', '', 'profile/user.png', '', '$2y$10$/2JzhQifgv5bPeNPFN9jG./k2EI3N7dXBCibciqVah1tD1l733TKK', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-07-13 22:07:57', '2022-07-13 22:07:57', NULL),
-(7, 'haechan@gmail.com', 'haechan112', '', 'profile/user.png', '', '$2y$10$exBSmBjBfSSK.hBdt3biv.CXEJ0sTjT1wDZaEy.2ylHfQKEY2sIWO', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-07-13 22:08:39', '2022-07-13 22:08:39', NULL),
-(11, 'test@gmail.com', 'test', '', 'profile/user.png', '', '$2y$10$7oxARPGmt59sKeqYObyleO9Xf1enwcto/hhza88efGjdJb.2KojhW', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-07-29 08:43:16', '2022-07-29 08:43:16', NULL),
-(12, 'admin@gmail.com', 'admin', '', 'profile/admin.png', '', '$2y$10$DhnccSKG4I4LCttOWhIGue5c/ijmScS0NUbffWF4maC4WInpO1tMS', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-07-29 08:47:25', '2022-07-29 08:47:25', NULL),
-(13, 'dnabila0703@gmail.com', 'wtf', '', 'profile/user.png', '', '$2y$10$IdrLJborxy69xfY0O/Jet.q.miFcyrlVpANOKYct7AWNZWpODAByq', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-08-18 02:56:34', '2022-08-18 02:56:34', NULL),
-(14, 'putri@gmail.com', 'putri', '', 'profile/user.png', '', '$2y$10$QjzNa7GXEppNp1UnyZYOteE4v2SV7r4ylc3vDLUxgPivtzidpU90y', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-08-19 09:40:18', '2022-08-19 09:40:18', NULL),
-(15, 'marklee@gmail.com', 'marklee', '', 'profile/user.png', '', '$2y$10$WriEqYmtkl5a4GTjgEtonucWD41q3cc7OXs9P5AS1u4iDcBoCZw4q', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-08-19 09:45:49', '2022-08-19 09:45:49', NULL),
-(16, 'dnabila07@gmail.com', 'ary', '', 'profile/user.png', '', '$2y$10$MO51so9NYLHQefzTHUVSUuT7M5ZU9.X3hpxaUyqks0STiNPed.cpm', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-12-20 01:43:52', '2022-12-20 01:43:52', NULL),
-(17, 'ari@gmail.com', 'ari', '', 'profile/user.png', '', '$2y$10$DhnccSKG4I4LCttOWhIGue5c/ijmScS0NUbffWF4maC4WInpO1tMS', 0, NULL, NULL, NULL, '2403c3d949a338c722a283a8876a7027', NULL, NULL, 1, 'mahasiswa', 0, '2023-05-02 08:09:29', '2023-05-02 08:09:29', NULL),
-(18, 'ari2@gmail.com', 'ermapedagang', '', 'profile/user.png', '', '$2y$10$owKZEGhMkZM1.f8Rqwb5fuXhWrKZlRe7vhTCmaaGO/ERMlpXDz2C.', 0, NULL, NULL, NULL, 'faf29adce2d68d8997eb0fe86d6d2b12', NULL, NULL, 1, 'admin', 0, '2023-05-02 08:11:32', '2023-05-02 08:11:32', NULL),
-(19, 'isa@gmail.com', 'isa1234', NULL, 'profile/user.png', NULL, '$2y$10$DhnccSKG4I4LCttOWhIGue5c/ijmScS0NUbffWF4maC4WInpO1tMS', NULL, NULL, NULL, NULL, '82f0baf9a37c5aad62a4082f67adc999', NULL, NULL, 1, NULL, 0, '2023-05-02 10:55:58', '2023-05-02 10:55:58', NULL),
-(20, 'percobaan@gmail.com', 'percobaan', NULL, NULL, NULL, '$2y$10$TEEMSVHCqKB8zfyM.4eDiO55ILimSiA8evln9Ysx8GTZ72DzFdTZW', NULL, NULL, NULL, NULL, 'a53c8b4f6dd977f6ab0953ecba38ab48', NULL, NULL, 0, NULL, 0, '2023-05-11 12:26:29', '2023-05-11 12:26:29', NULL),
-(21, 'bagus@gmail.com', 'bagus', NULL, NULL, NULL, '$2y$10$K7Vfg3Ad9hvUcnGzrcc8UuVgIrp3.7j0EQdkbxlSU892Rj8r9J/.G', NULL, NULL, NULL, NULL, '6f26cab4f2e6d4b9c2d7ebfc171721a8', NULL, NULL, 0, NULL, 0, '2023-05-11 13:12:58', '2023-05-11 13:12:58', NULL),
-(22, 'bismillah@gmail.com', 'bismillah', NULL, NULL, NULL, '$2y$10$j0q8KTqluph4W6Dmvr/rMe.p7HrTeTAf/aZ8q.lDatSIUoNMoAu..', NULL, NULL, NULL, NULL, 'e7f914ef568dbc955d23fc343cf508e5', NULL, NULL, 0, NULL, 0, '2023-05-11 13:29:35', '2023-05-11 13:29:35', NULL),
-(23, 'raden@gmail.com', 'raden', NULL, NULL, NULL, '$2y$10$g6LREYx8g49T2dvFhA4OD.JF8OCE78fbhOhwj88ueWKUJ6G2JNvR6', NULL, NULL, NULL, NULL, '95d77340f60dd88d8cefe5bc8e809f52', NULL, NULL, 0, NULL, 0, '2023-06-21 10:39:40', '2023-06-21 10:39:40', NULL),
-(24, 'tandu@gmail.com', 'Rinaldo', NULL, NULL, NULL, '$2y$10$Hrck1gJv7cuVG2eJxpgxe.l6dUsSpY1TML1DiNeS3LdVqwn1FF1Z2', NULL, NULL, NULL, NULL, '669bed25d8986b98809830ff0a38afba', NULL, NULL, 0, NULL, 0, '2023-06-21 11:30:43', '2023-06-21 11:30:43', NULL),
-(25, 'danu@gmail.com', 'danu', NULL, NULL, NULL, '$2y$10$gUKd7a7xX88eV4ex40LmleqTGs46BU8nGK99ChN3RP2/mrpKlv6Yu', NULL, NULL, NULL, NULL, '87767c6930f3f1a31dc17caac44bd543', NULL, NULL, 0, NULL, 0, '2023-06-21 11:34:03', '2023-06-21 11:34:03', NULL),
-(26, 'feby@gmail.com', 'feby', NULL, NULL, NULL, '$2y$10$0aq4NXhaQpsyaoZKb60h/eLuTm3sYMi7ru2NTah9GDArw6LhgRz.e', NULL, NULL, NULL, NULL, 'e19fbff0a01be1c1a55e700da5b423a9', NULL, NULL, 0, NULL, 0, '2023-06-21 11:39:14', '2023-06-21 11:39:14', NULL),
+(1, 'dandan@gmail.com', 'dandan', 'dandan', NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, NULL),
+(2, 'nano@gmail.com', 'nano', 'nano', NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, NULL),
+(3, 'putripratamisari@gmail.com', 'wtfss', 'wtfss', 'profile/user.png', '', '$2y$10$X71.pl6kl47C9s5Cylfbf.KWo8D.KtLgkfj500w5n8xNkl9jO4.bm', 0, NULL, NULL, NULL, '58bacebe221a8515dd62b87f87e6c19b', NULL, NULL, 0, 'admin', 0, '2022-07-12 11:47:50', '2022-07-12 11:47:50', NULL),
+(4, 'dinnabila22@gmail.com', 'dnabilaa', 'dnabilaa', 'profile/user.png', '', '$2y$10$a6xH2XElGeJpu3aAnwu3bO5DUPMYGPDWPXBODBRLl3cUVlA8F7NQm', 0, NULL, NULL, NULL, 'd857f961fecba584da94417503976962', NULL, NULL, 0, 'admin', 0, '2022-07-12 12:47:25', '2022-07-12 12:47:25', NULL),
+(5, 'dnabilaa@student.telkomuniversity.ac.id', 'chenle12', 'chenle12', 'profile/user.png', '', '$2y$10$PsnSQjQZLMfgRLW7aEqnr.HppXTAjGdCEBmxrVldVOPVwhD6yeARK', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-07-12 12:51:31', '2022-07-12 12:51:31', NULL),
+(6, 'sekretariat@pkbibengkulu.or.id', 'haechan12', 'haechan12', 'profile/user.png', '', '$2y$10$/2JzhQifgv5bPeNPFN9jG./k2EI3N7dXBCibciqVah1tD1l733TKK', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-07-13 22:07:57', '2022-07-13 22:07:57', NULL),
+(7, 'haechan@gmail.com', 'haechan112', 'haechan112', 'profile/user.png', '', '$2y$10$exBSmBjBfSSK.hBdt3biv.CXEJ0sTjT1wDZaEy.2ylHfQKEY2sIWO', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-07-13 22:08:39', '2022-07-13 22:08:39', NULL),
+(11, 'test@gmail.com', 'test', 'test', 'profile/user.png', '', '$2y$10$7oxARPGmt59sKeqYObyleO9Xf1enwcto/hhza88efGjdJb.2KojhW', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-07-29 08:43:16', '2022-07-29 08:43:16', NULL),
+(12, 'admin@gmail.com', 'admin', 'admin', 'profile/admin.png', '', '$2y$10$DhnccSKG4I4LCttOWhIGue5c/ijmScS0NUbffWF4maC4WInpO1tMS', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-07-29 08:47:25', '2022-07-29 08:47:25', NULL),
+(13, 'dnabila0703@gmail.com', 'wtf', 'wtf', 'profile/user.png', '', '$2y$10$IdrLJborxy69xfY0O/Jet.q.miFcyrlVpANOKYct7AWNZWpODAByq', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-08-18 02:56:34', '2022-08-18 02:56:34', NULL),
+(14, 'putri@gmail.com', 'putri', 'putri', 'profile/user.png', '', '$2y$10$QjzNa7GXEppNp1UnyZYOteE4v2SV7r4ylc3vDLUxgPivtzidpU90y', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-08-19 09:40:18', '2022-08-19 09:40:18', NULL),
+(15, 'marklee@gmail.com', 'marklee', 'marklee', 'profile/user.png', '', '$2y$10$WriEqYmtkl5a4GTjgEtonucWD41q3cc7OXs9P5AS1u4iDcBoCZw4q', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-08-19 09:45:49', '2022-08-19 09:45:49', NULL),
+(16, 'dnabila07@gmail.com', 'ary', 'ary', 'profile/user.png', '', '$2y$10$MO51so9NYLHQefzTHUVSUuT7M5ZU9.X3hpxaUyqks0STiNPed.cpm', 0, NULL, NULL, NULL, NULL, NULL, NULL, 1, 'admin', 0, '2022-12-20 01:43:52', '2022-12-20 01:43:52', NULL),
+(17, 'ari@gmail.com', 'ari', 'ari', 'profile/user.png', '', '$2y$10$DhnccSKG4I4LCttOWhIGue5c/ijmScS0NUbffWF4maC4WInpO1tMS', 0, NULL, NULL, NULL, '2403c3d949a338c722a283a8876a7027', NULL, NULL, 1, 'mahasiswa', 0, '2023-05-02 08:09:29', '2023-05-02 08:09:29', NULL),
+(18, 'ari2@gmail.com', 'ermapedagang', 'ermapedagang', 'profile/user.png', '', '$2y$10$owKZEGhMkZM1.f8Rqwb5fuXhWrKZlRe7vhTCmaaGO/ERMlpXDz2C.', 0, NULL, NULL, NULL, 'faf29adce2d68d8997eb0fe86d6d2b12', NULL, NULL, 1, 'admin', 0, '2023-05-02 08:11:32', '2023-05-02 08:11:32', NULL),
+(19, 'isa@gmail.com', 'isa1234', 'isa1234', 'profile/user.png', NULL, '$2y$10$DhnccSKG4I4LCttOWhIGue5c/ijmScS0NUbffWF4maC4WInpO1tMS', NULL, NULL, NULL, NULL, '82f0baf9a37c5aad62a4082f67adc999', NULL, NULL, 1, NULL, 0, '2023-05-02 10:55:58', '2023-05-02 10:55:58', NULL),
+(20, 'percobaan@gmail.com', 'percobaan', 'percobaan', NULL, NULL, '$2y$10$TEEMSVHCqKB8zfyM.4eDiO55ILimSiA8evln9Ysx8GTZ72DzFdTZW', NULL, NULL, NULL, NULL, 'a53c8b4f6dd977f6ab0953ecba38ab48', NULL, NULL, 0, NULL, 0, '2023-05-11 12:26:29', '2023-05-11 12:26:29', NULL),
+(21, 'bagus@gmail.com', 'bagus', 'bagus', NULL, NULL, '$2y$10$K7Vfg3Ad9hvUcnGzrcc8UuVgIrp3.7j0EQdkbxlSU892Rj8r9J/.G', NULL, NULL, NULL, NULL, '6f26cab4f2e6d4b9c2d7ebfc171721a8', NULL, NULL, 0, NULL, 0, '2023-05-11 13:12:58', '2023-05-11 13:12:58', NULL),
+(22, 'bismillah@gmail.com', 'bismillah', 'bismillah', NULL, NULL, '$2y$10$j0q8KTqluph4W6Dmvr/rMe.p7HrTeTAf/aZ8q.lDatSIUoNMoAu..', NULL, NULL, NULL, NULL, 'e7f914ef568dbc955d23fc343cf508e5', NULL, NULL, 0, NULL, 0, '2023-05-11 13:29:35', '2023-05-11 13:29:35', NULL),
+(23, 'raden@gmail.com', 'raden', 'raden', NULL, NULL, '$2y$10$g6LREYx8g49T2dvFhA4OD.JF8OCE78fbhOhwj88ueWKUJ6G2JNvR6', NULL, NULL, NULL, NULL, '95d77340f60dd88d8cefe5bc8e809f52', NULL, NULL, 0, NULL, 0, '2023-06-21 10:39:40', '2023-06-21 10:39:40', NULL),
+(24, 'tandu@gmail.com', 'Rinaldo', 'Rinaldo', NULL, NULL, '$2y$10$Hrck1gJv7cuVG2eJxpgxe.l6dUsSpY1TML1DiNeS3LdVqwn1FF1Z2', NULL, NULL, NULL, NULL, '669bed25d8986b98809830ff0a38afba', NULL, NULL, 0, NULL, 0, '2023-06-21 11:30:43', '2023-06-21 11:30:43', NULL),
+(25, 'danu@gmail.com', 'danu', 'danu', NULL, NULL, '$2y$10$gUKd7a7xX88eV4ex40LmleqTGs46BU8nGK99ChN3RP2/mrpKlv6Yu', NULL, NULL, NULL, NULL, '87767c6930f3f1a31dc17caac44bd543', NULL, NULL, 0, NULL, 0, '2023-06-21 11:34:03', '2023-06-21 11:34:03', NULL),
+(26, 'feby@gmail.com', 'feby', 'feby', NULL, NULL, '$2y$10$0aq4NXhaQpsyaoZKb60h/eLuTm3sYMi7ru2NTah9GDArw6LhgRz.e', NULL, NULL, NULL, NULL, 'e19fbff0a01be1c1a55e700da5b423a9', NULL, NULL, 0, NULL, 0, '2023-06-21 11:39:14', '2023-06-21 11:39:14', NULL),
 (27, 'viky@gmail.com', 'viky', 'Viky', NULL, NULL, '$2y$10$up6w89oGic.8D7/8.FGx8.KYk00oZIJcgxxDRDqv2Xf75/WcjdO.K', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'mahasiswa', 0, '2023-06-21 12:09:42', '2023-06-21 12:09:42', NULL),
 (28, 'donal.anas@gmail.com', 'Anas', 'Donald', NULL, NULL, '$2y$10$1LuROH.OscjornKa8Djube6/A292kr60HIMVuJ4cyl/wCvTyU.Ke.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 'mahasiswa', 0, '2023-07-08 14:22:50', '2023-07-08 14:22:50', NULL),
 (29, 'trump@gmail.com', 'trump', 'Donald Trump', NULL, NULL, '$2y$10$qMRkUvHSHUNs5G5IXH4nPuFi2cojafIdnZP5qUR76C2dcXbDzpCA.', NULL, NULL, NULL, NULL, 'fe24e88b26902b7d99f7c23a23a9d5b3', NULL, NULL, 1, 'mahasiswa', 0, '2023-07-08 14:58:09', '2023-07-08 14:58:09', NULL),
@@ -1056,7 +1065,7 @@ ALTER TABLE `auth_groups_users`
 -- AUTO_INCREMENT for table `auth_logins`
 --
 ALTER TABLE `auth_logins`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=244;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=253;
 
 --
 -- AUTO_INCREMENT for table `auth_permissions`
@@ -1140,7 +1149,7 @@ ALTER TABLE `prodi`
 -- AUTO_INCREMENT for table `rekognisi`
 --
 ALTER TABLE `rekognisi`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `rekognisi_mahasiswa`
