@@ -52,6 +52,7 @@
                                 <th class="pt-0">Email</th>
                                 <th class="pt-0">Sertifikat</th>
                                 <th class="pt-0">Status</th>
+                                <th class="pt-0">Catatan</th>
                                 <th class="pt-0">Aksi</th>
                             </tr>
                         </thead>
@@ -69,6 +70,7 @@
                                     <td><?= $row['email'] ?></td>
                                     <td><a href="/assets/img/<?= $row['sertifikat'] ?>" target="_blank" class="btn btn-sm btn-success">Sertifikat</a></td>
                                     <td><?= $row['status'] ?></td>
+                                    <td><?= $row['note'] ?></td>
                                     <td>
                                         <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#anggotaModal<?= $row['id'] ?>">
                                             Detail Anggota
@@ -76,6 +78,13 @@
                                         <button type="button" class="btn btn-primary btn-sm updateStatus" data-bs-toggle="modal" data-bs-target="#updateStatusModal" data-id="<?= $row['id'] ?>" data-status="<?= $row['status'] ?>">
                                             Perbarui Status
                                         </button>
+                                    <td>
+                                        <form action="/admin/rekognisi/delete/<?= $row['id'] ?>" method="POST" class="d-inline">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                                            <button type="submit" class="btn btn-sm btn-danger tombol-hapus">Hapus</button>
+                                        </form>
+                                    </td>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
@@ -169,14 +178,18 @@
                         </small>
                         <div class="help-block with-errors"></div>
                     </div>
+                    <div class="mb-3">
+                        <label for="note" class="form-label">Catatan<span class="text-danger">*</span></label>
+                        <textarea name="note" id="note" class="form-control <?= ($validation->hasError('note')) ? 'is-invalid' : '' ?> <?= ($validation->hasError('note')) ? 'is-invalid' : '' ?>" data-error="Masukkan note" placeholder="Masukkan Note"></textarea>
+                    </div>
                 </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                <button type="submit" class="btn btn-primary">Simpan</button>
-            </div>
-        </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 </div>
 <?= $this->endSection() ?>
 

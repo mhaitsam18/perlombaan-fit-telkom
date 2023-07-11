@@ -52,11 +52,13 @@ $routes->group('mahasiswa', static function ($routes) {
         $routes->post('', 'Mahasiswa\Rekognisi::store', ['as' => 'mahasiswa-rekognisi-store']);
         $routes->post('anggota', 'Mahasiswa\Rekognisi::storeAnggota', ['as' => 'mahasiswa-rekognisi-store-anggota']);
         $routes->get('list', 'Mahasiswa\Rekognisi::list', ['as' => 'mahasiswa-rekognisi-list']);
+        $routes->delete('delete/(:num)', 'Mahasiswa\rekognisi::delete/$1', ['as' => 'mahasiswa-rekognisi-delete']);
     });
     $routes->group('pendataan-lomba', static function ($routes) {
         $routes->get('', 'Mahasiswa\PendataanLomba::index', ['as' => 'mahasiswa-pendataan-lomba-index']);
         $routes->post('', 'Mahasiswa\PendataanLomba::store', ['as' => 'mahasiswa-pendataan-lomba-store']);
         $routes->get('list', 'Mahasiswa\PendataanLomba::list', ['as' => 'mahasiswa-pendataan-lomba-list']);
+        $routes->delete('delete/(:num)', 'Mahasiswa\PendataanLomba::delete/$1', ['as' => 'mahasiswa-pendataan-lomba-delete']);
         $routes->post('anggota', 'Mahasiswa\PendataanLomba::storeAnggota', ['as' => 'mahasiswa-pendataan-lomba-store-anggota']);
         $routes->post('update-status', 'Mahasiswa\PendataanLomba::updateStatus', ['as' => 'mahasiswa-pendataan-lomba-update-status']);
     });

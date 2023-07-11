@@ -74,6 +74,13 @@
                                             Detail Anggota
                                         </button>
                                     </td>
+                                    <td>
+                                        <form action="/admin/pendataanlomba/delete/<?= $row['id'] ?>" method="POST" class="d-inline">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                                            <button type="submit" class="btn btn-sm btn-danger tombol-hapus">Hapus</button>
+                                        </form>
+                                    </td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>

@@ -18,7 +18,7 @@ class Rekognisi extends BaseController
             'validation' => \Config\Services::validation(),
         ]);
     }
-    
+
     public function create()
     {
     }
@@ -26,7 +26,8 @@ class Rekognisi extends BaseController
     public function updateStatus()
     {
         $check = $this->validate([
-            'status' => 'required'
+            'status' => 'required',
+            'note' => 'required'
         ]);
         $validation = \Config\Services::validation();
         if (!$check) {
@@ -42,10 +43,17 @@ class Rekognisi extends BaseController
         $this->rekognisiModel->save([
             'id' => $this->request->getVar('id'),
             'status' => $this->request->getVar('status'),
+            'note' => $this->request->getVar('note'),
         ]);
 
         session()->setFlashdata('success', 'Status Rekognisi berhasil diperbarui');
 
         return redirect()->to('/admin/rekognisi');
+    }
+    public function delete($id = null)
+    {
+        $this->rekognisiModel->delete($id);
+        session()->setFlashdata('success', 'Data berhasil dihapus');
+        return redirect()->back();
     }
 }

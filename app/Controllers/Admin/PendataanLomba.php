@@ -22,4 +22,10 @@ class PendataanLomba extends BaseController
     {
     }
 
+    public function delete($id = null)
+    {
+        $this->pendataanLombaModel->delete($id);
+        session()->setFlashdata('success', 'Data berhasil dihapus');
+        return redirect()->back();
+    }
 }

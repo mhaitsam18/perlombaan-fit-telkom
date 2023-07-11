@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="/assets-nobleui/vendors/jquery-steps/jquery.steps.css">
 <!-- End plugin css for this page -->
 
+
 <!-- Plugin css for this page -->
 <link rel="stylesheet" href="/assets-nobleui/vendors/simplemde/simplemde.min.css">
 <!-- End plugin css for this page -->
@@ -36,9 +37,10 @@
                     <?= csrf_field() ?>
                     <div class="row" id="">
                         <div class="col-md-6">
-                            <div class="mb-3">
+                            <?php $no = 1; ?>
+                            <div class=" mb-3">
                                 <label for="Title" class="form-label">Judul Lomba</label>
-                                <input type="text" class="form-control <?= ($validation->hasError('Title')) ? 'is-invalid' : '' ?> <?= ($validation->hasError('Title')) ? 'is-invalid' : '' ?>" name="Title" id="Title" value="<?= old('Title') ?>">
+                                <input onchange="myFunction()" type="text" class="form-control <?= ($validation->hasError('Title')) ? 'is-invalid' : '' ?> <?= ($validation->hasError('Title')) ? 'is-invalid' : '' ?>" name="Title" id="Title" value="<?= old('Title') ?>">
                                 <div id="Title_feedback" class="invalid-feedback">
                                     <?= $validation->getError('Title') ?>
                                 </div>
@@ -105,12 +107,31 @@
 </div>
 
 
+
+
 <?= $this->endSection() ?>
 
 <?= $this->section('script') ?>
 <!-- Plugin js for this page -->
 <script src="/assets-nobleui/vendors/jquery-steps/jquery.steps.min.js"></script>
+
 <!-- End plugin js for this page -->
+
+<script type="text/javascript">
+    function myFunction() {
+
+        var a = document.getElementById("Title").value;
+
+        var b = a.toLowerCase().replace(/ /g, '-')
+            .replace(/[^\w-]+/g, '');
+
+        document.getElementById("slug").value = b;
+
+
+    }
+</script>
+
+
 
 <script src="/assets-nobleui/js/wizard.js"></script>
 
@@ -162,6 +183,7 @@
 <script src="/assets-nobleui/vendors/simplemde/simplemde.min.js"></script>
 <script src="/assets-nobleui/vendors/ace-builds/src-min/ace.js"></script>
 <script src="/assets-nobleui/vendors/ace-builds/src-min/theme-chaos.js"></script>
+
 <!-- End plugin js for this page -->
 
 <!-- Custom js for this page -->

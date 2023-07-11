@@ -64,7 +64,7 @@ use CodeIgniter\I18n\Time;
                                         <li><i class='bx bx-time'></i><?= $daysRemaining ?> Hari lagi</li>
                                         <li><i class='bx bx-link'></i><a href="<?= $lomba['link'] ?>" target="_blank">Buka Situs Resmi</a></li>
                                     </ul>
-                                    <h3><a href="/perlombaan/<?= $lomba['slug'] ?>"><?= $lomba['cabang_lomba'] ?></a></h3>
+                                    <h3><a href="/perlombaan/<?= $lomba['slug'] ?>"><?= $lomba['Title'] ?></a></h3>
                                     <p>
                                         <?= $lomba['excerpt'] ?>
                                     </p>

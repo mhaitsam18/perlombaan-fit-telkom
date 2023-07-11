@@ -83,7 +83,13 @@
                                         <button type="button" class="btn btn-primary btn-sm updateStatus" data-bs-toggle="modal" data-bs-target="#updateStatusModal" data-id="<?= $row->id ?>" data-status="<?= $row->status ?>">
                                             Update Status
                                         </button>
+                                        <form action="/mahasiswa/pendataan-lomba/delete/<?= $row->id ?>" method="POST" class="d-inline">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <input type="hidden" name="id" value="<?= $row->id ?>">
+                                            <button type="submit" class="btn btn-sm btn-danger tombol-hapus">Hapus</button>
+                                        </form>
                                     </td>
+
                                 </tr>
                             <?php endforeach; ?>
                         <?php else : ?>

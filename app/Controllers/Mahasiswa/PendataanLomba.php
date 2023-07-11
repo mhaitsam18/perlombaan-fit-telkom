@@ -117,6 +117,13 @@ class PendataanLomba extends BaseController
         return redirect()->to('/mahasiswa/pendataan-lomba/list');
     }
 
+    public function delete($id = null)
+    {
+        $this->pendataanLombaModel->delete($id);
+        session()->setFlashdata('success', 'Data berhasil dihapus');
+        return redirect()->back();
+    }
+
 
     public function updateStatus()
     {

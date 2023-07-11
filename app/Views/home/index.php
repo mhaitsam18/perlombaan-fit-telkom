@@ -16,7 +16,7 @@
                             Website untuk mencari lomba khusus sistem informasi
                         </p>
                         <div class="banner-btn">
-                            <a href="/login" class="default-btn btn-bg-two border-radius-50">Cari Lomba <i class='bx bx-chevron-right'></i></a>
+                            <a href="/perlombaan" class="default-btn btn-bg-two border-radius-50">Cari Lomba <i class='bx bx-chevron-right'></i></a>
                             <?php if (!logged_in()) : ?>
                                 <a href="/register" class="default-btn btn-bg-one border-radius-50 ml-20">Daftar<i class='bx bx-chevron-right'></i></a>
                             <?php endif; ?>
@@ -456,10 +456,10 @@
 <section class="clients-area pt-100 pb-70">
     <div class="container">
         <div class="section-title text-center">
-            <span class="sp-color2">User Kami</span>
-            <h2>Mahasiswa Feedback</h2>
+            <!-- <span class="sp-color2">User Kami</span> -->
+            <h2 style="margin-top: 100px; margin: bottom 100px;">Terima Kasih Sudah Menggunakan Website Kami</h2>
         </div>
-        <div class="clients-slider owl-carousel owl-theme pt-45">
+        <!-- <div class="clients-slider owl-carousel owl-theme pt-45">
             <div class="clients-content">
                 <div class="content">
                     <img src="/assets-techex-demo/images/clients-img/anas.jpg" alt="Images" loading="lazy">
@@ -494,7 +494,7 @@
                     sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi loren accumsan ipsum velit.”
                 </p>
             </div>
-        </div>
+        </div> -->
     </div>
     <!-- <div class="client-circle">
         <div class="client-circle-1">

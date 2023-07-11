@@ -55,16 +55,18 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="choose-content mr-20">
-                    <div class="section-title">
-                        <h2>Dinda Nabila</h2>
-                        <p>
-                            Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum auctor a ornare odio.
-                        </p>
-                        <br>
+                    <div class="section-title"><br><br>
                         <h2>Raden Fachry Azwar</h2>
                         <p>
-                            Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum auctor a ornare odio.
+                            Halo Perkenalkan Aku Raden Fachry Azwar Mahasiswa angkatan 2020 dari D3 Sistem Informasi yang menggarap project Web ini dari UI,Fitur Perlombaan Pendataan Lomba dan Rekognisi.
                         </p>
+                        <br><br><br><br><br><br><br>
+                        <h2>Dinda Nabila</h2>
+                        <p>
+                            Halo Perkenalkan Aku Dinda Nabila Mahasiswa angkatan 2019 dari D3 Sistem Informasi yang menggarap project Web ini Fitur Machine Learning.
+                        </p>
+                        <br>
+
                     </div>
                     <!-- <div class="row">
                         <div class="col-lg-6 col-6">
@@ -99,7 +101,11 @@
 
 <div class="about-area ptb-100">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="section-title text-center">
+            <!-- <span class="sp-color2">User Kami</span> -->
+            <h2>Terima Kasih Sudah Menggunakan Website Kami</h2>
+        </div>
+        <!-- <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="about-play">
                     <img src="/assets-techex-demo/images/about/about-img1.jpg" alt="About Images" loading="lazy">
@@ -140,7 +146,7 @@
                     <p class="about-content-text">Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.</p>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 

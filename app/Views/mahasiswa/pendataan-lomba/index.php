@@ -147,7 +147,7 @@
                             </div>
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
-                                    <label>Upload Bukti Sertifikat <span>*</span></label>
+                                    <label>Upload File<span>*</span></label>
                                     <input type="file" name="sertifikat" id="sertifikat" class="form-control" required data-error="Upload Sertifikat">
                                     <small id="sertifikat_feedback" class="text-danger fs-6">
                                         <?= $validation->getError('sertifikat') ?>

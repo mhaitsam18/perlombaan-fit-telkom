@@ -36,7 +36,7 @@ class Rekognisi extends BaseController
             'rekognisi_mahasiswa' => $this->rekognisiMahasiswaModel
         ]);
     }
-    
+
     public function store()
     {
         $check = $this->validate([
@@ -75,12 +75,20 @@ class Rekognisi extends BaseController
             'email' => $this->request->getVar('email'),
             'sertifikat' => $nama_file,
             'status' => 'on process',
+            'note' => 'Sedang dalam pemrosesan',
             'prestasi' => $this->request->getVar('prestasi'),
         ]);
 
         session()->setFlashdata('success', 'Data rekognisi berhasil dikirim');
 
         return redirect()->to('/mahasiswa/rekognisi/list');
+    }
+
+    public function delete($id = null)
+    {
+        $this->rekognisiModel->delete($id);
+        session()->setFlashdata('success', 'Data berhasil dihapus');
+        return redirect()->back();
     }
 
     public function storeAnggota()
@@ -116,6 +124,5 @@ class Rekognisi extends BaseController
     }
     public function print()
     {
-        
     }
 }

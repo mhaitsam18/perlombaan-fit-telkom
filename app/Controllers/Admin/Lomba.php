@@ -70,19 +70,22 @@ class Lomba extends BaseController
 
         $file = $this->request->getFile('poster');
         $nama_file = $file->getRandomName();
-        $file->move('assets/img/lomba');
+        $file->move('assets/img/lomba', $nama_file);
         $nama_file = 'lomba/' . $nama_file;
 
+        // $slug = url_title($this->request->getVar('Title'), "-", true);
         $this->lombaModel->save([
             'Title' => $this->request->getVar('Title'),
             'link' => $this->request->getVar('link'),
             'teks' => $this->request->getVar('teks'),
+            // 'slug' => $slug,
             'slug' => $this->request->getVar('slug'),
             'Penyelenggara' => $this->request->getVar('Penyelenggara'),
             'Deadline' => $this->request->getVar('Deadline'),
-            // 'counting_day' => $this->request->getVar('counting_day'),
+            'counting_day' => $this->request->getVar('counting_day'),
             'poster' => $nama_file,
-            // 'output' => $this->request->getVar('output'),
+            'kategori_lomba_id' => '1',
+            'output' => $this->request->getVar('output'),
         ]);
 
         session()->setFlashdata('success', 'Data lomba berhasil ditambahkan');
@@ -135,7 +138,7 @@ class Lomba extends BaseController
             $file->move('assets/img/lomba');
             $nama_file = 'lomba/' . $nama_file;
         }
-        
+
         $this->lombaModel->save([
             'id' => $id,
             'Title' => $this->request->getVar('Title'),

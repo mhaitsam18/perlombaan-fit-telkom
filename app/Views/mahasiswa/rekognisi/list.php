@@ -59,6 +59,7 @@
                             <th class="pt-0">Email</th>
                             <th class="pt-0">Prestasi</th>
                             <th class="pt-0">Status</th>
+                            <th class="pt-0">Catatan (Admin)</th>
                             <th class="pt-0">Aksi</th>
                         </tr>
                     </thead>
@@ -76,11 +77,17 @@
                                     <td><?= $row->email ?></td>
                                     <td><?= $row->prestasi ?></td>
                                     <td><?= $row->status ?></td>
+                                    <td><?= $row->note ?></td>
                                     <td>
                                         <a href="/assets/img/<?= $row->sertifikat ?>" target="_blank" class="btn btn-sm btn-success">Sertifikat</a>
                                         <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#anggotaModal<?= $row->id ?>">
                                             Anggota
                                         </button>
+                                        <form action="/mahasiswa/rekognisi/delete/<?= $row->id ?>" method="POST" class="d-inline">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <input type="hidden" name="id" value="<?= $row->id ?>">
+                                            <button type="submit" class="btn btn-sm btn-danger tombol-hapus">Hapus</button>
+                                        </form>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
