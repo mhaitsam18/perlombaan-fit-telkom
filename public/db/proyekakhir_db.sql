@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2023 at 03:18 PM
+-- Generation Time: Jul 22, 2023 at 10:53 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.1.17
 
@@ -373,7 +373,9 @@ INSERT INTO `auth_logins` (`id`, `ip_address`, `email`, `user_id`, `date`, `succ
 (249, '::1', 'admin@gmail.com', 12, '2023-07-08 17:14:38', 1),
 (250, '::1', 'ari@gmail.com', 17, '2023-07-08 17:47:17', 1),
 (251, '::1', 'ari@gmail.com', 17, '2023-07-08 17:56:36', 1),
-(252, '::1', 'admin@gmail.com', 12, '2023-07-10 13:11:55', 1);
+(252, '::1', 'admin@gmail.com', 12, '2023-07-10 13:11:55', 1),
+(253, '::1', 'admin@gmail.com', 12, '2023-07-22 08:46:54', 1),
+(254, '::1', 'admin@gmail.com', 12, '2023-07-22 08:47:32', 1);
 
 -- --------------------------------------------------------
 
@@ -787,6 +789,7 @@ CREATE TABLE `rekognisi` (
   `sertifikat` varchar(255) DEFAULT NULL,
   `status` enum('diterima','ditolak','dalam proses') DEFAULT NULL,
   `prestasi` varchar(255) DEFAULT NULL,
+  `note` varchar(255) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -795,11 +798,11 @@ CREATE TABLE `rekognisi` (
 -- Dumping data for table `rekognisi`
 --
 
-INSERT INTO `rekognisi` (`id`, `user_id`, `nama_lomba`, `nama_ketua`, `nim`, `nama_pembimbing`, `kelas`, `email`, `sertifikat`, `status`, `prestasi`, `created_at`, `updated_at`) VALUES
-(1, NULL, 'GEMASTIK WEB PROGRAMMING', 'IHSAN KURNIAWAN', '1202218458', 'KUR', 'SI-44-01', 'kur@gmail.com', 'sertifikat/sertifikat.png', 'dalam proses', NULL, '2023-06-11 14:17:55', '2023-07-08 10:43:42'),
-(2, 17, 'Programming', 'Vanisa Auliani', '670120113', 'Inne Gartina Husein', 'D3SI-44-05', 'suryatiningsih@gmail.com', 'rekognisi/1687094697_bdd577483e78fa30599f.png', 'diterima', NULL, '2023-06-18 06:24:57', '2023-07-08 10:42:35'),
-(3, 17, 'UI/UX', 'Raden Fachry', '6701202132', 'Inne Gartina Husein', 'D3SI-44-04', 'radenfachryazwar@gmail.com', 'rekognisi/1687332567_d4b7fbe410c8e42ebc20.png', 'dalam proses', NULL, '2023-06-21 00:29:27', '2023-07-08 10:43:47'),
-(4, 17, 'Programming', 'Raden Fachry Azwar', '6701202132', 'Inne Gartina Husein', 'D3SI-44-04', 'radenfachryazwar@gmail.com', 'rekognisi/1688836378_b22defd121f1d9e3463c.png', 'dalam proses', 'Juara 1', '2023-07-08 10:12:58', '2023-07-08 10:43:51');
+INSERT INTO `rekognisi` (`id`, `user_id`, `nama_lomba`, `nama_ketua`, `nim`, `nama_pembimbing`, `kelas`, `email`, `sertifikat`, `status`, `prestasi`, `note`, `created_at`, `updated_at`) VALUES
+(1, NULL, 'GEMASTIK WEB PROGRAMMING', 'IHSAN KURNIAWAN', '1202218458', 'KUR', 'SI-44-01', 'kur@gmail.com', 'sertifikat/sertifikat.png', 'dalam proses', NULL, NULL, '2023-06-11 14:17:55', '2023-07-08 10:43:42'),
+(2, 17, 'Programming', 'Vanisa Auliani', '670120113', 'Inne Gartina Husein', 'D3SI-44-05', 'suryatiningsih@gmail.com', 'rekognisi/1687094697_bdd577483e78fa30599f.png', 'diterima', NULL, NULL, '2023-06-18 06:24:57', '2023-07-08 10:42:35'),
+(3, 17, 'UI/UX', 'Raden Fachry', '6701202132', 'Inne Gartina Husein', 'D3SI-44-04', 'radenfachryazwar@gmail.com', 'rekognisi/1687332567_d4b7fbe410c8e42ebc20.png', 'dalam proses', NULL, NULL, '2023-06-21 00:29:27', '2023-07-08 10:43:47'),
+(4, 17, 'Programming', 'Raden Fachry Azwar', '6701202132', 'Inne Gartina Husein', 'D3SI-44-04', 'radenfachryazwar@gmail.com', 'rekognisi/1688836378_b22defd121f1d9e3463c.png', 'dalam proses', 'Juara 1', NULL, '2023-07-08 10:12:58', '2023-07-08 10:43:51');
 
 -- --------------------------------------------------------
 
@@ -1065,7 +1068,7 @@ ALTER TABLE `auth_groups_users`
 -- AUTO_INCREMENT for table `auth_logins`
 --
 ALTER TABLE `auth_logins`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=253;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=255;
 
 --
 -- AUTO_INCREMENT for table `auth_permissions`
