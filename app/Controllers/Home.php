@@ -13,7 +13,12 @@ class Home extends BaseController
     }
     public function perlombaan()
     {
-        $data_lomba = $this->lombaModel->select('lomba.*, kategori_indo')->join('kategori_lomba', 'kategori_lomba.id=lomba.kategori_lomba_id')->paginate(4, 'lomba');
+        // $data_lomba = $this->lombaModel->select('lomba.*, kategori_indo')->join('kategori_lomba', 'kategori_lomba.id=lomba.kategori_lomba_id')->paginate(8, 'lomba');
+        $data_lomba = $this->lombaModel
+            ->select('lomba.*, kategori_indo')
+            ->join('kategori_lomba', 'kategori_lomba.id=lomba.kategori_lomba_id')
+            ->orderBy('lomba.id', 'desc')
+            ->paginate(10, 'lomba');
         $data_kategori_lomba = $this->kategoriLombaModel->findAll();
         return view('home/perlombaan', [
             'title' => 'Perlombaan',

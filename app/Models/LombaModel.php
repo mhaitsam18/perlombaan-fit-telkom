@@ -25,4 +25,16 @@ class LombaModel extends Model
     {
         // return $this->join('f')->all();
     }
+
+    //ary
+    public function getLombaAktif()
+    {
+        return $this->where('kategori_lomba_id', '>', 0)->findAll();
+    }
+
+    public function getLombaTidakAktif()
+    {
+        return $this->where('kategori_lomba_id', 0)->findAll();
+    }
+    //ary
 }

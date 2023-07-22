@@ -120,11 +120,13 @@
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label>Kelas <span>*</span></label>
+
                                     <input type="text" name="kelas" id="kelas" required data-error="Masukkan kelas" class="form-control  <?= ($validation->hasError('kelas')) ? 'is-invalid' : '' ?> <?= ($validation->hasError('kelas')) ? 'is-invalid' : '' ?>" placeholder="Kode Kelas" value="<?= old('kelas') ?>">
                                     <div id="kelas_feedback" class="text-danger fs-6">
                                         <?= $validation->getError('kelas') ?>
                                     </div>
                                     <div class="help-block with-errors"></div>
+                                    <p>Format Pengisian Contoh D3SI-44-04</p>
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -140,7 +142,13 @@
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
                                     <label>Nama Dosen Pembimbing <span>*</span></label>
-                                    <input type="text" name="nama_pembimbing" id="nama_pembimbing" class="form-control <?= ($validation->hasError('nama_pembimbing')) ? 'is-invalid' : '' ?> <?= ($validation->hasError('nama_pembimbing')) ? 'is-invalid' : '' ?>" required data-error="Masukkan Nama Pembimbing" placeholder="Nama Lengkap" value="<?= old('nama_pembimbing') ?>">
+                                    <input list="browsers" name="nama_pembimbing" id="nama_pembimbing" class="form-control <?= ($validation->hasError('nama_pembimbing')) ? 'is-invalid' : '' ?> <?= ($validation->hasError('nama_pembimbing')) ? 'is-invalid' : '' ?>" required data-error="Masukkan Nama Pembimbing" placeholder="Nama Lengkap" value="<?= old('nama_pembimbing') ?>">
+                                    <datalist id="browsers">
+                                        <!-- Iterasi melalui data yang diambil dari model DosenModel -->
+                                        <?php foreach ($nama_gelar_list as $nama_gelar) : ?>
+                                            <option value="<?= $nama_gelar['nama_gelar'] ?>">
+                                            <?php endforeach; ?>
+                                    </datalist>
                                     <div id="nama_pembimbing_feedback" class="text-danger fs-6">
                                         <?= $validation->getError('nama_pembimbing') ?>
                                     </div>
@@ -150,7 +158,7 @@
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
                                     <label>Upload Bukti Sertifikat <span>*</span></label>
-                                    <input type="file" name="sertifikat" id="sertifikat" class="form-control" required data-error="Upload Sertifikat">
+                                    <input type="file" name="sertifikat" id="sertifikat" class="form-control" required data-error="Upload Sertifikat" accept=".doc, .docx, .pdf">
                                     <div id="sertifikat_feedback" class="text-danger fs-6">
                                         <?= $validation->getError('sertifikat') ?>
                                     </div>
@@ -215,4 +223,6 @@
         labelIdle: 'Seret & Lepaskan file Anda atau <span class="filepond--label-action"> Jelajahi </span>'
     });
 </script>
+
+
 <?= $this->endSection() ?>

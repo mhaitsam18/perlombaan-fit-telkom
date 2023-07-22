@@ -4,15 +4,20 @@ namespace App\Controllers\Mahasiswa;
 
 use App\Controllers\BaseController;
 
+use App\Models\DosenModel;
 
 class Rekognisi extends BaseController
 {
     protected $validation;
+    //ary
+    protected $dosenModel;
+    //ary
     public function __construct()
     {
         $this->db = \Config\Database::connect();
 
         $this->validation = \Config\Services::validation();
+        $this->dosenModel = new DosenModel();
         if (!logged_in()) {
             return redirect()->to('/login');
         }
@@ -20,10 +25,14 @@ class Rekognisi extends BaseController
 
     public function index()
     {
+        // Ambil data dari DosenModel
+        $nama_gelar_list = $this->dosenModel->getNamaGelar();
+
         return view('mahasiswa/rekognisi/index', [
             'title' => 'Rekognisi',
             'page' => 'rekognisi',
             'validation' => \Config\Services::validation(),
+            'nama_gelar_list' => $nama_gelar_list, // Teruskan data ke view
         ]);
     }
 

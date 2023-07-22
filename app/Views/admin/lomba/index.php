@@ -39,6 +39,7 @@
                     </div>
                 </div>
                 <div class="table-responsive">
+                    <h5>Lomba Aktif</h5>
                     <table id="dataTableExample" class="table table-hover mb-0">
                         <thead>
                             <tr>
@@ -56,28 +57,76 @@
                         </thead>
                         <tbody>
 
-                            <?php $no = 1; ?>
-                            <?php foreach ($data_lomba as $row) : ?>
-                                <tr>
-                                    <th><?= $no++ ?></th>
-                                    <td> <img src="/assets/img/<?= $row['poster'] ?>" class="img-fluid"> </td>
-                                    <td><?= $row['Title'] ?></td>
-                                    <td><?= $row['link'] ?></td>
-                                    <td><?= $row['slug'] ?></td>
-                                    <td><?= $row['Penyelenggara'] ?></td>
-                                    <td><?= $row['Deadline'] ?></td>
-                                    <td><?= $row['counting_day'] ?></td>
-                                    <td><?= $row['output'] ?></td>
-                                    <td>
-                                        <!-- <a href="/admin/lomba/edit/<?= $row['id'] ?>" class="btn btn-sm btn-primary">Detail</a> -->
-                                        <a href="/admin/lomba/edit/<?= $row['id'] ?>" class="btn btn-sm btn-success d-inline">Ubah</a>
-                                        <form action="/admin/lomba/delete/<?= $row['id'] ?>" method="POST" class="d-inline">
-                                            <input type="hidden" name="_method" value="DELETE">
-                                            <input type="hidden" name="id" value="<?= $row['id'] ?>">
-                                            <button type="submit" class="btn btn-sm btn-danger tombol-hapus">Hapus</button>
-                                        </form>
-                                    </td>
-                                </tr>
+                            <?php $no = count($data_lomba);
+                            foreach (array_reverse($data_lomba) as $row) : ?>
+                                <?php if ($row['kategori_lomba_id'] == 1) : ?>
+                                    <tr>
+                                        <td><?= $no++ ?></td>
+                                        <td><img src="/assets/img/<?= $row['poster'] ?>" class="img-fluid"></td>
+                                        <td><?= $row['Title'] ?></td>
+                                        <td><?= $row['link'] ?></td>
+                                        <td><?= $row['slug'] ?></td>
+                                        <td><?= $row['Penyelenggara'] ?></td>
+                                        <td><?= $row['Deadline'] ?></td>
+                                        <td><?= $row['counting_day'] ?></td>
+                                        <td><?= $row['output'] ?></td>
+                                        <td>
+                                            <a href="/admin/lomba/edit/<?= $row['id'] ?>" class="btn btn-sm btn-success d-inline">Ubah</a>
+                                            <form action="/admin/lomba/delete/<?= $row['id'] ?>" method="POST" class="d-inline">
+                                                <input type="hidden" name="_method" value="DELETE">
+                                                <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                                                <button type="submit" class="btn btn-sm btn-danger tombol-hapus">Hapus</button>
+                                            </form>
+                                            <form action="/admin/lomba/nonaktifkan/<?= $row['id'] ?>" method="POST" class="d-inline">
+                                                <button type="submit" class="btn btn-sm btn-secondary tombol-nonaktifkan">Nonaktifkan Lomba</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-responsive mt-5">
+                    <h5>Lomba Tidak Aktif</h5>
+                    <table id="dataTableNonaktifExample" class="table table-hover mb-0">
+                        <thead>
+                            <tr>
+                                <th class="pt-0">#</th>
+                                <th class="pt-0">Poster</th>
+                                <th class="pt-0">Judul</th>
+                                <th class="pt-0">Link</th>
+                                <th class="pt-0">Slug</th>
+                                <th class="pt-0">Penyelenggara</th>
+                                <th class="pt-0">Deadline</th>
+                                <th class="pt-0">Menghitung Hari</th>
+                                <th class="pt-0">Validasi</th>
+                                <th class="pt-0">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php $no = 1;
+                            foreach ($data_lomba as $row) : ?>
+                                <?php if ($row['kategori_lomba_id'] == 0) : ?>
+                                    <tr>
+                                        <td><?= $no++ ?></td>
+                                        <td><img src="/assets/img/<?= $row['poster'] ?>" class="img-fluid"></td>
+                                        <td><?= $row['Title'] ?></td>
+                                        <td><?= $row['link'] ?></td>
+                                        <td><?= $row['slug'] ?></td>
+                                        <td><?= $row['Penyelenggara'] ?></td>
+                                        <td><?= $row['Deadline'] ?></td>
+                                        <td><?= $row['counting_day'] ?></td>
+                                        <td><?= $row['output'] ?></td>
+                                        <td>
+                                            <a href="/admin/lomba/edit/<?= $row['id'] ?>" class="btn btn-sm btn-success d-inline">Ubah</a>
+                                            <form action="/admin/lomba/aktifkan/<?= $row['id'] ?>" method="POST" class="d-inline">
+                                                <button type="submit" class="btn btn-sm btn-info tombol-aktifkan">Aktifkan Lomba</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                <?php endif; ?>
                             <?php endforeach; ?>
                         </tbody>
                     </table>

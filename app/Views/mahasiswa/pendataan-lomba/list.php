@@ -62,11 +62,14 @@
                         </tr>
                     </thead>
                     <tbody>
+
+
                         <?php if ($data_pendataan_lomba) : ?>
-                            <?php $no = 1; ?>
-                            <?php foreach ($data_pendataan_lomba as $row) : ?>
+                            <?php $reversed_data = array_reverse($data_pendataan_lomba); ?>
+                            <?php $no = count($data_pendataan_lomba); ?>
+                            <?php foreach ($reversed_data as $row) : ?>
                                 <tr>
-                                    <th><?= $no++ ?></th>
+                                    <th><?= $no-- ?></th>
                                     <td><?= $row->nama_lomba ?></td>
                                     <td><?= $row->nama_pembimbing ?></td>
                                     <td><?= $row->nama_ketua ?></td>

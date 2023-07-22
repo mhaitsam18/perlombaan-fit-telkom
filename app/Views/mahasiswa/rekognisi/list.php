@@ -65,10 +65,10 @@
                     </thead>
                     <tbody>
                         <?php if ($data_rekognisi) : ?>
-                            <?php $no = 1; ?>
-                            <?php foreach ($data_rekognisi as $row) : ?>
+                            <?php $no = count($data_rekognisi); ?>
+                            <?php foreach (array_reverse($data_rekognisi) as $row) : ?>
                                 <tr>
-                                    <th><?= $no++ ?></th>
+                                    <th><?= $no-- ?></th>
                                     <td><?= $row->nama_lomba ?></td>
                                     <td><?= $row->nama_pembimbing ?></td>
                                     <td><?= $row->nama_ketua ?></td>
@@ -92,6 +92,7 @@
                                 </tr>
                             <?php endforeach; ?>
                         <?php else : ?>
+                            <!-- Tampilkan pesan jika tidak ada data -->
                             <tr>
                                 <td colspan="9" class="text-center">Tidak Ada data</td>
                             </tr>

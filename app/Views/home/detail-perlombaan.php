@@ -47,14 +47,19 @@ use CodeIgniter\I18n\Time;
                     $targetDate = strtotime($lomba['Deadline']);
                     $currentDate = time();
                     $secondsRemaining = $targetDate - $currentDate;
-                    $daysRemaining = floor($secondsRemaining / (60 * 60 * 24));
+                    $daysRemaining = ceil($secondsRemaining / (60 * 60 * 24));
 
+                    if ($daysRemaining < 1) {
+                        $test =  "lomba sudah kadaluarsa";
+                    } else {
+                        $test = "Tersisa $daysRemaining hari lagi untuk lomba";
+                    }
                     ?>
                     <div class="blog-article-title">
                         <ul>
                             <li><i class='bx bxs-user'></i> By <?= $lomba['Penyelenggara'] ?></li>
                             <li><i class='bx bx-calendar'></i>Deadline: <?= date('d F Y', strtotime($lomba['Deadline'])); ?></li>
-                            <li><i class='bx bx-time'></i><?= $daysRemaining ?> Hari lagi</li>
+                            <li><i class='bx bx-time'></i><?= $test ?> Hari lagi</li>
                             <li><i class='bx bx-link'></i><a href="<?= $lomba['link'] ?>" target="_blank">Buka Situs Resmi</a></li>
                         </ul>
                         <h2><?= $lomba['Title'] ?> - <?= $lomba['cabang_lomba'] ?></h2>

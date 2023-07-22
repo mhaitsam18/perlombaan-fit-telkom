@@ -5,6 +5,7 @@ namespace App\Models;
 use CodeIgniter\Model;
 use Myth\Auth\Models\UserModel;
 
+
 class DosenModel extends Model
 {
     protected $table      = 'dosen';
@@ -19,4 +20,11 @@ class DosenModel extends Model
         $userModel = new UserModel();
         return $userModel->find($userId);
     }
+    //ary
+    public function getNamaGelar()
+    {
+        // Mengambil data dari tabel nama_gelar
+        return $this->findAll();
+    }
+    //ary
 }

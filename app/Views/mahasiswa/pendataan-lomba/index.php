@@ -122,6 +122,7 @@
                                         <?= $validation->getError('kelas') ?>
                                     </small>
                                     <div class="help-block with-errors"></div>
+                                    <p>Format Pengisian Contoh D3SI-44-04</p>
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -137,22 +138,28 @@
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
                                     <label>Nama Dosen Pembimbing <span>*</span></label>
-                                    <input type="text" name="nama_pembimbing" id="nama_pembimbing" class="form-control  <?= ($validation->hasError('nama_pembimbing')) ? 'is-invalid' : '' ?> <?= ($validation->hasError('nama_pembimbing')) ? 'is-invalid' : '' ?>" required data-error="Masukkan Nama Pembimbing" placeholder="Nama Lengkap" value="<?= old('nama_pembimbing') ?>">
-                                    <small id="nama_pembimbing_feedback" class="text-danger fs-6">
+                                    <input list="browsers" name="nama_pembimbing" id="nama_pembimbing" class="form-control <?= ($validation->hasError('nama_pembimbing')) ? 'is-invalid' : '' ?> <?= ($validation->hasError('nama_pembimbing')) ? 'is-invalid' : '' ?>" required data-error="Masukkan Nama Pembimbing" placeholder="Nama Lengkap" value="<?= old('nama_pembimbing') ?>">
+                                    <datalist id="browsers">
+                                        <!-- Iterasi melalui data yang diambil dari model DosenModel -->
+                                        <?php foreach ($nama_gelar_list as $nama_gelar) : ?>
+                                            <option value="<?= $nama_gelar['nama_gelar'] ?>">
+                                            <?php endforeach; ?>
+                                    </datalist>
+                                    <div id="nama_pembimbing_feedback" class="text-danger fs-6">
                                         <?= $validation->getError('nama_pembimbing') ?>
-                                    </small>
+                                    </div>
                                     <div class="help-block with-errors"></div>
-                                    <span class="text-dark">Belum punya Dosen Pembimbing? <a href="/informasi-dosen">Klik di sini</a> </span>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
                                     <label>Upload File<span>*</span></label>
-                                    <input type="file" name="sertifikat" id="sertifikat" class="form-control" required data-error="Upload Sertifikat">
+                                    <input type="file" name="sertifikat" id="sertifikat" class="form-control" accept=".doc, .docx, .pdf" required data-error="Upload Sertifikat">
                                     <small id="sertifikat_feedback" class="text-danger fs-6">
                                         <?= $validation->getError('sertifikat') ?>
                                     </small>
                                     <div class="help-block with-errors"></div>
+                                    <p>Note : File berupa .doc, .docx, .pdf</p>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12">
@@ -190,6 +197,13 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('script') ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
+
+
+
+
 <script>
     const csrfToken = document.querySelector('[name="csrf-token"]').getAttribute('content');
     FilePond.create(

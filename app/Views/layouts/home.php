@@ -165,7 +165,7 @@
                                 <div class="nav-side-item align-middle">
                                     <h5 class="align-middle">
                                         <?php if (logged_in()) : ?>
-                                            Haloo, <?= user()->username ?>
+                                            Haloo <?= user()->role ?>, <?= user()->username ?>
                                         <?php endif; ?>
                                     </h5>
                                 </div>
@@ -174,7 +174,8 @@
                                         <?php if (logged_in()) : ?>
                                             <a href="/logout" class="default-btn btn-bg-two border-radius-50">Keluar <i class='bx bx-chevron-right'></i></a>
                                         <?php else : ?>
-                                            <a href="/login" class="default-btn btn-bg-two border-radius-50">Masuk <i class='bx bx-chevron-right'></i></a>
+                                            <a href="/login" class="default-btn btn-bg-two border-radius-50">Login Mahasiswa <i class='bx bx-chevron-right'></i></a>
+                                            <a href="/login" class="default-btn btn-bg-two border-radius-50">Login Admin <i class='bx bx-chevron-right'></i></a>
                                         <?php endif; ?>
                                     </div>
                                 </div>

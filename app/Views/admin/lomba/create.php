@@ -46,6 +46,27 @@
                                 </div>
                             </div>
                             <div class="mb-3">
+                                <label for="cabang_lomba">Cabang Lomba</label>
+                                <input list="browsers" class="form-control <?= ($validation->hasError('cabang_lomba')) ? 'is-invalid' : '' ?>" name="cabang_lomba" id="cabang_lomba" value="<?= old('cabang_lomba') ?>">
+                                <div id="cabang_lomba_feedback" class="invalid-feedback">
+                                    <?= $validation->getError('cabang_lomba') ?>
+                                </div>
+                            </div>
+                            <datalist id="browsers">
+                                <option value="Pemprograman">
+                                <option value="Pengembangan Perangkat Lunak">
+                                <option value="Pengembangan Website">
+                                <option value="Analisis Data">
+                                <option value="Big Data">
+                                <option value="Machine Learning">
+                                <option value="UI UX Design">
+                                <option value="Proses Bisnis">
+                                <option value="Keamanan jaringan & Sistem Informasi">
+                                <option value="Kecerdasan Buatan AI">
+
+                                    <!-- Add more options as needed -->
+                            </datalist>
+                            <div class="mb-3">
                                 <label for="slug" class="form-label">Slug</label>
                                 <input type="text" class="form-control <?= ($validation->hasError('slug')) ? 'is-invalid' : '' ?>" name="slug" id="slug" value="<?= old('slug') ?>">
                                 <div id="slug_feedback" class="invalid-feedback">

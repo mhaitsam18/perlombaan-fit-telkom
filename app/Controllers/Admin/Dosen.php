@@ -16,6 +16,8 @@ class Dosen extends BaseController
     }
 
 
+
+
     public function index()
     {
         $data_dosen = $this->dosenModel->findAll();

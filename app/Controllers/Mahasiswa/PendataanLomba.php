@@ -4,22 +4,32 @@ namespace App\Controllers\Mahasiswa;
 
 use App\Controllers\BaseController;
 
+use App\Models\DosenModel;
 
 class PendataanLomba extends BaseController
 {
+    protected $validation;
+    //ary
+    protected $dosenModel;
 
     public function __construct()
     {
+        $this->db = \Config\Database::connect();
+
+        $this->validation = \Config\Services::validation();
+        $this->dosenModel = new DosenModel();
         if (!logged_in()) {
             return redirect()->to('/login');
         }
     }
     public function index()
     {
+        $nama_gelar_list = $this->dosenModel->getNamaGelar();
         return view('mahasiswa/pendataan-lomba/index', [
             'title' => 'Pendataan Lomba',
             'page' => 'pendataan-lomba',
             'validation' => \Config\Services::validation(),
+            'nama_gelar_list' => $nama_gelar_list,
         ]);
     }
 

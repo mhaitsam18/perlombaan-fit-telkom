@@ -76,6 +76,7 @@ class Lomba extends BaseController
         // $slug = url_title($this->request->getVar('Title'), "-", true);
         $this->lombaModel->save([
             'Title' => $this->request->getVar('Title'),
+            'cabang_lomba' => $this->request->getVar('cabang_lomba'),
             'link' => $this->request->getVar('link'),
             'teks' => $this->request->getVar('teks'),
             // 'slug' => $slug,
@@ -92,6 +93,73 @@ class Lomba extends BaseController
 
         return redirect()->to('/admin/lomba');
     }
+
+    //ary
+    public function nonaktifkan($id)
+    {
+        // Logika untuk nonaktifkan lomba
+        // Misalnya, mengubah nilai kolom "kategori_lomba_id" menjadi 0 pada lomba yang sudah ada
+
+        // Contoh kode:
+        $lombaModel = new \App\Models\LombaModel();
+        $lomba = $lombaModel->find($id);
+
+        if ($lomba) {
+            $lomba['kategori_lomba_id'] = 0;
+            $lombaModel->save($lomba);
+
+            // Hapus data dari lomba yang aktif
+            $lombaModel->delete($id);
+
+            // Tambahkan data ke lomba yang sudah tidak aktif
+            $lombaNonaktifModel = new \App\Models\LombaModel();
+            $lombaNonaktifModel->insert($lomba);
+
+            // Redirect atau tampilkan pesan sukses
+            session()->setFlashdata('success', 'Lomba berhasil dinonaktifkan.');
+        } else {
+            // Redirect atau tampilkan pesan error jika lomba tidak ditemukan
+            session()->setFlashdata('error', 'Lomba tidak ditemukan.');
+        }
+
+        return redirect()->to('/admin/lomba');
+    }
+
+    public function aktifkan($id)
+    {
+        // Logika untuk mengaktifkan kembali lomba yang sudah tidak aktif
+        // Misalnya, mengubah nilai kolom "kategori_lomba_id" menjadi 1 pada lomba yang sudah tidak aktif
+
+        // Contoh kode:
+        $lombaAktifModel = new \App\Models\LombaModel();
+        $lomba = $lombaAktifModel->find($id);
+
+        if ($lomba) {
+            $lomba['kategori_lomba_id'] = 1;
+            $lombaAktifModel->save($lomba);
+
+            // Hapus data dari lomba yang sudah tidak aktif
+            $lombaAktifModel->delete($id);
+
+            // Tambahkan data ke lomba yang aktif
+            $lombaModel = new \App\Models\LombaModel();
+            $lombaModel->insert($lomba);
+
+            // Redirect atau tampilkan pesan sukses
+            session()->setFlashdata('success', 'Lomba berhasil diaktifkan kembali.');
+        } else {
+            // Redirect atau tampilkan pesan error jika lomba tidak ditemukan
+            session()->setFlashdata('error', 'Lomba tidak ditemukan.');
+        }
+
+        return redirect()->to('/admin/lomba');
+    }
+
+
+
+
+
+    //ary
 
     public function edit($id)
     {

@@ -41,10 +41,17 @@
                         <img src="/assets/img/<?= $dosen['foto'] ?>" alt="Team Images" loading="lazy">
                         <ul class="social-link">
                             <li>
-                                <a href="https://wa.me/<?= $dosen['telepon'] ?>" target="_blank">
+                                <a href="mahasiswa\pendataan\lomba-index" target="_blank">
+                                    <i class='bx bxl-whatsapp'></i>
+                                </a>
+
+                                $routes->get('', 'Mahasiswa\PendataanLomba::index', ['as' => 'mahasiswa-pendataan-lomba-index']);
+                                <a href="<?= $dosen['telepon'] ?>" target="_blank">
                                     <i class='bx bxl-whatsapp'></i>
                                 </a>
                             </li>
+
+                            $routes->get('/informasi-dosen', 'Home::informasi_dosen', ['as' => 'home-informasi-dosen']);
                         </ul>
                         <div class="content">
                             <h3><?= $dosen['nama_gelar'] ?></h3>

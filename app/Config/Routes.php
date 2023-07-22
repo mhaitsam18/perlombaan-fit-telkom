@@ -111,6 +111,7 @@ $routes->group('admin', ['filter' => 'role:admin'], function ($routes) {
         $routes->post('', 'Admin\Lomba::store', ['as' => 'store-lomba']);
         $routes->put('(:num)', 'Admin\Lomba::update/$1', ['as' => 'update-lomba']);
         $routes->delete('delete/(:num)', 'Admin\Lomba::delete/$1', ['as' => 'delete-lomba']);
+        $routes->post('nonaktifkan/(:num)', 'Admin\Lomba::nonaktifkan/$1', ['as' => 'nonaktifkan-lomba']);
     });
     $routes->group('rekognisi', static function ($routes) {
         $routes->get('', 'Admin\Rekognisi::index', ['as' => 'admin-rekognisi']);
