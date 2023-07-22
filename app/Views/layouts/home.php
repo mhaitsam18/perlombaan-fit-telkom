@@ -175,7 +175,7 @@
                                             <a href="/logout" class="default-btn btn-bg-two border-radius-50">Keluar <i class='bx bx-chevron-right'></i></a>
                                         <?php else : ?>
                                             <a href="/login" class="default-btn btn-bg-two border-radius-50">Login Mahasiswa <i class='bx bx-chevron-right'></i></a>
-                                            <a href="/login" class="default-btn btn-bg-two border-radius-50">Login Admin <i class='bx bx-chevron-right'></i></a>
+                                            <a href="/admin-login" class="default-btn btn-bg-two border-radius-50">Login Admin <i class='bx bx-chevron-right'></i></a>
                                         <?php endif; ?>
                                     </div>
                                 </div>

@@ -68,19 +68,43 @@ License: For each use you must have a valid license purchased only from above li
                                 </div>
                                 <div class="col-md-8 ps-md-0">
                                     <div class="auth-form-wrapper px-4 py-5">
+                                        <h2><?= lang('Auth.loginTitle') ?></h2>
+                                        <?= view('Myth\Auth\Views\_message_block') ?>
                                         <a href="#" class="noble-ui-logo d-block mb-2">Dashboard Admin <br><span>Perlombaan D3 Sistem Informasi</span></a>
                                         <h5 class="text-muted fw-normal mb-4">Selamat datang! Silahkan masuk</h5>
-                                        <form class="forms-sample">
+                                        <form class="forms-sample" action="<?= url_to('login') ?>" method="post">
+                                            <?= csrf_field() ?>
+                                            <?php if ($config->validFields === ['email']) : ?>
+                                                <div class="mb-3">
+                                                    <label for="login" class="form-label"><?= lang('Auth.emailOrUsername') ?></label>
+                                                    <input type="text" name="login" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" id="login" placeholder="<?= lang('Auth.emailOrUsername') ?>">
+                                                    <div class="invalid-feedback">
+                                                        <?= session('errors.login') ?>
+                                                    </div>
+                                                </div>
+                                            <?php else : ?>
+                                                <div class="mb-3">
+                                                    <label for="login" class="form-label"><?= lang('Auth.emailOrUsername') ?></label>
+                                                    <input type="text" name="login" class="form-control <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" id="login" placeholder="<?= lang('Auth.emailOrUsername') ?>">
+                                                    <div class="invalid-feedback">
+                                                        <?= session('errors.login') ?>
+                                                    </div>
+                                                </div>
+                                            <?php endif; ?>
                                             <div class="mb-3">
-                                                <label for="userEmail" class="form-label">Email</label>
-                                                <input type="email" class="form-control" id="userEmail" placeholder="Email">
+                                                <label for="password" class="form-label"><?= lang('Auth.password') ?></label>
+                                                <input type="password" name="password" class="form-control  <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?= lang('Auth.password') ?>">
+                                                <div class="invalid-feedback">
+                                                    <?= session('errors.password') ?>
+                                                </div>
                                             </div>
                                             <div class="mb-3">
-                                                <label for="userPassword" class="form-label">Kata Sandi</label>
-                                                <input type="password" class="form-control" id="userPassword" autocomplete="current-password" placeholder="Password">
-                                            </div>
-                                            <div>
-                                                <a href="../../dashboard.html" class="btn btn-primary me-2 mb-2 mb-md-0 text-white">Login</a>
+                                                <button type="submit" class="btn btn-primary me-2 mb-2 mb-md-0 text-white">
+                                                    Masuk Sekarang
+                                                </button>
+                                                <p class="float-end">
+                                                    <a href="/">Kembali ke beranda</a>
+                                                </p>
                                             </div>
                                         </form>
                                     </div>
@@ -89,7 +113,6 @@ License: For each use you must have a valid license purchased only from above li
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
