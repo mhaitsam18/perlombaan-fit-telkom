@@ -99,7 +99,7 @@ $uniqueCabangLomba = array_unique(array_column($data_lomba, 'cabang_lomba'));
                                     $daysRemaining = ceil($secondsRemaining / (60 * 60 * 24));
 
                                     if ($daysRemaining < 1) {
-                                        $test =  "lomba sudah kadaluarsa";
+                                        $test =  "Lomba Sudah Ditutup";
                                     } else {
                                         $test = "Tersisa $daysRemaining hari lagi untuk lomba";
                                     }
